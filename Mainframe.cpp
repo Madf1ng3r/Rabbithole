@@ -3,12 +3,13 @@
 #include <fstream>
 #include <thread>
 #include <chrono>
-#include "Taschenrechner.h"
+#include "Taschenrechner.h"             // alle Header Dateien
 #include "sinndeslebens.h"
 #include "binary.h"
 #include "Snake.h"
 #include "Links.h"
 #include "readme.h"
+#include "Geschichte.h"
 #include "pong.h"
 #include "Witzbold.h"
 #include "Gaestebuch.h"
@@ -42,7 +43,7 @@ void showMenu()
     std::cout << "Hauptmenue" << std::endl;
     std::cout << "-----------------------" << std::endl;
     std::cout << "1. Art" << std::endl;
-    std::cout << "2. OpenAI (noch in Entwicklung)" << std::endl;
+    std::cout << "2. OpenAI alpha " << std::endl;
     std::cout << "3. Taschenrechner" << std::endl;
     std::cout << "4. Sinn des Lebens" << std::endl;
     std::cout << "5. Readme" << std::endl;
@@ -51,6 +52,7 @@ void showMenu()
     std::cout << "8. Pong" << std::endl;
     std::cout << "9. Snake" << std::endl;
     std::cout << "10. Code Rain / Console clear" << std::endl;
+    std::cout << "11. der Erzähler" << std::endl;
     std::cout << "0. Beenden" << std::endl;
     std::cout << "-----------------------" << std::endl;
 }
@@ -173,6 +175,12 @@ int main()
             clearScreen();
             bimain();
             break;
+        case 11:
+            animateTransition();
+            clearScreen();
+            geschmain();
+            break;
+
         case 0:
             running = false;
             break;
