@@ -76,24 +76,24 @@ int geschmain() {
         "In einem fernen Land lebte ein ",
         "Vor langer Zeit gab es einen ",
         "Es existierte einst ein ",
-        "Eines Tages begegnete ein "
-        "Zu einer unbekannten Zeit war ein"
+        "Eines Tages begegnete ein ",
+        "Zu einer unbekannten Zeit war ein "
     };
 
     std::vector<std::string> nouns = {
-        "Kevin", "Katze", "Vogel", "Bär", "Affe", "Elefant", "Löwe", "Tiger", "Hase", "Pferd", "Eichhörnchen", "Krokodil", "Roboter Namens Marvin", "Computer", "Delfin", "Dino", "Chefkoch","Rüdiger", "Steffen", "Klaus", "Geist","Influencer","Informatiker"
+        "Kevin", "Katze", "Vogel", "Bär", "Affe", "Elefant", "Löwe", "Tiger", "Hase", "Pferd", "Eichhörnchen", "Krokodil", "Roboter Namens Marvin", "Computer", "Delfin", "Dino", "Chefkoch", "Rüdiger", "Steffen", "Klaus", "Geist", "Influencer", "Informatiker", "König", "Prinzessin", "Zauberer", "Hexe", "Pilot", "Astronaut", "Detektiv", "Werwolf", "Hacker", "Mandalorean"
     };
 
     std::vector<std::string> adjectives = {
-        "kleiner", "großer", "freundlicher", "mutiger", "schlauer", "schneller", "ruhiger", "starker", "lustiger", "neugieriger", "glücklicher", "träumerischer", "lebendiger", "merkwürdiger", "verärgerter","ruchloser","erschrockener","trauriger"
+        "kleiner", "großer", "freundlicher", "mutiger", "schlauer", "schneller", "ruhiger", "starker", "lustiger", "neugieriger", "glücklicher", "träumerischer", "lebendiger", "merkwürdiger", "verärgerter", "ruchloser", "erschrockener", "trauriger", "geheimnisvoller", "abenteuerlustiger", "tapferer", "toller", "verwirrter" , "neugieriger"
     };
 
     std::vector<std::string> actions = {
-        "spielte", "rannte", "sprang", "kletterte", "flog", "lief", "versteckte sich", "schlief", "tanzte", "lachte", "sang", "las", "spielte", "rollte","warf einen Stein"
+        "spielte", "rannte", "sprang", "kletterte", "flog", "lief", "versteckte sich", "schlief", "tanzte", "lachte", "sang", "las", "spielte", "rollte", "warf einen Stein", "fand einen Schatz", "löste ein Rätsel", "rettete", "verfolgte", "löschte", "erschuf","gluckste vergnügt", "seufzte"
     };
 
     std::vector<std::string> locations = {
-        "im Wald", "auf dem Berg", "am Strand", "in der Stadt", "im Park", "im Zoo", "in einer Höhle", "im Schloss", "im Garten", "im Ozean", "auf einer Insel", "in einer Wüste", "am Johannisplatz", "um die Ecke", "in einer anderen Galaxie", "in einer Paralleldimension", "in der Matrix","Gegenüber vom Penny", "im Raumschiff", "vor dem Stargate", "auf dem Spielplatz", "im Büro", "in der Herrentoilette", "auf dem Bahnsteig", "in London", "irgendwo in Leipzig", "im Kirschblütenwald", "im Block gegenüber", "im Fitnesscenter"
+        "im Wald", "auf dem Berg", "am Strand", "in der Stadt", "im Park", "im Zoo", "in einer Höhle", "im Schloss", "im Garten", "im Ozean", "auf einer Insel", "in einer Wüste", "am Johannisplatz", "um die Ecke", "in einer anderen Galaxie", "in einer Paralleldimension", "in der Matrix", "Gegenüber vom Penny", "im Raumschiff", "vor dem Stargate", "auf dem Spielplatz", "im Büro", "in der Herrentoilette", "auf dem Bahnsteig", "in London", "irgendwo in Leipzig", "im Kirschblütenwald", "im Block gegenüber", "im Fitnesscenter", "in einem Märchenland", "unter Wasser","in Amsterdam","in New York", "in der Schule", "beim Abendessen", "auf einer Beerdigung", "auf der Spitze des Mount Everest", "in Mordor", "im Auenland"
     };
 
     std::vector<std::string> endings = {
@@ -106,13 +106,17 @@ int geschmain() {
         "..im Hintergrund flog unbemerkt ein Raumschiff vorbei.",
         "während am anderen Ende der Welt eine Alieninvasion begann.",
         "dort verbrachte er noch einen schönen Tag.",
-        "nachdem er noch ein kleinen Mittagsschlaf machte.",
+        "nachdem er noch einen kleinen Mittagsschlaf gemacht hatte.",
         "bis er aufwachte und feststellte, es war alles nur ein Traum.",
-        "bis ihm einfiel das er heute noch einen wichtigen Termin hatte.",
+        "bis ihm einfiel, dass er heute noch einen wichtigen Termin hatte.",
         "dort wurde ihm dann schlagartig bewusst, in welcher Situation er sich befand.",
-        "unbemerkt lief ein Zauberer an ihm vorbei."
-        
-
+        "unbemerkt lief ein Zauberer an ihm vorbei.",
+        "und wurde von allen gefeiert.",
+        "und lernte eine wichtige Lektion.",
+        "und fand sein wahres Glück.",
+        "und machte sich auf die Suche nach Abenteuern.",
+        "und wurde von einem herabfliegenden Klavier erschlagen",
+        "Ende."
     };
 
     int numStoryParts = storyParts.size();
@@ -122,7 +126,7 @@ int geschmain() {
     int numLocations = locations.size();
     int numEndings = endings.size();
 
-    int numSentences = 10; // Anzahl der Sätze in der Geschichte
+    int numSentences = 20; // Anzahl der Sätze in der Geschichte
 
     for (int i = 0; i < numSentences; ++i) {
         std::string sentence;
