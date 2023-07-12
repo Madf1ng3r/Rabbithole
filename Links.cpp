@@ -27,7 +27,7 @@ void openLinkInBrowser(const std::string& link) {
 
 int linkmain() {
     std::string links[] = {
-        "https://youtu.be/WD8Eqq2jvTI",
+        "https://en.cppreference.com/w/",
         "https://chat.openai.com/",
         "https://www.youtube.com/@justvisitingthisplanet/playlists",
         "https://www.lightningmaps.org/",
@@ -36,7 +36,10 @@ int linkmain() {
         "https://www.planetminecraft.com/member/madfinger/",
         "https://www.w3schools.com/",
         "https://pixlr.com/de/e/",
-        "https://soundcloud.com/spacecake1/sets/free-your-mind"
+        "https://hotpot.ai/",
+        "https://soundcloud.com/spacecake1/sets/free-your-mind",
+        "https://github.com/Madf1ng3r/Rabbithole",
+        "https://theuselessweb.com/?"
 
 
     };
