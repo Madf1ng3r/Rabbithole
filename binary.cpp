@@ -4,6 +4,7 @@
 #include <ctime>
 #include <conio.h> // Hinzugefügte Header-Datei für Tasteneingabe
 #include "binary.h"
+#include "MSmith.h"
 
 void sleep(unsigned int milliseconds) {
     Sleep(milliseconds);
@@ -20,6 +21,12 @@ void setConsoleSize(int width, int height) {
 void setConsoleColor(WORD color) {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(consoleHandle, color);
+}
+
+void functionToExecute() {
+    smmain();
+    // Fügen Sie hier den Code für die auszuführende Funktion ein
+    std::cout << "Enter-Taste wurde gedrückt! Eine andere Funktion wird ausgeführt." << std::endl;
 }
 
 int bimain() {
@@ -51,14 +58,20 @@ int bimain() {
         WriteConsoleOutput(consoleHandle, consoleBuffer, bufferSize, bufferCoord, &writeRegion);
 
         sleep(frameDelay);
-
+     
         if (_kbhit()) { // Überprüft, ob eine Taste gedrückt wurde
             char key = _getch(); // Liest die gedrückte Taste ein
             if (key == 27) {
                 running = false; // Beendet die Schleife, wenn die Escape-Taste (ESC) gedrückt wurde
             }
+            else if (key == 13) {
+                functionToExecute(); // Führt die andere Funktion aus, wenn die Enter-Taste gedrückt wurde
+            }
         }
+
     }
+    
+    
 
     return 0;
 }

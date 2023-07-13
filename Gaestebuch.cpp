@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <conio.h>
 
 void writeToFile(const std::string& filename, const std::string& text) {
     std::ofstream file(filename, std::ios::app);
@@ -36,18 +37,28 @@ std::string enterName() {
     std::getline(std::cin, name);
     return name;
 }
-
+bool running = true;
 int guimain() {
     std::string filename = "gaestebuch.txt";
 
     displayNotes(filename);
-
+    std::cout << "\033[32m";
+    std::cout << R"(
+      __...--~~~~~-._   _.-~~~~~--...__
+    //               `V'               \\ 
+   //                 |                 \\ 
+  //__...--~~~~~~-._  |  _.-~~~~~~--...__\\ 
+ //__.....----~~~~._\ | /_.~~~~----.....__\\
+====================\\|//====================
+                    `---`
+ )" << std::endl;
+    std::cout << "\033[0m";
     std::cout << "Willkommen im Gästebuch!" << std::endl;
 
     std::string name = enterName();
 
     while (name.empty()) {
-       // std::cout << "Ungültiger Name. Bitte geben Sie Ihren Namen erneut ein: ";
+       // std::cout << "Gib deinen Namen ein: ";
         name = enterName();
     }
 
@@ -60,5 +71,11 @@ int guimain() {
 
     displayNotes(filename);
 
+    if (_kbhit()) { // Überprüft, ob eine Taste gedrückt wurde
+        char key = _getch(); // Liest die gedrückte Taste ein
+        if (key == 27) {
+            running = false; // Beendet die Schleife, wenn die Escape-Taste (ESC) gedrückt wurde
+        }
+    }
     return 0;
 }

@@ -146,7 +146,7 @@ void Logic()
         Setup();
 }
 
-int pongmain()
+int pongmain()         // Hauptfunktion des Pong Spiels
 {
     Setup();
 

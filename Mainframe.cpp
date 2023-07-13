@@ -51,7 +51,7 @@ void showMenu()
     std::cout << "7. Links" << std::endl;
     std::cout << "8. Pong" << std::endl;
     std::cout << "9. Snake" << std::endl;
-    std::cout << "10. Code Rain / Console clear" << std::endl;
+    std::cout << "10. Matrix " << std::endl;
     std::cout << "11. der Erzähler" << std::endl;
     std::cout << "0. Beenden" << std::endl;
     std::cout << "-----------------------" << std::endl;

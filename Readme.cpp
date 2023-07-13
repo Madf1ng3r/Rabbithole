@@ -1,10 +1,14 @@
-#include <iostream>
-#include "readme.h"
+#include <iostream>   
+#include "readme.h"   // Header Datei
 
 using namespace std;
-void rmmain() {
-
+void rmmain() {              // Readme Funktion 
+    cout << endl << endl;
+    cout << "Version Early Alpha 1.19";
+    std::cout << "\033[32m";  //Anfang grüne Schriftfarbe
   cout <<  R"(
+  
+
                       _           _   _           
                      | |         | | | |           
    ___ _ __ ___  __ _| |_ ___  __| | | |__  _   _  
@@ -19,6 +23,6 @@ void rmmain() {
  |______\___|\___/|_| |_|\__,_|_|  \__,_|\___/     
                                                                                                                             
 )";
-
+  std::cout << "\033[0m";   //Ende mit grüner Farbe
 
 }

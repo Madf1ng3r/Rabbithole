@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,12 +128,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AILinks.cpp" />
     <ClCompile Include="Art.cpp" />
     <ClCompile Include="binary.cpp" />
+    <ClCompile Include="Caesar.cpp" />
+    <ClCompile Include="Geschichte.cpp" />
     <ClCompile Include="Mainframe.cpp" />
     <ClCompile Include="Links.cpp" />
     <ClCompile Include="Gaestebuch.cpp" />
+    <ClCompile Include="MrSmith.cpp" />
+    <ClCompile Include="NuLinks.cpp" />
+    <ClCompile Include="OPLinks.cpp" />
     <ClCompile Include="pong.cpp" />
+    <ClCompile Include="Projektlinks.cpp" />
+    <ClCompile Include="Openlink.cpp" />
     <ClCompile Include="Readme.cpp" />
     <ClCompile Include="Sinndeslebens.cpp" />
     <ClCompile Include="Snake.cpp" />
@@ -140,12 +149,21 @@
     <ClCompile Include="Taschenrechner.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AILinks.h" />
     <ClInclude Include="Art.h" />
     <ClInclude Include="binary.h" />
+    <ClInclude Include="caesar.h" />
     <ClInclude Include="curl.h" />
     <ClInclude Include="Gaestebuch.h" />
+    <ClInclude Include="Geschichte.h" />
+    <ClInclude Include="Mainframe.h" />
+    <ClInclude Include="MSmith.h" />
+    <ClInclude Include="Openlink.h" />
+    <ClInclude Include="NULinks.h" />
+    <ClInclude Include="OPLink.h" />
     <ClInclude Include="jason.hpp" />
     <ClInclude Include="Links.h" />
+    <ClInclude Include="PLinks.h" />
     <ClInclude Include="pong.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="sinndeslebens.h" />

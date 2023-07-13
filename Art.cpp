@@ -24,7 +24,7 @@ void generateAsciiArt() {
         "\033[0;36m"   // Cyan
     };
 
-    const int artworkSize = 20; // Größe des Kunstwerks
+    const int artworkSize = 24; // Größe des Kunstwerks
 
     for (int i = 0; i < artworkSize; i++) {
         for (int j = 0; j < artworkSize; j++) {
@@ -49,6 +49,7 @@ void generateAsciiArt() {
 }
 
 int artmain() {
+    std::cout << "Ich habe dies für sie gemahlt:";
     generateAsciiArt();
 
     return 0;

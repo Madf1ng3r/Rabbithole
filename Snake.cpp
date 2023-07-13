@@ -169,7 +169,7 @@ int snakemain()
         snakeDraw();
         snakeInput();
         snakeLogic();
-        Sleep(10); // Pause für die Geschwindigkeit des Spiels
+        Sleep(5); // Pause für die Geschwindigkeit des Spiels
     }
 
     return 0;
