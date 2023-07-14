@@ -1,5 +1,3 @@
-
-#include "Taschenrechner.h"
 #include <iostream>
 #include <cmath>
 #include <iomanip> // Für setprecision und fixed
@@ -116,11 +114,19 @@ void calcmain()
     while (running)
     {
         printMenu();
-        int choice;
+        string choice;
         cout << "Wählen Sie eine Option: ";
         cin >> choice;
 
-        switch (choice)
+        if (choice.empty() || !isdigit(choice[0]))
+        {
+            cout << "Ungültige Eingabe. Bitte geben Sie eine Zahl ein." << endl;
+            continue;
+        }
+
+        int option = stoi(choice);
+
+        switch (option)
         {
         case 0:
             running = false;
@@ -145,7 +151,7 @@ void calcmain()
             cout << "Ergebnis: " << subtraktion(a, b) << endl;
             break;
         }
-    case3:
+        case 3:
         {
             int a, b;
             cout << "Geben Sie die erste Zahl ein: ";
@@ -213,7 +219,7 @@ void calcmain()
             break;
         }
         case 8:
-            cout << "Zahl Pi: " << calculatePi() << endl;
+            cout << "Zahl Pi = " << calculatePi() << endl;
             break;
         case 9:
         {
@@ -245,3 +251,4 @@ void calcmain()
         }
     }
 }
+

@@ -1,48 +1,67 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+#include <ctime>
 
 using namespace std;
 
 bool gameover;
-const int width = 20;
-const int height = 20;
+const int width = 30;
+const int height = 30;
 int x, y, fruitX, fruitY, score;
-int tailX[100], tailY[100];
+int* tailX, * tailY;
 int nTail;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
 
+HANDLE consoleHandle;
+CHAR_INFO consoleBuffer[width * height];
+
 void snakeSetup()
 {
-    gameover = false;
     dir = STOP;
     x = width / 2;
     y = height / 2;
     fruitX = rand() % width;
     fruitY = rand() % height;
     score = 0;
+    nTail = 0;
+    gameover = false;
+
+    tailX = new int[width * height];
+    tailY = new int[width * height];
 }
 
 void snakeDraw()
 {
-    system("cls");
-
     for (int i = 0; i < width + 2; i++)
-        cout << "#";
-    cout << endl;
+    {
+        consoleBuffer[i].Char.AsciiChar = '#';
+        consoleBuffer[i].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+    }
+
+    for (int i = 1; i <= height; i++)
+    {
+        consoleBuffer[i * (width + 2)].Char.AsciiChar = '#';
+        consoleBuffer[i * (width + 2)].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+        consoleBuffer[i * (width + 2) + width + 1].Char.AsciiChar = '#';
+        consoleBuffer[i * (width + 2) + width + 1].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+    }
 
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            if (j == 0)
-                cout << "#";
-
             if (i == y && j == x)
-                cout << "O";
+            {
+                consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Char.AsciiChar = 'O';
+                consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Attributes = FOREGROUND_GREEN;
+            }
             else if (i == fruitY && j == fruitX)
-                cout << "F";
+            {
+                consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Char.AsciiChar = 'F';
+                consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+            }
             else
             {
                 bool printTail = false;
@@ -50,26 +69,28 @@ void snakeDraw()
                 {
                     if (tailX[k] == j && tailY[k] == i)
                     {
-                        cout << "o";
+                        consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Char.AsciiChar = 'o';
+                        consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
                         printTail = true;
+                        break;
                     }
                 }
 
                 if (!printTail)
-                    cout << " ";
+                {
+                    consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Char.AsciiChar = ' ';
+                    consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
+                }
             }
-
-            if (j == width - 1)
-                cout << "#";
         }
-        cout << endl;
     }
 
-    for (int i = 0; i < width + 2; i++)
-        cout << "#";
-    cout << endl;
+    consoleBuffer[(y + 1) * (width + 2) + (x + 1)].Attributes |= FOREGROUND_INTENSITY;
 
-    cout << "Score: " << score << endl;
+    COORD bufferSize = { width + 2, height + 2 };
+    COORD bufferCoord = { 0, 0 };
+    SMALL_RECT writeRegion = { 0, 0, width + 1, height + 1 };
+    WriteConsoleOutput(consoleHandle, consoleBuffer, bufferSize, bufferCoord, &writeRegion);
 }
 
 void snakeInput()
@@ -93,7 +114,7 @@ void snakeInput()
         case 'x':
             gameover = true;
             break;
-        case 27: // ASCII-Wert für Escape-Taste
+        case 27:
             gameover = true;
             break;
         }
@@ -160,17 +181,54 @@ void snakeLogic()
     }
 }
 
+bool PlayAgainPrompt()
+{
+    cout << "Drücke J wenn du noch eine Runde spielen nöchtest. ";
+    char choice;
+    cin >> choice;
+
+    return (choice == 'j' || choice == 'J');
+}
+
+void ShowCursor(bool showFlag)
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO cursorInfo;
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);
+    cursorInfo.bVisible = showFlag;
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);
+}
+
 int snakemain()
 {
-    snakeSetup();
+    consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    ShowCursor(false);
 
-    while (!gameover)
-    {
-        snakeDraw();
-        snakeInput();
-        snakeLogic();
-        Sleep(5); // Pause für die Geschwindigkeit des Spiels
-    }
+    bool playAgain = true;
+
+    do {
+        snakeSetup();
+
+        while (!gameover)
+        {
+            snakeDraw();
+            snakeInput();
+            snakeLogic();
+            Sleep(100);
+        }
+
+        delete[] tailX;
+        delete[] tailY;
+
+        if (PlayAgainPrompt()) {
+            playAgain = true;
+        }
+        else {
+            playAgain = false;
+        }
+    } while (playAgain);
+
+    ShowCursor(true);
 
     return 0;
 }

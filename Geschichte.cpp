@@ -210,8 +210,8 @@ int geschmain() {
                 "Vor langer Zeit gab es einen verlassenen ",
                 "Ein ",
                 "Der ",
-                "Sein Freund der ",
-                "In einem Land vor unserer Zeit ",
+                "Sein Freund, ein ",
+                "In einem Land vor unserer Zeit war ein ",
 
                 // ... traurige Satzanfänge
             };
@@ -224,8 +224,8 @@ int geschmain() {
                 "Vor langer Zeit gab es einen ",
                 "Es existierte einst ein ",
                 "Eines Tages begegnete ein ",
-                "Der ",
-                "Sein Freund der ",
+                "Ein ",
+                "Sein Freund, ein ",
                 "Zu einer unbekannten Zeit war ein ",
                 "Am Anfang gab es einen ",
                 

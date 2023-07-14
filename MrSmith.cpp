@@ -3,8 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
-#include <conio.h>
-#include <cmath>
+#include <string>
 
 using namespace std;
 
@@ -19,6 +18,7 @@ struct Player {
     int ammo;
     int medkits;
     int ammunition;
+    int direction; // Blickrichtung des Spielers (0 - oben, 1 - rechts, 2 - unten, 3 - links)
 };
 
 struct Enemy {
@@ -54,7 +54,14 @@ void setCursorPosition(int x, int y) {
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<Item>& items) {
+void hideCursor() {
+    CONSOLE_CURSOR_INFO cursorInfo;
+    cursorInfo.dwSize = 100;
+    cursorInfo.bVisible = FALSE;
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+}
+
+void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<Item>& items, const vector<pair<int, int>>& projectiles) {
     setCursorPosition(0, 0);
 
     cout << char(201);
@@ -73,20 +80,39 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
                 cout << "P ";
                 cout << "\033[0m";
             }
-            else if (i == enemies[0].y && j == enemies[0].x) {
-                cout << "E ";
-            }
             else {
-                bool itemFound = false;
-                for (const Item& item : items) {
-                    if (item.x == j && item.y == i) {
-                        cout << item.symbol << " ";
-                        itemFound = true;
+                bool enemyFound = false;
+                for (const Enemy& enemy : enemies) {
+                    if (enemy.x == j && enemy.y == i) {
+                        cout << "E ";
+                        enemyFound = true;
                         break;
                     }
                 }
-                if (!itemFound) {
-                    cout << ". ";
+                if (!enemyFound) {
+                    bool itemFound = false;
+                    for (const Item& item : items) {
+                        if (item.x == j && item.y == i) {
+                            cout << item.symbol << " ";
+                            itemFound = true;
+                            break;
+                        }
+                    }
+                    if (!itemFound) {
+                        bool projectileFound = false;
+                        for (const auto& projectile : projectiles) {
+                            if (projectile.first == j && projectile.second == i) {
+                                cout << "\033[31m";
+                                cout << "* ";
+                                cout << "\033[0m";
+                                projectileFound = true;
+                                break;
+                            }
+                        }
+                        if (!projectileFound) {
+                            cout << ". ";
+                        }
+                    }
                 }
             }
         }
@@ -118,21 +144,25 @@ void movePlayer(Player& player, char direction) {
     case 'w':
         if (player.y > 0) {
             player.y--;
+            player.direction = 0; // Blickrichtung nach oben
         }
         break;
     case 's':
         if (player.y < HEIGHT - 1) {
             player.y++;
+            player.direction = 2; // Blickrichtung nach unten
         }
         break;
     case 'a':
         if (player.x > 0) {
             player.x--;
+            player.direction = 3; // Blickrichtung nach links
         }
         break;
     case 'd':
         if (player.x < WIDTH - 1) {
             player.x++;
+            player.direction = 1; // Blickrichtung nach rechts
         }
         break;
     case ' ':
@@ -165,13 +195,26 @@ void moveEnemyTowardsPlayer(Enemy& enemy, const Player& player) {
     }
 }
 
-void shootPlayerWeapon(Player& player, Enemy& enemy) {
+void shootPlayerWeapon(Player& player, vector<pair<int, int>>& projectiles) {
     if (player.ammo > 0) {
         player.ammo--;
-        enemy.health -= player.weaponDamage;
-        if (enemy.health <= 0) {
-            cout << "Gegner besiegt!" << endl;
+        int projectileX = player.x;
+        int projectileY = player.y;
+        switch (player.direction) {
+        case 0: // Blickrichtung nach oben
+            projectileY--;
+            break;
+        case 1: // Blickrichtung nach rechts
+            projectileX++;
+            break;
+        case 2: // Blickrichtung nach unten
+            projectileY++;
+            break;
+        case 3: // Blickrichtung nach links
+            projectileX--;
+            break;
         }
+        projectiles.push_back(make_pair(projectileX, projectileY));
     }
     else {
         cout << "Waffe ist leer! Lade nach." << endl;
@@ -185,8 +228,6 @@ void reloadPlayerWeapon(Player& player) {
 
 void shootEnemyWeapon(Player& player, Enemy& enemy) {
     if (enemy.weaponDamage > 0) {
-        Sleep(1500);
-
         if (player.health > 0) {
             int dx = player.x - enemy.x;
             int dy = player.y - enemy.y;
@@ -265,6 +306,7 @@ bool playLevel(Player& player, int level) {
     int numEnemies = level;
     vector<Enemy> enemies(numEnemies);
     vector<Item> items;
+    vector<pair<int, int>> projectiles;
 
     spawnItems(items, level);
 
@@ -276,43 +318,67 @@ bool playLevel(Player& player, int level) {
         enemies[i].weaponDamage = 10;
     }
 
-    drawBoard(player, enemies, items);
+    drawBoard(player, enemies, items, projectiles);
 
     while (player.health > 0 && enemies.size() > 0 && enemies[0].health > 0) {
-        if (_kbhit()) {
-            char input = _getch();
-            movePlayer(player, input);
-            if (checkCollision(player, enemies[0])) {
-                player.health -= enemies[0].damage;
+        if (GetAsyncKeyState('W') & 0x8000) {
+            movePlayer(player, 'w');
+        }
+        else if (GetAsyncKeyState('S') & 0x8000) {
+            movePlayer(player, 's');
+        }
+        else if (GetAsyncKeyState('A') & 0x8000) {
+            movePlayer(player, 'a');
+        }
+        else if (GetAsyncKeyState('D') & 0x8000) {
+            movePlayer(player, 'd');
+        }
+        else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
+            movePlayer(player, ' ');
+        }
+
+        bool playerEnemyCollision = false;
+        for (const Enemy& enemy : enemies) {
+            if (checkCollision(player, enemy)) {
+                player.health -= enemy.damage;
                 cout << "Kollision mit dem Gegner! Deine Gesundheit: " << player.health << endl;
+                playerEnemyCollision = true;
+                break;
             }
-            else {
-                for (int i = 0; i < items.size(); i++) {
-                    if (checkCollision(player, items[i])) {
-                        collectItem(player, items[i]);
-                        items.erase(items.begin() + i);
-                        break;
-                    }
+        }
+
+        if (!playerEnemyCollision) {
+            for (int i = 0; i < items.size(); i++) {
+                if (checkCollision(player, items[i])) {
+                    collectItem(player, items[i]);
+                    items.erase(items.begin() + i);
+                    break;
                 }
             }
-            drawBoard(player, enemies, items);
         }
+
+        drawBoard(player, enemies, items, projectiles);
 
         if (player.health > 0) {
             moveEnemyTowardsPlayer(enemies[0], player);
             shootEnemyWeapon(player, enemies[0]);
         }
 
-        if (_kbhit()) {
-            char input = _getch();
-            if (input == 'q') {
-                shootPlayerWeapon(player, enemies[0]);
-                drawBoard(player, enemies, items);
-            }
-            else if (input == 'r') {
-                reloadPlayerWeapon(player);
-                drawBoard(player, enemies, items);
-            }
+        if (GetAsyncKeyState('Q') & 0x8000) {
+            shootPlayerWeapon(player, projectiles);
+            drawBoard(player, enemies, items, projectiles);
+        }
+        else if (GetAsyncKeyState(VK_UP) & 0x8000) {
+            player.direction = 0; // Blickrichtung nach oben
+        }
+        else if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
+            player.direction = 1; // Blickrichtung nach rechts
+        }
+        else if (GetAsyncKeyState(VK_DOWN) & 0x8000) {
+            player.direction = 2; // Blickrichtung nach unten
+        }
+        else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
+            player.direction = 3; // Blickrichtung nach links
         }
     }
 
@@ -322,15 +388,17 @@ bool playLevel(Player& player, int level) {
 int smmain() {
     srand(time(0));
     setConsoleMaximized();
+    hideCursor();
 
     Player player;
     player.x = WIDTH / 2;
     player.y = HEIGHT / 2;
-    player.health = 500;
+    player.health = 300;
     player.weaponDamage = 10;
     player.ammo = 10;
     player.medkits = 0;
     player.ammunition = 20;
+    player.direction = 0; // Start-Blickrichtung nach oben
 
     cout << "=== Steuerung ===" << endl;
     cout << "W - Nach oben bewegen" << endl;
@@ -339,7 +407,7 @@ int smmain() {
     cout << "D - Nach rechts bewegen" << endl;
     cout << "Leertaste - Schnell nach rechts bewegen" << endl;
     cout << "Q - Gegner angreifen" << endl;
-    cout << "R - Waffe nachladen" << endl;
+    cout << "Pfeiltasten - Blickrichtung ändern" << endl;
     waitForEnter();
 
     int level = 1;
