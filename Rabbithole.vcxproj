@@ -132,7 +132,11 @@
     <ClCompile Include="Art.cpp" />
     <ClCompile Include="binary.cpp" />
     <ClCompile Include="Caesar.cpp" />
+    <ClCompile Include="Code.cpp" />
+    <ClCompile Include="Digital Clock.cpp" />
     <ClCompile Include="Geschichte.cpp" />
+    <ClCompile Include="HCode.cpp" />
+    <ClCompile Include="Helpdesk.cpp" />
     <ClCompile Include="Mainframe.cpp" />
     <ClCompile Include="Links.cpp" />
     <ClCompile Include="Gaestebuch.cpp" />
@@ -145,17 +149,23 @@
     <ClCompile Include="Readme.cpp" />
     <ClCompile Include="Sinndeslebens.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="User.cpp" />
     <ClCompile Include="Witzbold.cpp" />
     <ClCompile Include="Taschenrechner.cpp" />
+    <ClCompile Include="ZCode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AILinks.h" />
     <ClInclude Include="Art.h" />
     <ClInclude Include="binary.h" />
     <ClInclude Include="caesar.h" />
+    <ClInclude Include="Code.h" />
     <ClInclude Include="curl.h" />
     <ClInclude Include="Gaestebuch.h" />
     <ClInclude Include="Geschichte.h" />
+    <ClInclude Include="Hcode.h" />
+    <ClInclude Include="Helpdesk.h" />
+    <ClInclude Include="User.h" />
     <ClInclude Include="Mainframe.h" />
     <ClInclude Include="MSmith.h" />
     <ClInclude Include="Openlink.h" />
@@ -170,6 +180,7 @@
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Taschenrechner.h" />
     <ClInclude Include="Witzbold.h" />
+    <ClInclude Include="Zcode.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="gaestebuch.txt" />

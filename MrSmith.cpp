@@ -11,29 +11,32 @@ const int WIDTH = 40;
 const int HEIGHT = 25;
 
 struct Player {
-    int x;
-    int y;
+    double x;
+    double y;
     int health;
     int weaponDamage;
     int ammo;
     int medkits;
     int ammunition;
     int direction; // Blickrichtung des Spielers (0 - oben, 1 - rechts, 2 - unten, 3 - links)
+    int bulletDamage; // Schaden der abgefeuerten Kugeln
 };
 
 struct Enemy {
-    int x;
-    int y;
+    double x;
+    double y;
     int health;
     int damage;
     int weaponDamage;
+    bool alive; // Zustand des Gegners (lebendig oder tot)
 };
 
 struct Item {
-    int x;
-    int y;
+    double x;
+    double y;
     char symbol;
     string name;
+    bool isAmmo; // Gibt an, ob das Item Munition ist
 };
 
 void setConsoleMaximized() {
@@ -64,18 +67,15 @@ void hideCursor() {
 void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<Item>& items, const vector<pair<int, int>>& projectiles) {
     setCursorPosition(0, 0);
 
-    cout << char(201);
-    for (int i = 0; i < WIDTH; i++) {
-        cout << char(205);
-    }
-    cout << char(187) << endl;
+    // Zeichne Spielfeldrand
+    cout << "###################################################" << endl;
 
     for (int i = 0; i < HEIGHT; i++) {
         setCursorPosition(0, i + 1);
-        cout << char(186);
+        cout << "#";
 
         for (int j = 0; j < WIDTH; j++) {
-            if (i == player.y && j == player.x) {
+            if (i == static_cast<int>(player.y) && j == static_cast<int>(player.x)) {
                 cout << "\033[32m";
                 cout << "P ";
                 cout << "\033[0m";
@@ -83,7 +83,7 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
             else {
                 bool enemyFound = false;
                 for (const Enemy& enemy : enemies) {
-                    if (enemy.x == j && enemy.y == i) {
+                    if (static_cast<int>(enemy.x) == j && static_cast<int>(enemy.y) == i && enemy.alive) {
                         cout << "E ";
                         enemyFound = true;
                         break;
@@ -92,7 +92,7 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
                 if (!enemyFound) {
                     bool itemFound = false;
                     for (const Item& item : items) {
-                        if (item.x == j && item.y == i) {
+                        if (static_cast<int>(item.x) == j && static_cast<int>(item.y) == i) {
                             cout << item.symbol << " ";
                             itemFound = true;
                             break;
@@ -103,7 +103,12 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
                         for (const auto& projectile : projectiles) {
                             if (projectile.first == j && projectile.second == i) {
                                 cout << "\033[31m";
-                                cout << "* ";
+                                if (enemyFound && !enemies[0].alive) {
+                                    cout << "X ";
+                                }
+                                else {
+                                    cout << "* ";
+                                }
                                 cout << "\033[0m";
                                 projectileFound = true;
                                 break;
@@ -116,15 +121,13 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
                 }
             }
         }
+
+        cout << "#";
     }
 
+    // Zeichne Spielfeldrand
     setCursorPosition(0, HEIGHT + 1);
-
-    cout << char(200);
-    for (int i = 0; i < WIDTH; i++) {
-        cout << char(205);
-    }
-    cout << char(188) << endl;
+    cout << "###################################################" << endl;
 
     // Grafische Darstellung der Lebensanzeige des Spielers
     setCursorPosition(0, HEIGHT + 2);
@@ -133,136 +136,110 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
         cout << char(219);
     }
     cout << endl;
-
+    cout << " | ";
     cout << "Magazin: " << player.ammo << "   ";
+    cout << " | ";
     cout << "Medkits: " << player.medkits << "   ";
+    cout << " | ";
     cout << "Munition: " << player.ammunition << endl;
 }
 
 void movePlayer(Player& player, char direction) {
+    double moveSpeed = 0.95; // Geschwindigkeit der Spielerbewegung
+
     switch (direction) {
     case 'w':
-        if (player.y > 0) {
-            player.y--;
+        if (player.y > moveSpeed) {
+            player.y -= moveSpeed;
             player.direction = 0; // Blickrichtung nach oben
         }
         break;
     case 's':
-        if (player.y < HEIGHT - 1) {
-            player.y++;
+        if (player.y < HEIGHT - moveSpeed - 1) {
+            player.y += moveSpeed;
             player.direction = 2; // Blickrichtung nach unten
         }
         break;
     case 'a':
-        if (player.x > 0) {
-            player.x--;
+        if (player.x > moveSpeed) {
+            player.x -= moveSpeed;
             player.direction = 3; // Blickrichtung nach links
         }
         break;
     case 'd':
-        if (player.x < WIDTH - 1) {
-            player.x++;
+        if (player.x < WIDTH - moveSpeed - 1) {
+            player.x += moveSpeed;
             player.direction = 1; // Blickrichtung nach rechts
         }
         break;
     case ' ':
         if (player.x < WIDTH - 2) {
-            player.x += 2;
+            player.x += 2 * moveSpeed;
         }
         break;
     }
 }
 
 bool checkCollision(const Player& player, const Enemy& enemy) {
-    return player.x == enemy.x && player.y == enemy.y;
+    return static_cast<int>(player.x) == static_cast<int>(enemy.x) && static_cast<int>(player.y) == static_cast<int>(enemy.y) && enemy.alive;
 }
 
 bool checkCollision(const Player& player, const Item& item) {
-    return player.x == item.x && player.y == item.y;
+    return static_cast<int>(player.x) == static_cast<int>(item.x) && static_cast<int>(player.y) == static_cast<int>(item.y);
 }
 
 void moveEnemyTowardsPlayer(Enemy& enemy, const Player& player) {
-    int dx = player.x - enemy.x;
-    int dy = player.y - enemy.y;
+    double dx = player.x - enemy.x;
+    double dy = player.y - enemy.y;
 
     if (dx != 0) {
-        int directionX = dx / abs(dx);
-        enemy.x += directionX;
+        double directionX = dx / abs(dx);
+        enemy.x += directionX * 0.1; // Geschwindigkeit der Gegnerbewegung
     }
     if (dy != 0) {
-        int directionY = dy / abs(dy);
-        enemy.y += directionY;
+        double directionY = dy / abs(dy);
+        enemy.y += directionY * 0.1; // Geschwindigkeit der Gegnerbewegung
     }
 }
 
-void shootPlayerWeapon(Player& player, vector<pair<int, int>>& projectiles) {
+void shootPlayerWeapon(Player& player, vector<pair<int, int>>& projectiles, vector<Enemy>& enemies) {
     if (player.ammo > 0) {
         player.ammo--;
-        int projectileX = player.x;
-        int projectileY = player.y;
+        double projectileX = player.x;
+        double projectileY = player.y;
         switch (player.direction) {
         case 0: // Blickrichtung nach oben
-            projectileY--;
+            projectileY -= 1;
             break;
         case 1: // Blickrichtung nach rechts
-            projectileX++;
+            projectileX += 1;
             break;
         case 2: // Blickrichtung nach unten
-            projectileY++;
+            projectileY += 1;
             break;
         case 3: // Blickrichtung nach links
-            projectileX--;
+            projectileX -= 1;
             break;
         }
-        projectiles.push_back(make_pair(projectileX, projectileY));
+        projectiles.push_back(make_pair(static_cast<int>(projectileX), static_cast<int>(projectileY)));
+
+        // Überprüfe, ob die Kugel einen Gegner trifft
+        for (auto it = enemies.begin(); it != enemies.end(); ) {
+            Enemy& enemy = *it;
+            if (static_cast<int>(enemy.x) == static_cast<int>(projectileX) && static_cast<int>(enemy.y) == static_cast<int>(projectileY) && enemy.alive) {
+                enemy.health -= player.bulletDamage;
+                if (enemy.health <= 0) {
+                    enemy.alive = false;
+                    cout << "Gegner besiegt!" << endl;
+                }
+                projectiles.pop_back();
+                break;
+            }
+            ++it;
+        }
     }
     else {
-        cout << "Waffe ist leer! Lade nach." << endl;
-    }
-}
-
-void reloadPlayerWeapon(Player& player) {
-    player.ammo = 10;
-    cout << "Waffe nachgeladen. Verbleibende Schüsse: " << player.ammo << endl;
-}
-
-void shootEnemyWeapon(Player& player, Enemy& enemy) {
-    if (enemy.weaponDamage > 0) {
-        if (player.health > 0) {
-            int dx = player.x - enemy.x;
-            int dy = player.y - enemy.y;
-
-            int directionX = 0;
-            int directionY = 0;
-
-            if (dx != 0) {
-                directionX = dx / abs(dx);
-            }
-            if (dy != 0) {
-                directionY = dy / abs(dy);
-            }
-
-            int projectileX = enemy.x + directionX;
-            int projectileY = enemy.y + directionY;
-
-            while (projectileX >= 0 && projectileX < WIDTH && projectileY >= 0 && projectileY < HEIGHT) {
-                setCursorPosition(projectileX * 2, projectileY + 1);
-                cout << "\033[31m";
-                cout << "* ";
-                cout << "\033[0m";
-
-                Sleep(100);
-
-                setCursorPosition(projectileX * 2, projectileY + 1);
-                cout << "  ";
-
-                projectileX += directionX;
-                projectileY += directionY;
-            }
-
-            player.health -= enemy.weaponDamage;
-            cout << "Du wurdest vom Gegner getroffen! Deine Gesundheit: " << player.health << endl;
-        }
+        cout << "Waffe ist leer!" << endl;
     }
 }
 
@@ -295,6 +272,7 @@ void spawnItems(vector<Item>& items, int level) {
             else {
                 item.symbol = 'A';
                 item.name = "Munition";
+                item.isAmmo = true;
             }
 
             items.push_back(item);
@@ -316,6 +294,7 @@ bool playLevel(Player& player, int level) {
         enemies[i].health = 50;
         enemies[i].damage = 20;
         enemies[i].weaponDamage = 10;
+        enemies[i].alive = true;
     }
 
     drawBoard(player, enemies, items, projectiles);
@@ -338,10 +317,9 @@ bool playLevel(Player& player, int level) {
         }
 
         bool playerEnemyCollision = false;
-        for (const Enemy& enemy : enemies) {
+        for (Enemy& enemy : enemies) {
             if (checkCollision(player, enemy)) {
-                player.health -= enemy.damage;
-                cout << "Kollision mit dem Gegner! Deine Gesundheit: " << player.health << endl;
+                player.health = 0;
                 playerEnemyCollision = true;
                 break;
             }
@@ -361,11 +339,10 @@ bool playLevel(Player& player, int level) {
 
         if (player.health > 0) {
             moveEnemyTowardsPlayer(enemies[0], player);
-            shootEnemyWeapon(player, enemies[0]);
         }
 
         if (GetAsyncKeyState('Q') & 0x8000) {
-            shootPlayerWeapon(player, projectiles);
+            shootPlayerWeapon(player, projectiles, enemies);
             drawBoard(player, enemies, items, projectiles);
         }
         else if (GetAsyncKeyState(VK_UP) & 0x8000) {
@@ -380,6 +357,15 @@ bool playLevel(Player& player, int level) {
         else if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
             player.direction = 3; // Blickrichtung nach links
         }
+
+        // Automatische Nachladefunktion
+        if (player.ammo == 0 && player.ammunition > 0) {
+            player.ammo = 10;
+            player.ammunition -= 10;
+            cout << "Waffe nachgeladen!" << endl;
+        }
+
+        Sleep(50); // Kurze Verzögerung, um die Bewegung flüssiger zu machen
     }
 
     return player.health > 0;
@@ -391,49 +377,47 @@ int smmain() {
     hideCursor();
 
     Player player;
-    player.x = WIDTH / 2;
-    player.y = HEIGHT / 2;
+    player.x = WIDTH / 2.0;
+    player.y = HEIGHT / 2.0;
     player.health = 300;
-    player.weaponDamage = 10;
+    player.weaponDamage = 90;
     player.ammo = 10;
     player.medkits = 0;
     player.ammunition = 20;
     player.direction = 0; // Start-Blickrichtung nach oben
+    player.bulletDamage = 90;
 
-    cout << "=== Steuerung ===" << endl;
-    cout << "W - Nach oben bewegen" << endl;
-    cout << "S - Nach unten bewegen" << endl;
-    cout << "A - Nach links bewegen" << endl;
-    cout << "D - Nach rechts bewegen" << endl;
-    cout << "Leertaste - Schnell nach rechts bewegen" << endl;
-    cout << "Q - Gegner angreifen" << endl;
-    cout << "Pfeiltasten - Blickrichtung ändern" << endl;
+    cout << "=========== Steuerung ============" << endl;
+    cout << "||                             ||" << endl;
+    cout << "|| W - Nach oben bewegen       ||" << endl;
+    cout << "||                             ||" << endl;
+    cout << "||  S - Nach unten bewegen     ||" << endl;
+    cout << "||                             ||" << endl;
+    cout << "||  A - Nach links bewegen     ||" << endl;
+    cout << "||                             ||" << endl;
+    cout << "||  D - Nach rechts bewegen     ||" << endl;
+    cout << "||                              ||" << endl;
+    cout << "||  Leertaste - Sprung          ||" << endl;
+    cout << "||                              ||" << endl;
+    cout << "||  Q - Gegner angreifen        ||" << endl;
+    cout << "||                              ||" << endl;
+    cout << "||  Pfeiltasten - Blickrichtung ||" << endl;
+    cout << "||                              ||" << endl;
+    cout << "==================================" << endl;
     waitForEnter();
 
     int level = 1;
+    bool continuePlaying = true;
 
-    while (level <= 7 && player.health > 0) {
+    while (level <= 7 && player.health > 0 && continuePlaying) {
         cout << "Level " << level << " gestartet!" << endl;
-        bool levelCompleted = playLevel(player, level);
-        if (levelCompleted) {
-            cout << "Level " << level << " erfolgreich abgeschlossen!" << endl;
-            cout << "Möchtest du mit dem nächsten Level fortfahren? (j/n)" << endl;
-            char choice;
-            cin >> choice;
-            if (choice == 'j' || choice == 'J') {
-                level++;
-                player.health = 500;
-                player.ammo = 10;
-                player.medkits = 0;
-                player.ammunition = 20;
-            }
-            else {
-                break;
-            }
-        }
-        else {
-            cout << "Spiel vorbei! Du bist gestorben." << endl;
-            break;
+        continuePlaying = playLevel(player, level);
+        if (continuePlaying) {
+            level++;
+            player.health = 300;
+            player.ammo = 10;
+            player.medkits = 0;
+            player.ammunition = 20;
         }
     }
 

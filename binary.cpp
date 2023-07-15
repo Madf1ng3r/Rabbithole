@@ -31,17 +31,17 @@ void functionToExecute() {
 
 int bimain() {
     const int consoleWidth = 80;
-    const int consoleHeight = 25;
+     const int consoleHeight = 45;
     const int frameDelay = 100;
 
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
-    setConsoleSize(consoleWidth, consoleHeight);
+  setConsoleSize(consoleWidth, consoleHeight);
 
     bool running = true; // Neue Variable, um den Zustand des Programms zu verfolgen
 
     while (running) {
-        CHAR_INFO consoleBuffer[consoleWidth * consoleHeight];
+      CHAR_INFO consoleBuffer[consoleWidth * consoleHeight];
         COORD bufferSize = { static_cast<SHORT>(consoleWidth), static_cast<SHORT>(consoleHeight) };
         COORD bufferCoord = { 0, 0 };
         SMALL_RECT writeRegion = { 0, 0, static_cast<SHORT>(consoleWidth - 1), static_cast<SHORT>(consoleHeight - 1) };
@@ -58,7 +58,7 @@ int bimain() {
         WriteConsoleOutput(consoleHandle, consoleBuffer, bufferSize, bufferCoord, &writeRegion);
 
         sleep(frameDelay);
-     
+
         if (_kbhit()) { // Überprüft, ob eine Taste gedrückt wurde
             char key = _getch(); // Liest die gedrückte Taste ein
             if (key == 27) {
@@ -70,8 +70,8 @@ int bimain() {
         }
 
     }
-    
-    
+
+
 
     return 0;
 }

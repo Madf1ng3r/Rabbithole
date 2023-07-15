@@ -72,6 +72,24 @@
     <ClCompile Include="MrSmith.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="User.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Code.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="HCode.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ZCode.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpdesk.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Digital Clock.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -135,6 +153,21 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="MSmith.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="User.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Code.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Hcode.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Zcode.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpdesk.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

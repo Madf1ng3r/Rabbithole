@@ -1,21 +1,31 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+#include <algorithm>
+#include <random>
 #include "Art.h"
 
+enum ArtZone {
+    Landscape,
+    Foreground,
+    Other
+};
+
 void generateAsciiArt() {
-    // Hier kannst du den Code zur Generierung deines ASCII-Kunstwerks einfügen
-    // Verwende den Zufallszahlengenerator, um die erforderlichen Zeichenfolgen und Farbcodes zu generieren
-    // Du kannst Arrays von ASCII-Zeichen und Farbcodes verwenden, um verschiedene Symbole und Farben auszuwählen
+    std::srand(std::time(0));  // Zufallszahlengenerator initialisieren
 
-    // Beispielcode zur Generierung eines zufälligen ASCII-Kunstwerks mit Farben
-    srand(time(0));  // Zufallszahlengenerator initialisieren
-
-    // Array mit verschiedenen Zeichen für das Kunstwerk
-    const char characters[] = { '@', '#', '$', '%', '&', '*', '^', ' ', '°', ',', '_' };
+    // Arrays mit verschiedenen Zeichen für verschiedene Bereiche des Kunstwerks
+    const std::vector<char> landscapeCharacters = { '.', ':', '"', '^', '~', '-' };
+    const std::vector<char> flowerCharacters = { 'o', '@', '*', '+', '.' };
+    const std::vector<char> houseCharacters = { '#', 'H', 'T', '=', '^', '|' };
+    const std::vector<char> planetCharacters = { 'o', '*', 'x', '.', '^', '@' };
+    const std::vector<char> peopleCharacters = { 'M', 'W', 'V', 'Y', 'X', 'Z' };
+    const std::vector<char> alienCharacters = { 'A', 'E', 'I', 'O', 'U', 'Y' };
+    const std::vector<char> animalCharacters = { 'D', 'C', 'B', 'K', 'L', 'J' };
 
     // Array mit verschiedenen Farbcodes
-    const std::string colors[] = {
+    const std::vector<std::string> colors = {
         "\033[0;31m",  // Rot
         "\033[0;32m",  // Grün
         "\033[0;33m",  // Gelb
@@ -26,31 +36,41 @@ void generateAsciiArt() {
 
     const int artworkSize = 24; // Größe des Kunstwerks
 
+    // Zufällig bestimmen, welche Zone für Landschaft, Vordergrund und andere Elemente verwendet wird
+    std::vector<ArtZone> artZones(artworkSize, Other);
+    std::fill(artZones.begin(), artZones.begin() + artworkSize / 3, Landscape);
+    std::fill(artZones.begin() + artworkSize / 3, artZones.begin() + 2 * artworkSize / 3, Foreground);
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    std::shuffle(artZones.begin(), artZones.end(), rng);
+
     for (int i = 0; i < artworkSize; i++) {
         for (int j = 0; j < artworkSize; j++) {
-            // Generiere eine zufällige Zahl von 0 bis zur Anzahl der Zeichen im Array
-            int randomCharIndex = rand() % (sizeof(characters) / sizeof(char));
+            int randomBackgroundIndex;
+            int randomColorIndex;
 
-            // Generiere eine zufällige Zahl von 0 bis zur Anzahl der Farbcodes im Array
-            int randomColorIndex = rand() % (sizeof(colors) / sizeof(std::string));
-
-            // Wähle ein zufälliges ASCII-Zeichen und Farbcode aus dem Array
-            char asciiChar = characters[randomCharIndex];
-            std::string colorCode = colors[randomColorIndex];
-
-            // Setze den Farbcode für das aktuelle Zeichen
-            std::cout << colorCode << asciiChar;
+            // Setze den Farbcode für das aktuelle Zeichen basierend auf dem Bereich des Kunstwerks
+            switch (artZones[i]) {
+            case Landscape:
+                randomBackgroundIndex = std::rand() % landscapeCharacters.size();
+                randomColorIndex = std::rand() % colors.size();
+                std::cout << colors[randomColorIndex] << landscapeCharacters[randomBackgroundIndex];
+                break;
+            case Foreground:
+                randomBackgroundIndex = std::rand() % flowerCharacters.size();
+                randomColorIndex = std::rand() % colors.size();
+                std::cout << colors[randomColorIndex] << flowerCharacters[randomBackgroundIndex];
+                break;
+            case Other:
+                randomBackgroundIndex = std::rand() % houseCharacters.size();
+                randomColorIndex = std::rand() % colors.size();
+                std::cout << colors[randomColorIndex] << houseCharacters[randomBackgroundIndex];
+                break;
+            }
 
             // Setze den Farbcode zurück auf den Standardwert
             std::cout << "\033[0m";
         }
         std::cout << std::endl;
     }
-}
-
-int artmain() {
-    std::cout << "Ich habe dies für sie gemahlt:";
-    generateAsciiArt();
-
-    return 0;
 }

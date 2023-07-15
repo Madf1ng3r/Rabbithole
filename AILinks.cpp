@@ -3,12 +3,9 @@
 #include <string>
 #include "AILinks.h"
 #include "Openlink.h"
-
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
-
-
 
 int ailinkmain() {
     std::string links[] = {
@@ -22,7 +19,6 @@ int ailinkmain() {
         "https://maketafi.com/",
         "https://wepik.com/ai#rs=menu",
         "https://clipdrop.co/",
-
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
@@ -49,6 +45,5 @@ int ailinkmain() {
             std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
         }
     } while (choice != 0);
-
-    return 0;
+   return 0;
 }

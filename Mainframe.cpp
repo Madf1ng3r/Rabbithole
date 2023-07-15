@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS 
 #include <iostream>     // Eingabe/Ausgabe-Stream-Funktionalität
 #include <string>       // String-Funktionalität
 #include <fstream>      // Datei-Ein-/Ausgabe-Funktionalität
@@ -7,6 +8,7 @@
 #ifdef _WIN32
 #include <windows.h>    // Windows-spezifische Funktionen (z.B. GetSystemMetrics())
 #endif
+#include <lmcons.h>
 #include "Taschenrechner.h"     // Header-Datei für den Taschenrechner
 #include "sinndeslebens.h"      // Header-Datei für das Programm "Sinn des Lebens"
 #include "binary.h"             // Header-Datei für die Binärkonvertierung
@@ -19,6 +21,7 @@
 #include "Gaestebuch.h"         // Header-Datei für das Gästebuch
 #include <vector>               // Vektor-Klasse für dynamische Arrays
 #include "Art.h"                // Header-Datei für die Kunst-Funktionalität
+#include "Helpdesk.h"
 
 #ifdef _WIN32
 void clearScreen()
@@ -32,11 +35,61 @@ void clearScreen()
 }
 #endif
 
+#ifdef _WIN32
+void resetConsoleWindowSize()
+{
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    // Die ursprüngliche Fenstergröße abrufen
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    GetConsoleScreenBufferInfo(consoleHandle, &csbi);
+    COORD originalWindowSize = csbi.dwSize;
+
+    // Die aktuelle Fenstergröße abrufen
+    CONSOLE_SCREEN_BUFFER_INFO currentCsbi;
+    GetConsoleScreenBufferInfo(consoleHandle, &currentCsbi);
+    COORD currentWindowSize = currentCsbi.dwSize;
+
+    // Wenn die aktuelle Fenstergröße von der ursprünglichen Fenstergröße abweicht, das Fenstergröße zurücksetzen
+    if (currentWindowSize.X != originalWindowSize.X || currentWindowSize.Y != originalWindowSize.Y)
+    {
+        SMALL_RECT windowRect;
+        windowRect.Left = 0;
+        windowRect.Top = 0;
+        windowRect.Right = originalWindowSize.X - 1;
+        windowRect.Bottom = originalWindowSize.Y - 1;
+
+        SetConsoleWindowInfo(consoleHandle, TRUE, &windowRect);
+        SetConsoleScreenBufferSize(consoleHandle, originalWindowSize);
+    }
+}
+#elif __APPLE__ || __linux__
+void resetConsoleWindowSize()
+{
+    // Unter macOS und Linux ist keine Anpassung der Fenstergröße erforderlich
+}
+#endif
+
+
+//std::string getCurrentUsername() {
+//    char username[UNLEN + 1];
+//    DWORD usernameLen = UNLEN + 1;
+//
+//    if (GetUserNameA(username, &usernameLen)) {
+//        return std::string(username);
+//    }
+//    else {
+//        return "Fehler beim Abrufen des Benutzernamens.";
+//    }
+//}
+
 void showMenu()
 {
+//std::cout << "Hallo" << getCurrentUsername();
     // ASCII-Kunst anzeigen
     std::cout << "\033[32m"; // Farbcode für grünen Text
     std::cout << R"(
+
      _________
     / ======= \
    / __________\
@@ -49,24 +102,25 @@ void showMenu()
  / ::::::::::::: \                  =D-'
 (_________________)
 
- )" << std::endl;
+ )";
     std::cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
 
     // Menüoptionen anzeigen
     std::cout << "-----------------------" << std::endl;
     std::cout << "Hauptmenue" << std::endl;
     std::cout << "-----------------------" << std::endl;
-    std::cout << "1. Art" << std::endl;
-    std::cout << "2. OpenAI alpha " << std::endl;
-    std::cout << "3. Taschenrechner" << std::endl;
-    std::cout << "4. Sinn des Lebens" << std::endl;
-    std::cout << "5. Readme" << std::endl;
-    std::cout << "6. Gästebuch" << std::endl;
-    std::cout << "7. Links" << std::endl;
-    std::cout << "8. Pong" << std::endl;
-    std::cout << "9. Snake" << std::endl;
+    std::cout << "1.  Art" << std::endl;
+    std::cout << "2.  OpenAI alpha " << std::endl;
+    std::cout << "3.  Taschenrechner" << std::endl;
+    std::cout << "4.  Sinn des Lebens" << std::endl;
+    std::cout << "5.  Readme" << std::endl;
+    std::cout << "6.  Gästebuch" << std::endl;
+    std::cout << "7.  Links" << std::endl;
+    std::cout << "8.  Pong" << std::endl;
+    std::cout << "9.  Snake" << std::endl;
     std::cout << "10. Matrix " << std::endl;
     std::cout << "11. der Erzähler" << std::endl;
+    std::cout << "12. C++ Code" << std::endl;
     std::cout << "0. Beenden" << std::endl;
     std::cout << "-----------------------" << std::endl;
 }
@@ -136,8 +190,23 @@ void animateTransition()
 
         frameIndex = (frameIndex + 1) % animationFrames.length(); // Index für das nächste Animationssymbol aktualisieren
     }
+}
 
-    std::cout << std::endl;
+void printDigitalClock()
+{
+    std::time_t currentTime = std::time(nullptr);
+    std::tm* localTime = std::localtime(&currentTime);
+    std::string timeString = std::to_string(localTime->tm_hour) + ":" +
+        std::to_string(localTime->tm_min);
+#ifdef _WIN32
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+    int consoleWidth = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+#else
+    int consoleWidth = 80; // Standardbreite für nicht-Windows-Systeme
+#endif
+    int timePadding = consoleWidth - timeString.length() - 2; // 2 für Leerzeichen
+    std::cout << std::string(timePadding, ' ') << timeString << std::endl;
 }
 
 int main()   // Hauptfunktion von Rabbithole
@@ -151,16 +220,29 @@ int main()   // Hauptfunktion von Rabbithole
     while (running)
     {
         clearScreen();
+        resetConsoleWindowSize();
         showMenu();
+
+        std::thread clockThread([]() {
+            while (true) {
+                clearScreen();
+                showMenu();
+                printDigitalClock();
+                std::this_thread::sleep_for(std::chrono::minutes(1)); // Alle 1 Minute aktualisieren
+            }
+            });
+
         std::cout << "Wählen Sie eine Option: ";
         if (!(std::cin >> choice))
         {
-            std::cin.clear(); // Fehlerflags löschen
-            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n'); // Ungültige Eingabe verwerfen
-            std::cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // 2 Sekunden warten
+            std::cin.clear();
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+            std::cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << std::endl;
+            std::this_thread::sleep_for(std::chrono::seconds(2));
             continue;
         }
+
+        clockThread.detach();
 
         switch (choice)
         {
@@ -219,6 +301,11 @@ int main()   // Hauptfunktion von Rabbithole
             animateTransition();
             clearScreen();
             geschmain(); // Eine Funktion aus Geschichte.cpp aufrufen
+            break;
+        case 12:
+            animateTransition();
+            clearScreen();
+            helpmain();
             break;
         case 0:
             running = false;
