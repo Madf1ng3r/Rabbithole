@@ -30,22 +30,17 @@ void functionToExecute() {
 }
 
 int bimain() {
-    const int consoleWidth = 80;
-     const int consoleHeight = 45;
+    const int consoleWidth = 120;
+    const int consoleHeight = 30;
     const int frameDelay = 100;
-
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
-
-  setConsoleSize(consoleWidth, consoleHeight);
-
+    setConsoleSize(consoleWidth, consoleHeight);
     bool running = true; // Neue Variable, um den Zustand des Programms zu verfolgen
-
     while (running) {
-      CHAR_INFO consoleBuffer[consoleWidth * consoleHeight];
+        CHAR_INFO consoleBuffer[consoleWidth * consoleHeight];
         COORD bufferSize = { static_cast<SHORT>(consoleWidth), static_cast<SHORT>(consoleHeight) };
         COORD bufferCoord = { 0, 0 };
         SMALL_RECT writeRegion = { 0, 0, static_cast<SHORT>(consoleWidth - 1), static_cast<SHORT>(consoleHeight - 1) };
-
         for (int y = 0; y < consoleHeight; ++y) {
             for (int x = 0; x < consoleWidth; ++x) {
                 CHAR_INFO& consoleCell = consoleBuffer[y * consoleWidth + x];
@@ -53,7 +48,6 @@ int bimain() {
                 consoleCell.Attributes = FOREGROUND_GREEN;
             }
         }
-
         HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
         WriteConsoleOutput(consoleHandle, consoleBuffer, bufferSize, bufferCoord, &writeRegion);
 
@@ -68,10 +62,6 @@ int bimain() {
                 functionToExecute(); // Führt die andere Funktion aus, wenn die Enter-Taste gedrückt wurde
             }
         }
-
     }
-
-
-
     return 0;
 }

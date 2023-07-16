@@ -130,10 +130,12 @@
   <ItemGroup>
     <ClCompile Include="AILinks.cpp" />
     <ClCompile Include="Art.cpp" />
+    <ClCompile Include="BeispielCode.cpp" />
     <ClCompile Include="binary.cpp" />
     <ClCompile Include="Caesar.cpp" />
     <ClCompile Include="Code.cpp" />
     <ClCompile Include="Digital Clock.cpp" />
+    <ClCompile Include="Games.cpp" />
     <ClCompile Include="Geschichte.cpp" />
     <ClCompile Include="HCode.cpp" />
     <ClCompile Include="Helpdesk.cpp" />
@@ -157,11 +159,13 @@
   <ItemGroup>
     <ClInclude Include="AILinks.h" />
     <ClInclude Include="Art.h" />
+    <ClInclude Include="BeispielCode.h" />
     <ClInclude Include="binary.h" />
     <ClInclude Include="caesar.h" />
     <ClInclude Include="Code.h" />
     <ClInclude Include="curl.h" />
     <ClInclude Include="Gaestebuch.h" />
+    <ClInclude Include="Games.h" />
     <ClInclude Include="Geschichte.h" />
     <ClInclude Include="Hcode.h" />
     <ClInclude Include="Helpdesk.h" />

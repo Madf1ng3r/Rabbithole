@@ -6,71 +6,167 @@
 #include <random>
 #include "Art.h"
 
-enum ArtZone {
-    Landscape,
-    Foreground,
-    Other
+enum ArtType {
+    LandscapeArt,
+    AlienArt,
+    SpaceshipArt
 };
 
-void generateAsciiArt() {
+void generateAsciiArt(ArtType artType) {
     std::srand(std::time(0));  // Zufallszahlengenerator initialisieren
 
-    // Arrays mit verschiedenen Zeichen für verschiedene Bereiche des Kunstwerks
-    const std::vector<char> landscapeCharacters = { '.', ':', '"', '^', '~', '-' };
-    const std::vector<char> flowerCharacters = { 'o', '@', '*', '+', '.' };
-    const std::vector<char> houseCharacters = { '#', 'H', 'T', '=', '^', '|' };
-    const std::vector<char> planetCharacters = { 'o', '*', 'x', '.', '^', '@' };
-    const std::vector<char> peopleCharacters = { 'M', 'W', 'V', 'Y', 'X', 'Z' };
-    const std::vector<char> alienCharacters = { 'A', 'E', 'I', 'O', 'U', 'Y' };
-    const std::vector<char> animalCharacters = { 'D', 'C', 'B', 'K', 'L', 'J' };
+    // Arrays mit verschiedenen Zeichen für verschiedene Arten von Kunstwerken
+    std::vector<std::vector<char>> artCharacters;
+    artCharacters.push_back({ '.', ':', '"', '^', '~', '-' });                     // Landschaft
+    artCharacters.push_back({ 'A', 'E', 'I', 'O', 'U', 'Y' });                       // Alien
+    artCharacters.push_back({ '/', '|', '\\', '_', '#', '@', '+', '*', '<', '>' }); // Raumschiff
 
-    // Array mit verschiedenen Farbcodes
-    const std::vector<std::string> colors = {
+    // Arrays mit verschiedenen Farbcodes für jede Art von Kunstwerk
+    std::vector<std::vector<std::string>> artColors;
+    artColors.push_back({
         "\033[0;31m",  // Rot
         "\033[0;32m",  // Grün
         "\033[0;33m",  // Gelb
         "\033[0;34m",  // Blau
         "\033[0;35m",  // Magenta
         "\033[0;36m"   // Cyan
-    };
+        }); // Landschaft
+    artColors.push_back({
+        "\033[0;31m",  // Rot
+        "\033[0;32m",  // Grün
+        "\033[0;33m",  // Gelb
+        "\033[0;34m",  // Blau
+        "\033[0;35m",  // Magenta
+        "\033[0;36m"   // Cyan
+        }); // Alien
+    artColors.push_back({
+        "\033[0;31m",  // Rot
+        "\033[0;32m",  // Grün
+        "\033[0;33m",  // Gelb
+        "\033[0;34m",  // Blau
+        "\033[0;35m",  // Magenta
+        "\033[0;36m"   // Cyan
+        }); // Raumschiff
 
     const int artworkSize = 24; // Größe des Kunstwerks
 
-    // Zufällig bestimmen, welche Zone für Landschaft, Vordergrund und andere Elemente verwendet wird
-    std::vector<ArtZone> artZones(artworkSize, Other);
-    std::fill(artZones.begin(), artZones.begin() + artworkSize / 3, Landscape);
-    std::fill(artZones.begin() + artworkSize / 3, artZones.begin() + 2 * artworkSize / 3, Foreground);
-    std::random_device rd;
-    std::mt19937 rng(rd());
-    std::shuffle(artZones.begin(), artZones.end(), rng);
+    switch (artType) {
+    case LandscapeArt: {
+        int randomCharacterIndex = std::rand() % artCharacters[artType].size();
+        int randomColorIndex = std::rand() % artColors[artType].size();
+        char landscapeCharacter = artCharacters[artType][randomCharacterIndex];
+        std::string colorCode = artColors[artType][randomColorIndex];
 
-    for (int i = 0; i < artworkSize; i++) {
-        for (int j = 0; j < artworkSize; j++) {
-            int randomBackgroundIndex;
-            int randomColorIndex;
-
-            // Setze den Farbcode für das aktuelle Zeichen basierend auf dem Bereich des Kunstwerks
-            switch (artZones[i]) {
-            case Landscape:
-                randomBackgroundIndex = std::rand() % landscapeCharacters.size();
-                randomColorIndex = std::rand() % colors.size();
-                std::cout << colors[randomColorIndex] << landscapeCharacters[randomBackgroundIndex];
-                break;
-            case Foreground:
-                randomBackgroundIndex = std::rand() % flowerCharacters.size();
-                randomColorIndex = std::rand() % colors.size();
-                std::cout << colors[randomColorIndex] << flowerCharacters[randomBackgroundIndex];
-                break;
-            case Other:
-                randomBackgroundIndex = std::rand() % houseCharacters.size();
-                randomColorIndex = std::rand() % colors.size();
-                std::cout << colors[randomColorIndex] << houseCharacters[randomBackgroundIndex];
-                break;
+        for (int i = 0; i < artworkSize; i++) {
+            for (int j = 0; j < artworkSize; j++) {
+                int randomColorIndex = std::rand() % artColors[artType].size();
+                std::string currentColorCode = artColors[artType][randomColorIndex];
+                if (std::rand() % 5 == 0) {
+                    int randomCharacterIndex = std::rand() % artCharacters[artType].size();
+                    char structureCharacter = artCharacters[artType][randomCharacterIndex];
+                    std::cout << currentColorCode << structureCharacter;
+                }
+                else {
+                    std::cout << colorCode << landscapeCharacter;
+                }
             }
-
-            // Setze den Farbcode zurück auf den Standardwert
-            std::cout << "\033[0m";
+            std::cout << "\033[0m" << std::endl;
         }
-        std::cout << std::endl;
+        break;
     }
+    case AlienArt: {
+        int randomColorIndex = std::rand() % artColors[artType].size();
+        std::string colorCode = artColors[artType][randomColorIndex];
+
+        for (int i = 0; i < artworkSize; i++) {
+            for (int j = 0; j < artworkSize; j++) {
+                int randomCharacterIndex = std::rand() % artCharacters[artType].size();
+                char alienCharacter = artCharacters[artType][randomCharacterIndex];
+                std::cout << colorCode << alienCharacter;
+            }
+            std::cout << "\033[0m" << std::endl;
+        }
+        break;
+    }
+    case SpaceshipArt: {
+        int randomColorIndex = std::rand() % artColors[artType].size();
+        std::string colorCode = artColors[artType][randomColorIndex];
+
+        for (int i = 0; i < artworkSize; i++) {
+            for (int j = 0; j < artworkSize; j++) {
+                if (std::rand() % 5 == 0) {
+                    int randomCharacterIndex = std::rand() % artCharacters[artType].size();
+                    char spaceshipCharacter = artCharacters[artType][randomCharacterIndex];
+                    std::cout << colorCode << spaceshipCharacter;
+                }
+                else {
+                    int randomColorIndex = std::rand() % artColors[artType].size();
+                    std::string currentColorCode = artColors[artType][randomColorIndex];
+                    std::cout << currentColorCode << ' ';
+                }
+            }
+            std::cout << "\033[0m" << std::endl;
+        }
+        break;
+    }
+    default:
+        std::cout << "Ungültige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << std::endl;
+        generateAsciiArt(LandscapeArt);
+        break;
+    }
+}
+
+int artmain() {
+    int choice;
+    std::cout << "\033[1;32m"; // Setzt die Farbe auf hellgrün
+    std::cout << R"(
+
+
+
+
+
+
+
+
+  
+                                                     -''--.
+                                                   _`>   `\.-'<
+                                                _.'     _     '._
+                                               .'   _.='   '=._   '.
+                                               >_   / /_\ /_\ \   _<
+                                                 / (  \o/\\o/  ) \
+                                                 >._\ .-,_)-. /_.<
+                                                     /__/ \__\ 
+                                                       '---'    
+
+
+
+)";
+    std::cout << "\033[0m"; // Setzt die Farbe zurück auf den Standardwert
+    std::cout << "                                              Was darf ich für sie Malen?" << std::endl;
+    std::cout << "                                                1. Landschaft" << std::endl;
+    std::cout << "                                                2. Alien" << std::endl;
+    std::cout << "                                                3. Raumschiff" << std::endl;
+    std::cin >> choice;
+
+    ArtType artType;
+    switch (choice) {
+    case 1:
+        artType = LandscapeArt;
+        break;
+    case 2:
+        artType = AlienArt;
+        break;
+    case 3:
+        artType = SpaceshipArt;
+        break;
+    default:
+        std::cout << "Ungültige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << std::endl;
+        artType = LandscapeArt;
+        break;
+    }
+
+    generateAsciiArt(artType);
+
+    return 0;
 }

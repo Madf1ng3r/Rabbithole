@@ -5,65 +5,50 @@ int zcmain()
 {
 	cout << R"(
 _____________________________________________________________________________
-
 Hier ist eine Liste mit verschiedenen Syntaxzeichen in C++ und ihrer Bedeutung sowie ihrem Verwendungszweck:
 iese Liste enthält verschiedene Syntaxzeichen in C++, die in unterschiedlichen Kontexten verwendet werden, 
 um die Bedeutung und Struktur des Codes zu definieren. 
 Es ist wichtig, die richtige Verwendung dieser Zeichen zu beachten, 
 um Syntaxfehler zu vermeiden und den Code korrekt zu gestalten.
-
 _____________________________________________________________________________
-
-; (Semikolon):
+; (Semikolon)
    - Bedeutung: Das Semikolon wird verwendet, um Anweisungen in C++ zu beenden. Jede Anweisung muss mit einem Semikolon abgeschlossen werden.
-   - Beispiel: `int x = 5;`
+   - Beispiel: int x = 5;
 _____________________________________________________________________________
-
-{ } (geschweifte Klammern):
+{ } (geschweifte Klammern)
    - Bedeutung: Geschweifte Klammern werden verwendet, um Blöcke von Code zu gruppieren. Sie definieren den Anfang und das Ende eines Codeblocks.
    - Beispiel:
-     ```cpp
      for (int i = 0; i < 5; i++) {
          // Code innerhalb des Blocks
      }
-     ```
 _____________________________________________________________________________
-
-() (runde Klammern):
+() (runde Klammern)
    - Bedeutung: Runde Klammern werden in verschiedenen Kontexten verwendet, 
 z. B. bei Funktionsaufrufen, Funktionsdeklarationen, Bedingungen usw.
-   - Beispiel: `int sum = add(3, 5);`
+   - Beispiel: int sum = add(3, 5);
 _____________________________________________________________________________
-
-[] (eckige Klammern):
+[] (eckige Klammern)
    - Bedeutung: Eckige Klammern werden verwendet, um Arrays zu deklarieren 
 und auf Elemente in einem Array oder Vektor zuzugreifen.
    - Beispiel:
-     ```cpp
      int numbers[5]; // Array-Deklaration
      int x = numbers[2]; // Zugriff auf das dritte Element des Arrays
-     ```
 _____________________________________________________________________________
-
-.  (Punkt):
+.  (Punkt)
    - Bedeutung: Der Punkt wird verwendet, um auf Member einer Klasse oder Struktur zuzugreifen.
-   - Beispiel: `person.name = "John";`
+   - Beispiel: person.name = "John";
 _____________________________________________________________________________
-
--> (Pfeil):
+-> (Pfeil)
    - Bedeutung: Der Pfeil wird verwendet, um auf Member eines Zeigers auf eine Klasse oder Struktur zuzugreifen.
-   - Beispiel: `personPtr->name = "John";`
+   - Beispiel: personPtr->name = "John";
 _____________________________________________________________________________
-
-: (Doppelpunkt):
+: (Doppelpunkt)
    - Bedeutung: Der Doppelpunkt hat verschiedene Verwendungszwecke, z. B. bei der Definition von Klassen, 
 Strukturen, Switch-Case-Anweisungen und bei der Vererbung in der Objektorientierten Programmierung.
    - Beispiel:
-     ```cpp
      class MyClass {
          // Klassenmember und -funktionen
      };
-     
      switch (x) {
          case 1:
              // Code für Fall 1
@@ -74,103 +59,84 @@ Strukturen, Switch-Case-Anweisungen und bei der Vererbung in der Objektorientier
          default:
              // Code für alle anderen Fälle
      }
-     ```
 _____________________________________________________________________________
-
-// (Doppelte Schrägstriche):
+// (Doppelte Schrägstriche)
    - Bedeutung: Doppelte Schrägstriche werden verwendet, um Einzeilige Kommentare zu kennzeichnen. 
 Der Text nach den doppelten Schrägstrichen wird von der Compiler ignoriert.
-   - Beispiel: `// Dies ist ein Kommentar`
+   - Beispiel: // Dies ist ein Kommentar
 _____________________________________________________________________________
-
-/* */ (Schrägstrichsternchen):
+/* */ (Schrägstrichsternchen)
    - Bedeutung: Schrägstrichsternchen wird verwendet, um mehrzeilige Kommentare zu kennzeichnen. 
 Der Text zwischen `/*` und `*/` wird von der Compiler ignoriert.
    - Beispiel:
-     ```cpp
      /*
      Dies ist ein mehrzeiliger Kommentar
      */
-     ```
 _____________________________________________________________________________
-
-" (Doppelte Anführungszeichen):
+" (Doppelte Anführungszeichen)
     - Bedeutung: Doppelte Anführungszeichen werden verwendet, um Zeichenketten (Strings) zu kennzeichnen.
-    - Beispiel: `std::string name = "John";`
+    - Beispiel: std::string name = "John";
 _____________________________________________________________________________
-
-' (Einfache Anführungszeichen):
+' (Einfache Anführungszeichen)
     - Bedeutung: Einfache Anführungszeichen werden verwendet, um einzelne Zeichen zu kennzeichnen.
-    - Beispiel: `char ch = 'A';
+    - Beispiel: char ch = 'A';
 _____________________________________________________________________________
-
-# (Rautenzeichen):
+# (Rautenzeichen)
    - Bedeutung: Das Rautenzeichen wird in Direktiven des Preprocessors verwendet, 
 um Anweisungen für den Preprocessor zu kennzeichnen.
-   - Beispiel: `#include <iostream>`
+   - Beispiel: #include <iostream>
 _____________________________________________________________________________
-* (Sternchen):
+* (Sternchen)
    - Bedeutung: Das Sternchen wird in verschiedenen Kontexten verwendet, 
 z. B. zur Deklaration von Zeigern, zur Multiplikation oder zur Dereferenzierung von Zeigern.
-   - Beispiele: `int* ptr;`, `int result = a * b;`, `int value = *ptr;`
+   - Beispiele: int* ptr; , int result = a * b; , int value = *ptr;
 _____________________________________________________________________________
-
-& (Ampersand):
+& (Ampersand)
    - Bedeutung: Das Ampersand wird in verschiedenen Kontexten verwendet, 
 z. B. zur Deklaration von Referenzen, zum Erstellen von Verweisen oder als logischer AND-Operator.
-   - Beispiele: `int& ref = variable;`, `int& getReference();`, `bool result = a && b;`
+   - Beispiele: int& ref = variable; , int& getReference(); , bool result = a && b;
 _____________________________________________________________________________
-
-, (Komma):
+, (Komma)
    - Bedeutung: Das Komma wird in verschiedenen Kontexten verwendet, 
 z. B. zur Trennung von Argumenten in Funktionsaufrufen oder als Operator für die Komma-Sequenz-Auswertung.
-   - Beispiele: `function(a, b);`, `int a = 1, b = 2, c = 3;`, `int result = (a = 1, b = 2, a + b);`
+   - Beispiele:  function(a, b); , int a = 1, b = 2, c = 3; , int result = (a = 1, b = 2, a + b);
 _____________________________________________________________________________
-
-+ (Plus):
++ (Plus)
    - Bedeutung: Das Pluszeichen wird als Operator für die Addition oder als Vorzeichenoperator verwendet.
-   - Beispiele: `int result = a + b;`, `int value = +5;`
+   - Beispiele: int result = a + b; , int value = +5;
 _____________________________________________________________________________
-
-- (Minus):
+- (Minus)
    - Bedeutung: Das Minuszeichen wird als Operator für die Subtraktion oder als Vorzeichenoperator verwendet.
-   - Beispiele: `int result = a - b;`, `int value = -5;`
+   - Beispiele: int result = a - b; , int value = -5;
 _____________________________________________________________________________
-
-/ (Schrägstrich):
+/ (Schrägstrich)
    - Bedeutung: Der Schrägstrich wird als Operator für die Division verwendet.
-   - Beispiel: `double result = a / b;`
+   - Beispiel: double result = a / b;
 _____________________________________________________________________________
-
-% (Prozentzeichen):
+% (Prozentzeichen)
    - Bedeutung: Das Prozentzeichen wird als Operator für den Modulo (Restwert) verwendet.
-   - Beispiel: `int result = a % b;`
+   - Beispiel: int result = a % b;
 _____________________________________________________________________________
-
-= (Gleichheitszeichen):
+= (Gleichheitszeichen)
    - Bedeutung: Das Gleichheitszeichen wird verwendet, um Variablen Werte zuzuweisen oder Vergleichsoperationen durchzuführen.
-   - Beispiele: `int a = 5;`, `bool isEqual = (a == b);`
+   - Beispiele: int a = 5; , bool isEqual = (a == b);
 _____________________________________________________________________________
-
-== (Doppeltes Gleichheitszeichen):
+== (Doppeltes Gleichheitszeichen)
     - Bedeutung: Das doppelte Gleichheitszeichen wird als Vergleichsoperator für die Gleichheit verwendet.
-    - Beispiel: `bool isEqual = (a == b);`
+    - Beispiel: bool isEqual = (a == b);
 _____________________________________________________________________________
-
-!= (Ungleichheitszeichen):
+!= (Ungleichheitszeichen)
     - Bedeutung: Das Ungleichheitszeichen wird als Vergleichsoperator für die Ungleichheit verwendet.
-    - Beispiel: `bool isNotEqual = (a != b);`
+    - Beispiel: bool isNotEqual = (a != b);
 _____________________________________________________________________________
-
-< (Kleiner als):
+< (Kleiner als)
     - Bedeutung: Der Kleiner-als-Operator vergleicht, ob ein Wert kleiner ist als ein anderer Wert.
-    - Beispiel: `bool isSmaller = (a < b);`
+    - Beispiel: bool isSmaller = (a < b);
 _____________________________________________________________________________
-> (Größer als):
+> (Größer als)
     - Bedeutung: Der Größer-als-Operator vergleicht, ob ein Wert größer ist als ein anderer Wert.
-    - Beispiel: `bool isGreater = (a > b);`
+    - Beispiel: bool isGreater = (a > b);
 _____________________________________________________________________________
-
 )";
 
 

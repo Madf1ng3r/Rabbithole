@@ -66,7 +66,6 @@ string calculatePi()
     string piStr = to_string(acos(-1));
     return piStr.substr(0, piStr.find('.') + 101);
 }
-
 void printMenu()
 {
     cout << "\033[32m"; // Grüne Textfarbe
@@ -84,21 +83,21 @@ void printMenu()
     cout << "| | . | 0 | = | | / | |" << endl;
     cout << "| |___|___|___| |___| |" << endl;
     cout << "\033[0m"; //Zurücksetzen der Textfarbe
-    cout << "--------------------------------------" << endl;
-    cout << "|             Optionen:              |" << endl;
-    cout << "| 1. Addition                        |" << endl;
-    cout << "| 2. Subtraktion                     |" << endl;
-    cout << "| 3. Multiplikation                  |" << endl;
-    cout << "| 4. Division                        |" << endl;
-    cout << "| 5. Potenzierung                    |" << endl;
-    cout << "| 6. Quadratwurzel                   |" << endl;
-    cout << "| 7. Fakultät                        |" << endl;
-    cout << "| 8. Zahl Pi                         |" << endl;
-    cout << "| 9. Volumen eines Kreises           |" << endl;
-    cout << "| 10. Fläche eines Kreises           |" << endl;
-    cout << "| 11. Umfang eines Kreises           |" << endl;
-    cout << "| 0. zurück zum Menue                |" << endl;
-    cout << "--------------------------------------" << endl;
+    cout << "                                           --------------------------------------" << endl;
+    cout << "                                           |             Optionen:               |" << endl;
+    cout << "                                           |  1. Addition                        |" << endl;
+    cout << "                                           |  2. Subtraktion                     |" << endl;
+    cout << "                                           |  3. Multiplikation                  |" << endl;
+    cout << "                                           |  4. Division                        |" << endl;
+    cout << "                                           |  5. Potenzierung                    |" << endl;
+    cout << "                                           |  6. Quadratwurzel                   |" << endl;
+    cout << "                                           |  7. Fakultät                        |" << endl;
+    cout << "                                           |  8. Zahl Pi                         |" << endl;
+    cout << "                                           |  9. Volumen eines Kreises           |" << endl;
+    cout << "                                           |  10. Fläche eines Kreises           |" << endl;
+    cout << "                                           |  11. Umfang eines Kreises           |" << endl;
+    cout << "                                           |  0. zurück zum Menue                |" << endl;
+    cout << "                                            --------------------------------------" << endl;
 }
 
 void changeConsoleColor(int colorCode)

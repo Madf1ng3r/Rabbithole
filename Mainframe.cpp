@@ -12,14 +12,13 @@
 #include "Taschenrechner.h"     // Header-Datei für den Taschenrechner
 #include "sinndeslebens.h"      // Header-Datei für das Programm "Sinn des Lebens"
 #include "binary.h"             // Header-Datei für die Binärkonvertierung
-#include "Snake.h"              // Header-Datei für das Snake-Spiel
 #include "Links.h"              // Header-Datei für das Link-Programm
 #include "readme.h"             // Header-Datei für das Readme-Programm
 #include "Geschichte.h"         // Header-Datei für das Geschichte-Programm
-#include "pong.h"               // Header-Datei für das Pong-Spiel
 #include "Witzbold.h"           // Header-Datei für den Witzbold
 #include "Gaestebuch.h"         // Header-Datei für das Gästebuch
 #include <vector>               // Vektor-Klasse für dynamische Arrays
+#include "Games.h"
 #include "Art.h"                // Header-Datei für die Kunst-Funktionalität
 #include "Helpdesk.h"
 
@@ -90,25 +89,25 @@ void showMenu()
     std::cout << "\033[32m"; // Farbcode für grünen Text
     // Menüoptionen anzeigen
     std::cout << "        ______       _                      ________________________________________________________                   " << std::endl;
-    std::cout << "       |  ____|     | |                    / _____________________________________________________  )                 " << std::endl;
-    std::cout << "       | |__   _ __ | |_ ___ _ ___        /                                                          ]                " << std::endl;
-    std::cout << "       |  __| | '_ \ | __/ _ )| '__|      /  _______________________________________________________   |             " << std::endl;
+    std::cout << "       |  ____|     | |                    / _____________________________________________________  )                  " << std::endl;
+    std::cout << "       | |__   _ __ | |_ ___ _ ____       /                                                          ]                 " << std::endl;
+    std::cout << "       |  __| | '_  ) |__/ _ )|'__|      /  ________________________________________________________  |                " << std::endl;
     std::cout << "       | |____| | | | | |  _/| |         |  |   1.  Art                                             |  |               " << std::endl;
-    std::cout << "       |______|_| |_|_|_|____|_|         |  |   2.  OpenAI alpha                                    |  |               " << std::endl;
+    std::cout << "       |______|_| |_|_|_|____|_|         |  |   2.  C++ Code                                        |  |               " << std::endl;
     std::cout << "                                         |  |   3.  Taschenrechner                                  |  |               " << std::endl;
     std::cout << "               _   _                     |  |   4.  Sinn des Lebens                                 |  |               " << std::endl;
     std::cout << "              | | | |                    |  |   5.  Readme                                          |  |               " << std::endl;
     std::cout << "              | |_| |__   ___            |  |   6.  Gästebuch                                       |  |               " << std::endl;
-    std::cout << "              | __| '_  )/ _ )           |  |   7.  Links                                           |  |             " << std::endl;
-    std::cout << "              | |_| | | | __/            |  |   8.  Pong                                            |  |               " << std::endl;
-    std::cout << "              (___|_| |_|\__|             |  |   9.  Snake                                           |  |              " << std::endl;
-    std::cout << "                                         |  |  10. Matrix                                           |  |               " << std::endl;
-    std::cout << "    __  __       _        _              |  |  11. der Erzähler                                     |  |               " << std::endl;
-    std::cout << "    |  \/  |     | |      (_)             |  |  12. C++ Code                                         |  |              " << std::endl;
-    std::cout << "    | \  / | __ _| |_ _ __ _ _  __        |  |   0. Beenden                                          |  |              " << std::endl;
-    std::cout << "    | |\/| |/ _` | __| '__| |\  )/ /       |  --------------------------------------------------------|  |            " << std::endl;
-    std::cout << "    | | | | (_| | |_| |  | | > <         |__________________________________________________________| /                " << std::endl;
-    std::cout << "    |_| |_|(__,_|\___|_|  |_/_/]_[          (_________________________________________________________/              " << std::endl;
+    std::cout << "              | __| '_  )/ _ )           |  |   7.  Links                                           |  |               " << std::endl;
+    std::cout << "              | |_| | | |  _/            |  |   8.  Spiele                                          |  |               " << std::endl;
+    std::cout << "              (___|_| |_|(__|            |  |   9. Matrix                                           |  |               " << std::endl;
+    std::cout << "                                         |  |  10. Geschichte                                       |  |               " << std::endl;
+    std::cout << "     __  __       _        _             |  |   0. Beenden                                          |  |               " << std::endl;
+    std::cout << "     |  \/  |     | |      (_)            |  |                                                       |  |              " << std::endl;
+    std::cout << "     | \  / | __ _| |_ _ __ _  _ __       |  |                                                       |  |              " << std::endl;
+    std::cout << "     | |\/| |/ _` | __| '__| |\  )/ /      |  --------------------------------------------------------|  |             " << std::endl;
+    std::cout << "     | | | | (_| | |_| |  | |  ><        |__________________________________________________________| /                " << std::endl;
+    std::cout << "     |_| |_|(__,_|(__|_|  |_/_/]_[         (_________________________________________________________/                " << std::endl;
     std::cout << "                                         ______/                 [___________]                                         " << std::endl;
     std::cout << "                                        /                                                                              " << std::endl;
     std::cout << "                                       (__________________________________________________________________             " << std::endl;
@@ -243,17 +242,17 @@ int main()   // Hauptfunktion von Rabbithole
         case 1:
             animateTransition();
             clearScreen();
-            artmain(); // Eine Funktion aufrufen, um ASCII-Kunst zu generieren
+            artmain(); // Random ASCII Art
             break;
         case 2:
             animateTransition();
             clearScreen();
-            executeFile("Witzbold.cpp"); // Ruft Code der Datei auf
+            helpmain();  // c++ Codes mit Erklärungen und Beispiele dazu
             break;
         case 3:
             animateTransition();
             clearScreen();
-            taschenrechnerRunning = true;
+            taschenrechnerRunning = true;   // Taschenrechner
             break;
         case 4:
             animateTransition();
@@ -279,28 +278,22 @@ int main()   // Hauptfunktion von Rabbithole
         case 8:
             animateTransition();
             clearScreen();
-            pongmain(); // Pong Spiel
+            gamemain(); // Pong + Snake Spiel
             break;
         case 9:
             animateTransition();
             clearScreen();
-            snakemain(); // Snake Spiel
+            bimain(); // Matrix
             break;
         case 10:
             animateTransition();
             clearScreen();
-            bimain(); // Die Matrix betreten
-            resetConsoleWindowSize();
+            geschmain(); // Random Geschichte erzählen
             break;
         case 11:
             animateTransition();
             clearScreen();
-            geschmain(); // Erzähler aufrufen
-            break;
-        case 12:
-            animateTransition();
-            clearScreen();
-            helpmain();
+            executeFile("Witzbold.cpp");  // Witz API noch in Bearbeitung
             break;
         case 0:
             running = false;

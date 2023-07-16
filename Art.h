@@ -2,7 +2,7 @@
 #ifndef ART_H
 #define ART_H
 
-void generateAsciiArt();
+int artmain();
 
 #endif
 

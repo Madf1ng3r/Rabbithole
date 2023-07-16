@@ -135,31 +135,31 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
 }
 
 int geschmain() {
-    cout << "Willkommen Fremder!" << endl;
-    cout << "\033[32m";
+    cout << endl << endl << endl << "                                               Willkommen Fremder!" << endl;
+    cout << "\033[32m";  //Grün
     cout <<  R"(
-                     ______
-                   <((((((\\\
-                   /      . }\
-                   ;--..--._|}
-(\ ______          '--/\--'  )
- \\ ~~~~ \         | '-'  :'|
-  \\ ~~~~ \        . -==- .-|
-   \\ ~~~~ \        \.__.'   \--._
-   [\\ _____\  __.--|       //  _/'--.
-   \ \\       .'-._ ('-----'/ __/      \
-    \ \\     /   __>|      | '--.       |
-     \ \\   |   \   |     /    /       /
-      \ '\ /     \  |     |  _/       /
-       \  \       \ |     | /        /
-        \  \      \        /  
+                                                        ______
+                                                      <((((((\\\
+                                                      /      . }\
+                                                      ;--..--._|}
+                                   (\ ______          '--/\--'  )
+                                    \\ ~~~~ \         | '-'  :'|
+                                     \\ ~~~~ \        . -==- .-|
+                                      \\ ~~~~ \        \.__.'   \--._
+                                      [\\ _____\  __.--|       //  _/'--.
+                                      \ \\       .'-._ ('-----'/ __/      \
+                                       \ \\     /    __>|      | '--.       |
+                                        \ \\   |    \   |     /    /       /
+                                         \ '\ /  /'  \  |     |  _/       /
+                                          \__\__/     \ |     | /        /
+                                                      \  \      \        /  
 )";
     cout << "\033[0m";
-    cout << "Welche Art von Geschichte soll ich dir erzählen?" << endl;
-    cout << "1. eine Lustige Geschichte" << endl;
-    cout << "2. eine Traurige Geschichte" << endl;
-    cout << "3. eine Zufällige Geschichte" << endl;
-    cout << "Triff deine Wahl (1, 2 oder 3): ";
+    cout << "                                     Welche Art von Geschichte soll ich dir erzählen?" << endl;
+    cout << "                                             1. eine Lustige Geschichte" << endl;
+    cout << "                                             2. eine Traurige Geschichte" << endl;
+    cout << "                                             3. eine Zufällige Geschichte" << endl;
+    cout << "                                            Triff deine Wahl (1, 2 oder 3): ";
 
     int option;
     cin >> option;
@@ -198,7 +198,9 @@ int geschmain() {
                 "Eines Tages begegnete ein verrückter ",
                 "Zu einer unbekannten Zeit war ein komischer ",
                 "Am Anfang gab es einen witzigen ",
-                "Ein "
+                "Ein ",
+                "Doch es wurde immer komischer. Ein ",
+                "Vor nicht all zu langer Zeit war ein ",
                 // ... lustige Satzanfänge 
             };
         }
@@ -319,6 +321,8 @@ int geschmain() {
             ". Er war glücklich darüber.",
             ". Er wusste noch nichts davon wo ihn sein Schicksal als nächstes hinführen sollte",
             " und er dachte sich nur so: Ach wär ich doch lieber mal Zuhause geblieben.",
+            ". Dies sollte der Anfang einer langen Reise für ihn sein.",
+            ". Durch diese Aktion riss er ein Loch in das Raum-Zeit Kontinuum."
 
 
         };

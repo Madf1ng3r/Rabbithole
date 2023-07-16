@@ -15,6 +15,33 @@ bool isNumber(const std::string& str) {
 
 int ftmain() {
     srand(time(0)); // Seed für den Zufallszahlengenerator initialisieren
+    std::cout <<  R"(
+
+
+
+
+                                .                                         .
+
+           .                                                          .
+o                        .                        .        ___---___                    .                   
+                                         .              .--\        --.     .     .         .
+                                                     ./.;_.\     __/~ \.     
+                                                    /;  / `-'  __\    . \                            
+                                  .        .       / ,--'     / .   .;   \        |
+                         .                        | .|       /       __   |      -O-       .
+       .                                         |__/    __ |  . ;   \ | . |      |
+                                                 |      /  \\_    . ;| \___|    
+                       .            .    o       |      \  .~\\___,--'     |           .
+                                                 |      | . ; ~~~~\_     __|
+                                    |             \     \   .  .  ; \    /_
+                                    -O-        .    \   /         . |  ~/                  .
+        .                           |    .          ~\ \   .      /  /~          o
+                     .             .                   ~--___ ; ___--~       
+                                                  .          ---         .              -
+           .                                                                   .
+
+
+)";
 
     std::cout << "Willkommen beim Spiel des Lebens!" << std::endl;
     std::cout << "Du befindest dich in einer virtuellen Welt, in der du den Sinn des Lebens entdecken kannst." << std::endl;

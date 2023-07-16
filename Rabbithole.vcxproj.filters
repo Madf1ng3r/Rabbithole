@@ -90,6 +90,12 @@
     <ClCompile Include="Digital Clock.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="BeispielCode.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Games.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -168,6 +174,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Helpdesk.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="BeispielCode.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Games.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

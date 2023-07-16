@@ -8,28 +8,37 @@
 #include <thread>
 #include <chrono>
 #include "Openlink.h"
+#include "BeispielCode.h"
 #include <vector>
 
-    void showHelpmenu()
+     void showHelpmenu()
     {
-        std::cout << "\033[32m";
+       std::cout << "\033[32m";
         std::cout << R"(
- _________
-|^|     | |
-| |_____| |
-|  _____  |
-| |     | |
-| |_____| |
-|_|_____|_|  
+
+
+
+
+                                                        _________
+                                                       |^|     | |
+                                                       | |_____| |
+                                                       |  _____  |
+                                                       | |     | |
+                                                       | |_____| |
+                                                       |_|_____|_|  
+
+
  )";  std::cout << "\033[0m";
-        std::cout << "-----------------------" << std::endl;
-        std::cout << "      C++ Helpdesk  " << std::endl;
-        std::cout << "-----------------------" << std::endl;
-        std::cout << "1. Syntax Zeichen " << std::endl;
-        std::cout << "2. Befehle " << std::endl;
-        std::cout << "3. Bibliotheken " << std::endl;
-        std::cout << "0. Zurück zum Hauptmenü " << std::endl;
-        std::cout << "-----------------------" << std::endl;
+        std::cout << "                                                _______________________" << std::endl;
+        std::cout << "                                                |-----------------------|" << std::endl;
+        std::cout << "                                                |      C++ Helpdesk     |" << std::endl;
+        std::cout << "                                                |-----------------------|" << std::endl;
+        std::cout << "                                                |1. Syntax Zeichen      |" << std::endl;
+        std::cout << "                                                |2. Befehle             |" << std::endl;
+        std::cout << "                                                |3. Bibliotheken        |" << std::endl;
+        std::cout << "                                                |4. Beispielcodes       |" << std::endl;
+        std::cout << "                                                |0. Zurück zum Hauptmenü|" << std::endl;
+        std::cout << "                                                |_______________________|" << std::endl;
     }
 int helpmain() 
 {
@@ -57,6 +66,9 @@ int helpmain()
                 break;
             case 3:
                 hcmain();
+                break;
+            case 4:
+                bcmain();
                 break;
             case 0:
                 running = false;
