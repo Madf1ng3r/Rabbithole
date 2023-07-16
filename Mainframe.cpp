@@ -85,46 +85,40 @@ void resetConsoleWindowSize()
 
 void showMenu()
 {
-//std::cout << "Hallo" << getCurrentUsername();
-    // ASCII-Kunst anzeigen
+    //std::cout << "Hallo" << getCurrentUsername();
+        // ASCII-Kunst anzeigen
     std::cout << "\033[32m"; // Farbcode für grünen Text
-    std::cout << R"(
-
-     _________
-    / ======= \
-   / __________\
-  | ___________ |
-  | | -       | |
-  | |         | |
-  | |_________| |________________________
-  \=____________/    Enter The Matrix    )
-  / """"""""""" \                       /
- / ::::::::::::: \                  =D-'
-(_________________)
-
- )";
+    // Menüoptionen anzeigen
+    std::cout << "        ______       _                      ________________________________________________________                   " << std::endl;
+    std::cout << "       |  ____|     | |                    / _____________________________________________________  )                 " << std::endl;
+    std::cout << "       | |__   _ __ | |_ ___ _ ___        /                                                          ]                " << std::endl;
+    std::cout << "       |  __| | '_ \ | __/ _ )| '__|      /  _______________________________________________________   |             " << std::endl;
+    std::cout << "       | |____| | | | | |  _/| |         |  |   1.  Art                                             |  |               " << std::endl;
+    std::cout << "       |______|_| |_|_|_|____|_|         |  |   2.  OpenAI alpha                                    |  |               " << std::endl;
+    std::cout << "                                         |  |   3.  Taschenrechner                                  |  |               " << std::endl;
+    std::cout << "               _   _                     |  |   4.  Sinn des Lebens                                 |  |               " << std::endl;
+    std::cout << "              | | | |                    |  |   5.  Readme                                          |  |               " << std::endl;
+    std::cout << "              | |_| |__   ___            |  |   6.  Gästebuch                                       |  |               " << std::endl;
+    std::cout << "              | __| '_  )/ _ )           |  |   7.  Links                                           |  |             " << std::endl;
+    std::cout << "              | |_| | | | __/            |  |   8.  Pong                                            |  |               " << std::endl;
+    std::cout << "              (___|_| |_|\__|             |  |   9.  Snake                                           |  |              " << std::endl;
+    std::cout << "                                         |  |  10. Matrix                                           |  |               " << std::endl;
+    std::cout << "    __  __       _        _              |  |  11. der Erzähler                                     |  |               " << std::endl;
+    std::cout << "    |  \/  |     | |      (_)             |  |  12. C++ Code                                         |  |              " << std::endl;
+    std::cout << "    | \  / | __ _| |_ _ __ ___  __        |  |   0. Beenden                                          |  |              " << std::endl;
+    std::cout << "    | |\/| |/ _` | __| '__| \ \/ /          |  --------------------------------------------------------|  |            " << std::endl;
+    std::cout << "    | | | | (_| | |_| |  | | > <         |__________________________________________________________| /                " << std::endl;
+    std::cout << "    |_| |_|(__,_|\___|_|  |_/_/]_[          (_________________________________________________________/              " << std::endl;
+    std::cout << "                                         ______/                 [___________]                                         " << std::endl;
+    std::cout << "                                        /                                                                              " << std::endl;
+    std::cout << "                                       (__________________________________________________________________             " << std::endl;
+    std::cout << "                                       / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  /   __       " << std::endl;
+    std::cout << "                                      /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # /   (  )      " << std::endl;
+    std::cout << "                                     /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)      " << std::endl;
+    std::cout << "                                    /__________________________________________________________________/               " << std::endl;
     std::cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
 
-    // Menüoptionen anzeigen
-    std::cout << "-----------------------" << std::endl;
-    std::cout << "Hauptmenue" << std::endl;
-    std::cout << "-----------------------" << std::endl;
-    std::cout << "1.  Art" << std::endl;
-    std::cout << "2.  OpenAI alpha " << std::endl;
-    std::cout << "3.  Taschenrechner" << std::endl;
-    std::cout << "4.  Sinn des Lebens" << std::endl;
-    std::cout << "5.  Readme" << std::endl;
-    std::cout << "6.  Gästebuch" << std::endl;
-    std::cout << "7.  Links" << std::endl;
-    std::cout << "8.  Pong" << std::endl;
-    std::cout << "9.  Snake" << std::endl;
-    std::cout << "10. Matrix " << std::endl;
-    std::cout << "11. der Erzähler" << std::endl;
-    std::cout << "12. C++ Code" << std::endl;
-    std::cout << "0. Beenden" << std::endl;
-    std::cout << "-----------------------" << std::endl;
 }
-
 void centerConsoleWindow()
 {
 #ifdef _WIN32
@@ -184,7 +178,7 @@ void animateTransition()
     {
         std::cout << animationFrames[frameIndex] << std::flush; // Aktuelles Animationssymbol anzeigen
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Kurze Verzögerung für die Animation
+        std::this_thread::sleep_for(std::chrono::milliseconds(90)); // Kurze Verzögerung für die Animation
 
         std::cout << "\b \b" << std::flush; // Animationssymbol löschen (zurücksetzen)
 
@@ -249,12 +243,12 @@ int main()   // Hauptfunktion von Rabbithole
         case 1:
             animateTransition();
             clearScreen();
-            generateAsciiArt(); // Eine Funktion aufrufen, um ASCII-Kunst zu generieren
+            artmain(); // Eine Funktion aufrufen, um ASCII-Kunst zu generieren
             break;
         case 2:
             animateTransition();
             clearScreen();
-            executeFile("Witzbold.cpp"); // Eine Datei ausführen
+            executeFile("Witzbold.cpp"); // Ruft Code der Datei auf
             break;
         case 3:
             animateTransition();
@@ -285,22 +279,23 @@ int main()   // Hauptfunktion von Rabbithole
         case 8:
             animateTransition();
             clearScreen();
-            pongmain(); // Eine Funktion aus pong.cpp aufrufen
+            pongmain(); // Pong Spiel
             break;
         case 9:
             animateTransition();
             clearScreen();
-            snakemain(); // Eine Funktion aus Snake.cpp aufrufen
+            snakemain(); // Snake Spiel
             break;
         case 10:
             animateTransition();
             clearScreen();
-            bimain(); // Eine Funktion aus binary.cpp aufrufen
+            bimain(); // Die Matrix betreten
+            resetConsoleWindowSize();
             break;
         case 11:
             animateTransition();
             clearScreen();
-            geschmain(); // Eine Funktion aus Geschichte.cpp aufrufen
+            geschmain(); // Erzähler aufrufen
             break;
         case 12:
             animateTransition();
@@ -329,6 +324,5 @@ int main()   // Hauptfunktion von Rabbithole
             std::cin.get();
         }
     }
-
     return 0;
 }
