@@ -139,6 +139,7 @@
     <ClCompile Include="Geschichte.cpp" />
     <ClCompile Include="HCode.cpp" />
     <ClCompile Include="Helpdesk.cpp" />
+    <ClCompile Include="Life.cpp" />
     <ClCompile Include="Mainframe.cpp" />
     <ClCompile Include="Links.cpp" />
     <ClCompile Include="Gaestebuch.cpp" />

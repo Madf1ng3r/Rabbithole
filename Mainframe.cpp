@@ -85,7 +85,7 @@ void resetConsoleWindowSize()
 void showMenu()
 {
     //std::cout << "Hallo" << getCurrentUsername();
-        // ASCII-Kunst anzeigen
+    // ASCII-Kunst anzeigen
     std::cout << "\033[32m"; // Farbcode für grünen Text
     // Menüoptionen anzeigen
     std::cout << "        ______       _                      ________________________________________________________                   " << std::endl;
@@ -102,12 +102,12 @@ void showMenu()
     std::cout << "              | |_| | | |  _/            |  |   8.  Spiele                                          |  |               " << std::endl;
     std::cout << "              (___|_| |_|(__|            |  |   9. Matrix                                           |  |               " << std::endl;
     std::cout << "                                         |  |  10. Geschichte                                       |  |               " << std::endl;
-    std::cout << "     __  __       _        _             |  |   0. Beenden                                          |  |               " << std::endl;
-    std::cout << "     |  \/  |     | |      (_)            |  |                                                       |  |              " << std::endl;
-    std::cout << "     | \  / | __ _| |_ _ __ _  _ __       |  |                                                       |  |              " << std::endl;
-    std::cout << "     | |\/| |/ _` | __| '__| |\  )/ /      |  --------------------------------------------------------|  |             " << std::endl;
+    std::cout << "      __  __       _        _            |  |   0. Beenden                                          |  |               " << std::endl;
+    std::cout << "     |  \\/  |     | |      (_)           |  |                                                       |  |               " << std::endl;
+    std::cout << "     | \\  / | __ _| |_ _ __ _  _ __      |  |                                                       |  |               " << std::endl;
+    std::cout << "     | |\\/| |/ _` | __| '__| |\\  )/ /    |  |-------------------------------------------------------|  |               " << std::endl;
     std::cout << "     | | | | (_| | |_| |  | |  ><        |__________________________________________________________| /                " << std::endl;
-    std::cout << "     |_| |_|(__,_|(__|_|  |_/_/]_[         (_________________________________________________________/                " << std::endl;
+    std::cout << "     |_| |_|(__,_|(__|_|  |_/_/]_[         (_________________________________________________________/                 " << std::endl;
     std::cout << "                                         ______/                 [___________]                                         " << std::endl;
     std::cout << "                                        /                                                                              " << std::endl;
     std::cout << "                                       (__________________________________________________________________             " << std::endl;
@@ -209,18 +209,22 @@ int main()   // Hauptfunktion von Rabbithole
     bool running = true;
     int choice;
     bool taschenrechnerRunning = false;
+    bool menuVisible = true;  // Variable, um den Menüstatus zu verfolgen
 
     while (running)
     {
-        clearScreen();
-        resetConsoleWindowSize();
-        showMenu();
+        if (menuVisible)  // Nur das Menü anzeigen, wenn es sichtbar ist
+        {
+            clearScreen();
+            resetConsoleWindowSize();
+            showMenu();             // Benutzeroberfläche des Hauptmenüs anzeigen
+        }
 
         std::thread clockThread([]() {
             while (true) {
                 clearScreen();
                 showMenu();
-                printDigitalClock();
+                printDigitalClock();      // kleine Uhrzeit Anzeige in der rechten unteren Ecke
                 std::this_thread::sleep_for(std::chrono::minutes(1)); // Alle 1 Minute aktualisieren
             }
             });
@@ -232,18 +236,18 @@ int main()   // Hauptfunktion von Rabbithole
             std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
             std::cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(2));
-            continue;
+            continue;    // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingbae machen
         }
 
         clockThread.detach();
 
-        switch (choice)
+        switch (choice)          // Auswahl der Optionen
         {
         case 1:
-            animateTransition();
-            clearScreen();
+            animateTransition();   // schneller Ladebildschirm mit Übergangseffekt
+            clearScreen();   // Fenster leeren
             artmain(); // Random ASCII Art
-            break;
+            break;    // Beenden 
         case 2:
             animateTransition();
             clearScreen();
@@ -252,7 +256,8 @@ int main()   // Hauptfunktion von Rabbithole
         case 3:
             animateTransition();
             clearScreen();
-            taschenrechnerRunning = true;   // Taschenrechner
+            taschenrechnerRunning = true;
+            menuVisible = false;  // Menüstatus auf false setzen, um das Menü zu verbergen
             break;
         case 4:
             animateTransition();
@@ -308,6 +313,7 @@ int main()   // Hauptfunktion von Rabbithole
         {
             calcmain(); // Eine Funktion aus Taschenrechner.cpp aufrufen
             taschenrechnerRunning = false;
+            menuVisible = true;  // Menüstatus auf true setzen, um das Menü nach Beendigung der Funktion anzuzeigen
         }
 
         if (running)
