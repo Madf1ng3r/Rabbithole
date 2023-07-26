@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cmath>
+#include <algorithm>
 #include <iomanip> // Für setprecision und fixed
 #include <windows.h> // Für Farbänderung
 #include <string> // Für die Verwendung von std::to_string()
-
 using namespace std;
-
 int addition(int a, int b)
 {
     return a + b;
@@ -250,4 +249,3 @@ void calcmain()
         }
     }
 }
-

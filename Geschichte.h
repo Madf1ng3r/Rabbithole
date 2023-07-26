@@ -3,4 +3,3 @@
 #define GESCHICHTE_H
 int geschmain();
 #endif // !GESCHICHTE_H
-

@@ -1,6 +1,8 @@
 #include "games.h"
 #include "Snake.h"
 #include "pong.h"
+#include "Treadmill.h"
+#include "Mainframe.h"
 #include <iostream>
 #include <chrono>
 using namespace std;
@@ -9,11 +11,15 @@ void showGames()
 {
     std::cout << "\033[32m";
     std::cout << R"(
-
-
-
-
-                                                      ____                  
+               
+           
+         
+        
+        
+            
+        
+              
+                                                      ____                                            
                                                      /___/\_                                
                                                     _\   \/_/\__                          
                                                   __\       \/_/\                       
@@ -32,6 +38,8 @@ void showGames()
     std::cout << "                                                |-----------------------|" << std::endl;
     std::cout << "                                                |1. Snake               |" << std::endl;
     std::cout << "                                                |2. Pong                |" << std::endl;
+	std::cout << "                                                |3. Treadmill           |" << std::endl;
+  //std::cout << "                                                |4. Spaceinvaders       |" << std::endl; 
     std::cout << "                                                |0. Zurück zum Hauptmenü|" << std::endl;
     std::cout << "                                                |_______________________|" << std::endl;
 }
@@ -45,7 +53,7 @@ int gamemain() {
         std::cout << "Wählen Sie eine Option: ";
         if (!(std::cin >> choice))
         {
-            std::cin.clear(); // Clear error flags
+            std::cin.clear(); //    clear error flags
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
             std::cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
@@ -54,11 +62,24 @@ int gamemain() {
         switch (choice)
         {
         case 1:
+            animateTransition();
+            clearScreen();
             snakemain();
             break;
         case 2:
+			animateTransition();
+			clearScreen();
             pongmain();
             break;
+		case 3:
+			animateTransition();
+			clearScreen();
+            lifemain();
+            break;
+        case 4:
+            animateTransition();
+			clearScreen();
+            spacemain();
         case 0:
             running = false;
             break;

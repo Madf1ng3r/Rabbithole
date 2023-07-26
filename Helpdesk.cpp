@@ -10,7 +10,6 @@
 #include "Openlink.h"
 #include "BeispielCode.h"
 #include <vector>
-
      void showHelpmenu()
     {
        std::cout << "\033[32m";
@@ -29,16 +28,16 @@
 
 
  )";  std::cout << "\033[0m";
-        std::cout << "                                                _______________________" << std::endl;
-        std::cout << "                                                |-----------------------|" << std::endl;
-        std::cout << "                                                |      C++ Helpdesk     |" << std::endl;
-        std::cout << "                                                |-----------------------|" << std::endl;
-        std::cout << "                                                |1. Syntax Zeichen      |" << std::endl;
-        std::cout << "                                                |2. Befehle             |" << std::endl;
-        std::cout << "                                                |3. Bibliotheken        |" << std::endl;
-        std::cout << "                                                |4. Beispielcodes       |" << std::endl;
-        std::cout << "                                                |0. Zurück zum Hauptmenü|" << std::endl;
-        std::cout << "                                                |_______________________|" << std::endl;
+        std::cout << "                                                 _________________________" << std::endl;
+        std::cout << "                                                |-------------------------|" << std::endl;
+        std::cout << "                                                |      C++ Helpdesk       |" << std::endl;
+        std::cout << "                                                |-------------------------|" << std::endl;
+        std::cout << "                                                | 1. Syntax Zeichen       |" << std::endl;
+        std::cout << "                                                | 2. Befehle              |" << std::endl;
+        std::cout << "                                                | 3. Bibliotheken         |" << std::endl;
+        std::cout << "                                                | 4. Beispielcodes        |" << std::endl;
+        std::cout << "                                                | 0. Zurück zum Hauptmenü |" << std::endl;
+        std::cout << "                                                |_________________________|" << std::endl;
     }
 int helpmain() 
 {

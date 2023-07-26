@@ -142,7 +142,7 @@
     <ClCompile Include="Life.cpp" />
     <ClCompile Include="Mainframe.cpp" />
     <ClCompile Include="Links.cpp" />
-    <ClCompile Include="Gaestebuch.cpp" />
+    <ClCompile Include="Notizbuch.cpp" />
     <ClCompile Include="MrSmith.cpp" />
     <ClCompile Include="NuLinks.cpp" />
     <ClCompile Include="OPLinks.cpp" />
@@ -152,6 +152,7 @@
     <ClCompile Include="Readme.cpp" />
     <ClCompile Include="Sinndeslebens.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="Spaceinvader.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Witzbold.cpp" />
     <ClCompile Include="Taschenrechner.cpp" />
@@ -165,11 +166,12 @@
     <ClInclude Include="caesar.h" />
     <ClInclude Include="Code.h" />
     <ClInclude Include="curl.h" />
-    <ClInclude Include="Gaestebuch.h" />
+    <ClInclude Include="Notizbuch.h" />
     <ClInclude Include="Games.h" />
     <ClInclude Include="Geschichte.h" />
     <ClInclude Include="Hcode.h" />
     <ClInclude Include="Helpdesk.h" />
+    <ClInclude Include="Treadmill.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="Mainframe.h" />
     <ClInclude Include="MSmith.h" />
@@ -188,7 +190,10 @@
     <ClInclude Include="Zcode.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="gaestebuch.txt" />
+    <Text Include="config.txt" />
+    <Text Include="highscores.txt" />
+    <Text Include="notizbuch.txt" />
+    <Text Include="save.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

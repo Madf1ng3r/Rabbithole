@@ -7,8 +7,6 @@
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
-
-
 int oplinkmain() {
     std::string links[] = {
         "https://www.youtube.com/@justvisitingthisplanet/playlists",
@@ -17,11 +15,10 @@ int oplinkmain() {
         "https://steamcommunity.com/id/M4DF1NGER/",
         "https://github.com/Madf1ng3r/Rabbithole",
 
-
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
 
-    int choice;
+	int choice; // Benutzereingabe
     do {
         // Menü anzeigen
         std::cout << "Bitte wählen Sie einen Link:" << std::endl;
@@ -29,10 +26,8 @@ int oplinkmain() {
             std::cout << GREEN << i + 1 << ". " << links[i] << RESET << std::endl;
         }
         std::cout << "0. Beenden" << std::endl;
-
         // Benutzereingabe lesen
         std::cin >> choice;
-
         // Auswahl überprüfen
         if (choice > 0 && choice <= numLinks) {
             // Link im Browser öffnen
@@ -43,6 +38,5 @@ int oplinkmain() {
             std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
         }
     } while (choice != 0);
-
     return 0;
 }

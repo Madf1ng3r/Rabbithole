@@ -3,12 +3,9 @@
 #include <string>
 #include "PLinks.h"
 #include "Openlink.h"
-
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
-
-
 
 int plinkmain() {
     std::string links[] = {
@@ -19,10 +16,8 @@ int plinkmain() {
         "https://www.w3schools.com/",
         "https://github.com/Madf1ng3r/Rabbithole",
 
-
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
-
     int choice;
     do {
         // Menü anzeigen
@@ -31,10 +26,8 @@ int plinkmain() {
             std::cout << GREEN << i + 1 << ". " << links[i] << RESET << std::endl;
         }
         std::cout << "0. Beenden" << std::endl;
-
         // Benutzereingabe lesen
         std::cin >> choice;
-
         // Auswahl überprüfen
         if (choice > 0 && choice <= numLinks) {
             // Link im Browser öffnen
@@ -45,6 +38,5 @@ int plinkmain() {
             std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
         }
     } while (choice != 0);
-
     return 0;
 }

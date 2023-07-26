@@ -8,7 +8,7 @@
 #define RESET "\033[0m"
 
 int ailinkmain() {
-    std::string links[] = {
+    std::string links[] = {  
 
         "https://chat.openai.com/",
         "https://www.w3schools.com/",
@@ -22,7 +22,6 @@ int ailinkmain() {
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
-
     int choice;
     do {
         // Menü anzeigen
@@ -31,10 +30,8 @@ int ailinkmain() {
             std::cout << GREEN << i + 1 << ". " << links[i] << RESET << std::endl;
         }
         std::cout << "0. Beenden" << std::endl;
-
         // Benutzereingabe lesen
         std::cin >> choice;
-
         // Auswahl überprüfen
         if (choice > 0 && choice <= numLinks) {
             // Link im Browser öffnen

@@ -5,7 +5,6 @@
 #include <conio.h> // Hinzugefügte Header-Datei für Tasteneingabe
 #include "binary.h"
 #include "MSmith.h"
-
 void sleep(unsigned int milliseconds) {
     Sleep(milliseconds);
 }

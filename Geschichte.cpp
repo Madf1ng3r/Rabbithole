@@ -2,12 +2,11 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include "User.h"
 #ifdef _WIN32
 #include <conio.h> // Für _getch-Funktion (nur Windows)
 #endif
-
 using namespace std;
-
 enum class TextColor {
     Black,
     Red,
@@ -88,11 +87,9 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
 
     for (int i = 0; i < numSentences; ++i) {
         string sentence;
-
         // Zufälliges Story-Part auswählen
         string storyPart = getRandomElement(storyParts);
         sentence += storyPart;
-
         // Zufällige Anzahl von Adjektiven auswählen
         int numAdjectivesInSentence = rand() % 2 + 1;
         for (int j = 0; j < numAdjectivesInSentence; ++j) {
@@ -103,7 +100,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
         // Zufälliges Nomen auswählen
         string noun = getRandomElement(nouns);
         sentence += noun;
-
         // Zufällige Anzahl von Aktionen auswählen
         int numActionsInSentence = rand() % 1 + 1;
         for (int j = 0; j < numActionsInSentence; ++j) {
@@ -114,19 +110,14 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
         // Zufälliger Ort auswählen
         string location = getRandomElement(locations);
         sentence += " " + location;
-
         // Zufälliges Ende hinzufügen
         string ending = getRandomElement(endings);
         sentence += " " + ending;
-
         // Zufällige Textfarbe auswählen
         TextColor randomColor = static_cast<TextColor>(rand() % static_cast<int>(TextColor::White) + 1);
         setTextColor(randomColor);
-
         cout << sentence << " ";
-
         resetTextColor();
-
         if (isEscapeKeyPressed()) {
             cout << endl << "Programm beendet." << endl;
             break;
@@ -135,7 +126,7 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
 }
 
 int geschmain() {
-    cout << endl << endl << endl << "                                               Willkommen Fremder!" << endl;
+    cout << endl << endl << endl << "                                               Hey  " << g_name <<  " !" << endl;
     cout << "\033[32m";  //Grün
     cout <<  R"(
                                                         ______
@@ -154,19 +145,16 @@ int geschmain() {
                                           \__\__/     \ |     | /        /
                                                       \  \      \        /  
 )";
-    cout << "\033[0m";
+	cout << "\033[0m"; //Weiß
     cout << "                                     Welche Art von Geschichte soll ich dir erzählen?" << endl;
     cout << "                                             1. eine Lustige Geschichte" << endl;
     cout << "                                             2. eine Traurige Geschichte" << endl;
     cout << "                                             3. eine Zufällige Geschichte" << endl;
     cout << "                                            Triff deine Wahl (1, 2 oder 3): ";
-
     int option;
     cin >> option;
-
     bool isFunny = false;
     bool isSad = false;
-
     switch (option) {
     case 1:
         isFunny = true;
@@ -181,7 +169,7 @@ int geschmain() {
         return 0;
     }
 
-    bool generateAnotherStory = true;
+	bool generateAnotherStory = true; // Initialisierung
 
     while (generateAnotherStory) {
         cout << "Ich habe deine Geschichte fertig geschrieben. Drücke die Enter-Taste, um die Geschichte anzuzeigen...";
@@ -198,23 +186,24 @@ int geschmain() {
                 "Eines Tages begegnete ein verrückter ",
                 "Zu einer unbekannten Zeit war ein komischer ",
                 "Am Anfang gab es einen witzigen ",
+                "Einst gab es ein ",
                 "Ein ",
                 "Doch es wurde immer komischer. Ein ",
+                "Sein Freund, ein ",
                 "Vor nicht all zu langer Zeit war ein ",
                 // ... lustige Satzanfänge 
             };
         }
-        else if (isSad) {
+		else if (isSad) { 
             storyParts = {
                 "Es war einmal ein trauriger ",
                 "Einst gab es ein einsames ",
                 "In einem fernen Land lebte ein unglücklicher ",
                 "Vor langer Zeit gab es einen verlassenen ",
                 "Ein ",
-                "Der ",
+                "Leider kam er zu spät, ein ",
                 "Sein Freund, ein ",
                 "In einem Land vor unserer Zeit war ein ",
-
                 // ... traurige Satzanfänge
             };
         }
@@ -229,14 +218,14 @@ int geschmain() {
                 "Ein ",
                 "Sein Freund, ein ",
                 "Zu einer unbekannten Zeit war ein ",
-                "Am Anfang gab es einen ",
-                
+                "..und er sah ein",
+                "Am Anfang gab es einen ",  
                 //...  zufällige Satzanfänge
             };
         }
 
         vector<string> nouns = {
-            "Kevin", "Kater", "Vogel", "Bär", "Affe", "Elefant", "Löwe", "Tiger", "Hase", "Fisch", "Kühlschrank", "Roboter Namens Marvin", "Computer", "Delfin", "Dino", "Chefkoch", "Rüdiger", "Steffen", "Klaus", "Geist", "Influencer", "Informatiker", "König", "Zauberer", "Pilot", "Astronaut", "Detektiv", "Werwolf", "Hacker", "Mandaloreaner", "Hobbit", "Waldelf", "Karsten", "Sheriff", "Polizist", "Marsianer", "junger Padawan", "Indianer", "Woookie", "Zwerg"
+            "Kevin", g_name , "Kater", "Vogel", "Bär", "Affe", "Elefant", "Löwe", "Tiger", "Hase", "Fisch", "Kühlschrank", "Roboter Namens Marvin", "Computer", "Delfin", "Dino", "Chefkoch", "Rüdiger", "Steffen", "Klaus", "Geist", "Influencer", "Informatiker", "König", "Zauberer", "Pilot", "Astronaut", "Detektiv", "Werwolf", "Hacker", "Mandaloreaner", "Hobbit", "Waldelf", "Karsten", "Sheriff", "Polizist", "Marsianer", "junger Padawan", "Indianer", "Woookie", "Zwerg"
         };
 
         vector<string> adjectives = {
@@ -328,15 +317,12 @@ int geschmain() {
         };
 
          generateStory(storyParts, nouns, adjectives, actions, locations, endings);
-
          cout << endl << "Soll ich dir noch eine Geschichte erzählen? ";
          cout << " Mit der Escape Taste kannst du auch ins Hauptmenü zurückzukehren..";
- char choice = _getch();
-         
-
-         if ( choice == 27 ) {
+         char choice = _getch();
+		 if (choice == 27) {  //Escape
              generateAnotherStory = false;
         }
     } 
-     return 0;
+	return 0; //Ende der Funktion
 }

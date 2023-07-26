@@ -3,13 +3,12 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <map>
+#include "Mainframe.h"
 #include <string>
-
 using namespace std;
-
 const int WIDTH = 235;
 const int HEIGHT = 55;
-
 struct Player {
     double x;
     double y;
@@ -31,7 +30,7 @@ struct Enemy {
     bool alive; // Zustand des Gegners (lebendig oder tot)
 };
 
-struct Item {
+struct Item { 
     double x;
     double y;
     char symbol;
@@ -50,14 +49,14 @@ void waitForEnter() {
     cin.get();
 }
 
-void setCursorPosition(int x, int y) {
+void setCursorPosition(int x, int y) { // Zeichne Cursor
     COORD coord;
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void hideCursor() {
+void hideCursor() { // verstecke Cursor
     CONSOLE_CURSOR_INFO cursorInfo;
     cursorInfo.dwSize = 100;
     cursorInfo.bVisible = FALSE;
@@ -66,14 +65,11 @@ void hideCursor() {
 
 void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<Item>& items, const vector<pair<int, int>>& projectiles, const vector<vector<char>>& obstacles) {
     setCursorPosition(0, 0);
-
     // Zeichne Spielfeldrand
     cout << "##################################################################################################################################################################################################################" << endl;
-
     for (int i = 0; i < HEIGHT; i++) {
         setCursorPosition(0, i + 1);
         cout << "#";
-
         for (int j = 0; j < WIDTH; j++) {
             if (i == static_cast<int>(player.y) && j == static_cast<int>(player.x)) {
                 cout << "\033[32m";
@@ -128,7 +124,6 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
         }
         cout << "#";
     }
-
     // Zeichne Spielfeldrand
     setCursorPosition(0, HEIGHT + 1);
     cout << "###############################################################################################################################################################################################################################################" << endl;
@@ -148,11 +143,9 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
 }
 
 void movePlayer(Player& player, char direction, const vector<vector<char>>& obstacles) {
-    double moveSpeed = 1.3; // Geschwindigkeit der Spielerbewegung
-
+    double moveSpeed = 1.6; // Geschwindigkeit der Spielerbewegung
     double nextX = player.x;
     double nextY = player.y;
-
     switch (direction) {
     case 'w':
         nextY -= moveSpeed;
@@ -170,7 +163,6 @@ void movePlayer(Player& player, char direction, const vector<vector<char>>& obst
         nextX += 2 * moveSpeed;
         break;
     }
-
     if (nextX >= 0 && nextX < WIDTH && nextY >= 0 && nextY < HEIGHT && obstacles[static_cast<int>(nextY)][static_cast<int>(nextX)] == ' ') {
         player.x = nextX;
         player.y = nextY;
@@ -192,10 +184,8 @@ bool checkCollision(const pair<int, int>& projectile, const Enemy& enemy) {
 void moveEnemyTowardsPlayer(Enemy& enemy, const Player& player, const vector<vector<char>>& obstacles) {
     double dx = player.x - enemy.x;
     double dy = player.y - enemy.y;
-
     double nextX = enemy.x;
     double nextY = enemy.y;
-
     if (dx != 0) {
         double directionX = dx / abs(dx);
         nextX += directionX * 0.3; // Geschwindigkeit der Gegnerbewegung
@@ -295,7 +285,6 @@ void spawnItems(vector<Item>& items, int level) {
         }
     }
 }
-
 bool playLevel(Player& player, int level) {
     int numEnemies = level;
     vector<Enemy> enemies(numEnemies);
@@ -411,13 +400,11 @@ bool playLevel(Player& player, int level) {
         return false;
     }
 }
-
 int smmain() {
     setConsoleMaximized();
     hideCursor();
     srand(static_cast<unsigned int>(time(0)));
-
-    cout << "Willkommen in der Matrix!";
+ //   cout << "Willkommen in der Matrix!";
     cout << R"(
  ___________________
  | _______________ |
@@ -431,7 +418,7 @@ int smmain() {
  ___[___________]___
 |         [_____] []|__
 |         [_____] []|  \__
-L___________________J     \ \___\/
+L___________________J     \ 
  ___________________      /\
 /###################\    (__)
 
@@ -462,7 +449,6 @@ L___________________J     \ \___\/
     cout << "                                                                                 ==================================" << endl;
 
     waitForEnter();
-
     Player player;
     player.x = WIDTH / 2;
     player.y = HEIGHT / 2;
@@ -473,7 +459,6 @@ L___________________J     \ \___\/
     player.ammunition = 5;
     player.direction = 0;
     player.bulletDamage = 30;
-
     int level = 1;
     bool isGameWon = false;
     while (player.health > 0 && !isGameWon) {
@@ -492,6 +477,6 @@ L___________________J     \ \___\/
             }
         }
     }
-
+    resetConsoleWindowSize();
     return 0;
 }

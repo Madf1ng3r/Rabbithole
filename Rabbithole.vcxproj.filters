@@ -42,7 +42,7 @@
     <ClCompile Include="Snake.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Gaestebuch.cpp">
+    <ClCompile Include="Notizbuch.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="pong.cpp">
@@ -99,6 +99,9 @@
     <ClCompile Include="Life.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Spaceinvader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -107,7 +110,7 @@
     <ClInclude Include="Art.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Gaestebuch.h">
+    <ClInclude Include="Notizbuch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="sinndeslebens.h">
@@ -185,9 +188,21 @@
     <ClInclude Include="Games.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Treadmill.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="gaestebuch.txt">
+    <Text Include="notizbuch.txt">
+      <Filter>Quelldateien</Filter>
+    </Text>
+    <Text Include="save.txt">
+      <Filter>Quelldateien</Filter>
+    </Text>
+    <Text Include="config.txt">
+      <Filter>Quelldateien</Filter>
+    </Text>
+    <Text Include="highscores.txt">
       <Filter>Quelldateien</Filter>
     </Text>
   </ItemGroup>

@@ -3,7 +3,6 @@
 #ifndef TASCHENRECHNER_H
 #define TASCHENRECHNER_H
 	// Deklaration der Funktionen
-
     void calcmain();
 	void printMenu();
 	void addition();
@@ -17,6 +16,4 @@
 	void volumenKreis();
 	void flaecheKreis();
 	void umfangKreis();
-	
-
 #endif

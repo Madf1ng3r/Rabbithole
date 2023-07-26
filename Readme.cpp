@@ -1,6 +1,5 @@
 #include <iostream>   
 #include "readme.h"   // Header Datei
-
 using namespace std;
 void rmmain() {              // Readme Funktion 
     cout << endl << endl;
@@ -31,5 +30,4 @@ void rmmain() {              // Readme Funktion
                                                                                                                             
 )";
   std::cout << "\033[0m";   //Ende mit grüner Farbe
-
 }

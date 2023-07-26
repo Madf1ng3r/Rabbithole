@@ -2,9 +2,11 @@
 #include <conio.h>
 #include <windows.h>
 #include <ctime>
-
+#include <cstdlib>
+#include <fstream>
+#include <string>
+#include <conio.h>
 using namespace std;
-
 bool gameover;
 const int width = 30;
 const int height = 30;
@@ -13,7 +15,6 @@ int* tailX, * tailY;
 int nTail;
 enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
-
 HANDLE consoleHandle;
 CHAR_INFO consoleBuffer[width * height];
 
@@ -27,7 +28,6 @@ void snakeSetup()
     score = 0;
     nTail = 0;
     gameover = false;
-
     tailX = new int[width * height];
     tailY = new int[width * height];
 }
@@ -39,7 +39,6 @@ void snakeDraw()
         consoleBuffer[i].Char.AsciiChar = '#';
         consoleBuffer[i].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
     }
-
     for (int i = 1; i <= height; i++)
     {
         consoleBuffer[i * (width + 2)].Char.AsciiChar = '#';
@@ -47,7 +46,6 @@ void snakeDraw()
         consoleBuffer[i * (width + 2) + width + 1].Char.AsciiChar = '#';
         consoleBuffer[i * (width + 2) + width + 1].Attributes = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE;
     }
-
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -75,7 +73,6 @@ void snakeDraw()
                         break;
                     }
                 }
-
                 if (!printTail)
                 {
                     consoleBuffer[(i + 1) * (width + 2) + (j + 1)].Char.AsciiChar = ' ';
@@ -84,9 +81,7 @@ void snakeDraw()
             }
         }
     }
-
     consoleBuffer[(y + 1) * (width + 2) + (x + 1)].Attributes |= FOREGROUND_INTENSITY;
-
     COORD bufferSize = { width + 2, height + 2 };
     COORD bufferCoord = { 0, 0 };
     SMALL_RECT writeRegion = { 0, 0, width + 1, height + 1 };
@@ -155,23 +150,19 @@ void snakeLogic()
     default:
         break;
     }
-
     if (x >= width)
         x = 0;
     else if (x < 0)
         x = width - 1;
-
     if (y >= height)
         y = 0;
     else if (y < 0)
         y = height - 1;
-
     for (int i = 0; i < nTail; i++)
     {
         if (tailX[i] == x && tailY[i] == y)
             gameover = true;
     }
-
     if (x == fruitX && y == fruitY)
     {
         score += 10;
@@ -180,16 +171,56 @@ void snakeLogic()
         nTail++;
     }
 }
+void DisplayScore()
+{
+    system("cls"); // Clear the console
+    cout << "Score: " << score << endl;
+}
+ 
+void SaveHighScore(int score)
+{
+    ofstream file("highscores.txt", ios::app); // Open the file in append mode
+    if (file.is_open())
+    {
+        file << score << endl;
+        file.close();
+    }
+    else
+    {
+        cout << "Unable to save high score to file." << endl;
+    }
+}
+
+void ShowHighScores()
+{
+    ifstream file("highscores.txt");
+    if (file.is_open())
+    {
+        int score;
+        cout << "High Scores:" << endl;
+        while (file.read(reinterpret_cast<char*>(&score), sizeof(int)))
+        {
+            cout << score << endl;
+        }
+        file.close();
+    }
+    else
+    {
+        cout << "No high scores found." << endl;
+    }
+}
 
 bool PlayAgainPrompt()
 {
+ 
+	cout << "dein Score: " << score << endl;
+    ShowHighScores();
     cout << "Drücke J wenn du noch eine Runde spielen nöchtest. ";
     char choice;
     cin >> choice;
 
     return (choice == 'j' || choice == 'J');
 }
-
 void ShowCursor(bool showFlag)
 {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -198,17 +229,13 @@ void ShowCursor(bool showFlag)
     cursorInfo.bVisible = showFlag;
     SetConsoleCursorInfo(consoleHandle, &cursorInfo);
 }
-
 int snakemain()
 {
     consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     ShowCursor(false);
-
     bool playAgain = true;
-
     do {
         snakeSetup();
-
         while (!gameover)
         {
             snakeDraw();
@@ -216,10 +243,10 @@ int snakemain()
             snakeLogic();
             Sleep(100);
         }
-
+        DisplayScore();
+        SaveHighScore(score);
         delete[] tailX;
         delete[] tailY;
-
         if (PlayAgainPrompt()) {
             playAgain = true;
         }
@@ -227,8 +254,6 @@ int snakemain()
             playAgain = false;
         }
     } while (playAgain);
-
     ShowCursor(true);
-
     return 0;
 }

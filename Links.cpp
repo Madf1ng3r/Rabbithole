@@ -10,41 +10,49 @@
 #include "OPLink.h"
 #include "PLinks.h"
 #include "Openlink.h"
+#include "Mainframe.h"
 #include <vector>
-
 void showLinkmenu()
 {
     std::cout << "\033[32m";
     std::cout << R"(
-      ,-.
-     / \  `.  __..-,O
-    :   \ --''_..-'.'
-    |    . .-' `. '.
-    :     .     .`.'
-     \     `.  /  ..
-      \      `.   ' .
-       `,       `.   \
-      ,|,`.        `-.\
-     '.||  ``-...__..-`
-      |  |
-      |__|
-      /||\
-     //||\\
-    // || \\
- __//__||__\\__
-'--------------'    
+
+
+
+
+
+
+
+
+                                                            ,-.
+                                                          / \  `.  __..-,O
+                                                         :   \ --''_..-'.'
+                                                         |    . .-' `. '.
+                                                         :     .     .`.'
+                                                          \     `.  /  ..
+                                                           \      `.   ' .
+                                                            `,       `.   \
+                                                           ,|,`.        `-.\
+                                                          '.||  ``-...__..-`
+                                                          |  |
+                                                          |__|
+                                                          /||\
+                                                         //||\\
+                                                        // || \\
+                                                     __//__||__\\__
+                                                    '--------------'    
 
  )";  std::cout << "\033[0m";
-    std::cout << "-----------------------" << std::endl;
-    std::cout << "eine kleine Linksammlung" << std::endl;
-    std::cout << "-----------------------" << std::endl;
-    std::cout << "1. AI Links " << std::endl;
-    std::cout << "2. Projekt Links " << std::endl;
-    std::cout << "3. Admin Links" << std::endl;
-    std::cout << "4. andere nützliche Links" << std::endl;
-    std::cout << "5. Inception Links" << std::endl;
-    std::cout << "0. Beenden" << std::endl;
-    std::cout << "-----------------------" << std::endl;
+    std::cout << "                                                   -----------------------" << std::endl;
+    std::cout << "                                                   eine kleine Linksammlung" << std::endl;
+    std::cout << "                                                   -----------------------" << std::endl;
+    std::cout << "                                                  | 1. AI Links          |" << std::endl;
+    std::cout << "                                                  | 2. Projekt Links     |" << std::endl;
+    std::cout << "                                                  | 3. Admin Links       |" << std::endl;
+    std::cout << "                                                  | 4. andere Links      |" << std::endl;
+    std::cout << "                                                  | 5. Inception Links   |" << std::endl;
+    std::cout << "                                                  | 0. Beenden           |    " << std::endl;
+    std::cout << "                                                   ---------------------- " << std::endl;
 }
 
 int linkmain()
@@ -66,17 +74,27 @@ int linkmain()
         switch (choice)
         {
         case 1:   
+            animateTransition();
+            clearScreen();
             ailinkmain();
             break;
         case 2:
+            animateTransition();
+			clearScreen();
             plinkmain();
             break;
         case 3:
+			animateTransition();
+			clearScreen();
             oplinkmain();
             break;
         case 4:
+			animateTransition();
+			clearScreen();
             nulinkmain();
         case 5:
+			animateTransition();
+			clearScreen();
             linkmain();
             break;     
         case 0:
