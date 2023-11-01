@@ -19,6 +19,7 @@ int ailinkmain() {
         "https://maketafi.com/",
         "https://wepik.com/ai#rs=menu",
         "https://clipdrop.co/",
+        "https://donotpay.com",  
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);

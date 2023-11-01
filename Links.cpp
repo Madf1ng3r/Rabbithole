@@ -7,6 +7,7 @@
 #include "Links.h"
 #include "AILinks.h"
 #include "NULinks.h"
+#include "BWLLink.h"
 #include "OPLink.h"
 #include "PLinks.h"
 #include "Openlink.h"
@@ -51,12 +52,12 @@ void showLinkmenu()
     std::cout << "                                                  | 3. Admin Links       |" << std::endl;
     std::cout << "                                                  | 4. andere Links      |" << std::endl;
     std::cout << "                                                  | 5. Inception Links   |" << std::endl;
+	std::cout << "                                                  | 6. BWL Links         |" << std::endl;
     std::cout << "                                                  | 0. Beenden           |    " << std::endl;
     std::cout << "                                                   ---------------------- " << std::endl;
 }
 
-int linkmain()
-{
+int linkmain() {
     bool running = true;
     int choice;
     while (running)
@@ -96,7 +97,12 @@ int linkmain()
 			animateTransition();
 			clearScreen();
             linkmain();
-            break;     
+            break;  
+        case 6:
+            animateTransition();
+            clearScreen();
+            bwllinkmain();
+            break;
         case 0:
             running = false;
             break;

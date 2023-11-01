@@ -131,12 +131,18 @@
     <ClCompile Include="AILinks.cpp" />
     <ClCompile Include="Art.cpp" />
     <ClCompile Include="BeispielCode.cpp" />
+    <ClCompile Include="Bicalc.cpp" />
     <ClCompile Include="binary.cpp" />
+    <ClCompile Include="BWL.cpp" />
+    <ClCompile Include="BWLLink.cpp" />
     <ClCompile Include="Caesar.cpp" />
     <ClCompile Include="Code.cpp" />
+    <ClCompile Include="Definitionen.cpp" />
     <ClCompile Include="Digital Clock.cpp" />
     <ClCompile Include="Games.cpp" />
     <ClCompile Include="Geschichte.cpp" />
+    <ClCompile Include="Gesetze.cpp" />
+    <ClCompile Include="Hardware.cpp" />
     <ClCompile Include="HCode.cpp" />
     <ClCompile Include="Helpdesk.cpp" />
     <ClCompile Include="Life.cpp" />
@@ -154,6 +160,7 @@
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Spaceinvader.cpp" />
     <ClCompile Include="User.cpp" />
+    <ClCompile Include="Wiki.cpp" />
     <ClCompile Include="Witzbold.cpp" />
     <ClCompile Include="Taschenrechner.cpp" />
     <ClCompile Include="ZCode.cpp" />
@@ -162,10 +169,16 @@
     <ClInclude Include="AILinks.h" />
     <ClInclude Include="Art.h" />
     <ClInclude Include="BeispielCode.h" />
+    <ClInclude Include="Bicalc.h" />
     <ClInclude Include="binary.h" />
+    <ClInclude Include="BWL.h" />
+    <ClInclude Include="BWLLink.h" />
     <ClInclude Include="caesar.h" />
     <ClInclude Include="Code.h" />
     <ClInclude Include="curl.h" />
+    <ClInclude Include="Definitionen.h" />
+    <ClInclude Include="Gesetze.h" />
+    <ClInclude Include="Hardware.h" />
     <ClInclude Include="Notizbuch.h" />
     <ClInclude Include="Games.h" />
     <ClInclude Include="Geschichte.h" />
@@ -186,6 +199,7 @@
     <ClInclude Include="sinndeslebens.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Taschenrechner.h" />
+    <ClInclude Include="Wiki.h" />
     <ClInclude Include="Witzbold.h" />
     <ClInclude Include="Zcode.h" />
   </ItemGroup>

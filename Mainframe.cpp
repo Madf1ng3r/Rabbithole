@@ -16,12 +16,14 @@
 #include "readme.h"             // Header-Datei für das Readme-Programm
 #include "Geschichte.h"         // Header-Datei für das Geschichte-Programm
 #include "Witzbold.h"           // Header-Datei für den Witzbold
+#include "BWL.h"                // Header-Datei für das BWL Lexikon
 #include "Notizbuch.h"         // Header-Datei für das Notizbuch
 #include <vector>               // Vektor-Klasse für dynamische Arrays
 #include "User.h"
 #include "Games.h"
 #include "Art.h"                // Header-Datei für die Kunst-Funktionalität
-#include "Helpdesk.h"
+#include "Wiki.h"
+#include "Hardware.h"
 #ifdef _WIN32
 void clearScreen()  
 {
@@ -87,7 +89,7 @@ void showMenu()
     std::cout << "   \033[32m     |  __| | '_  )  __/ _ )|'__|    \033[0m  /  _______________________________________________________   |     " << std::endl;
     std::cout << "  \033[32m      | |____| | | | | |  _/| |    \033[0m    |  |------------------------                               |  |     " << std::endl;
     std::cout << "  \033[32m      |______|_| |_|_| |____|_|     \033[0m   |  | ' 1.  Art             '                               |  |    " << std::endl;
-    std::cout << "                                         |  | ' 2.  C++ Code        '                               |  |     " << std::endl;
+    std::cout << "                                         |  | ' 2.  Wiki            '                               |  |     " << std::endl;
     std::cout << "     \033[32m           _   _   \033[0m                 |  | ' 3.  Taschenrechner  '                               |  |     " << std::endl;
     std::cout << "   \033[32m            | | | |  \033[0m                 |  | ' 4.  Sinn des Lebens '                               |  |     " << std::endl;
     std::cout << "    \033[32m           | |_| |__   ___   \033[0m        |  | ' 5.  Readme          '                               |  |     " << std::endl;
@@ -181,6 +183,7 @@ void animateTransition()
 ////    int timePadding = consoleWidth - timeString.length() - 2; // 2 für Leerzeichen
 ////    std::cout << std::string(timePadding, ' ') << timeString << std::endl;
 ////}
+
 int main()   // Hauptfunktion von Rabbithole
 {
     resetConsoleWindowSize();
@@ -236,7 +239,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 2:
             animateTransition();
             clearScreen();
-            helpmain();  // c++ Codes mit Erklärungen und Beispiele dazu
+            wikimain();  // c++ Codes mit Erklärungen und Beispiele dazu
             break;
         case 3:
             animateTransition();
@@ -284,6 +287,21 @@ int main()   // Hauptfunktion von Rabbithole
             animateTransition();
             clearScreen();
             executeFile("Witzbold.cpp");  // Witz API noch in Bearbeitung
+            break;
+        case 12:
+            animateTransition();
+			clearScreen();
+            bwlmain();
+            break;
+		case 13:
+			animateTransition();
+			clearScreen();
+            hwmain();
+            break;
+        case 14:
+            animateTransition();
+            clearScreen();
+
             break;
         case 0:
 			running = false; 

@@ -4,6 +4,9 @@
 #include <iomanip> // Für setprecision und fixed
 #include <windows.h> // Für Farbänderung
 #include <string> // Für die Verwendung von std::to_string()
+#include "Bicalc.h"
+#include "Mainframe.h"
+
 using namespace std;
 int addition(int a, int b)
 {
@@ -95,6 +98,7 @@ void printMenu()
     cout << "                                           |  9. Volumen eines Kreises           |" << endl;
     cout << "                                           |  10. Fläche eines Kreises           |" << endl;
     cout << "                                           |  11. Umfang eines Kreises           |" << endl;
+	cout << "                                           |  12. Binärrechner                   |" << endl;
     cout << "                                           |  0. zurück zum Menue                |" << endl;
     cout << "                                            --------------------------------------" << endl;
 }
@@ -243,6 +247,11 @@ void calcmain()
             cout << "Umfang des Kreises: " << umfangKreis(radius) << endl;
             break;
         }
+		case 12:
+            animateTransition();
+            clearScreen();
+            bicmain();
+            break;
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
             break;

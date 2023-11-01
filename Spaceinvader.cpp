@@ -1,116 +1,124 @@
 #include <iostream>
 #include <conio.h>
 #include <Windows.h>
+#include <vector>
+#include <ctime>
 using namespace std;
+
 const int width = 40;
 const int height = 20;
 int playerX, playerY;
-int enemyX, enemyY;
+vector<int> enemyX, enemyY;
 int bulletX, bulletY;
 bool isBulletActive;
-int enemySpeed; // Geschwindigkeit des Feindes
-int shootDelay; // Schussverzögerung des Spielers
+int sscore;
 
-void spacesetup()
-{
+void spaceSetup() {
     playerX = width / 2;
     playerY = height - 1;
-    enemyX = width / 2;
-    enemyY = 0;
+    enemyX.clear();
+    enemyY.clear();
+    enemyX.push_back(rand() % width);
+    enemyY.push_back(0);
     isBulletActive = false;
-    enemySpeed = 1; // Leicht: 1, Mittel: 2, Schwer: 3
-    shootDelay = 5; // Leicht: 5, Mittel: 3, Schwer: 1
+    sscore = 0;
 }
 
-void spacedraw()
-{
-    system("cls"); // Clear console screen
-    // Draw player
-    cout << "\033[1;32m"; // Set color to green (Escape sequence for colored output)
-    for (int i = 0; i < playerX; i++)
-        cout << " ";
-    cout << "P";
-    cout << "\033[0m"; // Reset color to default
-    // Draw enemy
-    cout << "\033[1;31m"; // Set color to red
-    for (int i = 0; i < enemyX; i++)
-        cout << " ";
-    cout << "E";
-    cout << "\033[0m"; // Reset color to default
-
-    // Draw bullet
-    if (isBulletActive)
-    {
-        cout << "\033[1;33m"; // Set color to yellow
-        for (int i = 0; i < bulletX; i++)
-            cout << " ";
-        cout << "B";
-        cout << "\033[0m"; // Reset color to default
-    }
-    // Draw bottom border
+void spaceDraw() {
+    system("cls");
     for (int i = 0; i < width; i++)
         cout << "#";
     cout << endl;
+
+    for (int i = 0; i < height - 2; i++) {
+        for (int j = 0; j < width; j++) {
+            bool isPlayer = (j == playerX && i == playerY);
+            bool isEnemy = false;
+
+            for (size_t k = 0; k < enemyX.size(); k++) {
+                if (j == enemyX[k] && i == enemyY[k]) {
+                    isEnemy = true;
+                    break;
+                }
+            }
+
+            if (isPlayer)
+                cout << "P";
+            else if (isEnemy)
+                cout << "E";
+            else if (j == bulletX && i == bulletY)
+                cout << "B";
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+
+    for (int i = 0; i < width; i++)
+        cout << "#";
+    cout << endl;
+
+    cout << "Score: " << sscore << endl;
 }
 
-void spaceinput()
-{
-    // Check if a key is pressed
-    if (_kbhit())
-    {
+void spaceInput() {
+    if (_kbhit()) {
         char key = _getch();
-        if (key == 27) // 27 is the ASCII code for the Escape key
-            exit(0); // Exit the program when Escape is pressed
+        if (key == 27)
+            exit(0);
         if (key == 'a' && playerX > 0)
             playerX--;
         if (key == 'd' && playerX < width - 1)
             playerX++;
-        if (key == ' ' && !isBulletActive)
-        {
-            // Shoot bullet
+        if (key == ' ' && !isBulletActive) {
+            isBulletActive = true;
             bulletX = playerX;
             bulletY = playerY - 1;
-            isBulletActive = true;
         }
     }
 }
 
-void spaceupdate()
-{
-    // Move the enemy down
-    enemyY += enemySpeed;
-    // Move the bullet up
-    if (isBulletActive)
-    {
-        bulletY--;
-        if (bulletY <= 0)
-            isBulletActive = false;
+void spaceUpdate() {
+    for (size_t i = 0; i < enemyX.size(); i++) {
+        enemyY[i]++;
+        if (enemyY[i] >= height - 1) {
+            enemyX[i] = rand() % width;
+            enemyY[i] = 0;
+        }
     }
-    // Check for collision
-    if (enemyX == bulletX && enemyY == bulletY)
-    {
-        isBulletActive = false;
-        enemyX = rand() % width;
-        enemyY = 0;
+
+    if (isBulletActive) {
+        bulletY--;
+        if (bulletY < 0) {
+            isBulletActive = false;
+        }
+        else {
+            for (size_t i = 0; i < enemyX.size(); i++) {
+                if (bulletX == enemyX[i] && bulletY == enemyY[i]) {
+                    isBulletActive = false;
+                    enemyX[i] = rand() % width;
+                    enemyY[i] = 0;
+                    sscore++;
+                }
+            }
+        }
+    }
+
+    // Spawn new enemies
+    if (rand() % 10 == 0) {
+        enemyX.push_back(rand() % width);
+        enemyY.push_back(0);
     }
 }
 
-int spacemain()
-{
-    spacesetup();
-    while (true)
-    {
-        spacedraw();
-        spaceinput();
-        spaceupdate();
-        Sleep(50); // Adjust the sleep time to control game speed
-        // Adjust enemy speed based on difficulty
-        if (enemySpeed == 1) // Leicht
-            Sleep(50);
-        else if (enemySpeed == 2) // Mittel
-            Sleep(30);
-        else if (enemySpeed == 3) // Schwer
-            Sleep(10);
+int spacemain() {
+    srand(static_cast<unsigned>(time(0)));
+    spaceSetup();
+    while (true) {
+        spaceDraw();
+        spaceInput();
+        spaceUpdate();
+        Sleep(100);  // Adjust the speed as needed
     }
     return 0;
 }
