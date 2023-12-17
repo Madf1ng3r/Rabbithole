@@ -1,10 +1,15 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+#include <algorithm>
+#include <thread>
 #include <chrono>
 #include <string>
 #include <conio.h>
 #include "sinndeslebens.h"
+
+using namespace std;
 
 bool isNumber(const std::string& str) {
     for (char c : str) {
@@ -14,6 +19,7 @@ bool isNumber(const std::string& str) {
     }
     return true;
 }
+
 
 int ftmain() {
     srand(time(0)); // Seed für den Zufallszahlengenerator initialisieren

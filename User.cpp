@@ -4,6 +4,8 @@
 #include <chrono>
 #include <fstream>
 #include <conio.h>
+#include <thread>
+#include <vector>
 
 std::string g_name; // Global variable to store the name
 
