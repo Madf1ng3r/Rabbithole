@@ -123,6 +123,18 @@
     <ClCompile Include="Gesetze.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="sqlwiki.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="pcwiki.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="chess.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="infolink.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -144,9 +156,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="binary.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Snake.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Links.h">
@@ -209,9 +218,6 @@
     <ClInclude Include="Games.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Treadmill.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="BWL.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -231,6 +237,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Gesetze.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlwiki.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="pcwiki.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

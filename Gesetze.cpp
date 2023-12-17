@@ -1,7 +1,5 @@
 #include "games.h"
-#include "Snake.h"
 #include "pong.h"
-#include "Treadmill.h"
 #include "Mainframe.h"
 #include <iostream>
 #include <chrono>

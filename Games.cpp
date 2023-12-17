@@ -1,50 +1,52 @@
-#include "games.h"
-#include "Snake.h"
+#include "Games.h"
 #include "pong.h"
-#include "Treadmill.h"
 #include "Mainframe.h"
 #include <iostream>
 #include <chrono>
+#include <thread>
+
 using namespace std;
 
 void showGames()
 {
     std::cout << "\033[32m";
-    std::cout << R"(
-               
-           
+    std::cout << R"(               
          
-        
-        
-            
-        
-              
-                                                      ____                                            
-                                                     /___/\_                                
-                                                    _\   \/_/\__                          
-                                                  __\       \/_/\                       
-                                                  \   __    __ \ \                     
-                                                 __\  \_\   \_\ \ \   __               
-                                                /_/\\   __   __  \ \_/_/\          
-                                                \_\/_\__\/\__\/\__\/_\_\/       
-                                                   \_\/_/\       /_\_\/             
-                                                      \_\/       \_\/ 
 
 
+
+
+                                                       _______________________________________________________        
+                                                     /  _____________________________________________________  )      
+                                                    /                                                           ]      
+                                                   /  _______________________________________________________   |     
+                                                  |  |------------------------           ____                |  |     
+                                                  |  |  _______________________         /___/\_              |  |    
+                                                  |  | |-----------------------|       _\   \/_/\__          |  |     
+                                                  |  | |        Minispiele     |     __\       \/_/\         |  |     
+                                                  |  | |-----------------------|     \   __    __ \ \        |  |     
+                                                  |  | |1. Snake               |    __\  \_\   \_\ \ \   __  |  |    
+                                                  |  | |2. Pong                |   /_/\\   __   __  \ \_/_/\ |  |     
+                                                  |  | |3. Treadmill           |   \_\/_\__\/\__\/\__\/_\_\/ |  |     
+                                                  |  | |4. Spaceinvaders       |        \_\/_/\      /_\_\/  |  |     
+                                                  |  | |5. Schach              |         \_\/        \_\/    |  |     
+                                                  |  | |                       |                             |  |     
+                                                  |  | |0. Zurück zum Hauptmenü|                             |  |     
+                                                  |  | @---------------------                                |  |     
+                                                  |  |-------------------------------------------------------|  |
+                                                  |__________________________________________________________|  /      
+                                                    (__________________________________________________________/        
+                                             _______/                [___________]    
+                                           /  
+                                          (_________________________________________________________________      
+                                          / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  / __  
+                                         /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
+                                        /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
+                                       /__________________________________________________________________/                                                                                                                                                                                                                                               
  )";  std::cout << "\033[0m";
-    std::cout << "                                                _______________________" << std::endl;
-    std::cout << "                                                |-----------------------|" << std::endl;
-    std::cout << "                                                |        Minispiele     |" << std::endl;
-    std::cout << "                                                |-----------------------|" << std::endl;
-    std::cout << "                                                |1. Snake               |" << std::endl;
-    std::cout << "                                                |2. Pong                |" << std::endl;
-	std::cout << "                                                |3. Treadmill           |" << std::endl;
-  //std::cout << "                                                |4. Spaceinvaders       |" << std::endl; 
-    std::cout << "                                                |0. Zurück zum Hauptmenü|" << std::endl;
-    std::cout << "                                                |_______________________|" << std::endl;
 }
-int gamemain() {
 
+int gamemain() {
     bool running = true;
     int choice;
     while (running)
@@ -80,6 +82,12 @@ int gamemain() {
             animateTransition();
 			clearScreen();
             spacemain();
+            break;
+        case 5:
+            animateTransition();
+            clearScreen();
+            chessmain();
+            break;
         case 0:
             running = false;
             break;

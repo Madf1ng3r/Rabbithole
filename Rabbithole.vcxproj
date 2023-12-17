@@ -136,6 +136,7 @@
     <ClCompile Include="BWL.cpp" />
     <ClCompile Include="BWLLink.cpp" />
     <ClCompile Include="Caesar.cpp" />
+    <ClCompile Include="chess.cpp" />
     <ClCompile Include="Code.cpp" />
     <ClCompile Include="Definitionen.cpp" />
     <ClCompile Include="Digital Clock.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="Hardware.cpp" />
     <ClCompile Include="HCode.cpp" />
     <ClCompile Include="Helpdesk.cpp" />
+    <ClCompile Include="infolink.cpp" />
     <ClCompile Include="Life.cpp" />
     <ClCompile Include="Mainframe.cpp" />
     <ClCompile Include="Links.cpp" />
@@ -152,6 +154,7 @@
     <ClCompile Include="MrSmith.cpp" />
     <ClCompile Include="NuLinks.cpp" />
     <ClCompile Include="OPLinks.cpp" />
+    <ClCompile Include="pcwiki.cpp" />
     <ClCompile Include="pong.cpp" />
     <ClCompile Include="Projektlinks.cpp" />
     <ClCompile Include="Openlink.cpp" />
@@ -159,6 +162,7 @@
     <ClCompile Include="Sinndeslebens.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Spaceinvader.cpp" />
+    <ClCompile Include="sqlwiki.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Wiki.cpp" />
     <ClCompile Include="Witzbold.cpp" />
@@ -184,7 +188,8 @@
     <ClInclude Include="Geschichte.h" />
     <ClInclude Include="Hcode.h" />
     <ClInclude Include="Helpdesk.h" />
-    <ClInclude Include="Treadmill.h" />
+    <ClInclude Include="pcwiki.h" />
+    <ClInclude Include="sqlwiki.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="Mainframe.h" />
     <ClInclude Include="MSmith.h" />
@@ -197,7 +202,6 @@
     <ClInclude Include="pong.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="sinndeslebens.h" />
-    <ClInclude Include="Snake.h" />
     <ClInclude Include="Taschenrechner.h" />
     <ClInclude Include="Wiki.h" />
     <ClInclude Include="Witzbold.h" />

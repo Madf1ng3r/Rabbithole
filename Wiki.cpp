@@ -1,54 +1,68 @@
 #include "Mainframe.h"
 #include "Helpdesk.h"
 #include "BWL.h"
+#include "sqlwiki.h"
+#include "pcwiki.h"
 #include <iostream>
 #include <chrono>
+#include <thread>
+#include <string>
+
 using namespace std;
+
+
 
 void showWiki()
 {
-    std::cout << "\033[32m";
-    std::cout << R"(
-               
+    cout << "\033[32m";
+    cout << R"(            
+                 
            
-         
-        
-        
-            
-        
-              
-                                                                O
-                                                               /|\
-                                                               / \
-
-
-
- )";  std::cout << "\033[0m";
-    std::cout << "                                                _______________________" << std::endl;
-    std::cout << "                                                |-----------------------|" << std::endl;
-    std::cout << "                                                |         WIKI          |" << std::endl;
-    std::cout << "                                                |-----------------------|" << std::endl;
-    std::cout << "                                                |1. C++                 |" << std::endl;
-    std::cout << "                                                |2. BWL                 |" << std::endl;
-    std::cout << "                                                |3.                     |" << std::endl;
-    //std::cout << "                                              |4.                     |" << std::endl; 
-    std::cout << "                                                |0. Zurück zum Hauptmenü|" << std::endl;
-    std::cout << "                                                |_______________________|" << std::endl;
+      
+      
+           
+                                                       _______________________________________________________        
+                                                     /  _____________________________________________________  )      
+                                                    /                                                           ]      
+                                                   /  _______________________________________________________   |     
+                                                  |  |                                                       |  |     
+                                                  |  |  _______________________                              |  |    
+                                                  |  | |-----------------------|                             |  |     
+                                                  |  | |         WIKI          |                             |  |     
+                                                  |  | |-----------------------|                             |  |     
+                                                  |  | |1. C++                 |                             |  |    
+       .--.           .---.        .-.            |  | |2. BWL                 |                             |  |     
+   .---|--|   .-.     | B |  .---. |~|            |  | |3. SQL                 |                             |  |     
+.--|===|W |---|_|--.__| W |--|:::| |~|-==-.__ ___ |  | |4. Elektronik & PC     |                             |  |     
+|C#|C++|i |===| |~~|%%| L |--|SQL|_|~|HTML|  |___||  | |0. Zurück zum Hauptmenü|                             |  |     
+|  |   |S |===| |==|  |   |  |:::|=| |    |PC|---||  | |                       |                             |  |     
+|  |PHP|o |   |_|__|  | I |__|CMD| | |    |  |___||  |_________________________|                             |  |     
+|~~|===|--|===|~|~~|%%|~~~|--|:::|=|~|----|==|---||  | @-----------------------                              |  |     
+^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^|  |-------------------------------------------------------|  |
+                                                  |__________________________________________________________|  /      
+                                                    (__________________________________________________________/        
+                                                ____/                 [___________]                                     
+                                               /                                                                        
+                                              (_________________________________________________________________        
+                                              / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  / __  
+                                             /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
+                                            /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
+                                           /__________________________________________________________________/          
+ )";  cout << "\033[0m";
 }
 int wikimain() {
-
     bool running = true;
     int choice;
     while (running)
     {
         showWiki();
-        std::cout << "Wählen Sie eine Option: ";
-        if (!(std::cin >> choice))
+        cout << "Wählen Sie eine Option: ";
+        if (!(cin >> choice))
         {
-            std::cin.clear(); //    clear error flags
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
-            std::cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
+            cin.clear(); //    clear error flags
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
             continue;
         }
         switch (choice)
@@ -66,18 +80,19 @@ int wikimain() {
         case 3:
             animateTransition();
             clearScreen();
-         
+            showsqlwikimain();
             break;
         case 4:
             animateTransition();
             clearScreen();
-        
+			pcwikimain();
+			break;
         case 0:
             running = false;
             break;
         default:
-            std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay 2 seconds
+            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(std::chrono::seconds(2)); // Delay 2 seconds
             break;
         }
     }

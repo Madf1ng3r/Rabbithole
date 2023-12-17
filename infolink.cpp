@@ -1,21 +1,18 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "PLinks.h"
 #include "Openlink.h"
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
 
-int plinkmain() {
+int infolinkmain() {
     std::string links[] = {
-        "https://www.leipzig.ihk.de/mb-04-111",
-        "https://en.cppreference.com/w/",
-        "https://github.com/nlohmann/json",
-        "https://github.com/curl/curl/tree/master",
-        "https://github.com/olrea/openai-cpp",
-        "https://www.w3schools.com/",
-        "https://github.com/Madf1ng3r/Rabbithole",
+
+        "https://www.leifiphysik.de/elektrizitaetslehre/",
+        "https://www.lernort-mint.de/informatik/",
+        "https://www.lawerence.de",
+        "https://computerweekly.com/de/definitionen",
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
