@@ -16,14 +16,6 @@ void showFinanzierungsregeln() {
     cout << "Die Finanzierungsregeln sind in der BWL aufgestellte normierte Regeln. Es handelt sich um Mindestanforderungen an die aus einer Bilanz ersichtliche Kapitalstruktur.[1] Im Hinblick auf eine optimale Kapitalstruktur, was eine Kosten minimierende und damit auch Unternehmenswert maximierende Auslegung der Finanzierung bedeutet, haben sich einige Finanzierungsregeln ausgeprägt. Diese zielen nicht nur auf einen optimalen Verschuldungsgrad, sondern auch auf die Erhaltung der Zahlungsfähigkeit, also eine optimale Liquidität. Bei der Bewertung der Liquidität wird vom Grundsatz der Fristenkongruenz ausgegangen. Die meisten der unten genannten Regeln erweisen sich in der Praxis oft als unerreichbar, da sie je nach Branche kaum bis gar nicht umzusetzen sind. Außerdem vermindern sie häufig die Rentabilität zu Gunsten der Liquidität, ermöglichen aber auch, je besser die Regeln erfüllt sind, längere wirtschaftliche Unternehmenskrisen zu überwinden. Aus dieser Perspektive ist eine Anpassung der starren Regeln auf jedes einzelne Unternehmen (Betriebsgröße) oder zumindest auf einen Wirtschaftszweig nötig, um den Praxisbezug herzustellen. Eine besondere Rolle spielt der Leverage-Effekt, das heißt die Hebelwirkung des Fremdkapitals auf die Eigenkapitalrentabilität.";
 }
 
-void showGeschaeftsprozesse() {
-    cout << R"(
-Geschäftsprozesse sind systematische und wiederholbare Aktivitätsabläufe, 
-die in einer Organisation durchgeführt werden, um Ziele zu erreichen. 
-Beispiele für Geschäftsprozesse sind:\n
-)";
-}
-
 void showBilanz()
 {
    cout <<  R"(
@@ -727,13 +719,15 @@ Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessiona
 void showsixsigma()
 {
 cout <<    R"(
-Six Sigma ist ein Managementsystem zur Prozessverbesserung, statistisches Qualitätsziel und zugleich eine Methode des Qualitätsmanagements.
-Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und Überwachung von Geschäftsvorgängen mit statistischen Mitteln.
+Six Sigma ist ein Managementsystem zur Prozessverbesserung, statistisches 
+Qualitätsziel und zugleich eine Methode des Qualitätsmanagements.
+Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und 
+Überwachung von Geschäftsvorgängen mit statistischen Mitteln.
 
 
                                                   Definieren
                                                                                 Messen
-                                                              Sig Sigma
+                                                              Six Sigma
                                          Kontrollieren                              Analysieren
                                                                Verbessern
 )";
@@ -787,7 +781,7 @@ Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu
 
 void showmaxpr()
 {
-    R"(
+ cout <<   R"(
 Maximalprinzip: Auch als Prinzip der optimalen Zielerreichung bekannt. Es besagt, dass mit gegebenen
 Ressourcen das Maximum an Zielen erreicht werden soll. Im ökonomischen Kontext bedeutet dies, dass ein 
 Unternehmen versucht, mit den vorhandenen Ressourcen den größtmöglichen Gewinn zu erzielen.
@@ -796,7 +790,7 @@ Unternehmen versucht, mit den vorhandenen Ressourcen den größtmöglichen Gewinn z
 
 void showminpr()
 {
-    R"(
+ cout <<   R"(
 Minimalprinzip: Auch als Prinzip der sparsamen Mittelverwendung bekannt. Es besagt, dass ein bestimmtes Ziel 
 mit minimalen Ressourcen oder Aufwand erreicht werden sollte. Im ökonomischen Kontext bedeutet dies, 
 dass ein Unternehmen versucht, eine bestimmte Produktionsmenge mit minimalen Kosten zu produzieren, 
@@ -847,23 +841,100 @@ um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen
     }
 }
 
+void showgeschp1() {
+    R"(
+Beschaffungsprozess:
 
-void showbwl()
+Identifikation von Bedarfen
+Auswahl von Lieferanten
+Bestellungsabwicklung
+Lieferantenmanagement
+)";
+}
+
+void showgeschp2() {
+    R"(
+Produktionsprozess:
+
+Materialbeschaffung
+Fertigung
+Qualitätskontrolle
+Lagerhaltung
+)";
+}
+
+void showgeschp3() {
+    R"(
+Vertriebsprozess:
+
+Kundenaquise
+Angebotslegung
+Auftragsabwicklung
+Lieferung
+)";
+}
+
+void showgeschp4() {
+R"(
+Finanzprozess:
+
+Buchführung
+Rechnungswesen
+Budgetierung
+Finanzplanung
+)"; }
+
+void showgeschp5() {
+    R"(
+Personalprozess:
+
+Personalbeschaffung
+Mitarbeiterentwicklung
+Gehaltsabrechnung
+Personalmanagement
+)";
+}
+
+void showgeschp6() {
+    R"(
+Innovations- und Entwicklungsprozess:
+
+Forschung und Entwicklung
+Produktentwicklung
+Innovationsmanagement
+Markteinführung neuer Produkte
+)";
+}
+
+void showgeschp7() {
+    R"(
+Kundenbeziehungsprozess:
+
+Kundenbetreuung
+Beschwerdemanagement
+Kundenfeedback
+Kundenzufriedenheitsmessung
+)";
+}
+
+void showgeschaeftsp()
 {
     cout << R"(
-
+Geschäftsprozesse sind systematische und wiederholbare Aktivitätsabläufe, 
+die in einer Organisation durchgeführt werden, um Ziele zu erreichen. 
+Beispiele für Geschäftsprozesse sind:\n
 
 )";
     int choice;
     while (true)
     {
-        cout << "1. CPU Sockel" << endl;
-        cout << "2. RAM Steckplatz" << endl;
-        cout << "3. " << endl;
-        cout << "4. " << endl;
-        cout << "5. " << endl;
-        cout << "6. Ökonomisches Prinzip" << endl;
-        cout << "7. " << endl;
+        cout << "1. Beschaffung " << endl;
+        cout << "2. Produktion" << endl;
+        cout << "3. Vertrieb" << endl;
+        cout << "4. Finanzen" << endl;
+        cout << "5. Personal" << endl;
+        cout << "6. Innovation und Entwicklung" << endl;
+        cout << "7. Kundenbeziehung" << endl;
         cout << "0. Zurück zum Hauptmenü" << endl;
         cout << "Wählen Sie eine Option: ";
         if (!(cin >> choice))
@@ -878,31 +949,31 @@ void showbwl()
         {
         case 1:
             clearScreen();
-
+			showgeschp1();
             break;
         case 2:
             clearScreen();
-
+			showgeschp2();
             break;
         case 3:
             clearScreen();
-
+			showgeschp3();
             break;
         case 4:
             clearScreen();
-
+			showgeschp4();
             break;
         case 5:
             clearScreen();
-
+			showgeschp5();
             break;
         case 6:
             clearScreen();
-			showoekopr();
+			showgeschp6();
             break;
         case 7:
             clearScreen();
-
+			showgeschp7();
             break;
         case 0:
             return;
@@ -914,14 +985,13 @@ void showbwl()
     }
 }
 
-
 int bwlmain()
 {
     bool running = true;
     int choice;
     while (running)
     {
-        system("cls");
+       system("cls");
         clearScreen();
         //  cout << "\033[1;32m"; // Setzt die Farbe auf hellgrün
         cout << R"(
@@ -937,7 +1007,7 @@ int bwlmain()
                                                    /  _______________________________________________________   |     
                                                   |  | ------------------------                _.-"\         |  |     
                                                   |  | '    BLW-Wiki                       _.-"     \        |  |    
-                                                  |  | ' 1. Gesetze                     ,-"          \       |  |     
+                                                  |  | ' 1. Gesetzbücher                ,-"          \       |  |     
                                                   |  | ' 2. Geschäftsprozesse          ( \            \      |  |     
                                                   |  | ' 3. ISO Normen                  \ \            \     |  |     
                                                   |  | ' 4. Bilanz                       \ \            \    |  |    
@@ -979,7 +1049,7 @@ int bwlmain()
         case 2:
             clearScreen();
             cout.flush();  // Puffer leeren
-            showbwl();
+            showgeschaeftsp();
             break;
         case 3:
             animateTransition();
@@ -1069,10 +1139,9 @@ int bwlmain()
         case 0:
             running = false;
             break;
-     /*       return;*/
         default:
-            std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2));
+            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(std::chrono::seconds(2));
             break;
         }
     }

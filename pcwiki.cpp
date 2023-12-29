@@ -1150,6 +1150,218 @@ Computerhardware / alle physischen Teile oder Komponenten, die zu einem Computer
         }
     }
 
+    void showad1() {
+        cout << R"(
+Verzeichnisdienst:
+
+AD ist ein hierarchisches Verzeichnisdienstsystem, das Informationen über Objekte im Netzwerk speichert. 
+Diese Objekte können Benutzer, Gruppen, Computer, Drucker, Anwendungen und andere Ressourcen sein.
+Die Informationen werden in einer Baumstruktur organisiert, die als "Verzeichnisbaum" oder 
+"Domänenbaum" bezeichnet wird. Die Grundstruktur ist das "Verzeichnis", 
+das wiederum in "Domänen" unterteilt ist.
+)";
+    }
+    void showad2() {
+        cout << R"(
+Domänen:
+
+Eine Domäne ist eine logische Organisationseinheit in einem AD-Netzwerk. 
+Sie enthält Benutzer, Gruppen und Computerobjekte, die zentral verwaltet werden können.
+Jede Domäne hat eine eindeutige Bezeichnung, die als Domänenname bezeichnet wird. 
+Domänen können auch hierarchisch organisiert werden.
+)";
+    }
+
+    void showad3() {
+        cout << R"(
+Domänencontroller:
+
+Ein Domänencontroller (DC) ist ein Server, der die AD-Datenbank enthält und 
+Authentifizierungsanfragen sowie Anfragen zum Zugriff auf Ressourcen verarbeitet.
+Es gibt mindestens einen primären Domänencontroller (PDC) pro Domäne, 
+aber zusätzliche Domänencontroller können vorhanden sein, um die Last zu verteilen 
+und die Ausfallsicherheit zu verbessern.
+)";
+    }
+
+    void showad4() {
+        cout << R"(
+Active Directory-Datenbank:
+
+Die AD-Datenbank speichert Informationen über Objekte im Netzwerk. Dies umfasst 
+Attribute wie Benutzernamen, Passwörter, Gruppenmitgliedschaften und mehr.
+Die Datenbank wird repliziert, um sicherzustellen, dass Änderungen auf allen 
+Domänencontrollern in einer Domäne synchronisiert werden.
+)";
+    }
+
+    void showad5() {
+        cout << R"(
+Organizational Units (OU):
+
+OUs sind Container innerhalb von Domänen, die es Administratoren ermöglichen, 
+Objekte zu organisieren und zu verwalten. Sie bieten eine flexible Möglichkeit, 
+Gruppenrichtlinien und Berechtigungen auf bestimmte Gruppen von Objekten anzuwenden.
+)";
+    }
+
+    void showad6() {
+        cout << R"(
+Gruppenrichtlinien:
+
+Gruppenrichtlinien ermöglichen es Administratoren, Einstellungen auf Benutzer- und Computerebene
+zu konfigurieren. Dies reicht von Sicherheitseinstellungen bis hin zu Desktop-Hintergrundbildern.
+)";
+    }
+
+    void showad7() {
+        cout << R"(
+Sicherheit:
+
+Active Directory implementiert Sicherheitsmechanismen, um den Zugriff auf Ressourcen zu steuern. 
+Dies erfolgt durch die Vergabe von Berechtigungen und die Anwendung von Sicherheitsrichtlinien.
+)";
+    }
+
+    void showad8() {
+        cout << R"(
+DNS-Integration:
+
+Active Directory ist stark mit dem Domain Name System (DNS) integriert. 
+DNS wird verwendet, um die Namen von Netzwerkressourcen in IP-Adressen aufzulösen.
+)";
+    }
+
+    void showad()
+    {
+        cout << R"(   
+ Active Directory (AD) ist ein von Microsoft entwickelter Verzeichnisdienst, der in Windows-basierten 
+Netzwerken eingesetzt wird. Es bietet eine zentrale Datenbank und einen Satz von Diensten, die es 
+Netzwerkadministratoren ermöglichen, Ressourcen wie Computer, Benutzer, Drucker und andere 
+Netzwerkobjekte zu organisieren, zu verwalten und zu sichern. 
+Die Verwendung von Active Directory erleichtert die Verwaltung von Netzwerkressourcen, 
+erhöht die Sicherheit und ermöglicht eine effiziente Organisation von Benutzern und Ressourcen 
+in Unternehmen. Es ist ein zentraler Bestandteil der Windows-Netzwerkumgebung und spielt eine 
+Schlüsselrolle bei der Authentifizierung und Autorisierung von Benutzern.
+Hier sind die wichtigsten Komponenten und Funktionen von Active Directory:
+)";
+        int choice;
+        while (true)
+        {
+            cout << "1. Verzeichnisdienst" << endl;
+            cout << "2. Domain" << endl;
+            cout << "3. Domaincontroller" << endl;
+            cout << "4. Datenbank" << endl;
+            cout << "5. Organisation Units (OU)" << endl;
+            cout << "6. Gruppenrichtlinien" << endl;
+            cout << "7. Sicherheit" << endl;
+            cout << "8. DNS Integration" << endl;
+            cout << "0. Zurück zum Hauptmenü" << endl;
+            cout << "Wählen Sie eine Option: ";
+            if (!(cin >> choice))
+            {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+                this_thread::sleep_for(chrono::seconds(2));
+                continue;
+            }
+            switch (choice)
+            {
+            case 1:
+                clearScreen();
+                showad1();
+                break;
+            case 2:
+                clearScreen();
+                showad2();
+                break;
+            case 3:
+                clearScreen();
+                showad3();
+                break;
+            case 4:
+                clearScreen();
+                showad4();
+                break;
+            case 5:
+                clearScreen();
+                showad5();
+                break;
+            case 6:
+                clearScreen();
+                showad6();
+                break;
+            case 7:
+                clearScreen();
+                showad7();
+                break;
+            case 8:
+                clearScreen();
+                showad8();
+                break;
+            case 0:
+                return;
+            default:
+                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                this_thread::sleep_for(chrono::seconds(2));
+                break;
+            }
+        }
+    }
+
+    void showusv1() {
+     cout <<   R"(
+Batteriesicherung: Die USV verfügt über eine interne Batterie, die bei 
+einem Stromausfall aktiviert wird. Diese Batterie versorgt die angeschlossenen 
+Geräte mit Strom, bis die Hauptstromversorgung wiederhergestellt ist.
+)";
+    }
+
+    void showusv2() {
+     cout <<   R"(
+Automatische Spannungsregelung (AVR): Viele USV-Modelle verfügen über AVR, 
+um Schwankungen in der Netzspannung auszugleichen und eine stabile Stromversorgung sicherzustellen.
+)";
+    }
+
+    void showusv3() {
+     cout <<   R"(
+Online-, Offline- und Line-Interactive-Modelle: USV-Geräte gibt es in verschiedenen Konfigurationen. 
+Online-USV-Geräte bieten die höchste Schutzniveau, da sie die angeschlossenen Geräte kontinuierlich 
+über die Batterie versorgen. Offline- und Line-Interactive-Modelle schalten die Batterie nur bei 
+Bedarf ein.Online-, Offline- und Line-Interactive-Modelle: USV-Geräte gibt es in verschiedenen 
+Konfigurationen. Online-USV-Geräte bieten die höchste Schutzniveau, da sie die angeschlossenen 
+Geräte kontinuierlich über die Batterie versorgen. Offline- und Line-Interactive-Modelle 
+schalten die Batterie nur bei Bedarf ein.
+)";
+    }
+
+    void showusv4() {
+    cout <<    R"(
+Überspannungsschutz: USV-Geräte bieten oft Schutz vor Überspannungen, 
+die durch Blitzeinschläge oder andere elektrische Störungen verursacht werden können.
+)";
+    }
+
+    void showusv5() {
+     cout <<   R"(
+Schnittstellen: Viele moderne USV-Geräte verfügen über Schnittstellen wie USB oder Netzwerkanschlüsse, 
+um mit Computern oder Netzwerken zu kommunizieren. Dies ermöglicht es der USV, den Status zu überwachen 
+und automatisch herunterzufahren, wenn die Batterieleistung kritisch wird.
+)";
+    }
+
+    void showusv6() {
+        cout << R"(
+Kapazität und Laufzeit:
+
+Die Kapazität einer USV wird in Voltampere (VA) oder Watt (W) gemessen und gibt an, 
+wie viel Last sie unterstützen kann. Die Laufzeit der USV hängt von der Kapazität und 
+der angeschlossenen Last ab. Größere Kapazitäten und Batterien ermöglichen längere Laufzeiten.
+)";
+    }
+
     void showusv()
     {
         cout << R"(   
@@ -1182,39 +1394,27 @@ Dies ermöglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung w
             {
             case 1:
                 clearScreen();
-        
+                showusv1();
                 break;
             case 2:
                 clearScreen();
-    
+                showusv2();
                 break;
             case 3:
                 clearScreen();
-        
+                showusv3();
                 break;
             case 4:
                 clearScreen();
-    
+                showusv4();
                 break;
             case 5:
                 clearScreen();
-        
+                showusv5();
                 break;
             case 6:
                 clearScreen();
-         
-                break;
-            case 7:
-                clearScreen();
-       
-                break;
-            case 8:
-                clearScreen();
-                showhwinfo8();
-                break;
-            case 9:
-                clearScreen();
-        
+                showusv6();
                 break;
             case 0:
                 return;
@@ -1248,7 +1448,7 @@ Zweite Seite:
                                                   |  | ' 4. USV               |                              |  |     
                                                   |  | ' 5.                   |                              |  |    
                                                   |  | ' 6.                   |                              |  |     
-                                                  |  | ' 7.                   |                              |  |     
+                                                  |  | ' 7. Active Directory  |                              |  |     
                                                   |  | ' 8.                   |                              |  |     
                                                   |  | ' 9.                   |                              |  |     
                                                   |  | '10.                   |                              |  |     
@@ -1309,7 +1509,7 @@ Zweite Seite:
             case 7:
                 animateTransition();
                 clearScreen();
-              
+                showad();
                 break;
             case 8:
                 animateTransition();

@@ -11,6 +11,7 @@
 #include "PLinks.h"
 #include "Openlink.h"
 #include "Mainframe.h"
+#include "pcwiki.h"
 #include <vector>
 void showLinkmenu()
 {
@@ -29,15 +30,15 @@ void showLinkmenu()
                                                     /                                                           ]      
                                                    /  _______________________________________________________   |     
                  ,-.                               |  |------------------------|                              |  |     
-                / \  `.  __..-,O                   |  |                        |                              |  |    
-               :   \ --''_..-'.'                   |  |        Links           |                              |  |     
-               |    . .-' `. '.                    |  | -----------------------|                              |  |     
-               :     .     .`.'                    |  | | 1. AI Links          |                              |  |     
-                \     `.  /  ..                    |  | | 2. Projekt Links     |                              |  |    
-                 \      `.   ' .                   |  | | 3. Admin Links       |                              |  |     
-                  `,       `.   \                  |  | | 4. andere Links      |                              |  |     
-                 ,|,`.        `-.\                 |  | | 5. Inception Links   |                              |  |     
-                '.||  ``-...__..-`                 |  | | 6. BWL Links         |                              |  |     
+                / \  `.  __..-,O                   |  |       Links            |                              |  |    
+               :   \ --''_..-'.'                   |  |________________________|                              |  |     
+               |    . .-' `. '.                    |  | | 1. Infolinks         |                              |  |     
+               :     .     .`.'                    |  | | 2. Projekt Links     |                              |  |     
+                \     `.  /  ..                    |  | | 3. Admin Links       |                              |  |    
+                 \      `.   ' .                   |  | | 4. andere Links      |                              |  |     
+                  `,       `.   \                  |  | | 5. Inception Links   |                              |  |     
+                 ,|,`.        `-.\                 |  | | 6. BWL Links         |                              |  |     
+                '.||  ``-...__..-`                 |  | | 7. AI Links          |                              |  |     
                 |  |                               |  | | 0. Beenden           |                              |  |     
                 |__|                               |  | ----------------------                                |  |     
                 /||\                               |  | @---------------------                                |  |     
@@ -74,7 +75,7 @@ int linkmain() {
         case 1:   
             animateTransition();
             clearScreen();
-            ailinkmain();
+            infolinkmain();
             break;
         case 2:
             animateTransition();
@@ -100,6 +101,11 @@ int linkmain() {
             clearScreen();
             bwllinkmain();
             break;
+        case 7:
+            animateTransition();
+			clearScreen();
+			ailinkmain();
+			break;
         case 0:
             running = false;
             break;

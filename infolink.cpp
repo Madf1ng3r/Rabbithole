@@ -8,11 +8,12 @@
 
 int infolinkmain() {
     std::string links[] = {
-
-        "https://www.leifiphysik.de/elektrizitaetslehre/",
-        "https://www.lernort-mint.de/informatik/",
+        "https://fachinformatikerpruefungsvorbereitung.de/",
+        "https://www.leifiphysik.de/elektrizitaetslehre",
+        "https://www.lernort-mint.de/informatik",
         "https://www.lawerence.de",
         "https://computerweekly.com/de/definitionen",
+        "https://ss64.com"
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);

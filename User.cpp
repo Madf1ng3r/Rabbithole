@@ -69,7 +69,7 @@ std::string enterName() {
     std::cout << "Wilkommen ";
     std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Verzögerung von 500 Millisekunden
 
-    std::string welcomeMessage = "im Rabbithole! Das Programm befindet sich noch in der Alpha Version, wenn du noch irgendwelche Bugs findest kannst du diese gerne melden. Bevor du loslegst erzähl mir etwas über dich. Wie lautet dein Name?";
+    std::string welcomeMessage = "im Rabbithole! Das Programm befindet sich noch in der Alpha Version, wenn Du noch irgendwelche Bugs findest kannst Du diese gerne melden. Bevor Du loslegst erzähl mir etwas über dich. Wie lautet dein Name?";
     for (char c : welcomeMessage) {
         std::cout << c;
         std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen

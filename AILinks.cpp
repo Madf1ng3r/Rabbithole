@@ -14,6 +14,7 @@ int ailinkmain() {
         "https://www.w3schools.com/",
         "https://deepai.org/",
         "https://hotpot.ai/",
+        "https://playground.ai/",
         "https://www.canva.com/",
         "https://www.craiyon.com/",
         "https://maketafi.com/",

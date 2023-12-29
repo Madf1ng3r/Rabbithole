@@ -7,6 +7,7 @@
 #include <chrono>
 #include <thread>
 #include <string>
+#include "cmd.h"
 
 using namespace std;
 
@@ -31,11 +32,11 @@ void showWiki()
                                                   |  | |         WIKI          |                             |  |     
                                                   |  | |-----------------------|                             |  |     
                                                   |  | |1. C++                 |                             |  |    
-       .--.           .---.        .-.            |  | |2. BWL                 |                             |  |     
+       .--.           .---.        .-.            |  | |2. CMD                 |                             |  |     
    .---|--|   .-.     | B |  .---. |~|            |  | |3. SQL                 |                             |  |     
 .--|===|W |---|_|--.__| W |--|:::| |~|-==-.__ ___ |  | |4. Elektronik & PC     |                             |  |     
-|C#|C++|i |===| |~~|%%| L |--|SQL|_|~|HTML|  |___||  | |0. Zurück zum Hauptmenü|                             |  |     
-|  |   |S |===| |==|  |   |  |:::|=| |    |PC|---||  | |                       |                             |  |     
+|C#|C++|i |===| |~~|%%| L |--|SQL|_|~|HTML|  |___||  | |5. BWL                 |                             |  |     
+|  |   |S |===| |==|  |   |  |:::|=| |    |PC|---||  | |0. Zurück zum Hauptmenü|                             |  |     
 |  |PHP|o |   |_|__|  | I |__|CMD| | |    |  |___||  |_________________________|                             |  |     
 |~~|===|--|===|~|~~|%%|~~~|--|:::|=|~|----|==|---||  | @-----------------------                              |  |     
 ^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^|  |-------------------------------------------------------|  |
@@ -75,7 +76,7 @@ int wikimain() {
         case 2:
             animateTransition();
             clearScreen();
-            bwlmain();
+            cmdmain();
             break;
         case 3:
             animateTransition();
@@ -86,6 +87,11 @@ int wikimain() {
             animateTransition();
             clearScreen();
 			pcwikimain();
+			break;
+        case 5:
+			animateTransition();
+			clearScreen();
+            bwlmain();
 			break;
         case 0:
             running = false;

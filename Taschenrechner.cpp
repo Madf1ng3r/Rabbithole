@@ -2,10 +2,11 @@
 #include <cmath>
 #include <algorithm>
 #include <iomanip> // Für setprecision und fixed
-#include <windows.h> // Für Farbänderung
-#include <string> // Für die Verwendung von std::to_string()
+#include <windows.h>
+#include <string>
 #include "Bicalc.h"
 #include "Mainframe.h"
+#include "Bitcalc.h"
 
 using namespace std;
 int addition(int a, int b)
@@ -83,24 +84,22 @@ void printMenu()
     cout << "| | 1 | 2 | 3 | | x | |" << endl;
     cout << "| |___|___|___| |___| |" << endl;
     cout << "| | . | 0 | = | | / | |" << endl;
-    cout << "| |___|___|___| |___| |" << endl;
+    cout << "|_|___|___|___|_|___|_|" << endl;
     cout << "\033[0m"; //Zurücksetzen der Textfarbe
-    cout << "                                           --------------------------------------" << endl;
-    cout << "                                           |             Optionen:               |" << endl;
-    cout << "                                           |  1. Addition                        |" << endl;
-    cout << "                                           |  2. Subtraktion                     |" << endl;
-    cout << "                                           |  3. Multiplikation                  |" << endl;
-    cout << "                                           |  4. Division                        |" << endl;
-    cout << "                                           |  5. Potenzierung                    |" << endl;
-    cout << "                                           |  6. Quadratwurzel                   |" << endl;
-    cout << "                                           |  7. Fakultät                        |" << endl;
-    cout << "                                           |  8. Zahl Pi                         |" << endl;
-    cout << "                                           |  9. Volumen eines Kreises           |" << endl;
-    cout << "                                           |  10. Fläche eines Kreises           |" << endl;
-    cout << "                                           |  11. Umfang eines Kreises           |" << endl;
-	cout << "                                           |  12. Binärrechner                   |" << endl;
-    cout << "                                           |  0. zurück zum Menue                |" << endl;
-    cout << "                                            --------------------------------------" << endl;
+    cout << "                                           ------------------------------------------------------" << endl;
+    cout << "                                           |             Optionen:                               |" << endl;
+    cout << "                                           |  1. Addition          |  11. Umfang eines Kreises   |" << endl;
+    cout << "                                           |  2. Subtraktion       |  12. Binärrechner           |" << endl;
+    cout << "                                           |  3. Multiplikation    |  13. Bit-/Byte Rechner      |" << endl;
+    cout << "                                           |  4. Division          |                             |" << endl;
+    cout << "                                           |  5. Potenzierung      |                             |" << endl;
+    cout << "                                           |  6. Quadratwurzel     |                             |" << endl;
+    cout << "                                           |  7. Fakultät          |                             |" << endl;
+    cout << "                                           |  8. Zahl Pi           |                             |" << endl;
+    cout << "                                           |  9. Volumen eines Kreises                           |" << endl;
+    cout << "                                           |  10. Fläche eines Kreises                           |" << endl;
+    cout << "                                           |  0. zurück zum Menue                                |" << endl;
+    cout << "                                            -----------------------------------------------------" << endl;
 }
 
 void changeConsoleColor(int colorCode)
@@ -252,6 +251,11 @@ void calcmain()
             clearScreen();
             bicmain();
             break;
+        case 13:
+			animateTransition();
+			clearScreen();
+            bitmain();
+			break;
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
             break;

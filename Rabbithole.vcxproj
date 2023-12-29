@@ -133,10 +133,12 @@
     <ClCompile Include="BeispielCode.cpp" />
     <ClCompile Include="Bicalc.cpp" />
     <ClCompile Include="binary.cpp" />
+    <ClCompile Include="Bitcalc.cpp" />
     <ClCompile Include="BWL.cpp" />
     <ClCompile Include="BWLLink.cpp" />
     <ClCompile Include="Caesar.cpp" />
     <ClCompile Include="chess.cpp" />
+    <ClCompile Include="cmd.cpp" />
     <ClCompile Include="Code.cpp" />
     <ClCompile Include="Definitionen.cpp" />
     <ClCompile Include="Digital Clock.cpp" />
@@ -175,9 +177,11 @@
     <ClInclude Include="BeispielCode.h" />
     <ClInclude Include="Bicalc.h" />
     <ClInclude Include="binary.h" />
+    <ClInclude Include="Bitcalc.h" />
     <ClInclude Include="BWL.h" />
     <ClInclude Include="BWLLink.h" />
     <ClInclude Include="caesar.h" />
+    <ClInclude Include="cmd.h" />
     <ClInclude Include="Code.h" />
     <ClInclude Include="curl.h" />
     <ClInclude Include="Definitionen.h" />

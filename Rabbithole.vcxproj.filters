@@ -135,6 +135,12 @@
     <ClCompile Include="infolink.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Bitcalc.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="cmd.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -243,6 +249,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="pcwiki.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitcalc.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="cmd.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

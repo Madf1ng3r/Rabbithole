@@ -82,7 +82,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
     int numActions = actions.size();
     int numLocations = locations.size();
     int numEndings = endings.size();
-
     int numSentences = 10; // Anzahl der Sätze in der Geschichte
 
     for (int i = 0; i < numSentences; ++i) {
@@ -168,15 +167,14 @@ int geschmain() {
         cout << "Darüber kann ich dir nichts erzählen. Ich verabschiede mich vorerst." << endl;
         return 0;
     }
-
 	bool generateAnotherStory = true; // Initialisierung
-
     while (generateAnotherStory) {
         cout << "Ich habe deine Geschichte fertig geschrieben. Drücke die Enter-Taste, um die Geschichte anzuzeigen...";
         cin.ignore(); // Ignoriere vorherige Eingaben
         cin.get(); // Warte auf Enter-Taste
 
         cout << "Hier ist deine Geschichte:" << endl;
+        cout << "________________________________________________________________________________________________________________________";
         srand(time(nullptr)); // Initialisiert den Zufallssatzgenerator
 
         vector<string> storyParts;
@@ -313,9 +311,7 @@ int geschmain() {
             ". Dies sollte der Anfang einer langen Reise für ihn sein.",
             ". Durch diese Aktion riss er ein Loch in das Raum-Zeit Kontinuum."
 
-
         };
-
          generateStory(storyParts, nouns, adjectives, actions, locations, endings);
          cout << endl << "Soll ich dir noch eine Geschichte erzählen? ";
          cout << " Mit der Escape Taste kannst du auch ins Hauptmenü zurückzukehren..";
@@ -324,5 +320,5 @@ int geschmain() {
              generateAnotherStory = false;
         }
     } 
-	return 0; //Ende der Funktion
+	return 0;
 }
