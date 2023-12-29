@@ -1,0 +1,103 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26819",
+          "message": {
+            "text": "fallthrough-Attribut ohne Anmerkungen zwischen switch-Bezeichnungen (es. 78)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/rolfd/Downloads/Rabbithole-master/Rabbithole-master/Games.cpp"
+                },
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "gamemain",
+                  "decoratedName": "?gamemain@@YAHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33130.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/rolfd/Downloads/Rabbithole-master/Rabbithole-master/Games.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "df7f5bdd406b15ba3d6570fb5bc34dd2957e5e73ad653666ce9114384037b4e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/rolfd/downloads/rabbithole-master/rabbithole-master/games.h"
+          },
+          "hashes": {
+            "sha-256": "fec3159c3b85c6e878627d3b575876c292895c1ed66edd91d1fd643370a8eda3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/rolfd/downloads/rabbithole-master/rabbithole-master/snake.h"
+          },
+          "hashes": {
+            "sha-256": "6cbe07054d32451ce06b38ceca59fd5e318f7e854338892e3606bbad70ce1d10"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/rolfd/downloads/rabbithole-master/rabbithole-master/pong.h"
+          },
+          "hashes": {
+            "sha-256": "0516684c8c123de603c879282847e3d65e22238b8485764990c2822d99208c24"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/rolfd/downloads/rabbithole-master/rabbithole-master/treadmill.h"
+          },
+          "hashes": {
+            "sha-256": "7d299e71f4aa4352d06c4a93798adcf5076683d1e55af591a962f1513e1e372b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/rolfd/downloads/rabbithole-master/rabbithole-master/mainframe.h"
+          },
+          "hashes": {
+            "sha-256": "b4f04fbb4d30c9f50fd80f1ff4532882527d4d1fe41100e3bfb1c49143d4c3ba"
+          }
+        }
+      ]
+    }
+  ]
+}
