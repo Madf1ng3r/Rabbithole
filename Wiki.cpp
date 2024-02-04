@@ -8,10 +8,7 @@
 #include <thread>
 #include <string>
 #include "cmd.h"
-
 using namespace std;
-
-
 
 void showWiki()
 {
@@ -61,7 +58,7 @@ int wikimain() {
         if (!(cin >> choice))
         {
             cin.clear(); //    clear error flags
-            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
             continue;
@@ -98,7 +95,7 @@ int wikimain() {
             break;
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
-            this_thread::sleep_for(std::chrono::seconds(2)); // Delay 2 seconds
+            this_thread::sleep_for(chrono::seconds(2)); 
             break;
         }
     }

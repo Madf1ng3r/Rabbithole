@@ -8,9 +8,9 @@
 #include <cstdlib>  // Für die Funktion "system"
 #include <ctime>    // Für die Funktion "time"
 #include "Mainframe.h"
-
+using namespace std;
 // ASCII Art für die Spielflächen     BKCPDSRWFT
-const std::string homeMap = R"(
+const string homeMap = R"(
 +-------------------------+
 |                         |   
 |                         |   
@@ -21,7 +21,7 @@ const std::string homeMap = R"(
 +-------------------------+
 )";
 
-const std::string balconyMap = R"(
+const string balconyMap = R"(
 +--------------+
 |              |
 |     BB       |  
@@ -31,7 +31,7 @@ const std::string balconyMap = R"(
 +--------------+
 )";
 
-const std::string hallwayMap = R"(
+const string hallwayMap = R"(
 +--------------+
 |  T   HT  KT   |  
 |   H    K      |
@@ -41,7 +41,7 @@ const std::string hallwayMap = R"(
 +--------------+
 )";
 
-const std::string kitchenMap = R"(
+const string kitchenMap = R"(
 +--------------+
 |  KT          |   
 |    K         |
@@ -49,7 +49,7 @@ const std::string kitchenMap = R"(
 +--------------+
 )";
 
-const std::string bathroomMap = R"(
+const string bathroomMap = R"(
 +--------------+
 |    BT        |   
 |    B         |
@@ -57,7 +57,7 @@ const std::string bathroomMap = R"(
 +--------------+
 )";
 
-const std::string schoolMap = R"(
+const string schoolMap = R"(
 +------------------+
 |   M    L         |   
 |     C            |  
@@ -66,7 +66,7 @@ const std::string schoolMap = R"(
 +------------------+
 )";
 
-const std::string streetMap = R"(
+const string streetMap = R"(
 +------------------------+
 |   N  L                 |   
 |    A    P              |
@@ -75,53 +75,42 @@ const std::string streetMap = R"(
 | K                      |   
 +------------------------+
 )";
-
 // Spielerposition auf der Karte
 struct Position {
     int x;
     int y;
 };
-
 // Klasse für interaktive Objekte
 class InteractiveObject {
 public:
-    InteractiveObject(const std::string& name, char symbol, const Position& position)
+    InteractiveObject(const string& name, char symbol, const Position& position)
         : name(name), symbol(symbol), position(position) {}
-
-    const std::string& getName() const { return name; }
+    const string& getName() const { return name; }
     char getSymbol() const { return symbol; }
     const Position& getPosition() const { return position; } // Updated: const version
-
     Position& getPosition() { return position; } // Non-const version
-
 private:
-    std::string name;   // Name des Objekts
+    string name;   // Name des Objekts
     char symbol;        // Symbol, das das Objekt auf der Karte repräsentiert
     Position position;  // Position des Objekts auf der Karte
 };
-
 // Klasse für Spielfläche
 class GameMap {
 public:
-    GameMap(const std::string& map)
+    GameMap(const string& map)
         : map(map), width(28), height(16) {}
-
     void display() const {
-        std::cout << map << std::endl;
+        cout << map << endl;
     }
-
     void addObject(const InteractiveObject& object) {
         objects.push_back(object);
     }
-
-    const std::string& getMap() const {
+    const string& getMap() const {
         return map;
     }
-
-    const std::vector<InteractiveObject>& getObjects() const {
+    const vector<InteractiveObject>& getObjects() const {
         return objects;
     }
-
     InteractiveObject* getObjectAtPosition(const Position& position) {
         for (auto& object : objects) {
             if (object.getPosition().x == position.x && object.getPosition().y == position.y) {
@@ -130,7 +119,6 @@ public:
         }
         return nullptr;
     }
-
     void updateMovingObjects() {
         for (auto& object : objects) {
             if (isMovingObject(object)) {
@@ -138,20 +126,17 @@ public:
             }
         }
     }
-
     int getWidth() const {
         return width;
     }
-
     int getHeight() const {
         return height;
     }
-
 private:
-    std::string map;                       // ASCII Art für die Spielfläche
+    string map;                       // ASCII Art für die Spielfläche
     int width;                             // Breite der Spielfläche
     int height;                            // Höhe der Spielfläche
-    std::vector<InteractiveObject> objects; // Vektor der interaktiven Objekte auf der Spielfläche
+    vector<InteractiveObject> objects; // Vektor der interaktiven Objekte auf der Spielfläche
     bool isMovingObject(const InteractiveObject& object) const {
         // Überprüfen, ob das Objekt ein bewegliches Objekt ist (Nachbarn, andere Leute, Mitschüler)
         return object.getName() == "Nachbarn" || object.getName() == "Andere Leute" || object.getName() == "Mitschüler";
@@ -189,7 +174,7 @@ private:
 // Function to show the current map and interactive objects
 void showMap(const GameMap& map, const Position& playerPosition) {
     clearScreen();
-    std::string currentMap = map.getMap();
+    string currentMap = map.getMap();
     const int width = map.getWidth();
     // Pad the currentMap string with spaces if needed
     while (currentMap.length() < (currentMap.find_first_of('\n') + 1) * width)
@@ -200,13 +185,12 @@ void showMap(const GameMap& map, const Position& playerPosition) {
     }
     int playerIndex = (playerPosition.y + 1) * (width + 1) + playerPosition.x + 1;
     currentMap[playerIndex] = 'P';
-    std::cout << currentMap << std::endl;
+    cout << currentMap << endl;
 }
-
 // Funktion zum Steuern des Spielercharakters
 void controlPlayer(Position& playerPosition, GameMap& currentMap, bool isMorning) {
     char input;
-    std::cout << "Steuerung: (W = Hoch, S = Runter, A = Links, D = Rechts, E = Interagieren, Q = Beenden)\n";
+    cout << "Steuerung: (W = Hoch, S = Runter, A = Links, D = Rechts, E = Interagieren, Q = Beenden)\n";
     do {
         input = _getch();
         switch (input) {
@@ -233,34 +217,34 @@ void controlPlayer(Position& playerPosition, GameMap& currentMap, bool isMorning
         case 'e':
             InteractiveObject * object = currentMap.getObjectAtPosition(playerPosition);
             if (object) {
-                std::cout << "Interaktion mit " << object->getName() << std::endl;
+                cout << "Interaktion mit " << object->getName() << endl;
                 // Führen Sie hier die spezifische Logik für die Interaktion mit dem Objekt aus
                 if (object->getName() == "Balkontür") {
-                    std::cout << "Der Spieler betritt den Balkon\n";
+                    cout << "Der Spieler betritt den Balkon\n";
                     currentMap = balconyMap;
                     playerPosition = { 4, 1 };
                     showMap(currentMap, playerPosition);
                 }
                 else if (object->getName() == "Flurtür") {
-                    std::cout << "Der Spieler betritt den Flur\n";
+                    cout << "Der Spieler betritt den Flur\n";
                     currentMap = hallwayMap;
                     playerPosition = { 4, 0 };
                     showMap(currentMap, playerPosition);
                 }
                 else if (object->getName() == "Haustür") {
-                    std::cout << "Der Spieler betritt das Haus\n";
+                    cout << "Der Spieler betritt das Haus\n";
                     currentMap = homeMap;
                     playerPosition = { 5, 1 };
                     showMap(currentMap, playerPosition);
                 }
                 else if (object->getName() == "Küchentür") {
-                    std::cout << "Der Spieler betritt die Küche\n";
+                    cout << "Der Spieler betritt die Küche\n";
                     currentMap = kitchenMap;
                     playerPosition = { 2, 1 };
                     showMap(currentMap, playerPosition);
                 }
                 else if (object->getName() == "Badezimmertür") {
-                    std::cout << "Der Spieler betritt das Badezimmer\n";
+                    cout << "Der Spieler betritt das Badezimmer\n";
                     currentMap = bathroomMap;
                     playerPosition = { 2, 1 };
                     showMap(currentMap, playerPosition);
@@ -270,18 +254,17 @@ void controlPlayer(Position& playerPosition, GameMap& currentMap, bool isMorning
         }
         showMap(currentMap, playerPosition);
     } while (input != 'q');
-
     // Tageszeit überprüfen
     if (isMorning) {
         // Cutscene am Morgen (z.B. Spieler geht zur Schule)
-        std::cout << "Cutscene: Spieler geht zur Schule\n";
+        cout << "Cutscene: Spieler geht zur Schule\n";
         currentMap = schoolMap;
         playerPosition = { 0, 0 };
         showMap(currentMap, playerPosition);
     }
     else {
         // Cutscene am Abend (z.B. Spieler kehrt nach Hause zurück)
-        std::cout << "Cutscene: Spieler kehrt nach Hause zurück\n";
+        cout << "Cutscene: Spieler kehrt nach Hause zurück\n";
         currentMap = homeMap;
         playerPosition = { 0, 0 };
         showMap(currentMap, playerPosition);
@@ -306,19 +289,16 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
         home.addObject(InteractiveObject("Flurtür", 'T', { 0, 2 }));
 
         GameMap balcony(balconyMap);
-        // Objekte auf dem Balkon hinzufügen (falls erforderlich)
-
+        // Objekte auf dem Balkon 
         GameMap hallway(hallwayMap);
         hallway.addObject(InteractiveObject("Haustür", 'H', { 3, 1 }));
         hallway.addObject(InteractiveObject("Küchentür", 'K', { 7, 1 }));
         hallway.addObject(InteractiveObject("Badezimmertür", 'B', { 4, 3 }));
 
         GameMap kitchen(kitchenMap);
-        // Objekte in der Küche hinzufügen (falls erforderlich)
-
+        // Objekte in der Küche 
         GameMap bathroom(bathroomMap);
-        // Objekte im Badezimmer hinzufügen (falls erforderlich)
-
+        // Objekte im Badezimmer 
         GameMap school(schoolMap);
         school.addObject(InteractiveObject("Mitschüler", 'M', { 3, 1 }));
         school.addObject(InteractiveObject("Lehrer", 'L', { 8, 1 }));
@@ -330,14 +310,12 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
         street.addObject(InteractiveObject("Andere Leute", 'L', { 6, 1 }));
         street.addObject(InteractiveObject("Katze", 'K', { 9, 1 }));
         street.addObject(InteractiveObject("Ampel", 'A', { 5, 2 }));
-
         // Spielerposition und Startkarte
         Position playerPosition = { 0, 0 };
         GameMap* currentMap = &home;
-
         for (int day = 1; day <= 100; ++day) {
-            std::cout << "Tag " << day << std::endl;
-            std::cout << "Aufstehen, Kaffee trinken, Duschen, Schule, Heimweg, Essen, Abend ausklingen lassen, Ins Bett gehen\n";
+            cout << "Tag " << day << endl;
+            cout << "Aufstehen, Kaffee trinken, Duschen, Schule, Heimweg, Essen, Abend ausklingen lassen, Ins Bett gehen\n";
             // Steuerung des Spielers
             controlPlayer(playerPosition, *currentMap, isMorning);
             // Aktualisieren der beweglichen Objekte
@@ -345,7 +323,7 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
             // Tageszeit umschalten
             isMorning = !isMorning;
             // Speichern des Spielstands
-            std::ofstream saveFile("save.txt");
+            ofstream saveFile("save.txt");
             saveFile << day;
             saveFile.close();
         }
@@ -354,21 +332,20 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
 
 int lifemain() {
     // Laden des Spielstands
-    std::ifstream saveFile("save.txt");
+    ifstream saveFile("save.txt");
     int savedDay = 1;
     if (saveFile.good()) {
         saveFile >> savedDay;
     }
     saveFile.close();
-
     // Begrüßung
-    std::cout << "Willkommen zum Spiel!\n";
+    cout << "Willkommen zum Spiel!\n";
     // Fortsetzen des Spielstands oder neues Spiel starten
     char input;
-    std::cout << "Möchten Sie den Spielstand fortsetzen? (j/n): ";
-    std::cin >> input;
+    cout << "Möchten Sie den Spielstand fortsetzen? (j/n): ";
+    cin >> input;
     if (input == 'j') {
-        std::cout << "Lade Spielstand Tag " << savedDay << "\n";
+        cout << "Lade Spielstand Tag " << savedDay << "\n";
         GameMap home(homeMap);
         // ... Initialize objects for the home map ...
         // Perform the daily routine starting from the loaded day
@@ -380,9 +357,8 @@ int lifemain() {
         performDailyRoutine(home, true);
     }
     else {
-        std::cout << "Starte neues Spiel\n";
-        // ... (rest of the code remains unchanged) ...
+        cout << "Starte neues Spiel\n";
     }
-    std::cout << "Spiel beendet\n";
+    cout << "Spiel beendet\n";
     return 0;
 }

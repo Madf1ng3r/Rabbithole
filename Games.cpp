@@ -4,13 +4,12 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-
 using namespace std;
 
 void showGames()
 {
-    std::cout << "\033[32m";
-    std::cout << R"(               
+    cout << "\033[32m";
+    cout << R"(               
          
 
 
@@ -43,7 +42,7 @@ void showGames()
                                          /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
                                         /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
                                        /__________________________________________________________________/                                                                                                                                                                                                                                               
- )";  std::cout << "\033[0m";
+ )";  cout << "\033[0m";
 }
 
 int gamemain() {
@@ -52,13 +51,13 @@ int gamemain() {
     while (running)
     {
         showGames();
-        std::cout << "Wählen Sie eine Option: ";
-        if (!(std::cin >> choice))
+        cout << "Wählen Sie eine Option: ";
+        if (!(cin >> choice))
         {
-            std::cin.clear(); //    clear error flags
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
-            std::cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2)); 
             continue;
         }
         switch (choice)
@@ -92,8 +91,8 @@ int gamemain() {
             running = false;
             break;
         default:
-            std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay 2 seconds
+            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
             break;
         }
     } 

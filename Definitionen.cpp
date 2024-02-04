@@ -1,23 +1,22 @@
 #include <iostream>
 #include <conio.h>
-
 using namespace std;
 
 void anzeigenanfechtbar()
 {
-    R"(  Vertrag ist gültig.  )";
+ cout <<   R"(  Vertrag ist gültig.  )";
 }
 
 void anzeigenAuslobung()
 {
-    R"(
+ cout <<   R"(
 Preisversprechen
 )";
 }
 
 void anzeigenakkreditiv()
 {
-	R"(
+cout <<	R"(
 Akkreditiv 
 Ein Akkreditiv ist in der Außenhandelsfinanzierung ein Geschäftsbesorgungsvertrag mit dem abstrakten Schuldversprechen eines Kreditinstituts,
 nach Weisungen des Auftraggebers gegen Vorlage bestimmter Dokumente innerhalb eines bestimmten Zeitraumes
@@ -31,7 +30,7 @@ statt der Hausbank des Importeuers die Bank des Exporteuers in die Pflicht genom
 
 void anzeigenavisieren()
 {
-	R"(
+cout <<	R"(
 "Avisieren" bedeutet, im Allgemeinen, 
 etwas anzukündigen oder vorab zu benachrichtigen. 
 In spezifischeren Kontexten kann es sich auf das Melden oder
@@ -41,32 +40,32 @@ In spezifischeren Kontexten kann es sich auf das Melden oder
 
 void anzeigenBartern()
 {
-    R"(
+cout <<    R"(
 Tauschhandel mit Sachwerten )";
 }
 
 void anzeigenBesitzkonstitut()
 {
-    R"(
+cout <<    R"(
 Verkäufer bleibt Eigentümer der Sache, Besitzrecht wird aber übertragen.
 )";
 }
 
 void anzeigenDisponent()
 {
-    R"(  Zuteiler/Verwalter einer Organisation, Zuständig für Finanzen und Personal )";
+ cout <<   R"(  Zuteiler/Verwalter einer Organisation, Zuständig für Finanzen und Personal )";
 }
 
 void anzeigenevaluiren()
 {
-    R"(
+ cout <<   R"(
 bewerten / beurteilen
 )";
 }
 
 void anzeigenforfaitierung()
 {
-	R"(
+cout <<	R"(
 	Bei einer Forfaitierung auch Forfaiting, erfolgt der Verkauf von Forderungen an einen neuen Gläubiger.
 		Forfaitierungen sind vor allem ein Mittel der Exportfinanzierung bei Lieferungen an ausländische Kunden.
 )";
@@ -74,7 +73,7 @@ void anzeigenforfaitierung()
 
 void anzeigenfactoring()
 {
-	R"(
+cout <<	R"(
 Beim Factoring verkauft ein Unternehmen seine offenen Forderungen an einen Factor, der im Gegenzug einen Teilbetrag
 (oder die volle Summe) sofort auszahlt und das Ausfallrisiko übernimmt.
 Der Factor übernimmt auch das Debitorenmanagement und das Mahnwesen.
@@ -83,21 +82,21 @@ Der Factor übernimmt auch das Debitorenmanagement und das Mahnwesen.
 
 void anzeigenISO()
 {
-    R"(
+ cout <<   R"(
 ISO Normen sind gleiche einheitliche Vorschriften, die für alle Unternehmen gleichermaßen verstanden werden.
 )";
 }
 
 void anzeigentilgung()
 {
-    R"(
+cout <<    R"(
 Tilgung nennt man im Finanzwesen die planmäßige oder außerplanmäßige Rückzahlung von Schulden.
 )";
 }
 
 void anzeigensqueezeout()
 {
-    R"(
+ cout <<   R"(
 Der Squeeze Out, auch bekannt als „Freeze Out“, ist ein rechtliches Verfahren, um Minderheitsaktionäre eines Unternehmens auszuschließen 
 und alle Anteile auf den Mehrheitsaktionär (Hauptaktionär) zu vereinigen.
 )";
@@ -107,10 +106,8 @@ int defmain()
 {
     char auswahl;
     bool beenden = false;
-
     while (!beenden) {
         system("cls"); // Bildschirm löschen (funktioniert in Windows)
-
         std::cout << "Menü:\n";
         std::cout << "1. Finanzierungsregeln\n";
         std::cout << "2. Geschäftsprozesse\n";
@@ -125,9 +122,7 @@ int defmain()
         std::cout << "11. Finanzierungsarten\n";
         std::cout << "12. Darlehensarten\n";
         std::cout << "Bitte wählen Sie eine Option: ";
-
         auswahl = _getch(); // Warten auf Tastatureingabe ohne Enter
-
         switch (auswahl) {
         case '1':
             anzeigenavisieren();
@@ -160,11 +155,11 @@ int defmain()
             beenden = true; // Programm beenden
             break;
         default:
-            std::cout << "Ungültige Auswahl. Bitte erneut wählen.\n";
+            cout << "Ungültige Auswahl. Bitte erneut wählen.\n";
             break;
         }
         if (auswahl != '10') {
-            std::cout << "\nDrücken Sie eine beliebige Taste, um fortzufahren...";
+            cout << "\nDrücken Sie eine beliebige Taste, um fortzufahren...";
             _getch(); // Warten auf Tastendruck, bevor das Menü erneut angezeigt wird
         }
     }

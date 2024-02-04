@@ -4,7 +4,6 @@
 #include <vector>
 #include <ctime>
 using namespace std;
-
 const int width = 40;
 const int height = 20;
 int playerX, playerY;
@@ -29,7 +28,6 @@ void spaceDraw() {
     for (int i = 0; i < width; i++)
         cout << "#";
     cout << endl;
-
     for (int i = 0; i < height - 2; i++) {
         for (int j = 0; j < width; j++) {
             bool isPlayer = (j == playerX && i == playerY);
@@ -53,11 +51,9 @@ void spaceDraw() {
         }
         cout << endl;
     }
-
     for (int i = 0; i < width; i++)
         cout << "#";
     cout << endl;
-
     cout << "Score: " << sscore << endl;
 }
 
@@ -103,7 +99,6 @@ void spaceUpdate() {
             }
         }
     }
-
     // Spawn new enemies
     if (rand() % 10 == 0) {
         enemyX.push_back(rand() % width);

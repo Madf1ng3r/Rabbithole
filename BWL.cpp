@@ -18,7 +18,7 @@ void showFinanzierungsregeln() {
 
 void showBilanz()
 {
-   cout <<  R"(
+    cout << R"(
    Es handelt sich um Mindestanforderungen an die aus einer Bilanz ersichtliche Kapitalstruktur.
  Im Hinblick auf eine optimale Kapitalstruktur, was eine Kosten minimierende und damit auch
  Unternehmenswert maximierende Auslegung der Finanzierung bedeutet, haben sich einige Finanzierungsregeln ausgeprägt.
@@ -71,7 +71,7 @@ void showFinanzierungsarten() {
 
 void showmagischesdreieck()
 {
- cout <<   R"(
+    cout << R"(
 
          Qualität
             / \
@@ -98,7 +98,7 @@ Zum Beispiel, wenn Sie die Qualität erhöhen möchten, könnten sich die Kosten erh
 
 void anzeigenmagischesviereck()
 {
- cout <<   R"(
+    cout << R"(
 
 
 
@@ -130,7 +130,7 @@ Wirtschaftswachstum: Dieses Ziel zielt darauf ab, das langfristige Wirtschaftswa
 }
 
 void anzeigenDarlehensarten() {
- cout <<   R"(
+    cout << R"(
 Hypothekendarlehen (Immobilienkredite):
 Hypothekendarlehen werden verwendet, um Immobilien zu kaufen oder zu refinanzieren. Die Immobilie dient als Sicherheit für das Darlehen.
 Autokredite:
@@ -160,7 +160,7 @@ Annuitätendarhlehnen
 }
 
 void showVertragsarten() {
- cout <<   R"(
+    cout << R"(
 Arbeitsvertrag:
 Ein Vertrag zwischen einem Arbeitgeber und einem Arbeitnehmer, der die Bedingungen der Beschäftigung regelt.
 
@@ -194,7 +194,7 @@ Ein Vertrag zwischen einem Kreditgeber und einem Kreditnehmer, der die Bedingung
 }
 
 void showKreditarten() {
-cout <<    R"(
+    cout << R"(
 Avalkredit
 Der Avalkredit ist im Bankwesen eine Übernahme von Bürgschaften,Garantieen,
 oder ähnliche Eventualverbindlichkeiten durch Kreditinstitute im Auftrag von Bankkunden im Rahmen des Kreditgeschäftes.
@@ -240,7 +240,7 @@ die aus einem Teil des Kapitals und einem Zinsanteil bestehen
 
 void showpdca()
 {
- cout <<   R"(
+    cout << R"(
 Der DemingKreis und die PDCA (Plan-Do-Check-Act) wird in der Qualitätssicherung oft genutzt,
 er besteht aus folgenden Punkten:
 Planen (Plan):
@@ -258,7 +258,7 @@ Basierend auf den Erkenntnissen aus der Überprüfung werden Anpassungen vorgenomm
 }
 
 void showRechtsformen() {
- cout <<   R"(
+    cout << R"(
 Einzelunternehmen (e.K.):
 
 Einzelunternehmer führt das Unternehmen alleine und trägt das volle persönliche Haftungsrisiko.
@@ -302,7 +302,7 @@ Natürliche Person, die ein Handelsgewerbe betreibt, ohne eine bestimmte Rechtsfo
 
 void showSteuern()
 {
- cout <<   R"(
+    cout << R"(
 
 Körperschaftssteuer: Die Körperschaftssteuer ist eine Steuer, die von juristischen Personen wie Kapitalgesellschaften (z. B. GmbHs und AGs) auf ihre Gewinne erhoben wird. Es handelt sich um eine Unternehmenssteuer, die auf den erzielten Gewinn vor Steuern berechnet wird.
 
@@ -338,7 +338,7 @@ Hundesteuer: Eine Steuer, die auf den Besitz von Hunden erhoben wird, um die Kom
 
 void showUrheberrecht()
 {
- cout <<   R"(
+    cout << R"(
 Das Urheberrecht ist ein Rechtsgebiet, das Kreatoren und Schöpfern das ausschließliche Recht gibt, 
 ihre kreativen Werke zu nutzen und zu kontrollieren. Es schützt die geistige Schöpfung, nicht die Ideen an sich. 
 Es ist ein wesentlicher Bestandteil des geistigen Eigentums und soll Anreize für Künstler, Autoren, Musiker, 
@@ -381,7 +381,7 @@ bei Fragen oder Bedenken einen Rechtsanwalt oder Experten für geistiges Eigentum
 
 void showMarktKundenbeziehung()
 {
- cout <<   R"(
+    cout << R"(
 Markt- und Kundenbeziehungen sind zentral für den Erfolg eines Unternehmens. 
 Eine gute Beziehung zu den Kunden hilft bei der Kundenbindung und ermöglicht es Unternehmen, 
 ihre Produkte und Dienstleistungen besser an die Bedürfnisse des Marktes anzupassen.
@@ -390,7 +390,7 @@ ihre Produkte und Dienstleistungen besser an die Bedürfnisse des Marktes anzupas
 
 void showMarktstrukturenUnternehmenszieleUnternehmensleitlinien()
 {
- cout <<   R"(
+    cout << R"(
 Marktstrukturen beschreiben, wie ein Markt organisiert ist, z.B. Wettbewerbsformen wie Monopol, 
 Oligopol oder vollkommener Wettbewerb. Unternehmensziele sind die angestrebten Resultate, 
 die ein Unternehmen erreichen möchte. Unternehmensleitlinien sind die Grundprinzipien, nach denen ein Unternehmen handelt.
@@ -399,7 +399,7 @@ die ein Unternehmen erreichen möchte. Unternehmensleitlinien sind die Grundprinz
 
 void showCorporateIdentityCommunicationBehaviorDesign()
 {
- cout <<   R"(
+    cout << R"(
 Corporate Identity umfasst das Erscheinungsbild, die Werte und die Identität eines Unternehmens. 
 Corporate Communication bezieht sich auf die Art und Weise, wie das Unternehmen mit internen und 
 externen Stakeholdern kommuniziert. Corporate Behavior bezieht sich auf das Verhalten und die Kultur 
@@ -409,14 +409,14 @@ innerhalb des Unternehmens. Corporate Design betrifft das visuelle Erscheinungsb
 
 void showOperativestrategischeZiele()
 {
-cout <<    R"(
+    cout << R"(
 Operative Ziele sind kurzfristige, konkrete Ziele, während strategische Ziele langfristige, übergeordnete Ziele sind.
 )";
 }
 
 void showMotivationMaslowKompetenzen()
 {
-cout <<    R"(
+    cout << R"(
 Motivation bezieht sich auf die inneren und äußeren Faktoren, die das Verhalten und die Leistung von Mitarbeitern 
 beeinflussen. Maslows Bedürfnispyramide ist eine Theorie, die die Hierarchie der menschlichen Bedürfnisse beschreibt. 
 Kompetenzen beziehen sich auf die Fähigkeiten, Kenntnisse und Erfahrungen, die zur erfolgreichen 
@@ -426,14 +426,14 @@ Durchführung von Aufgaben benötigt werden.
 
 void showMarktforschungprimäresekundäreDaten()
 {
-  cout <<  R"(
+    cout << R"(
 
 )";
 }
 
 void showMarketingMix4P()
 {
- cout <<   R"(
+    cout << R"(
 Der Marketing Mix umfasst die vier Elemente Price (Preisgestaltung), Product (Produktgestaltung), 
 Placement (Vertrieb) und Promotion (Kommunikation), die gemeinsam die Marketingstrategie eines Unternehmens bilden.
 )";
@@ -441,7 +441,7 @@ Placement (Vertrieb) und Promotion (Kommunikation), die gemeinsam die Marketings
 
 void showFunkdPreiHochNiedripreiRabatpol()
 {
-cout <<    R"(
+    cout << R"(
 Der Preis erfüllt verschiedene Funktionen wie Signalfunktion, Lenkungsfunktion und Einkommensfunktion. 
 Hoch- und Niedrigpreisstrategien beziehen sich auf die Preispositionierung von Produkten. 
 Rabattpolitik bezieht sich auf die Verwendung von Rabatten als Marketinginstrument.
@@ -450,7 +450,7 @@ Rabattpolitik bezieht sich auf die Verwendung von Rabatten als Marketinginstrume
 
 void showDifferenzierungpsychologischerPreisZahlungsbedingung()
 {
- cout <<   R"(
+    cout << R"(
 Differenzierung bezieht sich auf die Schaffung von Unterscheidungsmerkmalen für ein Produkt, 
 um sich von der Konkurrenz abzuheben. Psychologischer Preis bezieht sich auf die Preisgestaltung, 
 die auf psychologische Faktoren abzielt. Zahlungsbedingungen sind die festgelegten Bedingungen, 
@@ -460,7 +460,7 @@ unter denen Zahlungen erfolgen.
 
 void anzeigenLieferbedingungenINCOTermsKreditpolitikLeasingFactoring()
 {
- cout <<   R"(
+    cout << R"(
 Lieferbedingungen regeln die Bedingungen für den Transport und die Lieferung von Waren. 
 INCO-Terms sind internationale Regeln zur Auslegung von Lieferverträgen. Kreditpolitik bezieht sich auf 
 die Strategien zur Kreditvergabe. Leasing und Factoring sind Finanzierungsinstrumente für Unternehmen.
@@ -469,7 +469,7 @@ die Strategien zur Kreditvergabe. Leasing und Factoring sind Finanzierungsinstru
 
 void anzeigenHandelsklauselnKreditpolitikMindestreserveOffenmarktpolitik()
 {
- cout <<   R"(
+    cout << R"(
 Handelsklauseln sind Bestimmungen in Handelsverträgen. Die Kreditpolitik regelt die Kreditvergabe und -rückzahlung. 
 Mindestreserve ist der Mindestbetrag, den Banken als Reserve halten müssen. Offenmarktpolitik bezieht sich auf 
 Maßnahmen der Zentralbank zur Steuerung der Geldmenge und der Zinsen.
@@ -486,7 +486,7 @@ erfolgt auf Grundlage der Gesellschaftsverträge und Beteiligungsverhältnisse.
 
 void anzeigenDatenschutzgrundverordnungDSGVO()
 {
-cout <<    R"(
+    cout << R"(
 Die Datenschutzgrundverordnung der EU regelt den Datenschutz und die Privatsphäre für alle Personen innerhalb der EU. 
 Artikel 1 bis 18 beziehen sich auf die Grundprinzipien und Rechte der betroffenen Personen.
 )";
@@ -494,7 +494,7 @@ Artikel 1 bis 18 beziehen sich auf die Grundprinzipien und Rechte der betroffene
 
 void anzeigenProduktpolitikDistributionspolitikKommunikationspolitik()
 {
-cout <<    R"(
+    cout << R"(
 Produktpolitik umfasst die Gestaltung von Produkten, Marken und Produktvariationen. 
 Distributionspolitik bezieht sich auf Entscheidungen über Vertriebskanäle. Kommunikationspolitik 
 beinhaltet die Planung und Umsetzung der Kommunikation mit Kunden und anderen Interessengruppen.
@@ -503,7 +503,7 @@ beinhaltet die Planung und Umsetzung der Kommunikation mit Kunden und anderen In
 
 void anzeigenMarktpotentialWachstumReifungSättigungEliminierung()
 {
- cout <<   R"(
+    cout << R"(
 Marktpotential bezieht sich auf das ungenutzte Marktvolumen. Wachstum ist die Phase, in der ein Markt expandiert. 
 Reifung ist die Phase, in der das Marktwachstum abflacht. Sättigung ist der Punkt, an dem der Markt gesättigt ist. 
 Eliminierung bezieht sich auf das Ausscheiden von Produkten aus dem Markt.
@@ -512,7 +512,7 @@ Eliminierung bezieht sich auf das Ausscheiden von Produkten aus dem Markt.
 
 void anzeigenKommunikationsmodellSchulzvonThun()
 {
-cout <<    R"(
+    cout << R"(
 Das Kommunikationsmodell nach Schulz von Thun beschreibt die Kommunikation mit vier Ebenen: 
 Sachinhalt, Selbstoffenbarung, Beziehung und Appell. Es betont die Bedeutung von verbaler und nonverbaler 
 Kommunikation bei der Interpretation von Botschaften.
@@ -521,7 +521,7 @@ Kommunikation bei der Interpretation von Botschaften.
 
 void anzeigenProzesskontrolle()
 {
- cout <<   R"(
+    cout << R"(
 Kontrolle von Prozessen
 Prozesscontrolling bezeichnet die Planung und Kontrolle von Geschäftsprozessen sowie die dafür notwendige Informationensversorgung und Koordination.
 Schwerpunkt der Planung ist die Definition von Ziel und Messgrößen und deren Kontrolle in Geschäftsprozessen.
@@ -532,7 +532,7 @@ Beispiele dafür sind das V-Model und das Spiralmodel.
 
 void anzeigenprojektmanagement()
 {
- cout <<   R"(
+    cout << R"(
 Projektmanagement ist eine strukturierte Herangehensweise zur Planung, Durchführung, Überwachung und Steuerung von Projekten, 
 um die definierten Ziele und Anforderungen innerhalb bestimmter Zeit-, Kosten- und Qualitätsvorgaben zu erreichen. 
 Es beinhaltet die effektive Nutzung von Ressourcen, das Management von Risiken, Kommunikation und Zusammenarbeit 
@@ -556,7 +556,7 @@ dass das Projekt erfolgreich abgeschlossen wird, um den gewünschten Nutzen zu er
 
 void showTotalQualityManagement()
 {
-cout <<    R"(
+    cout << R"(
 TQM bezeichnet als umfassendes QM Qualitätsmanagement nach der DIN eine "durchgängige,
  fortwährende und alle Bereiche des Unternehmens
 erfassende, aufzeichnende, sichtende, organisierende, und kontrollierende Tätigkeit mit dem Ziel,
@@ -575,7 +575,7 @@ Lieferantenbeziehung zum gegenseitigen Nutzen
 
 void showVersi()
 {
- cout <<   R"(
+    cout << R"(
 Kfz-Versicherung (Kraftfahrzeugversicherung):
 Eine Kfz-Versicherung deckt Schäden oder Verluste an Ihrem Fahrzeug sowie Haftpflichtansprüche Dritter ab, 
 die durch den Betrieb des Fahrzeugs entstehen.
@@ -633,7 +633,7 @@ die während der gesamten Lieferkette entstehen können, einschließlich Lagerung, 
 
 void anzeigenGesetze()
 {
-cout <<    R"(
+    cout << R"(
 Gesetzbücher zum auswendig lernen für die Prüfung:
 Jugendarbeitsschutzgesetz JArbSchG
 Arbeitsschutzgesetz ArbSchG
@@ -645,7 +645,7 @@ Bürgerliches Gesetzbuch BgB
 
 void anzeigenproablauf()
 {
-cout <<    R"(
+    cout << R"(
 Beschaffungsprozess:
 
 Dieser Prozess umfasst die Identifikation, Auswahl und Beschaffung von Rohstoffen, Materialien, Ausrüstungen und Dienstleistungen,
@@ -674,7 +674,7 @@ um einen reibungslosen Bestellvorgang, eine effektive Lieferung und eine gute Ku
 
 void anzeigenereigv()
 {
-cout <<    R"(
+    cout << R"(
 Der erweiterte Eigentumsvorbehalt sichert die Rechte eines Verkäufers.
 Bei der Vereinbarung mit dem Käufer muss er darauf achten, dass sich keine Grüne ergeben, die zur Unwirsamkeit des ´Vertrags führen.
 Mit dem erweiterten Eigentumsvorbehalt sichert sich der Verkäufer einer Sache ein zusetzliches Recht zu. 
@@ -691,7 +691,7 @@ nachträglicher Eigentumsvorbehalt
 
 void anzeigenrealsich()
 {
-cout <<    R"(
+    cout << R"(
 Realsicherheiten sind Vermögensgegenstände, die verpfändet werden, falls der Schuldner seine Schuld nicht bezahlt. 
 Zu diesen Vermögensgegenständen gehören bewegliche und unbewegliche Sachen. Sicherungsmittel an Grundstücken sind Grundschuld und Hypothek.
 )";
@@ -699,7 +699,7 @@ Zu diesen Vermögensgegenständen gehören bewegliche und unbewegliche Sachen. Sich
 
 void anzeigenholschuld()
 {
- cout <<   R"(
+    cout << R"(
 Holschuld ist ein Begriff aus dem Schuldrecht und bedeutet, dass Leistungs- und Erfolgsort beim Schuldner liegt. 
 Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintreten. Bei der Holschuld muss sich der Gläubiger
  die Leistung beim Schuldner abholen.
@@ -708,7 +708,7 @@ Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintrete
 
 void showzession()
 {
- cout <<   R"(
+    cout << R"(
 Eine Zession ist eine Forderungsabtretung oder Sicherungsabtretung. Dabei ändert sich das Schuldverhältnis, 
 indem die Forderung an einen neuen Gläubiger übertragen wird. 
 Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessionar (Abtretungsempfänger).
@@ -718,7 +718,7 @@ Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessiona
 
 void showsixsigma()
 {
-cout <<    R"(
+    cout << R"(
 Six Sigma ist ein Managementsystem zur Prozessverbesserung, statistisches 
 Qualitätsziel und zugleich eine Methode des Qualitätsmanagements.
 Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und 
@@ -735,7 +735,7 @@ Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und
 
 void showkaizen()
 {
-cout <<    R"(
+    cout << R"(
 Die Kaizen-Philosophie beschreibt laut Definition eine Denkweise, bei der kleine, schrittweise Änderungen im Laufe der Zeit 
 eine große Wirkung erzielen. Bei Kaizen handelt es sich um eine Methode des Qualitätsmanagement.
 Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum Bessen verwendet wird´.
@@ -752,7 +752,7 @@ Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum
 
 void showsteuererk()
 {
-cout <<    R"(
+    cout << R"(
 Eine Steuererklärung ist ein formaler Prozess, bei dem eine steuerpflichtige Person oder ein Unternehmen
  dem Finanzamt Informationen über ihre Einkommensverhältnisse, Ausgaben und finanziellen Transaktionen 
 für einen bestimmten Zeitraum meldet. Dieser Zeitraum entspricht normalerweise dem Steuerjahr, das in den meisten Ländern dem Kalenderjahr entspricht.
@@ -773,7 +773,7 @@ Die Steuererklärung ist in den meisten Ländern gesetzlich vorgeschrieben, und di
 
 void showinvestrech()
 {
-cout <<    R"(
+    cout << R"(
 Mit der Investitionsrechnung sollen Investitionsentscheidungen bezüglich der monetären Unternehmensziele fundiert und vorbereitet werden. 
 Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu einer Zielgröße, beispielsweise der Rentabilität, verdichtet.
 )";
@@ -781,7 +781,7 @@ Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu
 
 void showmaxpr()
 {
- cout <<   R"(
+    cout << R"(
 Maximalprinzip: Auch als Prinzip der optimalen Zielerreichung bekannt. Es besagt, dass mit gegebenen
 Ressourcen das Maximum an Zielen erreicht werden soll. Im ökonomischen Kontext bedeutet dies, dass ein 
 Unternehmen versucht, mit den vorhandenen Ressourcen den größtmöglichen Gewinn zu erzielen.
@@ -790,7 +790,7 @@ Unternehmen versucht, mit den vorhandenen Ressourcen den größtmöglichen Gewinn z
 
 void showminpr()
 {
- cout <<   R"(
+    cout << R"(
 Minimalprinzip: Auch als Prinzip der sparsamen Mittelverwendung bekannt. Es besagt, dass ein bestimmtes Ziel 
 mit minimalen Ressourcen oder Aufwand erreicht werden sollte. Im ökonomischen Kontext bedeutet dies, 
 dass ein Unternehmen versucht, eine bestimmte Produktionsmenge mit minimalen Kosten zu produzieren, 
@@ -875,14 +875,15 @@ Lieferung
 }
 
 void showgeschp4() {
-R"(
+    R"(
 Finanzprozess:
 
 Buchführung
 Rechnungswesen
 Budgetierung
 Finanzplanung
-)"; }
+)";
+}
 
 void showgeschp5() {
     R"(
@@ -949,31 +950,31 @@ Beispiele für Geschäftsprozesse sind:\n
         {
         case 1:
             clearScreen();
-			showgeschp1();
+            showgeschp1();
             break;
         case 2:
             clearScreen();
-			showgeschp2();
+            showgeschp2();
             break;
         case 3:
             clearScreen();
-			showgeschp3();
+            showgeschp3();
             break;
         case 4:
             clearScreen();
-			showgeschp4();
+            showgeschp4();
             break;
         case 5:
             clearScreen();
-			showgeschp5();
+            showgeschp5();
             break;
         case 6:
             clearScreen();
-			showgeschp6();
+            showgeschp6();
             break;
         case 7:
             clearScreen();
-			showgeschp7();
+            showgeschp7();
             break;
         case 0:
             return;
@@ -991,7 +992,7 @@ int bwlmain()
     int choice;
     while (running)
     {
-       system("cls");
+        system("cls");
         clearScreen();
         //  cout << "\033[1;32m"; // Setzt die Farbe auf hellgrün
         cout << R"(
@@ -1031,14 +1032,14 @@ int bwlmain()
 
 )";
         //cout << "\033[0m";
-        if (!(std::cin >> choice))
+        if (!(cin >> choice))
         {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
             cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
-             continue;
-         }
+            continue;
+        }
         switch (choice)
         {
         case 1:
@@ -1141,9 +1142,9 @@ int bwlmain()
             break;
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
-            this_thread::sleep_for(std::chrono::seconds(2));
+            this_thread::sleep_for(chrono::seconds(2));
             break;
         }
     }
-        return 0;
+    return 0;
 }

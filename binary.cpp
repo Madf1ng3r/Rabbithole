@@ -32,7 +32,7 @@ int bimain() {
     const int consoleWidth = 120;
     const int consoleHeight = 30;
     const int frameDelay = 100;
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    srand(static_cast<unsigned int>(std::time(nullptr)));
     setConsoleSize(consoleWidth, consoleHeight);
     bool running = true; // Neue Variable, um den Zustand des Programms zu verfolgen
     while (running) {

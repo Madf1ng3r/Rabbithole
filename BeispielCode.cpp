@@ -1,11 +1,11 @@
 #include <iostream>
 #include <conio.h> // Für _getch-Funktion
 #include <cmath>
+#include <string>
 #include <vector>
 #include "Mainframe.h"
 using namespace std;
 void example1() {
-    // Beispiel 1: Einfache Ausgabe auf der Konsole
     cout << "Beispiel 1: Einfache Ausgabe auf der Konsole" << endl;
     cout << "-------------------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie Text auf der Konsole ausgegeben wird." << endl;
@@ -16,7 +16,6 @@ void example1() {
     cout << endl;
 }
 void example2() {
-    // Beispiel 2: Eingabe von Benutzerdaten
     cout << "Beispiel 2: Eingabe von Benutzerdaten" << endl;
     cout << "-----------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie Benutzereingaben über die Konsole entgegengenommen werden." << endl;
@@ -31,7 +30,6 @@ void example2() {
     cout << endl;
 }
 void example3() {
-    // Beispiel 3: Berechnung der Summe zweier Zahlen
     cout << "Beispiel 3: Berechnung der Summe zweier Zahlen" << endl;
     cout << "--------------------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie die Summe zweier Zahlen berechnet wird." << endl;
@@ -50,7 +48,6 @@ void example3() {
     cout << endl;
 }
 void example4() {
-    // Beispiel 4: Bedingte Anweisung mit if-else
     cout << "Beispiel 4: Bedingte Anweisung mit if-else" << endl;
     cout << "------------------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie bedingte Anweisungen mit if-else in C++ verwendet werden." << endl;
@@ -72,7 +69,6 @@ int square(int x) {
     return x * x;
 }
 void example5() {
-    // Beispiel 5: Verwendung einer Funktion mit Rückgabewert
     cout << "Beispiel 5: Verwendung einer Funktion mit Rückgabewert" << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie Funktionen mit Rückgabewert in C++ verwendet werden." << endl;
@@ -87,7 +83,6 @@ void example5() {
 }
 
 void example6() {
-    // Beispiel 6: Verwendung der Standardbibliothek math für mathematische Funktionen
     cout << "Beispiel 6: Verwendung der Standardbibliothek math" << endl;
     cout << "------------------------------------------------" << endl;
     cout << "Dieses Beispiel zeigt, wie mathematische Funktionen aus der C++-Standardbibliothek verwendet werden." << endl;
@@ -106,7 +101,6 @@ void example6() {
     cout << endl;
 }
 void example7() {
-    // Beispiel 7: Verwendung des ternären Operators
     cout << "Beispiel 7: Verwendung des ternären Operators" << endl;
     cout << "--------------------------------------------" << endl;
     cout << "Der ternäre Operator ermöglicht es Ihnen, bedingte Ausdrücke in einer kompakten Form zu schreiben." << endl;
@@ -121,7 +115,6 @@ void example7() {
     cout << endl;
 }
 void example8() {
-    // Beispiel 8: Verwendung des Vektors aus der Standardbibliothek
     cout << "Beispiel 8: Verwendung des Vektors aus der Standardbibliothek" << endl;
     cout << "---------------------------------------------------------" << endl;
     cout << "Ein Vektor ist eine dynamische Datenstruktur, die es Ihnen ermöglicht, eine Liste von Elementen zu speichern." << endl;
@@ -144,7 +137,6 @@ void example8() {
     cout << endl << endl;
 }
 void example9() {
-    // Beispiel 9: Verwendung von Vektoren
     cout << "Beispiel 9: Verwendung von Vektoren" << endl;
     cout << "---------------------------------" << endl;
     cout << "Ein Vektor ist eine dynamische Datenstruktur, die automatisch ihre Größe anpasst." << endl;
@@ -161,7 +153,6 @@ void example9() {
     cout << endl;
 }
 void example10() {
-    // Beispiel 10: Verwendung einer while-Schleife
     cout << "Beispiel 10: Verwendung einer while-Schleife" << endl;
     cout << "-------------------------------------------" << endl;
     cout << "Eine while-Schleife führt eine Aktion aus, solange eine Bedingung erfüllt ist." << endl;
@@ -180,7 +171,6 @@ void example10() {
     cout << endl;
 }
 void example11() {
-    // Beispiel 11: Verwendung einer do-while-Schleife
     cout << "Beispiel 11: Verwendung einer do-while-Schleife" << endl;
     cout << "----------------------------------------------" << endl;
     cout << "Eine do-while-Schleife führt eine Aktion mindestens einmal aus und überprüft dann eine Bedingung." << endl;
@@ -200,7 +190,6 @@ void example11() {
     cout << endl;
 }
 void example12() {
-    // Beispiel 12: Verwendung von switch-case
     cout << "Beispiel 12: Verwendung von switch-case" << endl;
     cout << "---------------------------------------" << endl;
     cout << "Die switch-case-Anweisung ermöglicht die Ausführung von Codeblöcken," << endl;
@@ -243,7 +232,6 @@ void example12() {
     cout << endl;
 }
 void example13() {
-    // Beispiel 13: Verwendung von break in einer Schleife
     cout << "Beispiel 13: Verwendung von break in einer Schleife" << endl;
     cout << "------------------------------------------------" << endl;
     cout << "Der Befehl break ermöglicht es Ihnen, eine Schleife vorzeitig zu beenden." << endl;
@@ -266,7 +254,6 @@ void example13() {
     cout << endl;
 }
 void example14() {
-    // Beispiel 14: Verwendung von continue in einer Schleife
     cout << "Beispiel 14: Verwendung von continue in einer Schleife" << endl;
     cout << "---------------------------------------------------" << endl;
     cout << "Der Befehl continue ermöglicht es Ihnen, den aktuellen Schleifendurchlauf zu überspringen" << endl;
@@ -279,7 +266,7 @@ void example14() {
     // Eigentliche Funktion
     cout << "Zahlen von 1 bis 10 (mit continue bei Zahlen, die durch 3 teilbar sind): ";
     cout << " for (int i = 1; i <= 10; i++) { " << endl;
-	cout << "     if (i % 3 == 0) { " << endl;
+    cout << "     if (i % 3 == 0) { " << endl;
     for (int i = 1; i <= 10; i++) {
         if (i % 3 == 0) {
             continue;
@@ -289,6 +276,49 @@ void example14() {
     cout << endl;
     cout << endl;
 }
+
+string tiere[] = { "Hirsch", "Ratte", "Wildschwein", "Elch", "Vogel", "Eule", "Hummel", "Reh", "Hase" };
+void stringo() {
+    cout << R"(
+User gibt Tiernamen ein, Ausgabe: das Tier gibt es oder nicht
+)";
+    string suche;
+    cin >> suche;
+   
+    bool found = false;
+    for (int i = 0; i < 9; i++) {
+        if (tiere[i] == suche) {
+            found = true;
+            break;
+        }
+    }
+    if (found) {
+        cout << "Ja";
+    }
+    else {
+        cout << "Nein";
+    }
+}
+
+void stringi() {
+    cout << R"(
+Ausgabe aller Tiere des Index 
+)";
+    int index = 0, anzahl;
+    while (index < 9)
+    {
+        string wort = tiere[index];
+        anzahl = wort.length();
+        int buch = 0;
+        while (buch < anzahl) {
+            cout << wort[buch] << " ";
+            buch++;
+        }
+        cout << endl;
+        index++;
+    }
+}
+
 int bcmain() {
     char userInput;
     bool exitRequested = false;
@@ -308,6 +338,8 @@ int bcmain() {
         cout << "12. switch case      " << endl;
         cout << "13. break Schleife   " << endl;
         cout << "14. continue Schleife" << endl;
+        cout << "15. String           " << endl;
+        cout << "16. String gesamt    " << endl;
      /*   R"(
                                                                   _______________________________________________________
                                                                  / _____________________________________________________  )
@@ -315,7 +347,7 @@ int bcmain() {
                                                                / _______________________________________________________   |
                                                                |  |------------------------                               |  |
                                                                |  | ' 1.                                                  |  |    
-                                                               |  | ' 2.  Wiki                                            |  |     
+                                                               |  | ' 2.                                                  |  |     
                                                                |  | ' 3.                                                  |  |     
                                                                |  | ' 4.                                                  |  |     
                                                                |  | ' 5.                                                  |  |    
@@ -382,11 +414,14 @@ int bcmain() {
         case '14':
             example14();
             break;
+        case '15':
+            stringo();
+            break;
         case 27: // Escape-Taste
             exitRequested = true;
             break;
         default:
-            cout << "Ungültige Eingabe! Bitte wählen Sie eine Zahl von 1 bis 14 oder drücken Sie ESC zum Beenden." << endl;
+            cout << "Ungültige Eingabe! Bitte wählen Sie eine Zahl von 1 bis 9 oder drücken Sie ESC zum Beenden." << endl;
             cout << endl;
             break;
         }

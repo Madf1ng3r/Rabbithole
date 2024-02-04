@@ -5,9 +5,7 @@
 #include <ctime>
 #include "Openlink.h"
 
-
 using namespace std;
-
 
     int bwllinkmain() 
 	{
@@ -16,9 +14,7 @@ using namespace std;
         // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
-
         std::string links[] = {
-
             "https://chat.openai.com",
             "https://dejure.org",
             "https://www.gesetze-im-internet.de/bgb",
@@ -33,21 +29,21 @@ using namespace std;
         int choice;
         do {
             // Menü anzeigen
-            std::cout << "Bitte wählen Sie einen Link:" << std::endl;
+            cout << "Bitte wählen Sie einen Link:" << endl;
             for (int i = 0; i < numLinks; i++) {
-                std::cout << GREEN << i + 1 << ". " << links[i] << RESET << std::endl;
+                cout << GREEN << i + 1 << ". " << links[i] << RESET << endl;
             }
-            std::cout << "0. Beenden" << std::endl;
+            cout << "0. Beenden" << std::endl;
             // Benutzereingabe lesen
-            std::cin >> choice;
+            cin >> choice;
             // Auswahl überprüfen
             if (choice > 0 && choice <= numLinks) {
                 // Link im Browser öffnen
-                std::cout << "Öffne Link: " << GREEN << links[choice - 1] << RESET << std::endl;
+                cout << "Öffne Link: " << GREEN << links[choice - 1] << RESET << endl;
                 openLinkInBrowser(links[choice - 1]);
             }
             else if (choice != 0) {
-                std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
+                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
             }
         } while (choice != 0);
         return 0;

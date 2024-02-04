@@ -1577,12 +1577,12 @@ Zweite Seite:
                                           /__________________________________________________________________/          
 
 )";
-            if (!(std::cin >> choice))
+            if (!(cin >> choice))
             {
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input
-                std::cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << std::endl;
-                std::this_thread::sleep_for(std::chrono::seconds(2)); 
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+                this_thread::sleep_for(chrono::seconds(2)); 
                  continue;
              }
              switch (choice)
@@ -1640,8 +1640,8 @@ Zweite Seite:
                 running = false;
                 break;
             default:
-                std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
-                std::this_thread::sleep_for(std::chrono::seconds(2)); // Delay for 2 seconds
+                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                this_thread::sleep_for(chrono::seconds(2)); 
                 break;
             }
         }

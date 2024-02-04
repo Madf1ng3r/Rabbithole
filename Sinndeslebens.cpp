@@ -11,9 +11,9 @@
 
 using namespace std;
 
-bool isNumber(const std::string& str) {
+bool isNumber(const string& str) {
     for (char c : str) {
-        if (!std::isdigit(c)) {
+        if (!isdigit(c)) {
             return false;
         }
     }
@@ -23,7 +23,7 @@ bool isNumber(const std::string& str) {
 
 int ftmain() {
     srand(time(0)); // Seed für den Zufallszahlengenerator initialisieren
-    std::cout << R"(
+    cout << R"(
 
 
 
@@ -50,72 +50,72 @@ o                        .                        .        ___---___            
 
 
 )";
-    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Verzögerung von 500 Millisekunden
-    std::string welcomMessage = "Willkommen beim Spiel des Lebens. Du befindest dich in einer virtuellen Welt, in der du den Sinn des Lebens entdecken kannst.   ";
+    this_thread::sleep_for(chrono::milliseconds(400)); // Verzögerung von 500 Millisekunden
+    string welcomMessage = "Willkommen beim Spiel des Lebens. Du befindest dich in einer virtuellen Welt, in der du den Sinn des Lebens entdecken kannst.   ";
     for (char c : welcomMessage) {
-        std::cout << c;
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
+        cout << c;
+        this_thread::sleep_for(chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
     }
-    std::cout << std::endl;
+    cout << endl;
     //   std::cout << "Drücke eine beliebige Taste, um fortzufahren...";
-    std::cin.get();
+    cin.get();
     int randomNumber = 42; // Die zu erratende Zahl ist immer 42
-    std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Verzögerung von 500 Millisekunden
-    std::string welcoMessage = " Dein erstes Rätsel lautet: Finde die richtige Zahl (zwischen 1 und 100), um den Sinn des Lebens zu erfahren! ";
+    this_thread::sleep_for(chrono::milliseconds(500)); // Verzögerung von 500 Millisekunden
+    string welcoMessage = " Dein erstes Rätsel lautet: Finde die richtige Zahl (zwischen 1 und 100), um den Sinn des Lebens zu erfahren! ";
     for (char c : welcoMessage) {
-        std::cout << c;
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
+        cout << c;
+        this_thread::sleep_for(chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
     }
-    std::cout << std::endl;
+    cout << endl;
     int guess;
     int attempts = 0;
     bool found = false;
     while (!found) {
-        std::string input;
-        std::cout << "Gib eine Zahl zwischen 1 und 100 ein: ";
-        std::cin >> input;
+        string input;
+        cout << "Gib eine Zahl zwischen 1 und 100 ein: ";
+        cin >> input;
         if (!isNumber(input)) {
-            std::cout << "Ungültige Eingabe. Bitte gib eine Zahl ein." << std::endl;
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "Ungültige Eingabe. Bitte gib eine Zahl ein." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
-        guess = std::stoi(input);
+        guess = stoi(input);
         attempts++;
         if (guess == randomNumber) {
             found = true;
         }
         else if (guess < randomNumber) {
-            std::cout << "Die gesuchte Zahl ist größer. Versuche es erneut." << std::endl;
+            cout << "Die gesuchte Zahl ist größer. Versuche es erneut." << endl;
         }
         else {
-            std::cout << "Die gesuchte Zahl ist kleiner. Versuche es erneut." << std::endl;
+            cout << "Die gesuchte Zahl ist kleiner. Versuche es erneut." << endl;
         }
     }
-    std::cout << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(400)); // Verzögerung von 500 Millisekunden
-    std::string welMessage = " Glückwunsch! Du hast die richtige Zahl gefunden und den Sinn des Lebens entdeckt! ";
+    cout << endl;
+    this_thread::sleep_for(chrono::milliseconds(400)); // Verzögerung von 500 Millisekunden
+    string welMessage = " Glückwunsch! Du hast die richtige Zahl gefunden und den Sinn des Lebens entdeckt! ";
     for (char c : welMessage) {
-        std::cout << c;
-        std::this_thread::sleep_for(std::chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
+        cout << c;
+        this_thread::sleep_for(chrono::milliseconds(100));
     }
-    std::cout << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(300)); // Verzögerung von 500 Millisekunden
-    std::string wiMessage = " Du hast ";
+    cout << endl;
+    this_thread::sleep_for(chrono::milliseconds(300));
+    string wiMessage = " Du hast ";
     for (char c : wiMessage) {
-        std::cout << c;
-        std::this_thread::sleep_for(std::chrono::milliseconds(60));
+        cout << c;
+        this_thread::sleep_for(chrono::milliseconds(60));
     }     
-        std::cout << attempts;
-        std::this_thread::sleep_for(std::chrono::milliseconds(300)); // Verzögerung von 500 Millisekunden
-        std::string wMessage = " Versuch/e gebraucht.";
+        cout << attempts;
+        this_thread::sleep_for(chrono::milliseconds(300)); 
+        string wMessage = " Versuch/e gebraucht.";
         for (char c : wMessage) {
-            std::cout << c;
-            std::this_thread::sleep_for(std::chrono::milliseconds(60)); // Verzögerung von 100 Millisekunden pro Zeichen
+            cout << c;
+            this_thread::sleep_for(chrono::milliseconds(60)); 
         }
         return 0;
     }
 void returnToMainMenu() {
-    std::cout << std::endl;
-    std::cout << "Zurück zum Hauptmenü." << std::endl;
+    cout << endl;
+    cout << "Zurück zum Hauptmenü." << endl;
 }
