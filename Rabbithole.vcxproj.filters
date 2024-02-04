@@ -271,5 +271,8 @@
     <Text Include="highscores.txt">
       <Filter>Quelldateien</Filter>
     </Text>
+    <Text Include="pw.txt">
+      <Filter>Quelldateien</Filter>
+    </Text>
   </ItemGroup>
 </Project>

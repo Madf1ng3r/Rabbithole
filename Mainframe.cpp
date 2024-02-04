@@ -21,13 +21,14 @@
 #include <vector>               // Vektor-Klasse für dynamische Arrays
 #include "User.h"
 #include "Games.h"
-#include "Art.h"                // Header-Datei für die Kunst-Funktionalität
+#include "Art.h"       
 #include "Wiki.h"
 #include "Hardware.h"
+using namespace std;
 #ifdef _WIN32
 void clearScreen()  
 {
-    std::system("cls"); // Bildschirm löschen (nur für Windows)
+    system("cls"); // Bildschirm löschen (nur für Windows)
 }
 #elif __APPLE__ || __linux__
 void clearScreen()
@@ -79,37 +80,37 @@ void resetConsoleWindowSize()
 //}
 void showMenu()
 {
-    //std::cout << "Hallo" << getCurrentUsername();
+    //cout << "Hallo" << getCurrentUsername();
     // ASCII-Kunst anzeigen
-  //  std::cout << "\033[32m"; // Farbcode für grünen Text
+  //  cout << "\033[32m"; // Farbcode für grünen Text
     // Menüoptionen anzeigen
-    std::cout << "  \033[32m       ______       _           \033[0m            _______________________________________________________        " << std::endl;
-    std::cout << "   \033[32m     |  ____|     | |         \033[0m           /  _____________________________________________________  )       " << std::endl;
-    std::cout << "   \033[32m     | |__   _ __ | |_ ___ _ ____   \033[0m    /                                                           ]      " << std::endl;
-    std::cout << "   \033[32m     |  __| | '_  )  __/ _ )|'__|    \033[0m  /  _______________________________________________________   |     " << std::endl;
-    std::cout << "  \033[32m      | |____| | | | | |  _/| |    \033[0m    |  |------------------------                               |  |     " << std::endl;
-    std::cout << "  \033[32m      |______|_| |_|_| |____|_|     \033[0m   |  | ' 1.  Art             '                               |  |    " << std::endl;
-    std::cout << "                                         |  | ' 2.  Wiki            '                               |  |     " << std::endl;
-    std::cout << "     \033[32m           _   _   \033[0m                 |  | ' 3.  Taschenrechner  '                               |  |     " << std::endl;
-    std::cout << "   \033[32m            | | | |  \033[0m                 |  | ' 4.  Sinn des Lebens '                               |  |     " << std::endl;
-    std::cout << "    \033[32m           | |_| |__   ___   \033[0m        |  | ' 5.  Readme          '                               |  |     " << std::endl;
-    std::cout << "     \033[32m          | __| '_  )/ _ )    \033[0m      |  | ' 6.  Notizbuch       '                               |  |     " << std::endl;
-    std::cout << "   \033[32m            | |_| | | |  _/     \033[0m      |  | ' 7.  Links           '                               |  |     " << std::endl;
-    std::cout << "   \033[32m            (___|_| |_|(__|    \033[0m       |  | ' 8.  Spiele          '                               |  |     " << std::endl;
-    std::cout << "                                         |  | ' 9.  Matrix          '                               |  |     " << std::endl;
-    std::cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      '                               |  |     " << std::endl;
-    std::cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '                               |  |     " << std::endl;
-    std::cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << std::endl;
-    std::cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << std::endl;
-    std::cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << std::endl;
-    std::cout << "  \033[32m     |_|  |_|(__,_|_| |_| |_/_/]_[   \033[0m    (__________________________________________________________/        " << std::endl;
-    std::cout << "                                         ______/                 [___________]                                     " << std::endl;
-    std::cout << "                                        /                                                                          " << std::endl;
-    std::cout << "                                       (__________________________________________________________________         " << std::endl;
-    std::cout << "                                      / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  /   __   " << std::endl;
-    std::cout << "                                     /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # /   (  )  " << std::endl;
-    std::cout << "                                    /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)  " << std::endl;
-    std::cout << "                                   /__________________________________________________________________/          " << std::endl;
+    cout << "  \033[32m       ______       _           \033[0m            _______________________________________________________        " << std::endl;
+    cout << "   \033[32m     |  ____|     | |         \033[0m           /  _____________________________________________________  )       " << std::endl;
+    cout << "   \033[32m     | |__   _ __ | |_ ___ _ ____   \033[0m    /                                                           ]      " << std::endl;
+    cout << "   \033[32m     |  __| | '_  )  __/ _ )|'__|    \033[0m  /  _______________________________________________________   |     " << std::endl;
+    cout << "  \033[32m      | |____| | | | | |  _/| |    \033[0m    |  |------------------------                               |  |     " << std::endl;
+    cout << "  \033[32m      |______|_| |_|_| |____|_|     \033[0m   |  | ' 1.  Art             '                               |  |    " << std::endl;
+    cout << "                                         |  | ' 2.  Wiki            '                               |  |     " << std::endl;
+    cout << "     \033[32m           _   _   \033[0m                 |  | ' 3.  Taschenrechner  '                               |  |     " << std::endl;
+    cout << "   \033[32m            | | | |  \033[0m                 |  | ' 4.  Sinn des Lebens '                               |  |     " << std::endl;
+    cout << "    \033[32m           | |_| |__   ___   \033[0m        |  | ' 5.  Readme          '                               |  |     " << std::endl;
+    cout << "     \033[32m          | __| '_  )/ _ )    \033[0m      |  | ' 6.  Notizbuch       '                               |  |     " << std::endl;
+    cout << "   \033[32m            | |_| | | |  _/     \033[0m      |  | ' 7.  Links           '                               |  |     " << std::endl;
+    cout << "   \033[32m            (___|_| |_|(__|    \033[0m       |  | ' 8.  Spiele          '                               |  |     " << std::endl;
+    cout << "                                         |  | ' 9.  Matrix          '                               |  |     " << std::endl;
+    cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 14. Hardware                   |  |     " << std::endl;
+    cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '                               |  |     " << std::endl;
+    cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << std::endl;
+    cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << std::endl;
+    cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << std::endl;
+    cout << "  \033[32m     |_|  |_|(__,_|_| |_| |_/_/]_[   \033[0m    (__________________________________________________________/        " << std::endl;
+    cout << "                                         ______/                 [___________]                                     " << std::endl;
+    cout << "                                        /                                                                          " << std::endl;
+    cout << "                                       (__________________________________________________________________         " << std::endl;
+    cout << "                                      / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  /   __   " << std::endl;
+    cout << "                                     /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # /   (  )  " << std::endl;
+    cout << "                                    /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)  " << std::endl;
+    cout << "                                   /__________________________________________________________________/          " << std::endl;
  //   std::cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
 
 }
@@ -133,9 +134,9 @@ void centerConsoleWindow() // Konsolenfenster  mittig positionieren
 #endif
 }
 
-void executeFile(const std::string& filename)
+void executeFile(const string& filename)
 {
-    std::string command;
+    string command;
 #ifdef _WIN32
     command = "start " + filename; // Kommando zum Öffnen der Datei (Windows)
 #elif __APPLE__
@@ -143,36 +144,36 @@ void executeFile(const std::string& filename)
 #elif __linux__
     command = "xdg-open " + filename; // Kommando zum Öffnen der Datei (Linux)
 #else
-    std::cout << "Die Ausführung von Dateien wird auf diesem Betriebssystem nicht unterstützt." << std::endl; // Fehlermeldung für nicht unterstützte Betriebssysteme
+    cout << "Die Ausführung von Dateien wird auf diesem Betriebssystem nicht unterstützt." << endl; // Fehlermeldung für nicht unterstützte Betriebssysteme
     return;
 #endif
-    int exitCode = std::system(command.c_str()); // Kommando ausführen, um Datei zu öffnen
+    int exitCode = system(command.c_str()); // Kommando ausführen, um Datei zu öffnen
     if (exitCode != 0)
     {
-        std::cout << "Fehler beim Öffnen der Datei." << std::endl; // Fehlermeldung bei Fehlercode ungleich 0
+        cout << "Fehler beim Öffnen der Datei." << endl; // Fehlermeldung bei Fehlercode ungleich 0
     }
 }
 void animateTransition()
 {
     resetConsoleWindowSize();
     clearScreen(); // Bildschirm löschen
-    std::cout << "Lade..." << std::endl;
-    std::string animationFrames = "|/-\\"; // Animationssymbole
+    cout << "Lade..." << endl;
+    string animationFrames = "|/-\\"; // Animationssymbole
     int frameIndex = 0; // Aktueller Index des Animationssymbols
 	for (int i = 0; i < 10; ++i) // Animation
     {
-        std::cout << animationFrames[frameIndex] << std::flush; // Aktuelles Animationssymbol anzeigen
-        std::this_thread::sleep_for(std::chrono::milliseconds(90)); // Kurze Verzögerung für die Animation
-        std::cout << "\b \b" << std::flush; // Animationssymbol löschen (zurücksetzen)
+        cout << animationFrames[frameIndex] << std::flush; // Aktuelles Animationssymbol anzeigen
+        this_thread::sleep_for(chrono::milliseconds(90)); // Kurze Verzögerung für die Animation
+        cout << "\b \b" << flush; // Animationssymbol löschen (zurücksetzen)
         frameIndex = (frameIndex + 1) % animationFrames.length(); // Index für das nächste Animationssymbol aktualisieren
     }
 }
 ////void printDigitalClock()
 ////{
-////    std::time_t currentTime = std::time(nullptr);
-////    std::tm* localTime = std::localtime(&currentTime);
-////    std::string timeString = std::to_string(localTime->tm_hour) + ":" +
-////        std::to_string(localTime->tm_min);
+////    time_t currentTime = time(nullptr);
+////    tm* localTime = localtime(&currentTime);
+////    string timeString = to_string(localTime->tm_hour) + ":" +
+////        to_string(localTime->tm_min);
 ////#ifdef _WIN32
 ////    CONSOLE_SCREEN_BUFFER_INFO csbi;
 ////    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
@@ -181,51 +182,52 @@ void animateTransition()
 ////    int consoleWidth = 80; // Standardbreite für nicht-Windows-Systeme
 ////#endif
 ////    int timePadding = consoleWidth - timeString.length() - 2; // 2 für Leerzeichen
-////    std::cout << std::string(timePadding, ' ') << timeString << std::endl;
+////    cout << string(timePadding, ' ') << timeString << endl;
 ////}
 
 int main()   // Hauptfunktion von Rabbithole
 {
-    resetConsoleWindowSize();
     centerConsoleWindow();
     bool running = true;
     int choice;
     bool taschenrechnerRunning = false;
     bool menuVisible = true;  // Variable, um den Menüstatus zu verfolgen
-    // Schritt 1: Laden Sie den Namen aus der Konfigurationsdatei
+    // Schritt 1: Lade den Namen aus Konfigurationsdatei
     g_name = readNameFromFile("config.txt");
-    // Schritt 2: Überprüfen Sie, ob ein Name gespeichert ist
+    // Schritt 2: Überprüft ob ein Name gespeichert ist
     if (g_name.empty()) {
         g_name = enterName();
         while (g_name.empty()) {
             g_name = enterName();
         }
-        // Schritt 3: Speichern Sie den Namen in der Konfigurationsdatei
+        // Schritt 3: Speichert den Namen in der Konfigurationsdatei
         saveNameToFile("config.txt", g_name);
     }
+ 
+   
     while (running)
     {
-        if (menuVisible)  // Nur das Menü anzeigen, wenn es sichtbar ist
+        if (menuVisible)
         {
             clearScreen();
             resetConsoleWindowSize();
             showMenu();             // Benutzeroberfläche des Hauptmenüs anzeigen
         }
-        ////std::thread clockThread([]() {
+        ////thread clockThread([]() {
         ////    while (true) {
         ////        clearScreen();
         ////        showMenu();
         ////        printDigitalClock();      // kleine Uhrzeit Anzeige in der rechten unteren Ecke
-        ////        std::this_thread::sleep_for(std::chrono::minutes(1)); // Alle 1 Minute aktualisieren
+        ////        this_thread::sleep_for(chrono::minutes(1)); // Alle 1 Minute aktualisieren
         ////    }
         //});
-        std::cout << "Wählen Sie eine Option: ";
-        if (!(std::cin >> choice))
+        cout << "Wählen Sie eine Option: ";
+        if (!(cin >> choice))
         {
-			std::cin.clear(); 
-			std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');  // Leerzeichen ignorieren
-			std::cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << std::endl; //Fehlermeldung
-			std::this_thread::sleep_for(std::chrono::seconds(1)); // 1 Sekunde warten
+			cin.clear(); 
+			cin.ignore((numeric_limits<streamsize>::max)(), '\n');  // Leerzeichen ignorieren
+			cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << endl; //Fehlermeldung
+			this_thread::sleep_for(chrono::seconds(1)); // 1 Sekunde warten
             continue;    // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingbae machen
         }
         //clockThread.detach();
@@ -307,8 +309,8 @@ int main()   // Hauptfunktion von Rabbithole
 			running = false; 
             break;
         default:
-            std::cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
-            std::this_thread::sleep_for(std::chrono::seconds(2)); // 2 Sekunden warten
+            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
+            this_thread::sleep_for(chrono::seconds(2)); // 2 Sekunden warten
             break;
         }
         if (taschenrechnerRunning)
@@ -319,9 +321,9 @@ int main()   // Hauptfunktion von Rabbithole
         }
 		if (running) // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingabe machen
         {
-            std::cout << "Drücken Sie Enter, um fortzufahren.";
-            std::cin.ignore();
-            std::cin.get();
+            cout << "Drücken Sie Enter, um fortzufahren.";
+            cin.ignore();
+            cin.get();
         }
     }
 return 0; // Programm beenden

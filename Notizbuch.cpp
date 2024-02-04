@@ -7,12 +7,15 @@
 #include <iomanip>
 #include "User.h"
 #include <conio.h>
-
+#include <locale>
+using namespace std;
 int gumain() {
-    std::string filename = "notizbuch.txt";
+  //  locale::global(locale("de_DE.utf8"));
+    // wcout.imbue(locale());
+    string filename = "notizbuch.txt";
     displayNotes(filename);
-    std::cout << "\033[32m";
-    std::cout << R"(
+    cout << "\033[32m";
+    cout << R"(
       __...--~~~~~-._   _.-~~~~~--...__
     //               `V'               \\ 
    //                 |                 \\ 
@@ -20,16 +23,15 @@ int gumain() {
  //__.....----~~~~._\ | /_.~~~~----.....__\\
 ====================\\|//====================
                     `---`
- )" << std::endl;
-    std::cout << "\033[0m";
-    std::cout << "Dies ist dein persönliches Notizbuch!" << std::endl;
-    std::cout << "Hallo " << g_name << "! Bitte hinterlassen Sie eine Notiz: ";
-    std::string note;
-    std::getline(std::cin, note);
-    std::string entry = g_name + ": " + note;
+ )" << endl;
+    cout << "\033[0m";
+    cout <<  "Dies ist dein persoenliches Notizbuch!" << endl;
+    cout << "Hallo " << g_name << "! Bitte hinterlassen Sie eine Notiz: ";
+    string note;
+    getline(cin, note);
+    string entry = g_name + ": " + note;
     writeToFile(filename, g_name, note);
     displayNotes(filename);
-
     if (_kbhit()) {
         char key = _getch();
         if (key == 27) {
@@ -38,13 +40,12 @@ int gumain() {
     }
     return 0;
 }
-
 int guimain() {
     while (true) {
         gumain();
-        std::cout << "Möchten Sie eine weitere Notiz hinterlassen? (j/n): ";
-        std::string response;
-        std::getline(std::cin, response);
+        cout << "Möchten Sie eine weitere Notiz hinterlassen? ( J  für Ja ) ";
+        string response;
+        getline(cin, response);
         if (response != "j" && response != "J") {
             break;
         }
