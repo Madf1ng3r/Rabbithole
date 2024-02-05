@@ -439,7 +439,6 @@ L___________________J     \
     cout << "                                                                                 ||                              ||" << endl;
     cout << "                                                                                 ||  Q - Schießen                ||" << endl;
     cout << "                                                                                 ==================================" << endl;
-
     waitForEnter();
     Player player;
     player.x = WIDTH / 2;

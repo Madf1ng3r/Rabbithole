@@ -7,24 +7,23 @@
 #include "Bicalc.h"
 #include "Mainframe.h"
 #include "Bitcalc.h"
-
 using namespace std;
-int addition(int a, int b)
+double addition(double a, double b)
 {
     return a + b;
 }
 
-int subtraktion(int a, int b)
+double subtraktion(double a, double b)
 {
     return a - b;
 }
 
-int multiplikation(int a, int b)
+double multiplikation(double a, double b)
 {
     return a * b;
 }
 
-double division(int a, int b)
+double division(double a, double b)
 {
     return static_cast<double>(a) / b;
 }
@@ -69,6 +68,7 @@ string calculatePi()
     string piStr = to_string(acos(-1));
     return piStr.substr(0, piStr.find('.') + 101);
 }
+
 void printMenu()
 {
     cout << "\033[32m"; // Grüne Textfarbe
@@ -91,7 +91,7 @@ void printMenu()
     cout << "                                           |  1. Addition          |  11. Umfang eines Kreises   |" << endl;
     cout << "                                           |  2. Subtraktion       |  12. Binärrechner           |" << endl;
     cout << "                                           |  3. Multiplikation    |  13. Bit-/Byte Rechner      |" << endl;
-    cout << "                                           |  4. Division          |                             |" << endl;
+    cout << "                                           |  4. Division          |  14. Gleichung lösen        |" << endl;
     cout << "                                           |  5. Potenzierung      |                             |" << endl;
     cout << "                                           |  6. Quadratwurzel     |                             |" << endl;
     cout << "                                           |  7. Fakultät          |                             |" << endl;
@@ -118,7 +118,6 @@ void calcmain()
         string choice;
         cout << "Wählen Sie eine Option: ";
         cin >> choice;
-
         if (choice.empty() || !isdigit(choice[0]))
         {
             cout << "Ungültige Eingabe. Bitte geben Sie eine Zahl ein." << endl;
@@ -256,6 +255,10 @@ void calcmain()
 			clearScreen();
             bitmain();
 			break;
+        case 14:
+            animateTransition();
+            clearScreen();
+
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
             break;

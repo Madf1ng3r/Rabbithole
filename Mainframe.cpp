@@ -81,37 +81,35 @@ void resetConsoleWindowSize()
 void showMenu()
 {
     //cout << "Hallo" << getCurrentUsername();
-    // ASCII-Kunst anzeigen
   //  cout << "\033[32m"; // Farbcode für grünen Text
-    // Menüoptionen anzeigen
-    cout << "  \033[32m       ______       _           \033[0m            _______________________________________________________        " << std::endl;
-    cout << "   \033[32m     |  ____|     | |         \033[0m           /  _____________________________________________________  )       " << std::endl;
-    cout << "   \033[32m     | |__   _ __ | |_ ___ _ ____   \033[0m    /                                                           ]      " << std::endl;
-    cout << "   \033[32m     |  __| | '_  )  __/ _ )|'__|    \033[0m  /  _______________________________________________________   |     " << std::endl;
-    cout << "  \033[32m      | |____| | | | | |  _/| |    \033[0m    |  |------------------------                               |  |     " << std::endl;
-    cout << "  \033[32m      |______|_| |_|_| |____|_|     \033[0m   |  | ' 1.  Art             '                               |  |    " << std::endl;
-    cout << "                                         |  | ' 2.  Wiki            '                               |  |     " << std::endl;
-    cout << "     \033[32m           _   _   \033[0m                 |  | ' 3.  Taschenrechner  '                               |  |     " << std::endl;
-    cout << "   \033[32m            | | | |  \033[0m                 |  | ' 4.  Sinn des Lebens '                               |  |     " << std::endl;
-    cout << "    \033[32m           | |_| |__   ___   \033[0m        |  | ' 5.  Readme          '                               |  |     " << std::endl;
-    cout << "     \033[32m          | __| '_  )/ _ )    \033[0m      |  | ' 6.  Notizbuch       '                               |  |     " << std::endl;
-    cout << "   \033[32m            | |_| | | |  _/     \033[0m      |  | ' 7.  Links           '                               |  |     " << std::endl;
-    cout << "   \033[32m            (___|_| |_|(__|    \033[0m       |  | ' 8.  Spiele          '                               |  |     " << std::endl;
-    cout << "                                         |  | ' 9.  Matrix          '                               |  |     " << std::endl;
-    cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 14. Hardware                   |  |     " << std::endl;
-    cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '                               |  |     " << std::endl;
-    cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << std::endl;
-    cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << std::endl;
-    cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << std::endl;
-    cout << "  \033[32m     |_|  |_|(__,_|_| |_| |_/_/]_[   \033[0m    (__________________________________________________________/        " << std::endl;
-    cout << "                                         ______/                 [___________]                                     " << std::endl;
-    cout << "                                        /                                                                          " << std::endl;
-    cout << "                                       (__________________________________________________________________         " << std::endl;
-    cout << "                                      / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  /   __   " << std::endl;
-    cout << "                                     /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # /   (  )  " << std::endl;
-    cout << "                                    /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)  " << std::endl;
-    cout << "                                   /__________________________________________________________________/          " << std::endl;
- //   std::cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
+    cout << "  \033[32m       ______       _           \033[0m            _______________________________________________________        " << endl;
+    cout << "   \033[32m     |  ____|     | |         \033[0m           /  _____________________________________________________  )       " << endl;
+    cout << "   \033[32m     | |__   _ __ | |_ ___ _ ____   \033[0m    /                                                           ]      " << endl;
+    cout << "   \033[32m     |  __| | '_  )  __/ _ )|'__|    \033[0m  /  _______________________________________________________   |     " << endl;
+    cout << "  \033[32m      | |____| | | | | |  _/| |    \033[0m    |  |------------------------                               |  |     " << endl;
+    cout << "  \033[32m      |______|_| |_|_| |____|_|     \033[0m   |  | ' 1.  Art             '                               |  |    " << endl;
+    cout << "                                         |  | ' 2.  Wiki            '                               |  |     " << endl;
+    cout << "     \033[32m           _   _   \033[0m                 |  | ' 3.  Taschenrechner  '                               |  |     " << endl;
+    cout << "   \033[32m            | | | |  \033[0m                 |  | ' 4.  Sinn des Lebens '                               |  |     " << endl;
+    cout << "    \033[32m           | |_| |__   ___   \033[0m        |  | ' 5.  Readme          '                               |  |     " << endl;
+    cout << "     \033[32m          | __| '_  )/ _ )    \033[0m      |  | ' 6.  Notizbuch       '                               |  |     " << endl;
+    cout << "   \033[32m            | |_| | | |  _/     \033[0m      |  | ' 7.  Links           '                               |  |     " << endl;
+    cout << "   \033[32m            (___|_| |_|(__|    \033[0m       |  | ' 8.  Spiele          '                               |  |     " << endl;
+    cout << "                                         |  | ' 9.  Matrix          '                               |  |     " << endl;
+    cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 11. Hardware                  |  |     " << endl;
+    cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '                               |  |     " << endl;
+    cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << endl;
+    cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << endl;
+    cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << endl;
+    cout << "  \033[32m     |_|  |_|(__,_|_| |_| |_/_/]_[   \033[0m    (__________________________________________________________/        " << endl;
+    cout << "                                         ______/                 [___________]                                     " << endl;
+    cout << "                                        /                                                                          " << endl;
+    cout << "                                       (__________________________________________________________________         " << endl;
+    cout << "                                      / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  /   __   " << endl;
+    cout << "                                     /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # /   (  )  " << endl;
+    cout << "                                    /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)  " << endl;
+    cout << "                                   /__________________________________________________________________/          " << endl;
+ //   cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
 
 }
 void centerConsoleWindow() // Konsolenfenster  mittig positionieren
@@ -203,7 +201,6 @@ int main()   // Hauptfunktion von Rabbithole
         // Schritt 3: Speichert den Namen in der Konfigurationsdatei
         saveNameToFile("config.txt", g_name);
     }
- 
    
     while (running)
     {
@@ -211,7 +208,7 @@ int main()   // Hauptfunktion von Rabbithole
         {
             clearScreen();
             resetConsoleWindowSize();
-            showMenu();             // Benutzeroberfläche des Hauptmenüs anzeigen
+            showMenu(); 
         }
         ////thread clockThread([]() {
         ////    while (true) {
@@ -241,7 +238,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 2:
             animateTransition();
             clearScreen();
-            wikimain();  // c++ Codes mit Erklärungen und Beispiele dazu
+            wikimain();
             break;
         case 3:
             animateTransition();
@@ -273,7 +270,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 8:
             animateTransition();
             clearScreen();
-            gamemain(); // Pong + Snake Spiel
+            gamemain(); // Schach,Pong,Snake
             break;
         case 9:
             animateTransition();
@@ -288,7 +285,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 11:
             animateTransition();
             clearScreen();
-            executeFile("Witzbold.cpp");  // Witz API noch in Bearbeitung
+            hwmain(); // Prozessor auslesen
             break;
         case 12:
             animateTransition();
@@ -298,9 +295,14 @@ int main()   // Hauptfunktion von Rabbithole
 		case 13:
 			animateTransition();
 			clearScreen();
-            hwmain();
+            executeFile("Witzbold.cpp");  // Witz API noch in Bearbeitung
             break;
         case 14:
+            animateTransition();
+            clearScreen();
+
+            break;
+        case 15:
             animateTransition();
             clearScreen();
 

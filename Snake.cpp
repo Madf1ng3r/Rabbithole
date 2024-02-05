@@ -173,7 +173,7 @@ void snakeLogic()
 }
 void DisplayScore()
 {
-    system("cls"); // Clear the console
+    system("cls");
     cout << "Score: " << score << endl;
 }
  

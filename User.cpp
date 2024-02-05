@@ -7,9 +7,9 @@
 #include <thread>
 #include <vector>
 using namespace std;
-string g_name; // Global variable to store the name
+string g_name; 
 void writeToFile(const string& filename, const string& name, const string& text) {
-    ofstream file(filename, ios::app); // Append mode to add new notes
+    ofstream file(filename, ios::app); 
     if (file.is_open()) {
         file << "[" << name << "]: " << text << endl;
         file.close();
@@ -35,6 +35,7 @@ void displayNotes(const string& filename) {
 }
 
 static void createPasswort() {
+
     string password;
     bool validPassword = false;
     while (!validPassword) {
@@ -79,7 +80,7 @@ static void createPasswort() {
                 cout << "Fehler: Das Passwort muss mindestens 6 Zeichen lang sein." << endl;
             }
         }
-        else if (response == "nein" ) {
+        else if (response == "nein") {
             cout << "Okay, kein Passwort erstellt." << endl;
             validPassword = true;
         }
@@ -158,7 +159,7 @@ string enterName() {
         cout << c;
         this_thread::sleep_for(chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
     }
-    cout << "                                     Namen hier Eingeben: ";
+    cout << "                                 Namen hier Eingeben: ";
     getline(cin, name);
     return name;
 }

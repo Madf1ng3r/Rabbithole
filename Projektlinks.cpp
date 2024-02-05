@@ -15,19 +15,21 @@ int plinkmain() {
         "https://github.com/curl/curl/tree/master",
         "https://github.com/olrea/openai-cpp",
         "https://www.w3schools.com/",
+        "https://de.wikibooks.org/wiki/C-Programmierung:_Ausdrücke_und_Operatoren",
+        "https://learn.microsoft.com/en-us/cpp/cpp",
         "https://github.com/Madf1ng3r/Rabbithole",
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
     int choice;
     do {
-        // Menü anzeigen
+        cout << "\033[32m";
         cout << "Bitte wählen Sie einen Link:" << endl;
+        cout << "\033[0m";
         for (int i = 0; i < numLinks; i++) {
             cout << GREEN << i + 1 << ". " << links[i] << RESET << endl;
         }
         cout << "0. Beenden" << endl;
-        // Benutzereingabe lesen
         cin >> choice;
         // Auswahl überprüfen
         if (choice > 0 && choice <= numLinks) {

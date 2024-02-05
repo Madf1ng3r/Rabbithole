@@ -15,7 +15,7 @@ int hwmain()
         wcerr << L"Failed to initialize COM library. Error code = 0x" << hex << hres << endl;
         return 1;
     }
-    // Step 2: Set general COM security levels
+    // Step 2: Set general COM security levels  regix code
     hres = CoInitializeSecurity(
         nullptr,
         -1,                          // Default authentication
