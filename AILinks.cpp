@@ -1,6 +1,5 @@
-#include <iostream>
 #include <cstdlib>
-#include <string>
+#include "Mainframe.h"
 #include "AILinks.h"
 #include "Openlink.h"
 #define GREEN "\033[1;32m"

@@ -1,6 +1,5 @@
-#include <iostream>
 #include <cstdlib>
-#include <string>
+#include "Mainframe.h"
 #include "Openlink.h"
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"

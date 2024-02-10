@@ -156,6 +156,7 @@
     <ClCompile Include="MrSmith.cpp" />
     <ClCompile Include="NuLinks.cpp" />
     <ClCompile Include="OPLinks.cpp" />
+    <ClCompile Include="Optionen.cpp" />
     <ClCompile Include="pcwiki.cpp" />
     <ClCompile Include="pong.cpp" />
     <ClCompile Include="Projektlinks.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Spaceinvader.cpp" />
     <ClCompile Include="sqlwiki.cpp" />
+    <ClCompile Include="Teil1.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Wiki.cpp" />
     <ClCompile Include="Witzbold.cpp" />

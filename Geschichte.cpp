@@ -1,7 +1,6 @@
-#include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
+#include "Mainframe.h"
 #include "User.h"
 #ifdef _WIN32
 #include <conio.h> // Für _getch-Funktion (nur Windows)
@@ -83,7 +82,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
     int numLocations = locations.size();
     int numEndings = endings.size();
     int numSentences = 10; // Anzahl der Sätze in der Geschichte
-
     for (int i = 0; i < numSentences; ++i) {
         string sentence;
         // Zufälliges Story-Part auswählen
@@ -95,7 +93,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
             string adjective = getRandomElement(adjectives);
             sentence += adjective + " ";
         }
-
         // Zufälliges Nomen auswählen
         string noun = getRandomElement(nouns);
         sentence += noun;
@@ -105,7 +102,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
             string action = getRandomElement(actions);
             sentence += " " + action;
         }
-
         // Zufälliger Ort auswählen
         string location = getRandomElement(locations);
         sentence += " " + location;

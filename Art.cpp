@@ -1,7 +1,5 @@
-#include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
 #include <algorithm>
 #include <conio.h>
 #include "Art.h"
