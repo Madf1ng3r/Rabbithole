@@ -1,13 +1,76 @@
-#include <iostream>
 #include "Mainframe.h"
-#include <thread>	
-#include <chrono>
-#include <string>
-#include <vector>
 #include <algorithm>
 #include "pcwiki.h"
 
 using namespace std;
+
+void genalgo() {
+    R"(
+                                           In der Programmierung gibt es zwei verschiedene Arten von Algorithmen:
+
+          Deterministische Algorithmen:                                             Probabilistische Algorithmen: 
+  Diese Algorithmen liefern bei gleichen Eingaben                            liefern nicht immer das gleiche Ergebnis.
+  immer das gleiche Ergebnis. Sie arbeiten nach                                            eher zufällig. 
+  einem festen Ablauf und sind vorhersehbar.                    
+
+)";
+}
+
+void suchalgo() {
+    R"(
+                                 In der Programmierung gibt es zwei verschiedene Arten von Suchalgorithmen:
+
+            ein Prozessor                                                                   mehrere Prozessoren
+	sequenzieller Suchalgorithms/                                                       rekursiver Suchalgorithms/
+       Iterativer Suchalgorithms:                                                       binärer Suchalgorithmus:
+Wir wissen, wie oft die Schleife durchlaufen wird.                             Rechnet die Mitte aus und sucht dann erst den Teil
+Lineare Suche in einer Liste (Array) nach einem Wert                            ab in dem sich die vermutete Lösung befindet. 
+                                                                                      (Mitte berechnen= Begin+Ende/2)
+)";
+}
+
+void algorithm()
+{
+    cout << R"(   
+RAID steht für "Redundant Array of Independent Disks" und bezeichnet eine Technologie, 
+bei der mehrere Festplatten zusammenarbeiten, um die Leistung, Zuverlässigkeit oder beides zu verbessern. 
+Hier sind einige der gängigsten RAID-Level:
+)";
+    int choice;
+    while (true)
+    {
+        cout << "Arten von Algorithmen" << endl;
+        cout << "1. Suchalgorithmen " << endl;
+        cout << "2. Generelle Algorithmen" << endl << endl;
+        cout << "0. Zurück zum Hauptmenü" << endl;
+        cout << "Wählen Sie eine Option: ";
+        if (!(cin >> choice))
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            continue;
+        }
+        switch (choice)
+        {
+        case 1:
+            clearScreen();
+            suchalgo();
+            break;
+        case 2:
+            clearScreen();
+            genalgo();
+            break;
+        case 0:
+            return; 
+        default:
+            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            break;
+        }
+    }
+}
 
 void showraidzero() {
  cout <<   R"(
@@ -1442,7 +1505,7 @@ Zweite Seite:
                                                     /                                                           ]      
                                                    /  _______________________________________________________   |     
                                                   |  |------------------------                               |  |     
-                                                  |  | ' 1.                   |                              |  |    
+                                                  |  | ' 1. Algorithmen       |                              |  |    
                                                   |  | ' 2.                   |                              |  |     
                                                   |  | ' 3.                   |                              |  |     
                                                   |  | ' 4. USV               |                              |  |     
@@ -1479,7 +1542,7 @@ Zweite Seite:
             case 1:
                 animateTransition();
                 clearScreen();
-             
+                algorithm();
                 break;
             case 2:
                 animateTransition();

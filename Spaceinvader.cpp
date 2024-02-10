@@ -1,7 +1,5 @@
-#include <iostream>
-#include <conio.h>
 #include <Windows.h>
-#include <vector>
+#include "Mainframe.h"
 #include <ctime>
 using namespace std;
 const int width = 40;

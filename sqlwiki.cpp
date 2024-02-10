@@ -1,10 +1,5 @@
 #include "sqlwiki.h"
 #include "Mainframe.h"
-#include <conio.h>
-#include <vector>
-#include <thread>
-#include <iostream>
-
 using namespace std;
 
 void showsqlwikimain()

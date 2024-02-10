@@ -1,11 +1,7 @@
 #include "Games.h"
 #include "pong.h"
 #include "Mainframe.h"
-#include <iostream>
-#include <chrono>
-#include <thread>
 using namespace std;
-
 void showGames()
 {
     cout << "\033[32m";

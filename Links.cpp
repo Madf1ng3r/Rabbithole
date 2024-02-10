@@ -1,8 +1,3 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <thread>
-#include <chrono>
 #include "Links.h"
 #include "AILinks.h"
 #include "NULinks.h"
@@ -12,7 +7,6 @@
 #include "Openlink.h"
 #include "Mainframe.h"
 #include "pcwiki.h"
-#include <vector>
 using namespace std;
 void showLinkmenu()
 {

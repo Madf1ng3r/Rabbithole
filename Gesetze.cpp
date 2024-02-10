@@ -1,11 +1,8 @@
 #include "games.h"
 #include "pong.h"
 #include "Mainframe.h"
-#include <iostream>
-#include <chrono>
 #include "Openlink.h"
 using namespace std;
-
 void showGesetze()
 {
 }

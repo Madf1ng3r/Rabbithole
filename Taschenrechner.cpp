@@ -1,9 +1,6 @@
-#include <iostream>
 #include <cmath>
 #include <algorithm>
-#include <iomanip> // Für setprecision und fixed
 #include <windows.h>
-#include <string>
 #include "Bicalc.h"
 #include "Mainframe.h"
 #include "Bitcalc.h"
@@ -28,20 +25,20 @@ double division(double a, double b)
     return static_cast<double>(a) / b;
 }
 
-int potenzierung(int a, int b)
+double potenzierung(double a, double b)
 {
     return pow(a, b);
 }
 
-int quadratwurzel(int a)
+double quadratwurzel(double a)
 {
     return sqrt(a);
 }
 
-int fakultaet(int a)
+double fakultaet(double a)
 {
-    int result = 1;
-    for (int i = 1; i <= a; i++)
+    double result = 1;
+    for (double i = 1; i <= a; i++)
     {
         result *= i;
     }
@@ -86,26 +83,51 @@ void printMenu()
     cout << "| | . | 0 | = | | / | |" << endl;
     cout << "|_|___|___|___|_|___|_|" << endl;
     cout << "\033[0m"; //Zurücksetzen der Textfarbe
-    cout << "                                           ------------------------------------------------------" << endl;
-    cout << "                                           |             Optionen:                               |" << endl;
-    cout << "                                           |  1. Addition          |  11. Umfang eines Kreises   |" << endl;
-    cout << "                                           |  2. Subtraktion       |  12. Binärrechner           |" << endl;
-    cout << "                                           |  3. Multiplikation    |  13. Bit-/Byte Rechner      |" << endl;
-    cout << "                                           |  4. Division          |  14. Gleichung lösen        |" << endl;
-    cout << "                                           |  5. Potenzierung      |                             |" << endl;
-    cout << "                                           |  6. Quadratwurzel     |                             |" << endl;
-    cout << "                                           |  7. Fakultät          |                             |" << endl;
-    cout << "                                           |  8. Zahl Pi           |                             |" << endl;
-    cout << "                                           |  9. Volumen eines Kreises                           |" << endl;
-    cout << "                                           |  10. Fläche eines Kreises                           |" << endl;
-    cout << "                                           |  0. zurück zum Menue                                |" << endl;
-    cout << "                                            -----------------------------------------------------" << endl;
+    cout << "                                           ---------------------------------------------------------" << endl;
+    cout << "                                           |                Optionen:                               |" << endl;
+    cout << "                                           |  1. Addition             |  11. Umfang eines Kreises   |" << endl;
+    cout << "                                           |  2. Subtraktion          |  12. Binärrechner           |" << endl;
+    cout << "                                           |  3. Multiplikation       |  13. Bit-/Byte Rechner      |" << endl;
+    cout << "                                           |  4. Division             |  14. Gleichung lösen        |" << endl;
+    cout << "                                           |  5. Potenzierung         |                             |" << endl;
+    cout << "                                           |  6. Quadratwurzel        |                             |" << endl;
+    cout << "                                           |  7. Fakultät             |                             |" << endl;
+    cout << "                                           |  8. Zahl Pi              |                             |" << endl;
+    cout << "                                           |  9. Volumen eines Kreises|                             |" << endl;
+    cout << "                                           |  10. Fläche eines Kreises|                             |" << endl;
+    cout << "                                           |  0. zurück zum Menue     |                             |" << endl;
+    cout << "                                            --------------------------------------------------------" << endl;
 }
 
 void changeConsoleColor(int colorCode)
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, colorCode);
+}
+
+float calculaty(float num1, float num2, char op) {
+    if (op == '+') {
+        return num1 + num2;
+    }
+    else if (op == '-') {
+        return num1 - num2;
+    }
+    else if (op == '/') {
+        if (num2 != 0) {
+            return num1 / num2;
+        }
+        else {
+            cout << "Division durch Null ist nicht erlaubt" << endl;
+            return 0;
+        }
+    }
+    else if (op == '*') {
+        return num1 * num2;
+    }
+    else {
+        cout << "Ungültige Eingabe" << endl;
+        return 0;
+    }
 }
 
 void calcmain()
@@ -116,6 +138,7 @@ void calcmain()
     {
         printMenu();
         string choice;
+        cout << "\033[34m";
         cout << "Wählen Sie eine Option: ";
         cin >> choice;
         if (choice.empty() || !isdigit(choice[0]))
@@ -125,7 +148,6 @@ void calcmain()
         }
 
         int option = stoi(choice);
-
         switch (option)
         {
         case 0:
@@ -133,43 +155,47 @@ void calcmain()
             break;
         case 1:
         {
-            int a, b;
+            double a, b;
             cout << "Geben Sie die erste Zahl ein: ";
             cin >> a;
             cout << "Geben Sie die zweite Zahl ein: ";
             cin >> b;
+            cout << setprecision(3) << fixed;
             cout << "Ergebnis: " << addition(a, b) << endl;
             break;
         }
         case 2:
         {
-            int a, b;
+            double a, b;
             cout << "Geben Sie die erste Zahl ein: ";
             cin >> a;
             cout << "Geben Sie die zweite Zahl ein: ";
             cin >> b;
+            cout << setprecision(3) << fixed;
             cout << "Ergebnis: " << subtraktion(a, b) << endl;
             break;
         }
         case 3:
         {
-            int a, b;
+            double a, b;
             cout << "Geben Sie die erste Zahl ein: ";
             cin >> a;
             cout << "Geben Sie die zweite Zahl ein: ";
             cin >> b;
+            cout << setprecision(3) << fixed;
             cout << "Ergebnis: " << multiplikation(a, b) << endl;
             break;
         }
         case 4:
         {
-            int a, b;
+            double a, b;
             cout << "Geben Sie die erste Zahl ein: ";
             cin >> a;
             cout << "Geben Sie die zweite Zahl ein: ";
             cin >> b;
             if (b != 0)
             {
+                cout << setprecision(3) << fixed;
                 cout << "Ergebnis: " << division(a, b) << endl;
             }
             else
@@ -180,7 +206,7 @@ void calcmain()
         }
         case 5:
         {
-            int a, b;
+            double a, b;
             cout << "Geben Sie die Basis ein: ";
             cin >> a;
             cout << "Geben Sie den Exponenten ein: ";
@@ -190,7 +216,7 @@ void calcmain()
         }
         case 6:
         {
-            int a;
+            double a;
             cout << "Geben Sie die Zahl ein: ";
             cin >> a;
             if (a >= 0)
@@ -205,7 +231,7 @@ void calcmain()
         }
         case 7:
         {
-            int a;
+            double a;
             cout << "Geben Sie die Zahl ein: ";
             cin >> a;
             if (a >= 0)
@@ -258,7 +284,19 @@ void calcmain()
         case 14:
             animateTransition();
             clearScreen();
-
+            {
+                float num1, num2;
+                char op;
+                cout << "Gib die erste Zahl ein: ";
+                cin >> num1;
+                cout << "Gib die zweite Zahl ein: ";
+                cin >> num2;
+                cout << "Wähle eine Rechenoperation (+, -, /, *): ";
+                cin >> op;
+                cout << setprecision(3) << fixed;
+                float result = calculaty(num1, num2, op);
+                cout << "Ergebnis: " << result << endl;
+                break; }
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
             break;

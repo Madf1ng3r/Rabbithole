@@ -1,11 +1,5 @@
 #include "user.h"
-#include <iostream>
-#include <string>
-#include <chrono>
-#include <fstream>
-#include <conio.h>
-#include <thread>
-#include <vector>
+#include "Mainframe.h"
 using namespace std;
 string g_name; 
 void writeToFile(const string& filename, const string& name, const string& text) {
@@ -150,10 +144,11 @@ string enterName() {
               
 
 )";
+
     cout << "\033[0m";
     cout << "Wilkommen ";
     this_thread::sleep_for(chrono::milliseconds(500)); 
-
+ 
     string welcomeMessage = "im Rabbithole! Das Programm befindet sich noch in der Alpha Version. Bevor Du loslegst erzähl mir etwas über Dich. Wie lautet dein Name?";
     for (char c : welcomeMessage) {
         cout << c;
@@ -187,3 +182,4 @@ string readNameFromFile(const string& filename) {
     }
     return name;
 }
+

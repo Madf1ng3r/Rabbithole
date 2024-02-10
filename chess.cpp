@@ -1,10 +1,8 @@
-#include<iostream>
 #include<cstdlib>
 #include<ctime>
-#include<fstream>
+#include "Mainframe.h"
 #include<windows.h>
 using namespace std;
-
 int ROOK(char board[8][8], int i1, int j1, int i2, int j2)
 {
 	int count = 0;

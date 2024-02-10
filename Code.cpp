@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int codemain() {
 
 	cout << R"( 
@@ -123,7 +122,6 @@ ________________________________________________________________________________
 break - Wird innerhalb einer Schleife verwendet, 
 um die Schleife vorzeitig zu beenden und den Code nach der Schleife auszuführen.
    Beispiel:
-   ```cpp
    while (bedingung) {
        if (bedingung) {
            break; // Schleife vorzeitig beenden
@@ -141,8 +139,14 @@ um den aktuellen Schleifendurchlauf zu beenden und mit dem nächsten Durchlauf fo
    }
 _____________________________________________________________________________________________
 _____________________________________________________________________________________________
+1) eine Variable->ein Wert (Datentyp bool,int,float,double,char)
+-> Anzahl der byte steht fest.
+Idee: Zählen,Speichern,Eingeben,Rechnen
+2) ein Text->eine Variable (Datentyp string) Array von Zeichen
+Idee: Speichern von Eingabe, Suchen und Ersetzen
+3) ein Array->Speicherfeld, alle Werte, gleicher Typ->Suchen und Sortieren->Algorithmus
+Eindumensionales Array> int list[5]
+Zweidimensionales Array> double umsatz[3][2];
 )";
-
 return 0;
-
 }

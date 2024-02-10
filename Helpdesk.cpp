@@ -1,15 +1,9 @@
-#include <iostream>
 #include "Hcode.h"
 #include "Code.h"
 #include "Zcode.h"
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <thread>
-#include <chrono>
+#include "Mainframe.h"
 #include "Openlink.h"
 #include "BeispielCode.h"
-#include <vector>
 using namespace std;
      void showHelpmenu()
     {
