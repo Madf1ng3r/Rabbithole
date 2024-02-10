@@ -2,7 +2,6 @@
 #include <iostream>
 #include <comdef.h>
 #include <Wbemidl.h>
-#include <iostream>
 using namespace std;
 #pragma comment(lib, "wbemuuid.lib")
 int hwmain()

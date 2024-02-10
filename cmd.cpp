@@ -1,8 +1,5 @@
-#include <iostream>
 #include "Mainframe.h"
-
 using namespace std;
-
 int cmdmain() {
 	clearScreen();
 	cout << R"(
