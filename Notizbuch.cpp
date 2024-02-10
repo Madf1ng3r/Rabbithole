@@ -1,12 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
+#include "Mainframe.h"
 #include <algorithm>
 #include <sstream>
-#include <iomanip>
 #include "User.h"
-#include <conio.h>
 #include <locale>
 using namespace std;
 int gumain() {

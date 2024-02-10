@@ -1,5 +1,3 @@
-#include <iostream>
-#include <conio.h>
 #include <bitset> // Für die binäre Umwandlung
 #include <sstream> // Für die Umwandlung in Hexadezimal und Oktal
 #include "Mainframe.h"

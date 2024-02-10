@@ -1,14 +1,8 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
 #include <algorithm>
-#include <chrono>
-#include <thread>
 #include "Mainframe.h"
 #include "BWLLink.h"
 #include "Links.h"
 #include "Gesetze.h"
-
 using namespace std;
 
 void showFinanzierungsregeln() {
@@ -159,7 +153,7 @@ Annuitätendarhlehnen
 )";
 }
 
-void showVertragsarten() {
+void anzeigenVertragsarten() {
     cout << R"(
 Arbeitsvertrag:
 Ein Vertrag zwischen einem Arbeitgeber und einem Arbeitnehmer, der die Bedingungen der Beschäftigung regelt.
@@ -1075,7 +1069,7 @@ int bwlmain()
         case 7:
             animateTransition();
             clearScreen();
-            showVertragsarten();
+            anzeigenVertragsarten();
             break;
         case 8:
             animateTransition();

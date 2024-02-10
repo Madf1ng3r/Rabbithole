@@ -1,10 +1,7 @@
-#include <iostream>
-#include <conio.h>
 #include <windows.h>
 #include <ctime>
+#include "Mainframe.h"
 #include <cstdlib>
-#include <fstream>
-#include <string>
 #include <conio.h>
 using namespace std;
 bool gameover;

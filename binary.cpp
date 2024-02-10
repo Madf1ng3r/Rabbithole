@@ -1,10 +1,10 @@
-#include <iostream>
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
-#include <conio.h> // Hinzugefügte Header-Datei für Tasteneingabe
+#include "Mainframe.h"
 #include "binary.h"
 #include "MSmith.h"
+using namespace std;
 void sleep(unsigned int milliseconds) {
     Sleep(milliseconds);
 }
@@ -25,9 +25,8 @@ void setConsoleColor(WORD color) {
 void functionToExecute() {
     smmain();
     // Fügen Sie hier den Code für die auszuführende Funktion ein
-    std::cout << "Enter-Taste wurde gedrückt! Eine andere Funktion wird ausgeführt." << std::endl;
+    cout << "Enter-Taste wurde gedrückt! Eine andere Funktion wird ausgeführt." << endl;
 }
-
 int bimain() {
     const int consoleWidth = 120;
     const int consoleHeight = 30;

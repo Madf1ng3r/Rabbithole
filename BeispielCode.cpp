@@ -1,8 +1,5 @@
-#include <iostream>
-#include <conio.h>
 #include <cmath>
-#include <string>
-#include <vector>
+#include "BeispielCode.h"
 #include "Mainframe.h"
 using namespace std;
 void example1() {
@@ -273,8 +270,7 @@ void example14() {
         }
         cout << i << " ";
     }
-    cout << endl;
-    cout << endl;
+    cout << endl << endl;
 }
 
 string tiere[] = { "Hirsch", "Ratte", "Wildschwein", "Elch", "Vogel", "Eule", "Hummel", "Reh", "Hase" };
@@ -446,7 +442,8 @@ Ausgabe == cout
 Für jeden Wert in der Liste  ==  for(int i=0;i<anzahl;i++)
 Wenn ( Bedingung ) == while(Bedingung)
 Wiederhole solange(Bedingung) == do while(Bedingung)
-
+entspricht/identisch == ==
+ungleich !=
 )";
 }
 
@@ -472,12 +469,21 @@ int liste[] = { 34,36,78,11,37,90,99,33,-6,78,-12,45 };
 )";
         int liste[] = { 34,36,78,11,37,90,99,33,-6,78,-12,45 };
         for (int index = 11; index >= 0; index--) {
-            int zahl = liste[index];
+            int zahl = liste[index]; //Variable Zahl entspricht der Zahl im Index und wird von 11 abwärts aufgerufen
             if (zahl % 2 == 0 ) {   // Wenn Zahl durch 2 teilbar ist ohne Rest
                 cout << liste[index] << "  ";  // Liste rückwäts ausgeben lassen
             } 
         }
     }
+
+void Beispiel25() {
+    int liste[] = { 5,2,7,43,63,12,17,85 };
+    int anzahl = 8;
+    int suche;
+    cout << "Suche";
+    cin >> suche;
+}
+
 
 int bcmain() {
     int userInput;
@@ -617,6 +623,9 @@ int bcmain() {
             clearScreen();
             Beispiel24();
             break;
+        case 25:
+            clearScreen();
+     
         case 0: // Escape-Taste
             exitRequested = true;
             break;

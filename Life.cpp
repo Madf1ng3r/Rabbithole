@@ -1,12 +1,7 @@
-#include <iostream>
-#include <conio.h>
-#include <fstream>
-#include <string>
 #include <sstream>
 #include <Windows.h>
-#include <vector>
-#include <cstdlib>  // Für die Funktion "system"
-#include <ctime>    // Für die Funktion "time"
+#include <cstdlib> 
+#include <ctime>    
 #include "Mainframe.h"
 using namespace std;
 // ASCII Art für die Spielflächen     BKCPDSRWFT
@@ -87,8 +82,8 @@ public:
         : name(name), symbol(symbol), position(position) {}
     const string& getName() const { return name; }
     char getSymbol() const { return symbol; }
-    const Position& getPosition() const { return position; } // Updated: const version
-    Position& getPosition() { return position; } // Non-const version
+    const Position& getPosition() const { return position; } 
+    Position& getPosition() { return position; } 
 private:
     string name;   // Name des Objekts
     char symbol;        // Symbol, das das Objekt auf der Karte repräsentiert
@@ -133,7 +128,7 @@ public:
         return height;
     }
 private:
-    string map;                       // ASCII Art für die Spielfläche
+    string map;                       // Spielfläche
     int width;                             // Breite der Spielfläche
     int height;                            // Höhe der Spielfläche
     vector<InteractiveObject> objects; // Vektor der interaktiven Objekte auf der Spielfläche
@@ -271,9 +266,8 @@ void controlPlayer(Position& playerPosition, GameMap& currentMap, bool isMorning
     }
 }
 bool isMorning = true;
-// Funktion zum Ausführen des Alltagsablaufs
 void performDailyRoutine(GameMap& home, bool isMorning) {
-    // Erstellen der Karten und Objekte
+    //  Karten und Objekte
     if (home.getObjects().empty()) {
         home.addObject(InteractiveObject("Bett", 'B', { 5, 1 }));
         home.addObject(InteractiveObject("Kaffeemaschine", 'K', { 3, 1 }));
@@ -287,14 +281,12 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
         home.addObject(InteractiveObject("Rucksack", 'B', { 9, 3 }));
         home.addObject(InteractiveObject("Balkontür", 'T', { 1, 4 }));
         home.addObject(InteractiveObject("Flurtür", 'T', { 0, 2 }));
-
         GameMap balcony(balconyMap);
         // Objekte auf dem Balkon 
         GameMap hallway(hallwayMap);
         hallway.addObject(InteractiveObject("Haustür", 'H', { 3, 1 }));
         hallway.addObject(InteractiveObject("Küchentür", 'K', { 7, 1 }));
         hallway.addObject(InteractiveObject("Badezimmertür", 'B', { 4, 3 }));
-
         GameMap kitchen(kitchenMap);
         // Objekte in der Küche 
         GameMap bathroom(bathroomMap);
@@ -304,7 +296,6 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
         school.addObject(InteractiveObject("Lehrer", 'L', { 8, 1 }));
         school.addObject(InteractiveObject("Computer", 'C', { 6, 2 }));
         school.addObject(InteractiveObject("Rucksack", 'B', { 9, 2 }));
-
         GameMap street(streetMap);
         street.addObject(InteractiveObject("Nachbarn", 'N', { 3, 1 }));
         street.addObject(InteractiveObject("Andere Leute", 'L', { 6, 1 }));
@@ -322,14 +313,13 @@ void performDailyRoutine(GameMap& home, bool isMorning) {
             currentMap->updateMovingObjects();
             // Tageszeit umschalten
             isMorning = !isMorning;
-            // Speichern des Spielstands
+            // Speichern 
             ofstream saveFile("save.txt");
             saveFile << day;
             saveFile.close();
         }
     }
 }
-
 int lifemain() {
     // Laden des Spielstands
     ifstream saveFile("save.txt");
@@ -338,7 +328,6 @@ int lifemain() {
         saveFile >> savedDay;
     }
     saveFile.close();
-    // Begrüßung
     cout << "Willkommen zum Spiel!\n";
     // Fortsetzen des Spielstands oder neues Spiel starten
     char input;
@@ -347,8 +336,7 @@ int lifemain() {
     if (input == 'j') {
         cout << "Lade Spielstand Tag " << savedDay << "\n";
         GameMap home(homeMap);
-        // ... Initialize objects for the home map ...
-        // Perform the daily routine starting from the loaded day
+        // Perform the daily routine 
         for (int day = 1; day < savedDay; ++day) {
             performDailyRoutine(home, false);
             home.updateMovingObjects();

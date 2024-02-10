@@ -1,12 +1,7 @@
-#include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
 #include <algorithm>
-#include <thread>
-#include <chrono>
-#include <string>
-#include <conio.h>
+#include "Mainframe.h"
 #include "sinndeslebens.h"
 
 using namespace std;
@@ -57,7 +52,7 @@ o                        .                        .        ___---___            
         this_thread::sleep_for(chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
     }
     cout << endl;
-    //   std::cout << "Drücke eine beliebige Taste, um fortzufahren...";
+    //   cout << "Drücke eine beliebige Taste, um fortzufahren...";
     cin.get();
     int randomNumber = 42; // Die zu erratende Zahl ist immer 42
     this_thread::sleep_for(chrono::milliseconds(500)); // Verzögerung von 500 Millisekunden

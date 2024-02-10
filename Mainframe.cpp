@@ -1,9 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS  // Sicherheitsfunktionen
-#include <iostream>     // Eingabe/Ausgabe-Stream-Funktionalität
-#include <string>       // String-Funktionalität
-#include <fstream>      // Datei-Ein-/Ausgabe-Funktionalität
-#include <thread>       // Multithreading-Funktionalität
-#include <chrono>       // Zeitmessungsfunktionalität
+#include "Mainframe.h" 
 #include <cstdlib>      // Funktionen für allgemeine Aufgaben (z.B. system())
 #ifdef _WIN32         // Windows-spezifische Funktionen
 #include <windows.h>    // Windows-spezifische Funktionen (z.B. GetSystemMetrics())
@@ -18,7 +14,6 @@
 #include "Witzbold.h"           // Header-Datei für den Witzbold
 #include "BWL.h"                // Header-Datei für das BWL Lexikon
 #include "Notizbuch.h"         // Header-Datei für das Notizbuch
-#include <vector>               // Vektor-Klasse für dynamische Arrays
 #include "User.h"
 #include "Games.h"
 #include "Art.h"       
@@ -26,7 +21,7 @@
 #include "Hardware.h"
 using namespace std;
 #ifdef _WIN32
-void clearScreen()  
+void clearScreen()
 {
     system("cls"); // Bildschirm löschen (nur für Windows)
 }
@@ -39,7 +34,7 @@ void clearScreen()
 #ifdef _WIN32
 void resetConsoleWindowSize()  // Konsolengröße zurücksetzen
 {
-	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); // Fensterhandle der Konsole abrufen
+	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     // Die ursprüngliche Fenstergröße abrufen
     CONSOLE_SCREEN_BUFFER_INFO csbi; 
     GetConsoleScreenBufferInfo(consoleHandle, &csbi);
@@ -95,9 +90,9 @@ void showMenu()
     cout << "     \033[32m          | __| '_  )/ _ )    \033[0m      |  | ' 6.  Notizbuch       '                               |  |     " << endl;
     cout << "   \033[32m            | |_| | | |  _/     \033[0m      |  | ' 7.  Links           '                               |  |     " << endl;
     cout << "   \033[32m            (___|_| |_|(__|    \033[0m       |  | ' 8.  Spiele          '                               |  |     " << endl;
-    cout << "                                         |  | ' 9.  Matrix          '                               |  |     " << endl;
-    cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 11. Hardware                  |  |     " << endl;
-    cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '                               |  |     " << endl;
+    cout << "                                         |  | ' 9.  Matrix          '--------------                 |  |     " << endl;
+    cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 11. Hardware '                |  |     " << endl;
+    cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '--------------                 |  |     " << endl;
     cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << endl;
     cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << endl;
     cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << endl;
@@ -110,7 +105,6 @@ void showMenu()
     cout << "                                    /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /    (__)  " << endl;
     cout << "                                   /__________________________________________________________________/          " << endl;
  //   cout << "\033[0m"; // Farbcode für Standardtext zurücksetzen
-
 }
 void centerConsoleWindow() // Konsolenfenster  mittig positionieren
 {
@@ -126,9 +120,7 @@ void centerConsoleWindow() // Konsolenfenster  mittig positionieren
     int consolePosY = (screenHeight - consoleHeight) / 2; // Y-Position des Konsolenfensters berechnen
     SetWindowPos(consoleWindow, NULL, consolePosX, consolePosY, consoleWidth, consoleHeight, SWP_SHOWWINDOW); // Konsolenfenster positionieren
 #elif __APPLE__
-    // Code zum Zentrieren des Konsolenfensters unter macOS hier
 #elif __linux__
-    // Code zum Zentrieren des Konsolenfensters unter Linux hier
 #endif
 }
 

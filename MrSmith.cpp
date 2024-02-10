@@ -1,13 +1,8 @@
-#include <iostream>
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
-#include <vector>
 #include <map>
 #include "Mainframe.h"
-#include <string>
-#include <conio.h>
-#include <windows.h>
 using namespace std;
 const int WIDTH = 235;
 const int HEIGHT = 55;

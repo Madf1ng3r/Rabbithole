@@ -1,7 +1,6 @@
-#include <iostream>
-#include <conio.h>
+#include "mainframe.h"
+#include "BWL.h"
 using namespace std;
-
 void anzeigenanfechtbar()
 {
  cout <<   R"(  Vertrag ist gültig.  )";
@@ -16,7 +15,9 @@ Preisversprechen
 
 void anzeigenakkreditiv()
 {
-cout <<	R"(
+//	int  key;
+//    do {
+        cout << R"(
 Akkreditiv 
 Ein Akkreditiv ist in der Außenhandelsfinanzierung ein Geschäftsbesorgungsvertrag mit dem abstrakten Schuldversprechen eines Kreditinstituts,
 nach Weisungen des Auftraggebers gegen Vorlage bestimmter Dokumente innerhalb eines bestimmten Zeitraumes
@@ -26,6 +27,8 @@ Statt des Kunden ist die Bank in der Pflicht. Bei einer Bestätigung des Akkredit
 statt der Hausbank des Importeuers die Bank des Exporteuers in die Pflicht genommen.
 
 )";
+    //    cin >> key;
+    //} while (key != 27);
 }
 
 void anzeigenavisieren()
@@ -107,21 +110,23 @@ int defmain()
     char auswahl;
     bool beenden = false;
     while (!beenden) {
-        system("cls"); // Bildschirm löschen (funktioniert in Windows)
-        std::cout << "Menü:\n";
-        std::cout << "1. Finanzierungsregeln\n";
-        std::cout << "2. Geschäftsprozesse\n";
-        std::cout << "3. ISO Normen\n";
-        std::cout << "4. Kapital und Kapitalstruktur\n";
-        std::cout << "5. Rechtsformen\n";
-        std::cout << "6. Arten von Rechtsgeschäften\n";
-        std::cout << "7. Vertragsarten\n";
-        std::cout << "8. Verschiedene Gesellschaftsformen\n";
-        std::cout << "9. Bilanz\n";
-        std::cout << "10. Beenden (ESC)\n";
-        std::cout << "11. Finanzierungsarten\n";
-        std::cout << "12. Darlehensarten\n";
-        std::cout << "Bitte wählen Sie eine Option: ";
+        system("cls"); // Bildschirm löschen
+        cout << "Menü:\n";
+        cout << "1. Avisieren\n";
+        cout << "2. Forfaitierung\n";
+        cout << "3. Factoring\n";
+        cout << "4. Akkreditiv\n";
+        cout << "5. Anfechtbar\n";
+        cout << "6. Besitzkonstitut\n";
+        cout << "7. Disponent\n";
+        cout << "8. ISO Norm\n";
+        cout << "9. Tilgung\n";
+        cout << "10. Evaluiren\n";
+        cout << "11. Finanzierungsarten\n";
+        cout << "12. Magisches Viereck\n";
+        cout << "13 Magisches Dreieck\n";
+        cout << "14. Bartern\n";
+        cout << "Bitte wählen Sie eine Option: ";
         auswahl = _getch(); // Warten auf Tastatureingabe ohne Enter
         switch (auswahl) {
         case '1':
@@ -133,32 +138,54 @@ int defmain()
         case '3':
             anzeigenfactoring();
             break;
-        //case '4':
-        //    anzeigenBilanz();
-        //    break;
-        //case '5':
-        //    anzeigenRechtsformen();
-        //    break;
-        //case '6':
-        //    anzeigenArtenVonRechtsgeschaeften();
-        //    break;
-        //case '7':
-        //    anzeigenVertragsarten();
-        //    break;
-        //case '8':
-        //    anzeigenVerschiedeneGesellschaftsformen();
-        //    break;
-        //case '9':
-        //    anzeigenSteuern();
-        //    break;
+        case '4':
+            anzeigenakkreditiv();
+            break;
+        case '5':
+            anzeigenanfechtbar();
+            break;
+        case '6':
+            anzeigenBesitzkonstitut();
+            break;
+        case '7':
+            anzeigenDisponent();
+            break;
+        case '8':
+            anzeigenISO();
+            break;
+        case '9':
+            anzeigentilgung();
+            break;
         case '10':
+            anzeigenevaluiren();
+            break;
+        case '11':
+            showFinanzierungsregeln();
+            break;
+        case '12':
+            anzeigenmagischesviereck();
+            break;
+        case '13':
+            showmagischesdreieck();
+                break;
+        case '14':
+                    anzeigenBartern();
+                    break;
+        case '15':
+
+            break;
+        case '16':
+
+            break;
+
+        case '0':
             beenden = true; // Programm beenden
             break;
         default:
             cout << "Ungültige Auswahl. Bitte erneut wählen.\n";
             break;
         }
-        if (auswahl != '10') {
+        if (auswahl != '0') {
             cout << "\nDrücken Sie eine beliebige Taste, um fortzufahren...";
             _getch(); // Warten auf Tastendruck, bevor das Menü erneut angezeigt wird
         }
