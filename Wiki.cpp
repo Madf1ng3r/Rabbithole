@@ -1,12 +1,10 @@
 #include "Mainframe.h"
-#include "Helpdesk.h"
 #include "BWL.h"
 #include "sqlwiki.h"
 #include "pcwiki.h"
 #include "cmd.h"
 #include "Wiki.h"
 using namespace std;
-
 void showWiki()
 {
     cout << "\033[32m";
@@ -25,8 +23,8 @@ void showWiki()
                                                   |  | |-----------------------|                             |  |     
                                                   |  | |         WIKI          |                             |  |     
                                                   |  | |-----------------------|-------------------          |  |     
-                                                  |  | |1. C++                 | 6. Prüfung Teil 1 '         |  |    
-       .--.           .---.        .-.            |  | |2. CMD                 |                   '         |  |     
+                                                  |  | |1. C++                 | 6. Prüfungsfragen '         |  |    
+       .--.           .---.        .-.            |  | |2. CMD                 | 7. Python         '         |  |     
    .---|--|   .-.     | B |  .---. |~|            |  | |3. SQL                 |                   '         |  |     
 .--|===|W |---|_|--.__| W |--|:::| |~|-==-.__ ___ |  | |4. Elektronik & PC     |                   '         |  |     
 |C#|C++|i |===| |~~|%%| L |--|SQL|_|~|HTML|  |___||  | |5. BWL                 |                   '         |  |     
@@ -54,10 +52,10 @@ int wikimain() {
         cout << "Wählen Sie eine Option: ";
         if (!(cin >> choice))
         {
-            cin.clear(); //    clear error flags
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
-            this_thread::sleep_for(std::chrono::seconds(2)); // Delay  2 seconds
+            this_thread::sleep_for(chrono::seconds(2)); 
             continue;
         }
         switch (choice)
@@ -91,6 +89,12 @@ int wikimain() {
             animateTransition();
             clearScreen();
             pruefungmain();
+            break;
+        case 7:
+            animateTransition();
+            clearScreen();
+            showPython();
+            break;
         case 0:
             running = false;
             break;
