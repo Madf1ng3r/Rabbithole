@@ -114,7 +114,7 @@ Welche Maßnahmen können ergriffen werden, um sensible Daten zu verschlüsseln?
 Webtechnologien:
 
 Was ist der Unterschied zwischen HTTP und HTTPS?
-Erläutern Sie den Unterschied zwischen Frontend und Backend in der Webentwicklung.
+Erlaeutern Sie den Unterschied zwischen Frontend und Backend in der Webentwicklung.
 Welche Rolle spielen Cookies in der Webentwicklung und wie funktionieren sie?
 Grundlagen der IT-Projektarbeit:
 
@@ -122,10 +122,10 @@ Was versteht man unter dem Wasserfallmodell und dem agilen Projektmanagement?
 Nennen Sie die Phasen des Projektmanagements und beschreiben Sie deren Aufgaben.
 Wie kann man Risiken in einem IT-Projekt identifizieren und bewerten?
 
-(Lösung:
+(Loesung:
 Netzwerkgrundlagen:
-Das OSI-Modell ist ein Referenzmodell, das den Aufbau von Netzwerkprotokollen in sieben Schichten unterteilt, um die Interoperabilität verschiedener Netzwerkkomponenten zu gewährleisten.
-Ein Hub ist ein Gerät, das Datenpakete an alle angeschlossenen Geräte in einem Netzwerk weiterleitet, während ein Switch Datenpakete nur an das Zielgerät sendet.
+Das OSI-Modell ist ein Referenzmodell, das den Aufbau von Netzwerkprotokollen in sieben Schichten unterteilt, um die Interoperabilitaet verschiedener Netzwerkkomponenten zu gewährleisten.
+Ein Hub ist ein Gerät, das Datenpakete an alle angeschlossenen Geraete in einem Netzwerk weiterleitet, während ein Switch Datenpakete nur an das Zielgerät sendet.
 Ein Router ist ein Netzwerkgerät, das den Datenverkehr zwischen verschiedenen Netzwerken steuert und die richtigen Wege für die Datenpakete festlegt.
 
 Betriebssysteme:
@@ -135,9 +135,9 @@ Beispiele für Dateisysteme sind FAT32, NTFS (unter Windows), ext4 (unter Linux) 
 
 Datenbanken und SQL:
 Eine Datenbank ist eine strukturierte Sammlung von Daten, die organisiert und effizient verwaltet werden kann, um darauf zuzugreifen und sie zu aktualisieren.
-Relationale Datenbanken speichern Daten in Tabellen und ermöglichen komplexe Abfragen mithilfe von SQL (Structured Query Language), während NoSQL-Datenbanken
- flexibler sind und verschiedene Datenspeichermodelle unterstützen.
-Eine SQL-Abfrage zum Abrufen von Mitarbeitern mit einem Gehalt über 3000 Euro könnte wie folgt aussehen: SELECT * FROM Mitarbeiter WHERE Gehalt > 3000;
+Relationale Datenbanken speichern Daten in Tabellen und ermöglichen komplexe Abfragen mithilfe von SQL (Structured Query Language), waehrend NoSQL-Datenbanken
+flexibler sind und verschiedene Datenspeichermodelle unterstützen.
+SQL-Abfrage zum Abrufen von Mitarbeitern mit einem Gehalt über 3000: SELECT * FROM Mitarbeiter WHERE Gehalt > 3000;
 
 Programmierung:
 Compiler-Sprachen werden in Maschinencode übersetzt, während Interpreter-Sprachen Zeile für Zeile interpretiert und ausgeführt werden.
@@ -189,7 +189,7 @@ Ein Denial-of-Service (DoS)-Angriff zielt darauf ab, eine Dienstleistung, einen 
 durch Überlastung unbrauchbar zu machen. Dies geschieht durch das Senden einer überwältigenden 
 Menge von Anfragen oder Datenverkehr, die die Ressourcen des Ziels erschöpfen.
 
-                                                                         0 - zurück zum Menü 
+                                                                         0 - zurueck
 )";
         if (!(cin >> choice)) {
             cin.clear();
@@ -335,7 +335,6 @@ void pruefungsfragen3() {
     cout << R"(
 
 Wie viele DVDs mit einer Kapazität von 4,7 GB kann man mit einem Blu-ray-Disc-Brenner mit einer Kapazität von 25 GB beschreiben?
-
 A) 5 DVDs B) 6 DVDs C) 7 DVDs D) 8 DVDs
 
 Die richtige Antwort ist B)
@@ -348,104 +347,57 @@ Um diese Aufgabe zu lösen, muss man die Kapazität des Blu-ray-Disc-Brenners durc
 Da man keine halben DVDs beschreiben kann, muss man die nächsthöhere ganze Zahl nehmen, also 6 DVDs. Das bedeutet, dass man mit einem Blu-ray-Disc-Brenner mit einer Kapazität von 25 GB sechs DVDs mit einer Kapazität von 4,7 GB beschreiben kann.
 
 
-
 Wie viele Bytes sind in einem Terabyte enthalten?
-
 A) 1.000.000.000 Bytes B) 1.024.000.000 Bytes C) 1.000.000.000.000 Bytes D) 1.099.511.627.776 Bytes
 
 Die richtige Antwort ist D)
 
 Um diese Aufgabe zu lösen, muss man wissen, dass ein Byte aus acht Bit besteht und dass ein Terabyte aus 1024 Gigabyte besteht. Ein Gigabyte besteht wiederum aus 1024 Megabyte, ein Megabyte aus 1024 Kilobyte und ein Kilobyte aus 1024 Byte. Das heißt, um von Terabyte zu Byte zu kommen, muss man mit 1024 viermal multiplizieren. Das ergibt:
 
-1 TB
-=
-1 TB
-×
-1024 GB
-×
-1024 MB
-×
-1024 KB
-×
-1024 B
-=
-1.099.511.627.776 B
+1 TB=1 TB×1024 GB×1024 MB×1024 KB×1024 B=1.099.511.627.776 B
 1 TB=1 TB×1024 GB×1024 MB×1024 KB×1024 B=1.099.511.627.776 B
 
 Das bedeutet, dass ein Terabyte 1.099.511.627.776 Bytes enthält.
 
 
 Wie viele Megabyte sind in einem Gigabit enthalten?
-
 A) 0,125 Megabyte B) 8 Megabyte C) 125 Megabyte D) 1000 Megabyte
 
 Die richtige Antwort ist B)
 
 Um diese Aufgabe zu lösen, muss man wissen, dass ein Bit aus einem einzigen binären Wert (0 oder 1) besteht und dass ein Byte aus acht Bit besteht. Außerdem muss man wissen, dass ein Gigabit aus 1000 Megabit besteht und dass ein Megabit aus 1000 Kilobit besteht. Ein Kilobit besteht wiederum aus 1000 Bit. Das heißt, um von Gigabit zu Megabyte zu kommen, muss man mit 1000 dreimal multiplizieren und dann durch 8 teilen. Das ergibt:
 
-1 Gb
-=
-1 Gb
-×
-1000 Mb
-×
-1000 Kb
-×
-1000 b
-=
-1.000.000.000 b
+1 Gb=1 Gb×1000 Mb×1000 Kb×1000 b=1.000.000.000 b
 1 Gb=1 Gb×1000 Mb×1000 Kb×1000 b=1.000.000.000 b
 
 1.000.000.000 b
-8 b
-=
-125.000.000 B
+8 b=125.000.000 B
 8 b1.000.000.000 b?=125.000.000 B
 
 125.000.000 B
-1.000.000 B
-=
-125 MB
-1.000.000 B125.000.000 B?=125 MB
+1.000.000 B=125 MB1.000.000 B125.000.000 B?=125 MB
 
 Das bedeutet, dass ein Gigabit 125 Megabyte enthält.
 
 
-
 Wie groß ist die Leistung, die an einem Widerstand von 100 Ohm umgesetzt wird, wenn eine Spannung von 12 Volt anliegt?
-
 A) 0,12 Watt B) 1,2 Watt C) 12 Watt D) 120 Watt
 
 Die richtige Antwort ist B)
 
 Um diese Aufgabe zu lösen, muss man die Formel für die elektrische Leistung kennen
 
-
 P=RU2?
-
 Dabei ist P die Leistung in Watt, U die Spannung in Volt und R der Widerstand in Ohm. Wenn man die gegebenen Werte einsetzt, erhält man:
 
 
-1
-2
-2
-100
-=
-144
-100
-=
-1
-,
-44
- Watt
+122/100=144/100=1,44 Watt
 P=100122?=100144?=1,44 Watt
 
 Da die Antwortmöglichkeiten nur eine Nachkommastelle haben, muss man die Leistung auf eine Nachkommastelle runden. Das ergibt 1,2 Watt als richtige Antwort.
 
 
-
 Wie lautet das Ergebnis der binären Multiplikation 1011 x 110?
-
 A) 100010 B) 111110 C) 100110 D) 111010
 
 Die richtige Antwort ist C)
@@ -470,21 +422,20 @@ Die binäre Multiplikation sieht dann so aus:
 Das bedeutet, dass das Ergebnis der binären Multiplikation 1011 x 110 gleich 100110 ist.
 
 
-
 Wie lautet das Ergebnis der binären Subtraktion 1101 - 101?
 
 A) 1000 B) 1001 C) 1010 D) 1011
 
 Die richtige Antwort ist A)
 
-Um diese Aufgabe zu lösen, muss man die binäre Subtraktion anwenden, die ähnlich wie die schriftliche Subtraktion im Dezimalsystem funktioniert. Dabei muss man beachten, dass die binäre Subtraktion folgende Regeln hat:
+Um diese Aufgabe zu lösen, muss man die binäre Subtraktion anwenden, die ähnlich wie die schriftliche Subtraktion im Dezimalsystem funktioniert. 
+Dabei muss man beachten, dass die binaere Subtraktion folgende Regeln hat:
 
 0 - 0 = 0
 0 - 1 = 1 (Borrow 1)
 1 - 0 = 1
 1 - 1 = 0
 Die binäre Subtraktion sieht dann so aus:
-
    1101
  -  101
  -----
@@ -493,14 +444,12 @@ Die binäre Subtraktion sieht dann so aus:
 Das bedeutet, dass das Ergebnis der binären Subtraktion 1101 - 101 gleich 1000 ist.
 
 
-
 Wie viele Hosts können in einem Netzwerk mit der Subnetzmaske 255.255.255.192 maximal adressiert werden?
-
 A) 62 B) 64 C) 126 D) 128
 
 Die richtige Antwort ist A)
 
-Um diese Aufgabe zu lösen, muss man wissen, wie die Subnetzmaske die Anzahl der möglichen Hosts in einem Netzwerk bestimmt. Die Subnetzmaske besteht aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehören zum Hostanteil der IP-Adresse. Die Anzahl der möglichen Hosts in einem Netzwerk ist gleich 2 hoch der Anzahl der 0-Bits in der Subnetzmaske minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
+Um diese Aufgabe zu loesen, muss man wissen, wie die Subnetzmaske die Anzahl der möglichen Hosts in einem Netzwerk bestimmt. Die Subnetzmaske besteht aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehören zum Hostanteil der IP-Adresse. Die Anzahl der möglichen Hosts in einem Netzwerk ist gleich 2 hoch der Anzahl der 0-Bits in der Subnetzmaske minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
 
 Die Subnetzmaske 255.255.255.192 hat folgende binäre Darstellung:
 
@@ -508,16 +457,7 @@ Die Subnetzmaske 255.255.255.192 hat folgende binäre Darstellung:
 
 Die Anzahl der 0-Bits in der Subnetzmaske ist 6. Die Anzahl der möglichen Hosts in einem Netzwerk mit dieser Subnetzmaske ist also:
 
-2
-6
-?
-2
-=
-64
-?
-2
-=
-62
+26?2=64?2=62
 26?2=64?2=62
 
 Das bedeutet, dass in einem Netzwerk mit der Subnetzmaske 255.255.255.192 maximal 62 Hosts adressiert werden können.
@@ -652,7 +592,7 @@ A) Attribute B) Relationen C) Schlüssel D) Tupel
 
 Die richtige Antwort ist A)
 
-Die Eigenschaften oder Merkmale einer Entität, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden, werden Attribute genannt. Attribute sind die Informationen, die eine Entität beschreiben oder identifizieren. Zum Beispiel kann eine Entität Student die Attribute Name, Matrikelnummer, Studiengang, E-Mail usw. haben.
+Die Eigenschaften oder Merkmale einer Entitaet, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden, werden Attribute genannt. Attribute sind die Informationen, die eine Entität beschreiben oder identifizieren. Zum Beispiel kann eine Entität Student die Attribute Name, Matrikelnummer, Studiengang, E-Mail usw. haben.
 
 Die Antwort B) ist falsch, da Relationen die Beziehungen zwischen Entitäten bezeichnen, die in einem ER-Modell durch Linien oder Rauten dargestellt werden. Relationen beschreiben, wie Entitäten miteinander in Verbindung stehen oder interagieren. Zum Beispiel kann eine Relation Einschreiben die Beziehung zwischen den Entitäten Student und Kurs darstellen.
 
@@ -685,17 +625,17 @@ Die richtige Antwort ist B)
 
 Um diese Aufgabe zu lösen, muss man wissen, wie die CIDR-Notation die Anzahl der möglichen Subnetze und Hosts in einem Netzwerk bestimmt. Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehören. Die restlichen Bits gehören zum Subnetz- und Hostanteil der Adresse. Die Anzahl der möglichen Subnetze in einem Netzwerk ist gleich 2 hoch der Anzahl der Bits im Subnetzanteil. Die Anzahl der möglichen Hosts in einem Subnetz ist gleich 2 hoch der Anzahl der Bits im Hostanteil minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Subnetz für das Subnetz selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
 
-Die CIDR-Notation 10.0.0.0/20 hat folgende binäre Darstellung:
+Die CIDR-Notation 10.0.0.0/20 hat folgende binaere Darstellung:
 
 00001010.00000000.0000|0000.00000000 / 20
 
 Die Anzahl der Bits im Netzwerkanteil ist 20, die Anzahl der Bits im Subnetz- und Hostanteil ist 12. Um die Anzahl der Bits im Subnetz- und Hostanteil aufzuteilen, muss man die gewünschte Subnetzmaske wählen. Die Subnetzmaske ist eine Bitfolge, die angibt, welche Bits zum Subnetzanteil und welche zum Hostanteil gehören. Die Bits, die 1 sind, gehören zum Subnetzanteil, die Bits, die 0 sind, gehören zum Hostanteil. Die Subnetzmaske muss immer mit einer Reihe von 1 beginnen und mit einer Reihe von 0 enden. Die Länge der Subnetzmaske muss gleich der Länge des Präfixes plus der Länge des Subnetzanteils sein.
 
-Um die Antwortmöglichkeiten zu überprüfen, muss man die Subnetzmaske für jede Option berechnen und die Anzahl der Subnetze und Hosts daraus ableiten. Das ergibt:
+Um die Antwortmöglichkeiten zu ueberprüfen, muss man die Subnetzmaske für jede Option berechnen und die Anzahl der Subnetze und Hosts daraus ableiten. Das ergibt:
 
 A) 16 Subnetze mit je 4094 Hosts
 
-Die Subnetzmaske für diese Option ist 255.255.240.0, die folgende binäre Darstellung hat:
+Die Subnetzmaske für diese Option ist 255.255.240.0, die folgende binaere Darstellung hat:
 
 11111111.11111111.1111|0000.00000000 / 24
 
@@ -738,15 +678,7 @@ Die Anzahl der Bits im Subnetzanteil ist 6, die Anzahl der Bits im Hostanteil is
 26=64
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
-
-2
-6
-?
-2
-=
-64
-?
-2
+26?2=64?2
 =
 62
 26?2=64?2=62
@@ -761,24 +693,11 @@ Die Subnetzmaske für diese Option ist 255.255.255.0, die folgende binäre Darstel
 
 Die Anzahl der Bits im Subnetzanteil ist 8, die Anzahl der Bits im Hostanteil ist 4. Die Anzahl der möglichen Subnetze ist also:
 
-2
-8
-=
-256
-28=256
+28=25628=256
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
 
-2
-4
-?
-2
-=
-16
-?
-2
-=
-14
+24?2=16?2=14
 24?2=16?2=14
 
 Diese Option ist falsch, da die Anzahl der Hosts pro Subnetz nicht mit der Angabe übereinstimmt.
@@ -790,26 +709,11 @@ Die Subnetzmaske für diese Option ist 255.255.255.192, die folgende binäre Darst
 11111111.11111111.1111|1111.11000000 / 26
 
 Die Anzahl der Bits im Subnetzanteil ist 10, die Anzahl der Bits im Hostanteil ist 2. Die Anzahl der möglichen Subnetze ist also:
-
-2
-10
-=
-1024
-210=1024
+210=1024210=1024
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
 
-2
-2
-?
-2
-=
-4
-?
-2
-=
-2
-22?2=4?2=2
+22?2=4?2=222?2=4?2=2
 
 Diese Option ist falsch, da die Anzahl der Hosts pro Subnetz nicht mit der Angabe übereinstimmt.
 
@@ -839,7 +743,6 @@ AND
 Die IP-Adresse des Netzwerks ist also 11000000.10101000.00001100.00000000, die in dezimaler Schreibweise 192.168.12.0 ist.
 
 
-
 Was ist der Unterschied zwischen TCP und UDP in Bezug auf die Übertragung von Datenpaketen im Internet?
 
 A) TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet.
@@ -851,17 +754,14 @@ C) TCP ist ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protoko
 D) TCP ist ein verbindungsloses, zuverlässiges und geordnetes Protokoll, das keine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protokoll ist, das eine Quittung für jedes gesendete Datenpaket erwartet.
 
 Die richtige Antwort ist A)
-
 TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet. Das bedeutet, dass TCP eine Verbindung zwischen Sender und Empfänger aufbaut, bevor die Daten übertragen werden, und sicherstellt, dass die Daten vollständig, fehlerfrei und in der richtigen Reihenfolge ankommen, indem es die Pakete nummeriert, bestätigt und gegebenenfalls erneut sendet. UDP hingegen sendet die Daten ohne Verbindungsaufbau und ohne Garantie, dass die Daten ankommen, korrekt sind oder in der richtigen Reihenfolge sind, indem es die Pakete einfach an die Zieladresse schickt. TCP ist daher für Anwendungen geeignet, die eine hohe Zuverlässigkeit und Qualität der Datenübertragung erfordern, wie z.B. Webseiten, E-Mails oder Dateitransfers. UDP ist hingegen für Anwendungen geeignet, die eine hohe Geschwindigkeit und Effizienz der Datenübertragung erfordern, wie z.B. Sprach- oder Videotelefonie, Online-Spiele oder Streaming.
 
 
 
 Wie viel Speicherplatz benötigt man, um ein 15-minütiges Video in Full HD (1920 x 1080 Pixel) mit 30 Bildern pro Sekunde und einer Farbtiefe von 24 Bit zu speichern?
-
 A) 1,2 GB B) 2,4 GB C) 3,6 GB D) 4,8 GB
 
 Die richtige Antwort ist C)
-
 Um diese Aufgabe zu lösen, muss man wissen, wie der Speicherbedarf eines Videos berechnet wird. Der Speicherbedarf eines Videos hängt von der Auflösung, der Bildrate, der Farbtiefe und der Länge des Videos ab. Die Formel lautet:
 
 
@@ -869,35 +769,12 @@ S=R×F×B×T
 
 Dabei ist S der Speicherbedarf in Byte, R die Auflösung in Pixel, F die Bildrate in Bildern pro Sekunde, B die Farbtiefe in Bit und T die Länge des Videos in Sekunden. Wenn man die gegebenen Werte einsetzt, erhält man:
 
-
-=
-1920
-×
-1080
-×
-30
-×
-24
-×
-15
-×
-60
-=
-3.597.721.600
- Byte
+=1920×1080×30×24×15×60=3.597.721.600Byte
 S=1920×1080×30×24×15×60=3.597.721.600 Byte
 
 Um die Antwort in Gigabyte zu erhalten, muss man den Speicherbedarf durch 1024 hoch 3 teilen. Das ergibt:
-
 3.597.721.600
-102
-4
-3
-
-3
-,
-35
- GB
+102/43=3,35 GB
 102433.597.721.600??3,35 GB
 
 Da die Antwortmöglichkeiten nur eine Nachkommastelle haben, muss man den Speicherbedarf auf eine Nachkommastelle runden. Das ergibt 3,6 GB als richtige Antwort.
@@ -1061,7 +938,7 @@ Frage: Was ist der Unterschied zwischen einer Referenz und einem Zeiger in C++?
 Antwort:
 Eine Referenz ist ein Alias für eine bereits existierende Variable und kann nicht neu zugewiesen werden.
 Ein Zeiger ist eine Variable, die die Adresse einer anderen Variablen enthält und neu zugewiesen werden kann.
-Frage: Erstellen Sie einen Pseudocode für die Berechnung der Fakultät einer Zahl.
+Frage: Erstellen Sie einen Pseudocode fuer die Berechnung der Fakultaet einer Zahl.
 Antwort:
 FUNKTION Fakultät(n: INTEGER) : INTEGER
 BEGIN
@@ -1105,18 +982,15 @@ Frage: Erstellen Sie ein PAP in ASCII-Art für die Berechnung des Durchschnitts e
 Antwort:
 Anfang
 |
-|
 | Eingabe der Anzahl der Zahlen n
 | Eingabe der n Zahlen
 | Summe = 0, count = 0
-|
 | Für i von 1 bis n
 |   Summe = Summe + Zahl[i]
 |   count = count + 1
-|
 | Durchschnitt = Summe / n
 | Ausgabe des Durchschnitts
-                                                                    0 - zurück zum Menü
+                                                                    0 - zuruck
 )";
 if (!(cin >> choice)) {
     cin.clear();
@@ -1130,7 +1004,7 @@ case 0:
     running = false;
     break;
 default:
-    cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+    cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
     this_thread::sleep_for(chrono::seconds(2));
     break;
 }
@@ -1144,6 +1018,48 @@ if (_kbhit()) {
 
 }
 
+void pruefungsfragen7() {
+    bool running = true;
+    do {
+        system("cls");
+        int choice;
+        clearScreen();
+        cout << R"(
+Pruefungsfragen AP1 Fachinformatiker 
+
+
+                                     1 -   0 - zurueck
+)";
+        if (!(cin >> choice)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            continue;
+        }
+        switch (choice) {
+        case 0:
+            running = false;
+            break;
+        case 1:
+            animateTransition();
+            clearScreen();
+            
+            break;
+        default:
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            break;
+        }
+        if (_kbhit()) {
+            char key = _getch();
+            if (key == 27 || key == '0') {
+                running = false;
+            }
+        }
+    } while (running);
+}
+
 void Fachbegriffe() {
     bool running = true;
     do {
@@ -1152,7 +1068,7 @@ void Fachbegriffe() {
         clearScreen(); 
    cout << R"(
 
-SQL-Fachwörter:
+SQL-Fachwoerter:
 INNER JOIN
 LEFT JOIN
 Normalisierung
@@ -1165,7 +1081,7 @@ Redundanz
 Aktualisierungsanomalien
 Einfügeanomalien
 
-C++-Fachwörter:
+C++-Fachwoerter:
 Referenz
 Zeiger
 Pseudocode
@@ -1177,7 +1093,7 @@ Funktion
 Parameter
 Fakultät
 
-Projektmanagement-Fachwörter:
+Projektmanagement-Fachwoerter:
 Wasserfallmodell
 Agiles Projektmanagement
 Phasenmodell
@@ -1214,7 +1130,7 @@ Stakeholder-Management
 Kommunikationsmanagement
 Qualitätsmanagement
 
-Netzwerkgrundlagen-Fachwörter:
+Netzwerkgrundlagen-Fachwoerter:
 OSI-Modell
 TCP/IP-Protokoll
 LAN (Local Area Network)
@@ -1286,8 +1202,8 @@ Sicherheitsaudit
 Datenschutz
 Datensicherung
 Incident Response
-Penetrationstest = Test der Cybersecurity zum überprüfen wie sicher ein System ist zB. durch Hacken der Firewall
-                                     1 - Weitere Definitionen  0 - zurück zum Menü
+Penetrationstest = Test der Cybersecurity zum ueberpruefen wie sicher ein System ist zB. durch Hacken der Firewall
+                                     1 - Weitere Definitionen  0 - zurueck
 )";
 if (!(cin >> choice)) {
     cin.clear();
@@ -1326,15 +1242,15 @@ void themengebiete() {
         int choice;
         clearScreen();
     cout << R"(
- IHK Fachinformatiker Zwischenpruefung Teil 1 Einrichtung eines IT-gestützten Arbeitsplatz
+ IHK Fachinformatiker Zwischenpruefung Teil 1 Einrichtung eines IT-gestuetzten Arbeitsplatz
 
                                                                                                                                                                                                                      
 Diagramme
 UML UnifiedModelingLanguage Diagramm 
-Gantt Diagramm, Meilensteine, Projektphasen als Balken, Ressourcen Zuweisen, Vorgänger , Vorwärtsplanung , Deadline 
+Gantt Diagramm, Meilensteine, Projektphasen als Balken, Ressourcen Zuweisen, Vorgänger , Vorwaertsplanung , Deadline 
 Zeitplan  
 Use-Case-Diagramm    User/Kunde -> Firma -> 
-ERM Entity-Relation-Model  Entität-Attribut-Beziehung
+ERM Entity-Relation-Model  Entitaet-Attribut-Beziehung 1-n n-m chen-Notation
 Klassendiagramm   Vererbung , Realisierung , Abhaengigkeit , Aggregation , Zusammensetzung , Beziehung 
 Struktogramm    Kopf-Fußgesteuerte Schleifen
 PAP Programmablaufplan   Start->Eingabe->Verzweigungen->Vorgaenge->Ausgabe->Ende
@@ -1346,7 +1262,7 @@ Definition,Planung,Realisierung,Abschluss,Evaluation
 Projektstrukturplan
 Lastenheft/Pflichtenheft IST/SOLL Zustand Problemanalyse
 Ereignisgesteuerte Prozesskette
-Prokura, Unternehmensführung
+Prokura, Unternehmensfuehrung
 Stakeholder Management
 Pareto Prinzip      80% in 20% der Zeit schaffen
 Eisenhower-Matrix
@@ -1354,7 +1270,7 @@ Six-Sigma
 Total Quality Management    Kundenorientierung, Kontinuierliche Verbesserung, Prozessoptimierung
 Workflow Management 
 Change Management 
-Geschäftsprozesse Hauptprozesse:   Auftragseingang,Herstellung,Lieferung,Abrechnung Teilprozesse: Vorbereitung,Fertigung,Kontrolle
+Geschaeftsprozesse Hauptprozesse:   Auftragseingang,Herstellung,Lieferung,Abrechnung Teilprozesse: Vorbereitung,Fertigung,Kontrolle
 Anbietervergleich
 Datenanalyse   ERP System 
 Fehleranalyse: Ishikawa Diagramm Fishbone Architektur
@@ -1362,24 +1278,27 @@ KaiZen    stetige Veränderung zum Besseren
 Lean Management
 Bottleneck    wenn es mal Eng wird
 PDCA Zyklus   Plan,do,check,act Demingkreis
+AIDA Prinzip   Attention,Interest,Desire,Action
 Wasserfallmodell   aufeinanderfolgende Phasen: Analyse->Entwurf->Implementation->Tests->Wartung
 V-Modell
 Spiralmodell
 agiles Projektmanagement  -> Gegenteil vom Wasserfallmodell
+
+Wirtschaft
 Marktformen Oligopol (ein paar Anbieter),Polypol (viele Anbieter),Monopol (ein Anbieter)
-AIDA Prinzip   Attention,Interest,Desire,Action
 Organisatiosstrukturen  Stablinien,Matrix,Hierarchisch,Prozessorientiert
 Unternehmensformen GmbH , OHG , UG , AG , GbR, KG, eG
 Arten von Guetern  materiel/immateriel/Konsum/investitions/verbrauchs -Güter
-Produktionsformen Primär: Sekundär Teritär 
+Produktionsformen Primaer: Sekundaer Teritaer 
 Vertragsrecht Oeffentliches / Privates Recht  
-Vertragsarten Kauf,Schenkung,Tausch    Dienstvertrag->Leistung Werksvertrag->Werkstück   Miet, Pacht, Darlehen, Leih
+Vertragsarten Kauf,Schenkung,Tausch    Dienstvertrag->Leistung Werksvertrag->Werkstueck   
+Miet, Pacht, Darlehen, Leih
 (Kaufvertrag entsteht durch Antrag und Annahme)
 Besitz/Eigentum  Uebertragung
 Juristische Personen    Privatrecht: Gesellschaften,Vereine  öffentliches Recht: Gemeinden,Universitäten
 Rechtsobjekte  -Rechte: Forderungen,Pfandrechte,Lizenz,Patent  -Sachen: mobil/immobil
-Rechtsgeschäfte  -Willenserklärung -Formvorschriften -Einseitig/Zweiseitig  -Holschuld/Bringschuld -Nichtigkeit
-Geschäftsfähigkeit  naja:1-7,bedingt: 7-17,voll: 18-...Jahre
+Rechtsgeschäfte  -Willenserklaerung -Formvorschriften -Einseitig/Zweiseitig  -Holschuld/Bringschuld -Nichtigkeit
+Geschaeftsfähigkeit  naja:1-7,bedingt: 7-17,voll: 18-...Jahre
 Rentabilitaetsrechnung %=(Gewinn*100)/Kapital
 Bilanzrechnung  Aktiva/Passiva 
 Deckungsbeitragsberechnung
@@ -1389,7 +1308,7 @@ SMART Optimierung   Spezifisch,Messbar,Akzeptiert,Realistisch,Terminiert
 Nutzwertanalyse
 SWOT Analyse   Strenghten Weaknesses Opportunities Threats
 ABC Analyse   -wasistamwichtigsten?
-Magisches Dreieck/Viereck   3Eck: Zeit&Kosten&Qualität / 4Eck:stabilerPreis&Beschäftigte++&Gleichgewicht&Moneyflow
+Magisches Dreieck/Viereck   3Eck: Zeit&Kosten&Qualität / 4Eck:stabilerPreis&Beschaeftigte++&Gleichgewicht&Moneyflow
 Flussdiagramm Eingabe->Prozessschritt1->Datei->Bedingung->Prozessschritt2->Ende
 Bedarfsanalyse  was wollen die Leute?
 Beduerfnispyramide  was brauchen die Leute?
@@ -1399,8 +1318,9 @@ Datenschutz DSGVO BDSG  / Compliance
 Arbeitsschutz  -> Gesundheit, Ergonomie 
 
 IT Security
-CSI IT Grundschutz BSI Vertraulichkeit/Privatsphäre,Integrität/Unverfälscht,Verfügbarkeit
+CSI IT Grundschutz BSI Vertraulichkeit/Privatsphaere,Integritaet/Unverfaelscht,Verfuegbarkeit
 IT Sicherheitsgesetz
+IP Sec Protokoll in IPv6 integriert
 Zugriff / Zugang
 Maleware Arten Virus, Trojaner, Wurm,  Ransomware
 Angriffsarten  ManintheMiddle,Phishing,SocialEngineering, Exploit, SQL Injection, Spoofing, DDOS, Cross-Site, BruteForce,
@@ -1412,7 +1332,7 @@ Hardware
 Komponenten  Mainboard, CPU, Netzteil, Grafikkarte, HDD ,SSD, M2SSD
 Desktop, Laptop, Thin Client, Tablet, Handy 
 Bildschirmauflösung  4K , 8K 
-Anschlüsse: SATA,PCIexpress, HDMI,DisplayPort,Thunderbird,VGA,DVI,USBc3.0,LAN,Koaxial
+Anschluesse: SATA,PCIexpress, HDMI,DisplayPort,Thunderbird,VGA,DVI,USBc3.0,LAN,Koaxial
 Uebertragungsrate, Kabel LAN Cat.7   Single Mode /   MIMO 
 Dateisysteme   NTFS, FAT32, ext4
 
@@ -1450,16 +1370,17 @@ Virtualisierung   VMware, Hyper-V, Oracle VirtualBox
 
 Elektrotechnik   
 Reihenschaltung Parallelschaltung  Halbeiter Transistor 
-P=U*I Leistung=Spannung*Stromstärke Watt=Volt*Ampere
+P=U*I Leistung=Spannung*Stromstaerke Watt=Volt*Ampere
 Schaltkreise XOR,OR,NAND,AND,NOR 
 BIOS 16BitMBR / UEFI 32/64 Bit GPT    Secure Boot
 USV unterbrechungsfreie Stromversorgung berechnen  Q= Ampere Laufzeit t=Q/I I=Strom t=Zeit 
 Schutzklassen 1: Erdung und Anschluss an Schutzleiter / 2: doppelte Isolierung / 3: kleine Spannung 
 Zahlensysteme Binär/Dezi/Hexa   Umrechnung-> Divisionsrest   
-ASCI  UTF Zeichensatz  0-127 überall gleich 
+ASCI  UTF Zeichensatz  0-127 ueberall gleich  128-255  
 Speicherplatz / Uebertragungsgeschwindigkeit berechnen
-Umrechnung 1byte = 8 bit Kilo,Mega,Giga,Terra,Penta   Kibibyte *1028  -> :1,1   Farbtiefe 
-dpi=  Pixel =  , 1inch=2,54 zoll    RGB= 24 bit pro Pixel
+Umrechnung      1byte = 8 bit        Kilo,Mega,Giga,Terra,Penta - bit / byte 
+Kibi/Mebi/byte *1028  -> KiB: 1024^1 2^10 , MiB: 1024^2 2^20 GiB: 1024^3 2^30  
+Farbtiefe  dpi=  Pixel =   1 cm=2,54 inch    RGB= 24 bit pro Pixel
 Dateiformate SVG, PDF , PNG , XML , PPT , WAV, TIFF , JPG , XLS , BMP , CSV, DLL , JSON
 Englisch übersetzen
 Industrie 4.0 / BigData/AI SmartHome IoT
@@ -1469,10 +1390,12 @@ EVA Prinzip  Eingabe/Verarbeitung/Ausgabe
 Programmiersprachen: 
 IDE  VS Code, Notepad++   
 C++   include <bibliotheken>  int main() { }  EOF rand()  index 
-SQL -SELECT WHERE ORDERBY SUM AVG COUNT JOIN Alias LIKE >= <= != % ? HAVING ROLLBACK; 1.-3. Normalform  Primary Key - Foreign Key
-VisualCode, 
+SQL -SELECT * FROM WHERE HAVING SUM() AVG() MAX() MIN() COUNT() GRUP BY
+Alias LIKE>= <= != % ? ROLLBACK;   
+1.-3. Normalform  Primary Key - Foreign Key DQL DDL DML 
+MicrosoftVisualCode, 
 bash PowerShell
-PHP, 
+PHP Scriptsprache
 HTML Grundgerüst einer Website 
 CSS Corporate Design,  Responsive Design  
 Java Script
@@ -1497,7 +1420,7 @@ Schreibtischtest
         running = false;
         break;
     default:
-        cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+        cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
         this_thread::sleep_for(chrono::seconds(2));
         break;
     }
@@ -1526,17 +1449,17 @@ int pruefungmain()
                                                     /                                                           ]      
                                                    /  _______________________________________________________   |     
                                                   |  |------------------------                               |  |     
-                                                  |  | ' 1.  Prüfungsfragen   |                              |  |    
-                                                  |  | ' 2.  Prüfungsfragen   |                              |  |     
-                                                  |  | ' 3.  Themengebiete    |                              |  |     
-                                                  |  | ' 4.  Fachbegriffe     |                              |  |     
-                                                  |  | ' 5.                   |                              |  |    
-                                                  |  | ' 6.                   |                              |  |     
-                                                  |  | ' 7.                   |                              |  |     
-                                                  |  | ' 8.                   |                              |  |     
-                                                  |  | ' 9.                   |                              |  |     
-                                                  |  | '10. nächste Seite     |                              |  |     
-                                                  |  | ' 0. zurück            |                              |  |     
+                                                  |  | ' 1.  Pruefungsfragen1 |                              |  |    
+                                                  |  | ' 2.  Pruefungsfragen2 |                              |  |     
+                                                  |  | ' 3.  Pruefungsfragen3 |                              |  |     
+                                                  |  | ' 4.  Pruefungsfragen4 |                              |  |     
+                                                  |  | ' 5.  Pruefungsfragen5 |                              |  |    
+                                                  |  | ' 6.  Pruefungsfragen6 |                              |  |     
+                                                  |  | ' 7.  Pruefungsfragen7 |                              |  |     
+                                                  |  | ' 8.  Themengebiete    |                              |  |     
+                                                  |  | ' 9.  Fachbegriffe     |                              |  |     
+                                                  |  | '10. naechste Seite    |                              |  |     
+                                                  |  | ' 0. zurueck           |                              |  |     
                                                   |  | @----------------------                               |  |     
                                                   |  |-------------------------------------------------------|  |
                                                   |__________________________________________________________|  /      
@@ -1573,42 +1496,46 @@ int pruefungmain()
             case 3:
                 animateTransition();
                 clearScreen();
-                themengebiete();
+                pruefungsfragen3();
                 break;
             case 4:
                 animateTransition();
                 clearScreen();
-                Fachbegriffe();
+                pruefungsfragen4();
                 break;
             case 5:
                 animateTransition();
                 clearScreen();
-                pruefungsfragen3();
+                pruefungsfragen5();
                 break;
             case 6:
                 animateTransition();
                 clearScreen();
-                pruefungsfragen4();
+                pruefungsfragen6();
                 break;
             case 7:
                 animateTransition();
                 clearScreen();
-                pruefungsfragen5();
+                pruefungsfragen7();
                 break;
             case 8:
                 animateTransition();
                 clearScreen();
-                pruefungsfragen6();
+                themengebiete();
                 break;
+            case 9:
+                animateTransition();
+                clearScreen();
+                Fachbegriffe();
             case 0:
                 running = false;
                 break;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
-            // Überprüfen Sie, ob die Escape-Taste oder die Null-Taste gedrückt wurde
+            // Überprüfen, ob die Escape-Taste oder die Null-Taste gedrückt wurde
             if (_kbhit()) {
                 char key = _getch();
                 if (key == 27 || key == '0') {

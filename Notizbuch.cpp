@@ -38,7 +38,7 @@ int gumain() {
 int guimain() {
     while (true) {
         gumain();
-        cout << "Möchten Sie eine weitere Notiz hinterlassen? ( J  für Ja ) ";
+        cout << "Moechten Sie eine weitere Notiz hinterlassen? ( J  fuer Ja ) ";
         string response;
         getline(cin, response);
         if (response != "j" && response != "J") {

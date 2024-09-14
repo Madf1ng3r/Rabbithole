@@ -8,6 +8,7 @@ using namespace std;
 int infolinkmain() {
     string links[] = {
         "https://fachinformatikerpruefungsvorbereitung.de/",
+        "https://ausbildung-in-der-it.de/abschlusspruefung/einrichten-eines-it-gestuetzten-arbeitsplatzes",
         "https://www.leifiphysik.de/elektrizitaetslehre",
         "https://www.lernort-mint.de/informatik",
         "https://www.lawerence.de",

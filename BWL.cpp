@@ -156,7 +156,7 @@ Annuitätendarhlehnen
 void anzeigenVertragsarten() {
     cout << R"(
 Arbeitsvertrag:
-Ein Vertrag zwischen einem Arbeitgeber und einem Arbeitnehmer, der die Bedingungen der Beschäftigung regelt.
+Ein Vertrag zwischen einem Arbeitgeber und einem Arbeitnehmer, der die Bedingungen der Beschaeftigung regelt.
 
 Mietvertrag:
 Ein Vertrag, der die Bedingungen für die Miete einer Immobilie festlegt, einschließlich Mietdauer, Mietpreis und Pflichten des Mieters und Vermieters.
@@ -298,7 +298,7 @@ void showSteuern()
 {
     cout << R"(
 
-Körperschaftssteuer: Die Körperschaftssteuer ist eine Steuer, die von juristischen Personen wie Kapitalgesellschaften (z. B. GmbHs und AGs) auf ihre Gewinne erhoben wird. Es handelt sich um eine Unternehmenssteuer, die auf den erzielten Gewinn vor Steuern berechnet wird.
+Koerperschaftssteuer: Die Körperschaftssteuer ist eine Steuer, die von juristischen Personen wie Kapitalgesellschaften (z. B. GmbHs und AGs) auf ihre Gewinne erhoben wird. Es handelt sich um eine Unternehmenssteuer, die auf den erzielten Gewinn vor Steuern berechnet wird.
 
 Einkommenssteuer: Die Einkommenssteuer ist eine Steuer, die von natürlichen Personen auf ihr Einkommen erhoben wird. Dieses Einkommen kann aus verschiedenen Quellen stammen, einschließlich Gehältern, Mieteinnahmen, Kapitalerträgen und selbstständiger Arbeit.
 
@@ -377,7 +377,7 @@ void showMarktKundenbeziehung()
 {
     cout << R"(
 Markt- und Kundenbeziehungen sind zentral für den Erfolg eines Unternehmens. 
-Eine gute Beziehung zu den Kunden hilft bei der Kundenbindung und ermöglicht es Unternehmen, 
+Eine gute Beziehung zu den Kunden hilft bei der Kundenbindung und ermoeglicht es Unternehmen, 
 ihre Produkte und Dienstleistungen besser an die Bedürfnisse des Marktes anzupassen.
 )";
 }
@@ -404,7 +404,7 @@ innerhalb des Unternehmens. Corporate Design betrifft das visuelle Erscheinungsb
 void showOperativestrategischeZiele()
 {
     cout << R"(
-Operative Ziele sind kurzfristige, konkrete Ziele, während strategische Ziele langfristige, übergeordnete Ziele sind.
+Operative Ziele sind kurzfristige, konkrete Ziele, waehrend strategische Ziele langfristige, uebergeordnete Ziele sind.
 )";
 }
 
@@ -412,7 +412,7 @@ void showMotivationMaslowKompetenzen()
 {
     cout << R"(
 Motivation bezieht sich auf die inneren und äußeren Faktoren, die das Verhalten und die Leistung von Mitarbeitern 
-beeinflussen. Maslows Bedürfnispyramide ist eine Theorie, die die Hierarchie der menschlichen Bedürfnisse beschreibt. 
+beeinflussen. Maslows Beduerfnispyramide ist eine Theorie, die die Hierarchie der menschlichen Bedürfnisse beschreibt. 
 Kompetenzen beziehen sich auf die Fähigkeiten, Kenntnisse und Erfahrungen, die zur erfolgreichen 
 Durchführung von Aufgaben benötigt werden.
 )";
@@ -464,7 +464,7 @@ die Strategien zur Kreditvergabe. Leasing und Factoring sind Finanzierungsinstru
 void anzeigenHandelsklauselnKreditpolitikMindestreserveOffenmarktpolitik()
 {
     cout << R"(
-Handelsklauseln sind Bestimmungen in Handelsverträgen. Die Kreditpolitik regelt die Kreditvergabe und -rückzahlung. 
+Handelsklauseln sind Bestimmungen in Handelsverträgen. Die Kreditpolitik regelt die Kreditvergabe und -rueckzahlung. 
 Mindestreserve ist der Mindestbetrag, den Banken als Reserve halten müssen. Offenmarktpolitik bezieht sich auf 
 Maßnahmen der Zentralbank zur Steuerung der Geldmenge und der Zinsen.
 )";
@@ -499,7 +499,7 @@ void anzeigenMarktpotentialWachstumReifungSättigungEliminierung()
 {
     cout << R"(
 Marktpotential bezieht sich auf das ungenutzte Marktvolumen. Wachstum ist die Phase, in der ein Markt expandiert. 
-Reifung ist die Phase, in der das Marktwachstum abflacht. Sättigung ist der Punkt, an dem der Markt gesättigt ist. 
+Reifung ist die Phase, in der das Marktwachstum abflacht. Saettigung ist der Punkt, an dem der Markt gesättigt ist. 
 Eliminierung bezieht sich auf das Ausscheiden von Produkten aus dem Markt.
 )";
 }
@@ -517,7 +517,7 @@ void anzeigenProzesskontrolle()
 {
     cout << R"(
 Kontrolle von Prozessen
-Prozesscontrolling bezeichnet die Planung und Kontrolle von Geschäftsprozessen sowie die dafür notwendige Informationensversorgung und Koordination.
+Prozesscontrolling bezeichnet die Planung und Kontrolle von Geschaeftsprozessen sowie die dafür notwendige Informationensversorgung und Koordination.
 Schwerpunkt der Planung ist die Definition von Ziel und Messgrößen und deren Kontrolle in Geschäftsprozessen.
 Das Management Informations System ist eine Software das dieses Controlling erleichtert.
 Beispiele dafür sind das V-Model und das Spiralmodel.
@@ -542,27 +542,28 @@ dass das Projekt im Einklang mit den definierten Anforderungen und Zielen bleibt
 Überwachung und Steuerung: Kontinuierliche Überprüfung des Projektstatus, 
 Vergleich von tatsächlichem Fortschritt mit dem geplanten Fortschritt,
 Anpassung des Plans bei Abweichungen und Implementierung von Korrekturmaßnahmen.
-Abschluss: Abschluss des Projekts, Überprüfung der Zielerreichung, Dokumentation von Erfahrungen und Lernen für zukünftige Projekte.
+Abschluss: Abschluss des Projekts, Überprüfung der Zielerreichung, Dokumentation von Erfahrungen und Lernen für zukuenftige Projekte.
 Effektives Projektmanagement zielt darauf ab, die Qualität der Arbeit zu maximieren, Risiken zu minimieren und sicherzustellen,
-dass das Projekt erfolgreich abgeschlossen wird, um den gewünschten Nutzen zu erzielen.
+dass das Projekt erfolgreich abgeschlossen wird, um den gewuenschten Nutzen zu erzielen.
 )";
 }
 
 void showTotalQualityManagement()
 {
     cout << R"(
-TQM bezeichnet als umfassendes QM Qualitätsmanagement nach der DIN eine "durchgängige,
- fortwährende und alle Bereiche des Unternehmens
-erfassende, aufzeichnende, sichtende, organisierende, und kontrollierende Tätigkeit mit dem Ziel,
- Qualität als das unternehmerische Ziel permanent zu garantieren.
-Grundsätze des TQL
+TQM Total Quality Management
+bezeichnet als umfassendes QM Qualitaetsmanagement nach der DIN eine "durchgaengige,
+fortwaehrende und alle Bereiche des Unternehmens
+erfassende, aufzeichnende, sichtende, organisierende, und kontrollierende Taetigkeit mit dem Ziel,
+Qualitaet als das unternehmerische Ziel permanent zu garantieren.
+Grundsaetze des TQL
 Kundenorientierung
 Einbeziehung der Menschen
-Führung durch Zielorientierung
+Fuehrung durch Zielorientierung
 Sachlicher Ansatz zur Entscheidungsfindung
 Prozessorientierter Ansatz zur Verfahrensoptimierung
 Systemorientierter Ansatz
-Ständige Verbesserung ( KVP)
+Staendige Verbesserung ( KVP)
 Lieferantenbeziehung zum gegenseitigen Nutzen
 )";
 }
@@ -579,20 +580,20 @@ Eine Krankenversicherung übernimmt die Kosten für medizinische Behandlungen, Arz
 und andere Gesundheitsleistungen, abhängig von den Bedingungen des Versicherungsvertrags.
 
 Lebensversicherung:
-Eine Lebensversicherung bietet finanziellen Schutz für Angehörige oder Begünstigte im Falle des Todes 
+Eine Lebensversicherung bietet finanziellen Schutz für Angehörige oder Beguenstigte im Falle des Todes 
 des Versicherungsnehmers. Sie kann auch als Investition genutzt werden.
 
 Hausratversicherung:
-Eine Hausratversicherung deckt Schäden oder Verluste von persönlichem Eigentum in Ihrem Haus ab, 
-wie z. B. Möbel, Elektronik, Schmuck und andere Gegenstände.
+Eine Hausratversicherung deckt Schaeden oder Verluste von persönlichem Eigentum in Ihrem Haus ab, 
+wie z. B. Moebel, Elektronik, Schmuck und andere Gegenstaende.
 
 Haftpflichtversicherung:
-Die Haftpflichtversicherung deckt Schäden ab, die Sie einer anderen Person oder ihrem Eigentum zufügen. 
+Die Haftpflichtversicherung deckt Schaeden ab, die Sie einer anderen Person oder ihrem Eigentum zufuegen. 
 Dies kann in verschiedenen Kontexten auftreten, z. B. Privathaftpflicht, Berufshaftpflicht oder Produkthaftpflicht.
 
-Berufsunfähigkeitsversicherung:
-Diese Versicherung zahlt eine regelmäßige Rente aus, wenn Sie aufgrund von Krankheit oder Unfall dauerhaft 
-berufsunfähig sind und nicht mehr arbeiten können.
+Berufsunfaehigkeitsversicherung:
+Diese Versicherung zahlt eine regelmaeßige Rente aus, wenn Sie aufgrund von Krankheit oder Unfall dauerhaft 
+berufsunfaehig sind und nicht mehr arbeiten koennen.
 
 Unfallversicherung:
 Eine Unfallversicherung zahlt im Falle eines Unfalls eine bestimmte Geldsumme aus oder deckt die Kosten 
@@ -606,21 +607,21 @@ Reiseversicherung:
 Eine Reiseversicherung deckt verschiedene Risiken ab, die während einer Reise auftreten können, 
 wie z. B. Reiseabbruch, Krankheitskosten im Ausland, Gepäckverlust und Reiserücktritt.
 
-Güterversicherung (Frachtversicherung):
+Gueterversicherung (Frachtversicherung):
 Diese Versicherung deckt die Waren ab, während sie von einem Ort zum anderen transportiert werden. 
-Sie schützt gegen Schäden oder Verluste, die während des Transports auf dem Land, auf See oder in der Luft auftreten können.
+Sie schuetzt gegen Schaeden oder Verluste, die während des Transports auf dem Land, auf See oder in der Luft auftreten können.
 
 Transportmittelversicherung:
 Diese Versicherung deckt das Transportmittel selbst ab, wie beispielsweise Schiffe, Flugzeuge, Lastwagen oder Züge. 
-Sie bietet Schutz gegen Schäden am Transportmittel, die während des Transports auftreten können.
+Sie bietet Schutz gegen Schaeden am Transportmittel, die waehrend des Transports auftreten koennen.
 
 Transporteurs-Haftpflichtversicherung:
-Diese Versicherung schützt den Transporteur (das Transportunternehmen) vor Haftungsansprüchen Dritter, 
-die durch den Transport von Waren entstehen könnten. Sie deckt auch die Haftung für Schäden an den transportierten Gütern ab.
+Diese Versicherung schuetzt den Transporteur (das Transportunternehmen) vor Haftungsansprüchen Dritter, 
+die durch den Transport von Waren entstehen koennten. Sie deckt auch die Haftung für Schaeden an den transportierten Guetern ab.
 
 Logistikversicherung:
 Diese Versicherung bietet einen umfassenden Schutz für Logistikdienstleister, der Schäden oder Verluste abdeckt, 
-die während der gesamten Lieferkette entstehen können, einschließlich Lagerung, Umschlag und Transport.
+die waehrend der gesamten Lieferkette entstehen können, einschließlich Lagerung, Umschlag und Transport.
 
 )";
 }
@@ -628,11 +629,11 @@ die während der gesamten Lieferkette entstehen können, einschließlich Lagerung, 
 void anzeigenGesetze()
 {
     cout << R"(
-Gesetzbücher zum auswendig lernen für die Prüfung:
+Gesetzbuecher zum auswendig lernen für die Pruefung:
 Jugendarbeitsschutzgesetz JArbSchG
 Arbeitsschutzgesetz ArbSchG
 Betriebssicherheitsverordnung BetrSichV
-Bürgerliches Gesetzbuch BgB
+Buergerliches Gesetzbuch BgB
 
 )";
 }
@@ -648,14 +649,14 @@ Eine prozessorientierte Ablauforganisation kann sicherstellen, dass die Beschaff
 indem sie klare Verfahren für Lieferantenauswahl, Bestellabwicklung, Lagerhaltung und Bestandsmanagement festlegt.
 Produktionsprozess:
 
-Der Produktionsprozess konzentriert sich auf die Herstellung von Waren oder die Bereitstellung von Dienstleistungen gemäß den spezifizierten Anforderungen.
-Durch eine prozessorientierte Ablauforganisation können die Produktionsabläufe optimiert werden, um eine höhere Qualität, 
+Der Produktionsprozess konzentriert sich auf die Herstellung von Waren oder die Bereitstellung von Dienstleistungen gemaess den spezifizierten Anforderungen.
+Durch eine prozessorientierte Ablauforganisation koennen die Produktionsablaeufe optimiert werden, um eine hoehere Qualität, 
 Kostenkontrolle und Zeiteffizienz zu gewährleisten.
 Marketingprozess:
 
 Der Marketingprozess beinhaltet die Entwicklung und Umsetzung von Strategien zur Marktforschung, Markenpositionierung, 
 Produktentwicklung, Preisbildung und Werbung, um die Produkte/Dienstleistungen auf dem Markt erfolgreich zu platzieren.
-Mit einer prozessorientierten Ablauforganisation können Marketingaktivitäten besser koordiniert, 
+Mit einer prozessorientierten Ablauforganisation können Marketingaktivitaeten besser koordiniert, 
 Ressourcen effizienter eingesetzt und die Reaktion auf Marktanforderungen verbessert werden.
 Vertriebsprozess:
 
@@ -679,14 +680,14 @@ einfacher Eigentumsvorbehalt   Eigentumswechsel bei Tilgung des Kaufpreises
 erweitertes Eigentumsvorbehalt  + weitere Forderungen
 nachgeschalteter Eigentumsvorbehalt
 verlängerter Eigentumsvorbehalt
-nachträglicher Eigentumsvorbehalt 
+nachtraeglicher Eigentumsvorbehalt 
 )";
 }
 
 void anzeigenrealsich()
 {
     cout << R"(
-Realsicherheiten sind Vermögensgegenstände, die verpfändet werden, falls der Schuldner seine Schuld nicht bezahlt. 
+Realsicherheiten sind Vermögensgegenstaende, die verpfändet werden, falls der Schuldner seine Schuld nicht bezahlt. 
 Zu diesen Vermögensgegenständen gehören bewegliche und unbewegliche Sachen. Sicherungsmittel an Grundstücken sind Grundschuld und Hypothek.
 )";
 }
@@ -695,7 +696,7 @@ void anzeigenholschuld()
 {
     cout << R"(
 Holschuld ist ein Begriff aus dem Schuldrecht und bedeutet, dass Leistungs- und Erfolgsort beim Schuldner liegt. 
-Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintreten. Bei der Holschuld muss sich der Gläubiger
+Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintreten. Bei der Holschuld muss sich der Glaeubiger
  die Leistung beim Schuldner abholen.
 )";
 }
@@ -704,7 +705,7 @@ void showzession()
 {
     cout << R"(
 Eine Zession ist eine Forderungsabtretung oder Sicherungsabtretung. Dabei ändert sich das Schuldverhältnis, 
-indem die Forderung an einen neuen Gläubiger übertragen wird. 
+indem die Forderung an einen neuen Gläubiger uebertragen wird. 
 Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessionar (Abtretungsempfänger).
 § 398 Abs. 1 BGB
 )";
@@ -716,7 +717,7 @@ void showsixsigma()
 Six Sigma ist ein Managementsystem zur Prozessverbesserung, statistisches 
 Qualitätsziel und zugleich eine Methode des Qualitätsmanagements.
 Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und 
-Überwachung von Geschäftsvorgängen mit statistischen Mitteln.
+Ueberwachung von Geschaeftsvorgängen mit statistischen Mitteln.
 
 
                                                   Definieren
@@ -730,7 +731,7 @@ Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und
 void showkaizen()
 {
     cout << R"(
-Die Kaizen-Philosophie beschreibt laut Definition eine Denkweise, bei der kleine, schrittweise Änderungen im Laufe der Zeit 
+Die Kaizen-Philosophie beschreibt laut Definition eine Denkweise, bei der kleine, schrittweise Aenderungen im Laufe der Zeit 
 eine große Wirkung erzielen. Bei Kaizen handelt es sich um eine Methode des Qualitätsmanagement.
 Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum Bessen verwendet wird´.
 
@@ -761,7 +762,7 @@ Spenden, berufsbezogenen Ausgaben und anderen absetzbaren Kosten.
 Gutschriften oder Abzügen, die die steuerliche Belastung mindern können.
 4. **Persönliche Informationen:** Angaben zur persönlichen Identität, Familienstand, Abhängige und andere relevante persönliche Informationen
 5. **Anhang und Nachweise:** Beifügen von Belegen, Belegen und zusätzlichen Unterlagen, die die angegebenen Informationen stützen und validieren.
-Die Steuererklärung ist in den meisten Ländern gesetzlich vorgeschrieben, und die Einreichungsfristen variieren je nach Land und Rechtsvorschriften. Sie ist ein wichtiges Instrument für die Steuerbehörden, um die Steuerzahlungen zu überprüfen und sicherzustellen, dass die Steuerpflichtigen ihre finanziellen Verpflichtungen gegenüber dem Staat erfüllen.
+Die Steuererklärung ist in den meisten Laendern gesetzlich vorgeschrieben, und die Einreichungsfristen variieren je nach Land und Rechtsvorschriften. Sie ist ein wichtiges Instrument für die Steuerbehörden, um die Steuerzahlungen zu überprüfen und sicherzustellen, dass die Steuerpflichtigen ihre finanziellen Verpflichtungen gegenüber dem Staat erfüllen.
 )";
 }
 
@@ -769,7 +770,7 @@ void showinvestrech()
 {
     cout << R"(
 Mit der Investitionsrechnung sollen Investitionsentscheidungen bezüglich der monetären Unternehmensziele fundiert und vorbereitet werden. 
-Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu einer Zielgröße, beispielsweise der Rentabilität, verdichtet.
+Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu einer Zielgröße, beispielsweise der Rentabilitaet, verdichtet.
 )";
 }
 
@@ -778,7 +779,7 @@ void showmaxpr()
     cout << R"(
 Maximalprinzip: Auch als Prinzip der optimalen Zielerreichung bekannt. Es besagt, dass mit gegebenen
 Ressourcen das Maximum an Zielen erreicht werden soll. Im ökonomischen Kontext bedeutet dies, dass ein 
-Unternehmen versucht, mit den vorhandenen Ressourcen den größtmöglichen Gewinn zu erzielen.
+Unternehmen versucht, mit den vorhandenen Ressourcen den größtmoeglichen Gewinn zu erzielen.
 )";
 }
 
@@ -797,7 +798,7 @@ void showoekopr()
 {
     cout << R"(   
 Ökonomisches Prinzip:
-Das ökonomische Prinzip besagt, dass ökonomische Entscheidungen auf rationale Weise getroffen werden, 
+Das oekonomische Prinzip besagt, dass ökonomische Entscheidungen auf rationale Weise getroffen werden, 
 um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen. Es setzt sich aus zwei Teilen zusammen:
 )";
     int choice;
@@ -828,7 +829,7 @@ um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen
         case 0:
             return;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }
@@ -897,7 +898,7 @@ Innovations- und Entwicklungsprozess:
 Forschung und Entwicklung
 Produktentwicklung
 Innovationsmanagement
-Markteinführung neuer Produkte
+Markteinfuehrung neuer Produkte
 )";
 }
 
@@ -915,9 +916,9 @@ Kundenzufriedenheitsmessung
 void showgeschaeftsp()
 {
     cout << R"(
-Geschäftsprozesse sind systematische und wiederholbare Aktivitätsabläufe, 
+Geschaeftsprozesse sind systematische und wiederholbare Aktivitaetsablaeufe, 
 die in einer Organisation durchgeführt werden, um Ziele zu erreichen. 
-Beispiele für Geschäftsprozesse sind:\n
+Beispiele für Geschaeftsprozesse sind:\n
 
 )";
     int choice;
@@ -930,8 +931,8 @@ Beispiele für Geschäftsprozesse sind:\n
         cout << "5. Personal" << endl;
         cout << "6. Innovation und Entwicklung" << endl;
         cout << "7. Kundenbeziehung" << endl;
-        cout << "0. Zurück zum Hauptmenü" << endl;
-        cout << "Wählen Sie eine Option: ";
+        cout << "0. Zurueck" << endl << endl;
+        cout << "Waehlen Sie eine Option: ";
         if (!(cin >> choice))
         {
             cin.clear();
@@ -973,7 +974,336 @@ Beispiele für Geschäftsprozesse sind:\n
         case 0:
             return;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            break;
+        }
+    }
+}
+void showbwl4()
+{
+    cout << R"(   
+Dritte Seite:
+)";
+    int choice;
+    while (true)
+    {
+        cout << R"(
+
+
+
+                                                       _______________________________________________________        
+                                                     /  _____________________________________________________  )      
+                                                    /                                                           ]      
+                                                   /  _______________________________________________________   |     
+                                                  |  | --------------------------              _.-"\         |  |     
+                                                  |  | '  1. Marktanalyse        '         _.-"     \        |  |    
+                                                  |  | '  2. Handelsklauseln     '      ,-"          \       |  |     
+                                                  |  | '  3. Lieferbedingungen   '     ( \            \      |  |     
+                                                  |  | '  4. Preispolitik        '      \ \            \     |  |     
+                                                  |  | '  5. Marktstrukturen     '       \ \            \    |  |    
+                                                  |  | '  6. Investmentrechnung  '        \ \         _.-;   |  |     
+                                                  |  | '  7. Kommunikation       '         \ \    _.-"   :   |  |     
+                                                  |  | '  8. MarketingMix        '          \ \,-"    _.-"   |  |     
+                                                  |  | '  9. Versicherung        '           \(   _.-"       |  |     
+                                                  |  | '  0. zurueck             '______      `--"           |  |     
+                                                  |  | ' 10. ISO Normen          '11.   '                    |  |     
+                                                  |  | @--------------------------------                     |  |     
+                                                  |  |-------------------------------------------------------|  |
+                                                  |__________________________________________________________|  /      
+                                                    (__________________________________________________________/        
+                                                 ______/             [___________]                                     
+                                               /                                                                        
+                                              (________________________________________________________________        
+                                            / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  / __  
+                                           /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
+                                          /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
+                                         /__________________________________________________________________/          
+
+)";
+        if (!(cin >> choice))
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            continue;
+        }
+        switch (choice)
+        {
+        case 1:
+            animateTransition();
+            clearScreen();
+            anzeigenMarktpotentialWachstumReifungSättigungEliminierung();
+            break;
+        case 2:
+            animateTransition();
+            clearScreen();
+            anzeigenHandelsklauselnKreditpolitikMindestreserveOffenmarktpolitik();
+            break;
+        case 3:
+            animateTransition();
+            clearScreen();
+            anzeigenLieferbedingungenINCOTermsKreditpolitikLeasingFactoring();
+            break;
+        case 4:
+            animateTransition();
+            clearScreen();
+            showFunkdPreiHochNiedripreiRabatpol();
+            break;
+        case 5:
+            animateTransition();
+            clearScreen();
+            showMarktstrukturenUnternehmenszieleUnternehmensleitlinien();
+            break;
+        case 6:
+            animateTransition();
+            clearScreen();
+            showinvestrech();
+            break;
+        case 7:
+            animateTransition();
+            clearScreen();
+            showCorporateIdentityCommunicationBehaviorDesign();
+            break;
+        case 8:
+            animateTransition();
+            clearScreen();
+            showMarketingMix4P();
+            break;
+        case 9:
+            animateTransition();
+            clearScreen();
+            showVersi();
+            break;
+        case 10:
+            animateTransition();
+            clearScreen();
+            showISONormen();
+            break;
+        case 0:
+            return;
+        default:
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            break;
+        }
+    }
+}
+void showbwl3()
+{
+    cout << R"(   
+Dritte Seite:
+)";
+    int choice;
+    while (true)
+    {
+        cout << R"(
+
+
+
+                                                       _______________________________________________________        
+                                                     /  _____________________________________________________  )      
+                                                    /                                                           ]      
+                                                   /  _______________________________________________________   |     
+                                                  |  | --------------------------              _.-"\         |  |     
+                                                  |  | '  1. Prozessablauf       '         _.-"     \        |  |    
+                                                  |  | '  2. Kai Zen             '      ,-"          \       |  |     
+                                                  |  | '  3. Urheberrecht        '     ( \            \      |  |     
+                                                  |  | '  4. Steuern             '      \ \            \     |  |     
+                                                  |  | '  5. Rechtsformen        '       \ \            \    |  |    
+                                                  |  | '  6. Gewinnberechnung    '        \ \         _.-;   |  |     
+                                                  |  | '  7. 4 Seiten Modell     '         \ \    _.-"   :   |  |     
+                                                  |  | '  8. Prozesskette        '          \ \,-"    _.-"   |  |     
+                                                  |  | '  9. Hol/BringSchuld     '           \(   _.-"       |  |     
+                                                  |  | '  0. zurueck             '______      `--"           |  |     
+                                                  |  | ' 10. naecheste Seite     '11.   '                    |  |     
+                                                  |  | @--------------------------------                     |  |     
+                                                  |  |-------------------------------------------------------|  |
+                                                  |__________________________________________________________|  /      
+                                                    (__________________________________________________________/        
+                                                 ______/             [___________]                                     
+                                               /                                                                        
+                                              (________________________________________________________________        
+                                            / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  / __  
+                                           /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
+                                          /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
+                                         /__________________________________________________________________/          
+
+)";
+        if (!(cin >> choice))
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            continue;
+        }
+        switch (choice)
+        {
+        case 1:
+            animateTransition();
+            clearScreen();
+            anzeigenproablauf();
+            break;
+        case 2:
+            animateTransition();
+            clearScreen();
+            showkaizen();
+            break;
+        case 3:
+            animateTransition();
+            clearScreen();
+            showUrheberrecht();
+            break;
+        case 4:
+            animateTransition();
+            clearScreen();
+            showSteuern();
+            break;
+        case 5:
+            animateTransition();
+            clearScreen();
+            
+            break;
+        case 6:
+            animateTransition();
+            clearScreen();
+            anzeigenGewinnberechnungOHGKG();
+            break;
+        case 7:
+            animateTransition();
+            clearScreen();
+            anzeigenKommunikationsmodellSchulzvonThun();
+            break;
+        case 8:
+            animateTransition();
+            clearScreen();
+            anzeigenProzesskontrolle();
+            break;
+        case 9:
+            animateTransition();
+            clearScreen();
+            anzeigenholschuld();
+            break;
+        case 10:
+            animateTransition();
+            clearScreen();
+            showbwl4();
+            break;
+        case 0:
+            return;
+        default:
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            break;
+        }
+    }
+}
+
+void showbwl2()
+{
+    cout << R"(   
+Zweite Seite:
+)";
+    int choice;
+    while (true)
+    {
+        cout << R"(
+
+
+                                                       _______________________________________________________        
+                                                     /  _____________________________________________________  )      
+                                                    /                                                           ]      
+                                                   /  _______________________________________________________   |     
+                                                  |  |------------------------                               |  |     
+                                                  |  | ' 1. DSGVO             |                              |  |    
+                                                  |  | ' 2. Darlehensarten    |              ____            |  |     
+                                                  |  | ' 3. Finanzierungsarten|             |WISO|           |  |     
+                                                  |  | ' 4. TQM               |              ----            |  |     
+                                                  |  | ' 5. Bilanzrechnung    |                              |  |    
+                                                  |  | ' 6. magisches3Eck     |                              |  |     
+                                                  |  | ' 7. mages4Eck         |                              |  |     
+                                                  |  | ' 8. Projektmanagement |                              |  |     
+                                                  |  | ' 9. PDCA Zyklus       |                              |  |     
+                                                  |  | '10. naechste Seite    |                              |  |     
+                                                  |  | ' 0. zurueck           |                              |  |     
+                                                  |  | @----------------------                               |  |     
+                                                  |  |-------------------------------------------------------|  |
+                                                  |__________________________________________________________|  /      
+                                                    (__________________________________________________________/        
+                                                ______/               [___________]                                     
+                                               /                                                                        
+                                              (__________________________________________________________________        
+                                             / #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  #  / __  
+                                            /  #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #  # / (  )  
+                                           /   #  #   #   #   #   #   #   #   #   #   #   #   #   #   #   #   /  (__)  
+                                          /__________________________________________________________________/          
+
+)";
+        if (!(cin >> choice))
+        {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+            this_thread::sleep_for(chrono::seconds(2));
+            continue;
+        }
+        switch (choice)
+        {
+        case 1:
+            animateTransition();
+            clearScreen();
+            anzeigenDatenschutzgrundverordnungDSGVO();
+            break;
+        case 2:
+            animateTransition();
+            clearScreen();
+            anzeigenDarlehensarten();
+            break;
+        case 3:
+            animateTransition();
+            clearScreen();
+            showFinanzierungsarten();
+            break;
+        case 4:
+            animateTransition();
+            clearScreen();
+            showTotalQualityManagement();
+            break;
+        case 5:
+            animateTransition();
+            clearScreen();
+            showBilanz();
+            break;
+        case 6:
+            animateTransition();
+            clearScreen();
+            showmagischesdreieck();
+            break;
+        case 7:
+            animateTransition();
+            clearScreen();
+            anzeigenmagischesviereck();
+            break;
+        case 8:
+            animateTransition();
+            clearScreen();
+            anzeigenprojektmanagement();
+            break;
+        case 9:
+            animateTransition();
+            clearScreen();
+            showpdca();
+            break;
+        case 10:
+            clearScreen();
+            showbwl3();
+            break;
+        case 0:
+            return;
+        default:
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }
@@ -1000,19 +1330,19 @@ int bwlmain()
                                                      /  _____________________________________________________  )      
                                                     /                                                           ]      
                                                    /  _______________________________________________________   |     
-                                                  |  | ------------------------                _.-"\         |  |     
-                                                  |  | '    BLW-Wiki                       _.-"     \        |  |    
-                                                  |  | ' 1. Gesetzbücher                ,-"          \       |  |     
-                                                  |  | ' 2. Geschäftsprozesse          ( \            \      |  |     
-                                                  |  | ' 3. ISO Normen                  \ \            \     |  |     
-                                                  |  | ' 4. Bilanz                       \ \            \    |  |    
-                                                  |  | ' 5. Rechtsformen                  \ \         _.-;   |  |     
-                                                  |  | ' 6. Projektmanagement              \ \    _.-"   :   |  |     
-                                                  |  | ' 7. Vertragsarten                   \ \,-"    _.-"   |  |     
-                                                  |  | ' 8. Versicherungsarten               \(   _.-"       |  |     
-                                                  |  | ' 9. Kapital und Kapitalstruktur       `--"           |  |     
-                                                  |  | ' 0.  ESC                                             |  |     
-                                                  |  | @-----------------------------                        |  |     
+                                                  |  | --------------------------              _.-"\         |  |     
+                                                  |  | '    BLW-Wiki             '         _.-"     \        |  |    
+                                                  |  | ' 1. Gesetzbuecher        '      ,-"          \       |  |     
+                                                  |  | ' 2. Geschaeftsprozesse   '     ( \            \      |  |     
+                                                  |  | ' 3.                      '      \ \            \     |  |     
+                                                  |  | ' 4.                      '       \ \            \    |  |    
+                                                  |  | ' 5.                      '        \ \         _.-;   |  |     
+                                                  |  | ' 6.                      '         \ \    _.-"   :   |  |     
+                                                  |  | ' 7.                      '          \ \,-"    _.-"   |  |     
+                                                  |  | ' 8.                      '           \(   _.-"       |  |     
+                                                  |  | ' 9. Links                '___________ `--"           |  |     
+                                                  |  | ' 10. naecheste Seite     '0. zurueck '               |  |     
+                                                  |  | @-------------------------------------                |  |     
                                                   |  |-------------------------------------------------------|  |
                                                   |__________________________________________________________|  /      
                                                     (__________________________________________________________/        
@@ -1049,42 +1379,41 @@ int bwlmain()
         case 3:
             animateTransition();
             clearScreen();
-            showISONormen();
+        
             break;
         case 4:
             animateTransition();
             clearScreen();
-            showBilanz();
+           
             break;
         case 5:
             animateTransition();
             clearScreen();
-            showRechtsformen();
+           
             break;
         case 6:
             animateTransition();
             clearScreen();
-            anzeigenprojektmanagement();
+          
             break;
         case 7:
             animateTransition();
             clearScreen();
-            anzeigenVertragsarten();
+                  
             break;
         case 8:
             animateTransition();
             clearScreen();
-            showVersi();
+            
             break;
         case 9:
             animateTransition();
             clearScreen();
-            showSteuern();
+            bwllinkmain();
             break;
         case 10:
-            animateTransition();
             clearScreen();
-            anzeigenGesetze();
+            showbwl2();
             break;
         case 11:
             animateTransition();
@@ -1111,31 +1440,11 @@ int bwlmain()
             clearScreen();
             showinvestrech();
             break;
-        case 16:
-            animateTransition();
-            clearScreen();
-            showUrheberrecht();
-            break;
-        case 17:
-            animateTransition();
-            clearScreen();
-            showKreditarten();
-            break;
-        case 18:
-            animateTransition();
-            clearScreen();
-            showsteuererk();
-            break;
-        case 19:
-            animateTransition();
-            clearScreen();
-            anzeigenprojektmanagement();
-            break;
         case 0:
             running = false;
             break;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }

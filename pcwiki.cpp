@@ -93,8 +93,8 @@ Hier sind einige der gängigsten RAID-Level:
         cout << "Arten von Algorithmen" << endl;
         cout << "1. Suchalgorithmen " << endl;
         cout << "2. Generelle Algorithmen" << endl << endl;
-        cout << "0. Zurück zum Hauptmenü" << endl;
-        cout << "Wählen Sie eine Option: ";
+        cout << "0. Zurueck" << endl;
+        cout << "Waehlen Sie eine Option: ";
         if (!(cin >> choice))
         {
             cin.clear();
@@ -116,7 +116,7 @@ Hier sind einige der gängigsten RAID-Level:
         case 0:
             return; 
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }
@@ -128,7 +128,7 @@ RAID 0 (Striping):
 
 Ziel: Verbesserte Leistung durch Aufteilen von Daten auf mehrere Laufwerke.
 Funktionsweise: Die Daten werden über mehrere Laufwerke gestreut, was zu schnellerem 
-Datenzugriff führt. Es gibt jedoch keine Redundanz, daher führt der Ausfall eines Laufwerks zum Datenverlust.
+Datenzugriff fuehrt. Es gibt jedoch keine Redundanz, daher fuehrt der Ausfall eines Laufwerks zum Datenverlust.
 )";
 }
 void showraidone() {
@@ -142,19 +142,19 @@ Wenn eine Festplatte ausfällt, sind die Daten auf der anderen Festplatte weiterh
 }
 void showraidfive() {
 cout <<	R"(
-RAID 5 (Block-Level Striping mit Parität):
+RAID 5 (Block-Level Striping mit Paritaet):
 
 Ziel: Kombination aus Leistung und Redundanz.
-Funktionsweise: Daten werden auf mehreren Laufwerken gestreut, und Paritätsinformationen werden für Redundanz verwendet. 
-Wenn eine Festplatte ausfällt, können die Daten durch Berechnung der Parität wiederhergestellt werden.
+Funktionsweise: Daten werden auf mehreren Laufwerken gestreut, und Paritaetsinformationen werden für Redundanz verwendet. 
+Wenn eine Festplatte ausfällt, können die Daten durch Berechnung der Paritaet wiederhergestellt werden.
 )";
 }
 void showraidsix() {
 cout <<	R"(
-RAID 6 (Block-Level Striping mit doppelter Parität):
+RAID 6 (Block-Level Striping mit doppelter Paritaet):
 
-Ziel: Höhere Datensicherheit durch doppelte Parität.
-Funktionsweise: Ähnlich wie RAID 5, aber mit zusätzlicher Paritätsinformation. 
+Ziel: Hoehere Datensicherheit durch doppelte Parität.
+Funktionsweise: Ähnlich wie RAID 5, aber mit zusätzlicher Paritaetsinformation. 
 Es können zwei Festplatten ausfallen, ohne Datenverlust zu verursachen.
 )";
 }
@@ -180,7 +180,7 @@ void showraid()
     cout << R"(   
 RAID steht für "Redundant Array of Independent Disks" und bezeichnet eine Technologie, 
 bei der mehrere Festplatten zusammenarbeiten, um die Leistung, Zuverlässigkeit oder beides zu verbessern. 
-Hier sind einige der gängigsten RAID-Level:
+Hier sind einige der gaengigsten RAID-Level:
 )";
     int choice;
     while (true)
@@ -191,14 +191,14 @@ Hier sind einige der gängigsten RAID-Level:
         cout << "4. RAID 6" << endl;
         cout << "5. RAID 10" << endl;
         cout << "6. RAID 50" << endl;
-        cout << "0. Zurück zum Hauptmenü" << endl;
-        cout << "Wählen Sie eine Option: ";
+        cout << "0. Zurueck" << endl;
+        cout << "Waehlen Sie eine Option: ";
         if (!(cin >> choice))
         {
-            cin.clear(); // Clear error flags
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
-            this_thread::sleep_for(chrono::seconds(2)); // Delay for 2 seconds
+            this_thread::sleep_for(chrono::seconds(2)); 
             continue;
         }
         switch (choice)
@@ -231,7 +231,7 @@ Hier sind einige der gängigsten RAID-Level:
             return; // Zurück zum Hauptmenü
         default:
             cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
-            this_thread::sleep_for(chrono::seconds(2)); // Delay for 2 seconds
+            this_thread::sleep_for(chrono::seconds(2));
             break;
         }
     }
@@ -336,8 +336,8 @@ um logische Operationen durchzuführen. Hier sind die grundlegenden logischen Gat
             cout << "4. OR-Gate" << endl;
             cout << "5. NOR-Gate" << endl;
             cout << "6. NOT-Gate" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -375,7 +375,7 @@ um logische Operationen durchzuführen. Hier sind die grundlegenden logischen Gat
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -384,10 +384,12 @@ um logische Operationen durchzuführen. Hier sind die grundlegenden logischen Gat
 	void showosi1()
 	{
         cout << R"(
-Schicht 1: Bitübertragungsschicht (Physical Layer)
-Die Bitübertragungsschicht beschreibt die elektrische, mechanische und funktionale 
-Schnittstelle zum Übertragungsmedium. Einfacher gesagt: Sie beinhaltet die Datenübertragung 
+Schicht 1: Bituebertragungsschicht (Physical Layer)
+Die Bituebertragungsschicht beschreibt die elektrische, mechanische und funktionale 
+Schnittstelle zum Übertragungsmedium. Einfacher gesagt: Sie beinhaltet die Datenuebertragung 
 der beteiligten physischen Geräte wie Kabel und Schalter. 
+Beispiel:
+Netzwerkkabel, Stecker und Anschlüsse, Netzwerkkarten, Antennen
 )";
 	}
 	void showosi2()
@@ -395,9 +397,13 @@ der beteiligten physischen Geräte wie Kabel und Schalter.
 		cout << R"(
 Schicht 2: Sicherungsschicht (Data Link Layer)
 Die Sicherungsschicht ermöglicht eine zuverlässige und funktionierende Verbindung zwischen 
-Endgerät und Übertragungsmedium. Sie sorgt für den Datentransfer zwischen zwei Geräten 
+Endgeraet und Übertragungsmedium. Sie sorgt für den Datentransfer zwischen zwei Geräten 
 im selben Netzwerk. Dabei nimmt der data link layer Pakete vom network layer auf 
 und zerlegt sie in kleinere Teile, den sogenannten Frames. 
+Zugriffskontrolle und Fehlererkennung
+Beispiel: MAC Adresse , Ethernet , Point-to-point, HDLC 
+Hardware: Switch, Bridge
+
 )";
 	}
 	void showosi3()
@@ -407,7 +413,11 @@ Schicht 3: Vermittlungsschicht (Network Layer)
 Die Vermittlungsschicht reguliert den Datentransfer zwischen zwei verschiedenen Netzwerken. 
 Im Falle der Kommunikation innerhalb eines Netzwerks fällt diese Schicht weg. 
 Auch hier teilen sich die Segmente auf dem Sendergerät von dem Transport Layer in Fragmente auf 
-und fügen diese Pakete auf dem Empfängergerät wieder zusammen.
+und fügen diese Pakete auf dem Empfängergeraet wieder zusammen.
+Ist für das Routing der Datenpakete zwischen verschiedenen Netzwerken verantwortlich.
+Beispiele: IP-Adressen, Routing 
+Protokolle: IPv4,IPv6,ICMP,OSPF
+Hardware: Router, Layer3 Switch
 )";
 	}
 	void showosi4()
@@ -417,6 +427,9 @@ Schicht 4: Transportschicht (Transport Layer)
 Die Transportschicht ist für die End-to-End-Kommunikation zwischen zwei Geräten zuständig. 
 Sie gilt also als Bindeglied zwischen den transportorientierten und anwendungsorientierten Schichten. 
 Zur Datenübertragung wird das Gesamtpaket in kleinere Bestandteile zerlegt. 
+Zuverlaessige Datenübertragung
+Beispiele:
+TCP , UDP , SCTP
 )";
 	}
 	void showosi5()
@@ -428,6 +441,7 @@ Die Zeit zwischen dem Öffnen und Schließen der Kommunikation bezeichnest du dabe
 Darüber hinaus wird durch die session layer sichergestellt, dass die Sitzung lange genug 
 geöffnet bleibt, um alle auszutauschenden Daten zu übertragen. Im Anschluss daran 
 schließt sich die Sitzung, um Ressourcenverschwendung zu vermeiden.
+Beispiele: NetBIOS, PPTP Point to Point Tunneling 
 )";
 	}
 	void showosi6()
@@ -437,37 +451,43 @@ Schicht 6: Darstellungsschicht (Presentation Layer)
 Die Darstellungsschicht bereitet die Daten so auf, dass sie dem Nutzer angezeigt werden können. 
 In diesem Fall ist es üblich, dass zwei verschiedene Anwendungen die gleiche Kodierung verwenden.
 Die Kommunikation mit einem Webserver über HTTPS (hypertext transfer protocol secure) 
-ist verschlüsselt, weshalb die Daten erst entschlüsselt werden müssen. 
+ist verschlüsselt, weshalb die Daten erst entschluesselt werden müssen. 
+Beispiele:
+Protokolle: SSL / TLS 
+X.509 <- digitale Zertifikate
 )";
 	}
 	void showosi7()
 	{
 		cout << R"(
 Schicht 7: Anwendungsschicht (Application Layer)
-Die Anwendungsschicht stellt Funktionen für Anwendungen bereit. 
-Außerdem ermöglicht sie die Verbindung zu den unteren Schichten. 
+Die Anwendungsschicht stellt Funktionen für Netzwerkdienste und Anwendungen bereit. 
+Außerdem ermoeglicht sie die Verbindung zu den unteren Schichten. 
 Auf dieser Ebene findet auch die Dateneingabe und -ausgabe statt. 
+Beispiele: 
+Protokolle:  HTTPS,FTP,SMTP,DNS
 )";
 	}
     void showosi()
     {
         cout << R"(   
 OSI steht für Open-Systems-Interconnection und wurde von der ISO (International Organization for Standardization)
-entwickelt. Das Modell ermöglicht die standardisierte Kommunikation zwischen verschiedenen Computersystemen
-und besteht aus 7 Level:
+entwickelt. Das Modell ermoeglicht die standardisierte Kommunikation zwischen verschiedenen Computersystemen
+und besteht aus 7 Schichten:
+
 )";
         int choice;
         while (true)
         {
-            cout << "1. Bitübertragungsschicht" << endl;
+            cout << "1. Bituebertragungsschicht" << endl;
             cout << "2. Sicherungsschicht" << endl;
             cout << "3. Vermittlungsschicht" << endl;
             cout << "4. Transportschicht" << endl;
             cout << "5. Kommunikationsschicht" << endl;
             cout << "6. Darstellungsschicht" << endl;
 			cout << "7. Anwendungsschicht" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -509,7 +529,7 @@ und besteht aus 7 Level:
             case 0:
                 return; 
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -521,12 +541,12 @@ und besteht aus 7 Level:
 TCP/IP (Transmission Control Protocol/Internet Protocol):
 
 Beschreibung: TCP/IP ist das grundlegende Protokoll, das das Internet antreibt. 
-Es besteht aus zwei Hauptprotokollen: TCP, das für die zuverlässige Übertragung 
+Es besteht aus zwei Hauptprotokollen: TCP, das für die zuverlaessige Übertragung 
 von Daten verantwortlich ist, und IP, das die Adressierung 
 und das Routing von Paketen im Netzwerk ermöglicht.
-Anwendungsbereich: Es bildet das Grundgerüst des Internets und wird für die 
+Anwendungsbereich: Es bildet das Grundgeruest des Internets und wird für die 
 meisten Internetanwendungen wie Webseitenzugriff, E-Mail, 
-Dateiübertragungen und mehr verwendet.
+Dateiuebertragungen und mehr verwendet.
 )";
 	}
 	void shownetwork2()
@@ -534,10 +554,10 @@ Dateiübertragungen und mehr verwendet.
 		cout << R"(
 HTTP/HTTPS (Hypertext Transfer Protocol/Secure):
 
-Beschreibung: HTTP ist ein Protokoll zur Übertragung von Hypertext über das Internet. 
-HTTPS ist die sichere Variante von HTTP, die eine verschlüsselte Verbindung für zusätzliche Sicherheit bietet.
+Beschreibung: HTTP ist ein Protokoll zur Uebertragung von Hypertext über das Internet. 
+HTTPS ist die sichere Variante von HTTP, die eine verschlüsselte Verbindung für zusaetzliche Sicherheit bietet.
 Anwendungsbereich: HTTP wird für den Austausch von Informationen auf Websites verwendet. 
-HTTPS wird speziell für sichere Transaktionen und den geschützten Datenaustausch verwendet.
+HTTPS wird speziell für sichere Transaktionen und den geschuetzten Datenaustausch verwendet.
 )";
 	}
 	void shownetwork3()
@@ -555,10 +575,10 @@ und einem Server verwendet, beispielsweise beim Hochladen von Dateien auf eine W
 		cout << R"(
 SMTP/POP/IMAP (Simple Mail Transfer Protocol/Post Office Protocol/Internet Message Access Protocol):
 
-Beschreibung: SMTP wird verwendet, um E-Mails zu senden, während POP und IMAP dazu dienen, 
+Beschreibung: SMTP wird verwendet, um E-Mails zu senden, waehrend POP und IMAP dazu dienen, 
 E-Mails auf einem Server abzurufen. POP lädt E-Mails herunter und löscht 
 sie vom Server, während IMAP die E-Mails auf dem Server belässt.
-Anwendungsbereich: Diese Protokolle werden für die Übertragung und den Abruf von E-Mails verwendet.
+Anwendungsbereich: Diese Protokolle werden für die Uebertragung und den Abruf von E-Mails verwendet.
 )";
 	}
 	void shownetwork5()
@@ -588,7 +608,7 @@ ist als die Zuverlässigkeit der Datenübertragung, wie bei Videostreaming oder On
 		cout << R"(
 SSH (Secure Shell):
 
-Beschreibung: SSH bietet eine sichere Möglichkeit, auf entfernte Systeme zuzugreifen 
+Beschreibung: SSH bietet eine sichere Moeglichkeit, auf entfernte Systeme zuzugreifen 
 und Befehle auszuführen. Es verschlüsselt die Kommunikation zwischen dem Client und dem Server.
 Anwendungsbereich: SSH wird häufig für die Fernadministration von Servern und sichere Dateiübertragungen verwendet.
 )";
@@ -612,8 +632,8 @@ Hier sind einige wichtige Netzwerkprotokolle:
             cout << "5. DNS " << endl;
             cout << "6. UDP" << endl;
             cout << "7. SSH" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -655,7 +675,7 @@ Hier sind einige wichtige Netzwerkprotokolle:
             case 0:
                 return; 
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2)); 
                 break;
             }
@@ -689,7 +709,7 @@ Typen: Single-Mode-Faser, Multi-Mode-Faser.
     {
       cout <<  R"(
 Netzkabel:
-Anwendung: Übertragung von Strom zwischen Netzsteckdose und Geräten.
+Anwendung: Uebertragung von Strom zwischen Netzsteckdose und Geräten.
 Typen: Schuko, C13/C14, C5/C6, C7/C8.
 Stromkabel:
     versorgen Komponenten mit Strom.
@@ -703,13 +723,13 @@ Stromkabel:
        cout << R"(
 Audio- und Videoverbindungen:
 HDMI-Kabel:
-Anwendung: Übertragung von Audio- und Videosignalen zwischen Geräten.
+Anwendung: Uebertragung von Audio- und Videosignalen zwischen Geräten.
 Typen: HDMI 1.4, HDMI 2.0, HDMI 2.1.
 DisplayPort-Kabel:
 Anwendung: Hochauflösende Video- und Audioübertragung.
 Typen: DisplayPort 1.2, DisplayPort 1.4.
 Audio-Kabel:
-Anwendung: Übertragung von Audiosignalen zwischen Geräten.
+Anwendung: Uebertragung von Audiosignalen zwischen Geräten.
 Typen: 3,5-mm-Klinkenstecker, 6,35-mm-Klinkenstecker.
 )";
     }
@@ -718,24 +738,24 @@ Typen: 3,5-mm-Klinkenstecker, 6,35-mm-Klinkenstecker.
      cout <<   R"(
 Speicher- und Datenverbindungen:
 USB-Kabel:
-Anwendung: Datenübertragung zwischen Computern und Peripheriegeräten.
+Anwendung: Datenübertragung zwischen Computern und Peripheriegeraeten.
 USB 2.0: Übertragungsgeschwindigkeit: Bis zu 480 Mbit/s.
-Standard für viele Jahre. Verbindung von Peripheriegeräten, externen Festplatten, Kameras usw.
+Standard für viele Jahre. Verbindung von Peripheriegeraeten, externen Festplatten, Kameras usw.
 USB 3.0 (auch als USB 3.1 Gen 1 bekannt): Übertragungsgeschwindigkeit: Bis zu 5 Gbit/s.
 Schnellere Datenübertragung für externe Festplatten, SSDs und andere datenintensive Anwendungen.
 USB 3.1 Gen 2: Übertragungsgeschwindigkeit: Bis zu 10 Gbit/s.
 Noch schnellere Datenübertragung. Verwendet denselben physikalischen Stecker wie USB 3.0.
 USB 3.2: Übertragungsgeschwindigkeit: Bis zu 20 Gbit/s 
-Erhöhte Bandbreite für schnellere Datenübertragung, insbesondere bei USB-C-Verbindungen.
-USB 4: Übertragungsgeschwindigkeit: Bis zu 40 Gbit/s.
+Erhoehte Bandbreite für schnellere Datenübertragung, insbesondere bei USB-C-Verbindungen.
+USB 4: Uebertragungsgeschwindigkeit: Bis zu 40 Gbit/s.
 Neuester Standard, der Funktionen von Thunderbolt 3 übernimmt. Verwendet den USB-C-Stecker.
 USB-C: Merkmale: Kleinere, reversibel einsteckbare Steckverbindung.
-Universeller Steckertyp, unterstützt USB 2.0, USB 3.0, USB 3.1, USB 3.2 und USB4.
+Universeller Steckertyp, unterstuetzt USB 2.0, USB 3.0, USB 3.1, USB 3.2 und USB4.
 SATA-Kabel:
 Anwendung: Verbindung von Festplatten und optischen Laufwerken.
 Typen: SATA I Bis zu 1,5 Gbit/s , SATA II Bis zu 3 Gbit/s , SATA III Bis zu 6 Gbit/s
 Thunderbolt-Kabel:
-Anwendung: Hochgeschwindigkeitsdatenübertragung und Displayverbindung.
+Anwendung: Hochgeschwindigkeitsdatenuebertragung und Displayverbindung.
 Typen: Thunderbolt 2 Mini DisplayPort-Stecker, Thunderbolt 3  USB Type-C-Stecker
 )";
     }
@@ -744,9 +764,9 @@ Typen: Thunderbolt 2 Mini DisplayPort-Stecker, Thunderbolt 3  USB Type-C-Stecker
       cout <<  R"(
 Verbindung von Peripheriegeräten:
 VGA-Kabel:
-Anwendung: Übertragung von Video zwischen Computern und Monitoren (veraltet).
+Anwendung: Uebertragung von Video zwischen Computern und Monitoren (veraltet).
 DVI-Kabel:
-Anwendung: Übertragung von digitalen Videosignalen zwischen Computern und Monitoren.
+Anwendung: Uebertragung von digitalen Videosignalen zwischen Computern und Monitoren.
 PS/2-Kabel:
 Anwendung: Verbindung von Tastaturen und Mäusen mit älteren Computern.
 )";
@@ -756,7 +776,7 @@ Anwendung: Verbindung von Tastaturen und Mäusen mit älteren Computern.
         cout << R"(
 14  Frontpanel-Kabel:
 
-    Funktion: Verbindet die Tasten, LEDs und Audioanschlüsse an der Vorderseite des Gehäuses mit dem Motherboard.
+    Funktion: Verbindet die Tasten, LEDs und Audioanschluesse an der Vorderseite des Gehaeuses mit dem Motherboard.
 
     Spezifikationen:
     - Header-Typen: Die Art der Anschlüsse am Motherboard, z.B. USB-Header, Audio-Header.
@@ -777,10 +797,10 @@ unterteilt nach verschiedenen Anwendungsbereichen:
             cout << "2. Stromversorgung" << endl;
             cout << "3. Audio- und Videoverbindungen" << endl;
             cout << "4. Speicher- und Datenverbindungen" << endl;
-            cout << "5. Verbindung von Peripheriegeräten" << endl;
+            cout << "5. Verbindung von Peripheriegeraeten" << endl;
             cout << "6. Frontpanel Kabel" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -829,14 +849,14 @@ unterteilt nach verschiedenen Anwendungsbereichen:
         cout << R"(
 1  Zentrale Verarbeitungseinheit (CPU):
 
-   Funktion: Führt Anweisungen aus und ist das "Gehirn" des Computers.
+   Funktion: Fuehrt Anweisungen aus und ist das "Gehirn" des Computers.
 
    Spezifikationen:
    - Anzahl der Kerne: Die CPU kann einen oder mehrere Prozessorkerne haben, 
                       die gleichzeitig Aufgaben verarbeiten können.
    - Taktfrequenz: Die Geschwindigkeit, mit der die CPU Anweisungen ausführt, 
                    gemessen in Hertz (Hz) oder Gigahertz (GHz).
-   - Cache: Schneller Speicher, der für den schnellen Zugriff auf häufig 
+   - Cache: Schneller Speicher, der für den schnellen Zugriff auf haeufig 
             verwendete Daten verwendet wird.
    - Architektur: Die Designphilosophie der CPU, z. B. x86, ARM, oder AMD64.
    - Hyper-Threading: Eine Technologie, die die Anzahl der logischen Prozessoren erhöht 
@@ -851,13 +871,13 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    Funktion: Speichert temporäre Daten und ermöglicht schnellen Zugriff für laufende Programme.
 
    Spezifikationen:
-   - Kapazität: Die Menge an Daten, die der RAM speichern kann, gemessen in Gigabyte (GB) oder Terabyte (TB).
+   - Kapazitaet: Die Menge an Daten, die der RAM speichern kann, gemessen in Gigabyte (GB) oder Terabyte (TB).
    - Geschwindigkeit: Die Rate, mit der der RAM Daten lesen oder schreiben kann, gemessen in Megahertz (MHz) oder 
                       Gigahertz (GHz).
    - Typ: Es gibt verschiedene Arten von RAM wie DDR3, DDR4, DDR5 mit unterschiedlichen Geschwindigkeiten und 
           Energieeffizienz.
-   - Latenz: Die Verzögerung zwischen der Anforderung und der Ausführung einer Datenoperation im RAM.
-   - Dual Channel / Quad Channel: Technologien, die die Datenübertragungsrate zwischen RAM und CPU erhöhen können.
+   - Latenz: Die Verzögerung zwischen der Anforderung und der Ausfuehrung einer Datenoperation im RAM.
+   - Dual Channel / Quad Channel: Technologien, die die Datenübertragungsrate zwischen RAM und CPU erhoehen koennen.
 )";
     }
     void showhwinfo3()
@@ -870,8 +890,8 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    Spezifikationen:
    - Leistung: Gemessen in Watt (W), gibt die maximale Energiemenge an, die das Netzteil liefern kann.
    - Effizienz: Der Wirkungsgrad des Netzteils, der angibt, wie gut es Energie in nutzbare Leistung umwandelt.
-   - Anschlüsse: Verschiedene Steckertypen für die Stromversorgung von Komponenten wie CPU, GPU, Festplatten, usw.
-   - Modularität: Ein modulares Netzteil ermöglicht es, nur die benötigten Kabel anzuschließen, was die Kabelführung 
+   - Anschluesse: Verschiedene Steckertypen für die Stromversorgung von Komponenten wie CPU, GPU, Festplatten, usw.
+   - Modularitaet: Ein modulares Netzteil ermöglicht es, nur die benoetigten Kabel anzuschließen, was die Kabelfuehrung 
                   und Luftzirkulation verbessern kann.
 )";
     }
@@ -885,10 +905,10 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    Spezifikationen:
    - Typ: HDDs bieten mehr Speicherplatz zu niedrigeren Kosten, SSDs sind schneller und zuverlässiger, 
           oft mit geringerer Kapazität.
-   - Kapazität: Die Menge an Speicherplatz, gemessen in Gigabyte (GB) oder Terabyte (TB).
+   - Kapazitaet: Die Menge an Speicherplatz, gemessen in Gigabyte (GB) oder Terabyte (TB).
    - Schnittstelle: Die Verbindung zum Motherboard, z.B. SATA oder NVMe für SSDs.
    - RPM (Umdrehungen pro Minute): Die Geschwindigkeit, mit der sich die Platten in einer HDD drehen.
-   - MTBF (Mean Time Between Failures): Die durchschnittliche Zeit zwischen Ausfällen.
+   - MTBF (Mean Time Between Failures): Die durchschnittliche Zeit zwischen Ausfaellen.
 )";
     }
     void showhwinfo5()
@@ -902,7 +922,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - Grafikchip: Der Hauptprozessor der Grafikkarte.
    - VRAM (Video Random Access Memory): Speicher, der für die Verarbeitung von Grafikdaten verwendet wird.
    - CUDA-Kerne (bei NVIDIA GPUs): Parallele Verarbeitungseinheiten für allgemeine Berechnungen.
-   - DirectX / OpenGL / Vulkan-Unterstützung: API-Unterstützung für Grafikanwendungen und Spiele.
+   - DirectX / OpenGL / Vulkan-Unterstuetzung: API-Unterstützung für Grafikanwendungen und Spiele.
 )";
     }
 	void showmainboard1()
@@ -922,13 +942,13 @@ RAM-Steckplätze:
 
 Die RAM-Steckplätze sind die Anschlüsse, in die die Arbeitsspeichermodule (RAM) eingesteckt werden.
 Sie ermöglichen es dem RAM, temporäre Daten schnell zu speichern und darauf zuzugreifen, was die Leistung des Systems bei laufenden Programmen verbessert.
-Die Anzahl und der Typ der RAM-Steckplätze variieren je nach Motherboard und beeinflussen die maximale unterstützte RAM-Kapazität und Geschwindigkeit.
+Die Anzahl und der Typ der RAM-Steckplaetze variieren je nach Motherboard und beeinflussen die maximale unterstützte RAM-Kapazitaet und Geschwindigkeit.
 )";
 	}
 	void showmainboard3()
 	{
 		cout << R"(
-PCIe-Steckplätze:
+PCIe-Steckplaetze:
 
 PCIe (Peripheral Component Interconnect Express) -Steckplätze sind für die Verbindung von Erweiterungskarten wie Grafikkarten, SSDs, Soundkarten und Netzwerkkarten verantwortlich.
 Jeder PCIe-Steckplatz bietet hohe Datenübertragungsraten und ermöglicht die Kommunikation zwischen der Hauptplatine und den Erweiterungskarten.
@@ -938,13 +958,13 @@ Die Anzahl und Art der PCIe-Steckplätze variieren je nach Motherboard-Modell.
 	void showmainboard4()
 	{
 		cout << R"(
-Anschlüsse:
+Anschluesse:
 
 Das Motherboard verfügt über verschiedene Anschlüsse, darunter USB, HDMI, Audioanschlüsse, LAN-Ports und weitere.
-USB-Anschlüsse ermöglichen den Anschluss von Peripheriegeräten wie Tastaturen, Mäusen und Druckern.
+USB-Anschluesse ermöglichen den Anschluss von Peripheriegeräten wie Tastaturen, Mäusen und Druckern.
 HDMI-Anschlüsse dienen zur Verbindung mit Bildschirmen und anderen Anzeigegeräten.
-Audioanschlüsse unterstützen den Anschluss von Lautsprechern, Kopfhörern und Mikrofonen.
-LAN-Ports ermöglichen die Verbindung mit einem Netzwerk für Internetzugang oder lokale Netzwerkkommunikation.
+Audioanschlüsse unterstützen den Anschluss von Lautsprechern, Kopfhoerern und Mikrofonen.
+LAN-Ports ermoeglichen die Verbindung mit einem Netzwerk für Internetzugang oder lokale Netzwerkkommunikation.
 )";
 	}
 	void showmainboard5()
@@ -970,8 +990,8 @@ Er bietet auch Funktionen wie USB-Controller, SATA-Controller und weitere Schnit
 		cout << R"(
 Stromversorgung:
 
-Das Motherboard verfügt über Anschlüsse für die Stromversorgung, einschließlich eines Hauptstromanschlusses (24-Pin ATX) und eines zusätzlichen CPU-Stromanschlusses (4-Pin oder 8-Pin EPS).
-Diese liefern die benötigte Energie für den Betrieb der Komponenten.
+Das Motherboard verfügt über Anschluesse für die Stromversorgung, einschließlich eines Hauptstromanschlusses (24-Pin ATX) und eines zusaetzlichen CPU-Stromanschlusses (4-Pin oder 8-Pin EPS).
+Diese liefern die benoetigte Energie für den Betrieb der Komponenten.
 )";
 	}
     void showhwinfo6()
@@ -988,12 +1008,12 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
             cout << "1. CPU Sockel" << endl;
             cout << "2. RAM Steckplatz" << endl;
             cout << "3. PCIe Steckplatz" << endl;
-            cout << "4. Anschlüsse" << endl;
+            cout << "4. Anschluesse" << endl;
             cout << "5. BIOS/UEFI" << endl;
             cout << "6. Chipsatz" << endl;
             cout << "7. Stromversorgung" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -1035,7 +1055,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -1046,13 +1066,13 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
         cout << R"(
 7  Kühlsystem:
 
-   Funktion: Hält die Temperatur der CPU und GPU auf einem sicheren Niveau, um Überhitzung zu verhindern.
+   Funktion: Hält die Temperatur der CPU und GPU auf einem sicheren Niveau, um Ueberhitzung zu verhindern.
 
    Spezifikationen:
-   - Lüfter / Kühlkörper: Mechanismen zur Wärmeableitung von CPU und GPU.
+   - Lüfter / Kuehlkörper: Mechanismen zur Waermeableitung von CPU und GPU.
    - Kühlmethoden: Luftkühlung oder Wasserkühlung.
    - Lüftergeschwindigkeit: Die Umdrehungen pro Minute des Lüfters.
-   - Geräuschpegel: Die Lautstärke des Kühlsystems während des Betriebs.
+   - Geraeuschpegel: Die Lautstärke des Kuehlsystems während des Betriebs.
 )";
 
     }
@@ -1065,7 +1085,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
 
    Spezifikationen:
    - Audiocodec: Der Chip, der für die Verarbeitung von Audio verantwortlich ist.
-   - Kanäle: Die Anzahl der Audioausgangs- und -eingangskanäle, z.B. 2.1, 5.1, 7.1.
+   - Kanaele: Die Anzahl der Audioausgangs- und -eingangskanäle, z.B. 2.1, 5.1, 7.1.
    - Abtastrate: Die Anzahl der Samples pro Sekunde, gemessen in Hertz (Hz).
 )";
     }
@@ -1077,7 +1097,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
    Funktion: Lesen und Schreiben von CDs, DVDs oder Blu-ray-Discs.
 
    Spezifikationen:
-   - Unterstützte Formate: Welche Arten von optischen Medien das Laufwerk lesen und schreiben kann.
+   - Unterstuetzte Formate: Welche Arten von optischen Medien das Laufwerk lesen und schreiben kann.
    - Lesegeschwindigkeit: Die Geschwindigkeit, mit der das Laufwerk Daten von der Disc liest.
    - Schreibgeschwindigkeit: Die Geschwindigkeit, mit der das Laufwerk Daten auf eine leere Disc schreibt.
 )";
@@ -1092,7 +1112,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
 
     Spezifikationen:
     - Formfaktor: Die Größe und Bauform des Gehäuses, z.B. Tower, Mini-Tower, Desktop.
-    - Erweiterungsschächte: Platz für zusätzliche Komponenten wie Festplatten oder SSDs.
+    - Erweiterungsschaechte: Platz für zusätzliche Komponenten wie Festplatten oder SSDs.
     - Frontanschlüsse: USB-Ports, Audioanschlüsse, Power-Taste, usw.
 )";
     }
@@ -1106,7 +1126,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
 
     Spezifikationen:
     - Batterietyp: 3V CR-2032 Knopfzelle
-    - Lebensdauer: Die geschätzte Lebensdauer der Batterie: ca. 3-5 Jahre
+    - Lebensdauer: Die geschaetzte Lebensdauer der Batterie: ca. 3-5 Jahre
 )";
     }
     void showhwinfo()
@@ -1123,14 +1143,14 @@ Computerhardware / alle physischen Teile oder Komponenten, die zu einem Computer
             cout << "4. Festplatten" << endl;
             cout << "5. Grafikkarte" << endl;
             cout << "6. Mainboard" << endl;
-            cout << "7. Kühlsystem" << endl;
+            cout << "7. Kuehlsystem" << endl;
 			cout << "8. Soundkarte" << endl;
 			cout << "9. Optische Laufwerke" << endl;
 			cout << "10. Gehäuse" << endl;
 			cout << "11. Kabel" << endl;
 			cout << "12. BIOS Batterie" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -1192,7 +1212,7 @@ Computerhardware / alle physischen Teile oder Komponenten, die zu einem Computer
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -1205,28 +1225,28 @@ Verzeichnisdienst:
 AD ist ein hierarchisches Verzeichnisdienstsystem, das Informationen über Objekte im Netzwerk speichert. 
 Diese Objekte können Benutzer, Gruppen, Computer, Drucker, Anwendungen und andere Ressourcen sein.
 Die Informationen werden in einer Baumstruktur organisiert, die als "Verzeichnisbaum" oder 
-"Domänenbaum" bezeichnet wird. Die Grundstruktur ist das "Verzeichnis", 
-das wiederum in "Domänen" unterteilt ist.
+"Domaenenbaum" bezeichnet wird. Die Grundstruktur ist das "Verzeichnis", 
+das wiederum in "Domaenen" unterteilt ist.
 )";
     }
     void showad2() {
         cout << R"(
-Domänen:
+Domaenen:
 
-Eine Domäne ist eine logische Organisationseinheit in einem AD-Netzwerk. 
+Eine Domaene ist eine logische Organisationseinheit in einem AD-Netzwerk. 
 Sie enthält Benutzer, Gruppen und Computerobjekte, die zentral verwaltet werden können.
-Jede Domäne hat eine eindeutige Bezeichnung, die als Domänenname bezeichnet wird. 
-Domänen können auch hierarchisch organisiert werden.
+Jede Domäne hat eine eindeutige Bezeichnung, die als Domaenenname bezeichnet wird. 
+Domaenen können auch hierarchisch organisiert werden.
 )";
     }
     void showad3() {
         cout << R"(
-Domänencontroller:
+Domaenencontroller:
 
 Ein Domänencontroller (DC) ist ein Server, der die AD-Datenbank enthält und 
 Authentifizierungsanfragen sowie Anfragen zum Zugriff auf Ressourcen verarbeitet.
-Es gibt mindestens einen primären Domänencontroller (PDC) pro Domäne, 
-aber zusätzliche Domänencontroller können vorhanden sein, um die Last zu verteilen 
+Es gibt mindestens einen primären Domänencontroller (PDC) pro Domaene, 
+aber zusätzliche Domänencontroller koennen vorhanden sein, um die Last zu verteilen 
 und die Ausfallsicherheit zu verbessern.
 )";
     }
@@ -1237,15 +1257,15 @@ Active Directory-Datenbank:
 Die AD-Datenbank speichert Informationen über Objekte im Netzwerk. Dies umfasst 
 Attribute wie Benutzernamen, Passwörter, Gruppenmitgliedschaften und mehr.
 Die Datenbank wird repliziert, um sicherzustellen, dass Änderungen auf allen 
-Domänencontrollern in einer Domäne synchronisiert werden.
+Domaenencontrollern in einer Domäne synchronisiert werden.
 )";
     }
     void showad5() {
         cout << R"(
 Organizational Units (OU):
 
-OUs sind Container innerhalb von Domänen, die es Administratoren ermöglichen, 
-Objekte zu organisieren und zu verwalten. Sie bieten eine flexible Möglichkeit, 
+OUs sind Container innerhalb von Domänen, die es Administratoren ermoeglichen, 
+Objekte zu organisieren und zu verwalten. Sie bieten eine flexible Moeglichkeit, 
 Gruppenrichtlinien und Berechtigungen auf bestimmte Gruppen von Objekten anzuwenden.
 )";
     }
@@ -1253,7 +1273,7 @@ Gruppenrichtlinien und Berechtigungen auf bestimmte Gruppen von Objekten anzuwen
         cout << R"(
 Gruppenrichtlinien:
 
-Gruppenrichtlinien ermöglichen es Administratoren, Einstellungen auf Benutzer- und Computerebene
+Gruppenrichtlinien ermoeglichen es Administratoren, Einstellungen auf Benutzer- und Computerebene
 zu konfigurieren. Dies reicht von Sicherheitseinstellungen bis hin zu Desktop-Hintergrundbildern.
 )";
     }
@@ -1274,6 +1294,25 @@ Active Directory ist stark mit dem Domain Name System (DNS) integriert.
 DNS wird verwendet, um die Namen von Netzwerkressourcen in IP-Adressen aufzulösen.
 )";
     }
+
+    void showerm()
+    {
+        cout << R"(   
+   ERM   Entity-Relationship-Model       
+                                           /  \
+                          __________ 1    /    \     n ____________
+                         |          |____/  <3  \_____|           |
+                         | Entitaet |    \      /     | Entitaet  |
+               __________ ----------      \    /       ------------
+              ( Attribut )                 \  /  
+               ----------  
+
+ 1-n  n-m (kann durch Zwischentabelle aufgeloest werden in 2*1-n )
+ 
+chen-Notation
+)";
+    }
+
     void showad()
     {
         cout << R"(   
@@ -1298,8 +1337,8 @@ Hier sind die wichtigsten Komponenten und Funktionen von Active Directory:
             cout << "6. Gruppenrichtlinien" << endl;
             cout << "7. Sicherheit" << endl;
             cout << "8. DNS Integration" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Waehlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -1345,7 +1384,7 @@ Hier sind die wichtigsten Komponenten und Funktionen von Active Directory:
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -1355,7 +1394,7 @@ Hier sind die wichtigsten Komponenten und Funktionen von Active Directory:
      cout <<   R"(
 Batteriesicherung: Die USV verfügt über eine interne Batterie, die bei 
 einem Stromausfall aktiviert wird. Diese Batterie versorgt die angeschlossenen 
-Geräte mit Strom, bis die Hauptstromversorgung wiederhergestellt ist.
+Geraete mit Strom, bis die Hauptstromversorgung wiederhergestellt ist.
 )";
     }
 
@@ -1368,24 +1407,24 @@ um Schwankungen in der Netzspannung auszugleichen und eine stabile Stromversorgu
     void showusv3() {
      cout <<   R"(
 Online-, Offline- und Line-Interactive-Modelle: USV-Geräte gibt es in verschiedenen Konfigurationen. 
-Online-USV-Geräte bieten die höchste Schutzniveau, da sie die angeschlossenen Geräte kontinuierlich 
-über die Batterie versorgen. Offline- und Line-Interactive-Modelle schalten die Batterie nur bei 
-Bedarf ein.Online-, Offline- und Line-Interactive-Modelle: USV-Geräte gibt es in verschiedenen 
+Online-USV-Geraete bieten die hoechste Schutzniveau, da sie die angeschlossenen Geräte kontinuierlich 
+ueber die Batterie versorgen. Offline- und Line-Interactive-Modelle schalten die Batterie nur bei 
+Bedarf ein.Online-, Offline- und Line-Interactive-Modelle: USV-Geraete gibt es in verschiedenen 
 Konfigurationen. Online-USV-Geräte bieten die höchste Schutzniveau, da sie die angeschlossenen 
-Geräte kontinuierlich über die Batterie versorgen. Offline- und Line-Interactive-Modelle 
+Geraete kontinuierlich über die Batterie versorgen. Offline- und Line-Interactive-Modelle 
 schalten die Batterie nur bei Bedarf ein.
 )";
     }
     void showusv4() {
     cout <<    R"(
-Überspannungsschutz: USV-Geräte bieten oft Schutz vor Überspannungen, 
+Ueberspannungsschutz: USV-Geraete bieten oft Schutz vor Ueberspannungen, 
 die durch Blitzeinschläge oder andere elektrische Störungen verursacht werden können.
 )";
     }
     void showusv5() {
      cout <<   R"(
-Schnittstellen: Viele moderne USV-Geräte verfügen über Schnittstellen wie USB oder Netzwerkanschlüsse, 
-um mit Computern oder Netzwerken zu kommunizieren. Dies ermöglicht es der USV, den Status zu überwachen 
+Schnittstellen: Viele moderne USV-Geraete verfuegen über Schnittstellen wie USB oder Netzwerkanschluesse, 
+um mit Computern oder Netzwerken zu kommunizieren. Dies ermoeglicht es der USV, den Status zu überwachen 
 und automatisch herunterzufahren, wenn die Batterieleistung kritisch wird.
 )";
     }
@@ -1393,19 +1432,19 @@ und automatisch herunterzufahren, wenn die Batterieleistung kritisch wird.
         cout << R"(
 Kapazität und Laufzeit:
 
-Die Kapazität einer USV wird in Voltampere (VA) oder Watt (W) gemessen und gibt an, 
-wie viel Last sie unterstützen kann. Die Laufzeit der USV hängt von der Kapazität und 
-der angeschlossenen Last ab. Größere Kapazitäten und Batterien ermöglichen längere Laufzeiten.
+Die Kapazitaet einer USV wird in Voltampere (VA) oder Watt (W) gemessen und gibt an, 
+wie viel Last sie unterstuetzen kann. Die Laufzeit der USV haengt von der Kapazität und 
+der angeschlossenen Last ab. Groessere Kapazitaeten und Batterien ermoeglichen laengere Laufzeiten.
 )";
     }
     void showusv()
     {
         cout << R"(   
  Eine unterbrechungsfreie Stromversorgung (USV) ist eine elektronische Vorrichtung, 
-die dazu dient, kritische elektronische Geräte vor Stromausfällen, 
+die dazu dient, kritische elektronische Geraete vor Stromausfällen, 
 Spannungsschwankungen und anderen Stromproblemen zu schützen. Die Hauptfunktion einer USV besteht darin, 
-eine zeitweise Energiequelle bereitzustellen, wenn die Hauptstromversorgung ausfällt. 
-Dies ermöglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung weiterzuarbeiten.
+eine zeitweise Energiequelle bereitzustellen, wenn die Hauptstromversorgung ausfaellt. 
+Dies ermoeglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung weiterzuarbeiten.
 )";
         int choice;
         while (true)
@@ -1413,11 +1452,11 @@ Dies ermöglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung w
             cout << "1. Batteriesicherung" << endl;
             cout << "2. Automatische Spannungsregelung (AVR)" << endl;
             cout << "3. Online-, Offline- Standby- Eco- Modell" << endl;
-            cout << "4. Überspannungsschutz" << endl;
+            cout << "4. Ueberspannungsschutz" << endl;
             cout << "5. Schnittstellen" << endl;
             cout << "6. Kapazität und Laufzeit" << endl;
-            cout << "0. Zurück zum Hauptmenü" << endl;
-            cout << "Wählen Sie eine Option: ";
+            cout << "0. Zurueck" << endl;
+            cout << "Wahlen Sie eine Option: ";
             if (!(cin >> choice))
             {
                 cin.clear();
@@ -1455,7 +1494,7 @@ Dies ermöglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung w
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -1485,9 +1524,9 @@ Zweite Seite:
                                                   |  | ' 6.                   |                              |  |     
                                                   |  | ' 7. Active Directory  |                              |  |     
                                                   |  | ' 8.                   |                              |  |     
-                                                  |  | ' 9.                   |                              |  |     
+                                                  |  | ' 9. ERM Diagramm      |                              |  |     
                                                   |  | '10.                   |                              |  |     
-                                                  |  | ' 0. zurück            |                              |  |     
+                                                  |  | ' 0. zurueck           |                              |  |     
                                                   |  | @----------------------                               |  |     
                                                   |  |-------------------------------------------------------|  |
                                                   |__________________________________________________________|  /      
@@ -1554,17 +1593,17 @@ Zweite Seite:
             case 9:
                 animateTransition();
                 clearScreen();
-             
+                showerm();
                 break;
             case 10:
                 animateTransition();
                 clearScreen();
-               
+            
                 break;
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -1578,7 +1617,7 @@ Zweite Seite:
         {
 			system("cls");
 			clearScreen();
-            cout << "Wählen Sie eine Option: ";
+            cout << "Waehlen Sie eine Option: ";
           cout <<  R"(
 
 
@@ -1596,8 +1635,8 @@ Zweite Seite:
                                                   |  | ' 7. OSI Modell        |                              |  |     
                                                   |  | ' 8. Netzwerkprotokoll |                              |  |     
                                                   |  | ' 9. Links             |                              |  |     
-                                                  |  | '10. nächste Seite     |                              |  |     
-                                                  |  | ' 0. zurück            |                              |  |     
+                                                  |  | '10. naechste Seite    |                              |  |     
+                                                  |  | ' 0. zurueck           |                              |  |     
                                                   |  | @----------------------                               |  |     
                                                   |  |-------------------------------------------------------|  |
                                                   |__________________________________________________________|  /      
@@ -1674,7 +1713,7 @@ Zweite Seite:
                 running = false;
                 break;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2)); 
                 break;
             }

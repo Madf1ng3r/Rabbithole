@@ -10,20 +10,20 @@ int gesetzemain() {
         cout << "\033[32m";
         cout << R"(               
  )";  cout << "\033[0m";
-        cout << "                                                ____________________________________" << endl;
+        cout << "                                                 ___________________________________" << endl;
         cout << "                                                |-----------------------------------|" << endl;
         cout << "                                                |        Gesetze                    |" << endl;
         cout << "                                                |-----------------------------------|" << endl;
         cout << "                                                |1. Jugendarbeitsschutzgesetz       |" << endl;
         cout << "                                                |2. Arbeitsschutzgesetz             |" << endl;
         cout << "                                                |3. UrheberGesetz                   |" << endl;
-        cout << "                                                |4. Bürgerliches Gesetzbuch         |" << endl;
+        cout << "                                                |4. Buergerliches Gesetzbuch        |" << endl;
         cout << "                                                |5. Gesetz gegen unlauten Wettbewerb|" << endl;
         cout << "                                                |6. Betriebssicherheitsverordnung   |" << endl;
         cout << "                                                |7. Preisangabenverordnung          |" << endl;
         cout << "                                                |8. Elektrogesetz                   |" << endl;
         cout << "                                                |9. Telekommunikationsgesetz        |" << endl;
-        cout << "                                                |0. Zurück zum Hauptmenü            |" << endl;
+        cout << "                                                |0. Zurueck                         |" << endl;
         cout << "                                                |___________________________________|" << endl;
         // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"

@@ -16,7 +16,6 @@ template<typename T>
 T getRandomElement(const vector<T>& vec) {
     return vec[rand() % vec.size()];
 }
-
 void generateAsciiArt(ArtType artType) {
     srand(static_cast<unsigned>(time(0))); // Zufallszahlengenerator initialisieren
     // Arrays mit verschiedenen Zeichen für verschiedene Arten von Kunstwerken
@@ -114,7 +113,7 @@ void generateAsciiArt(ArtType artType) {
         break;
     }
     default:
-        cout << "Ungültige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << endl;
+        cout << "Ungueltige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << endl;
         generateAsciiArt(LandscapeArt);
         break;
     }
@@ -181,12 +180,12 @@ int artmain() {
         artType = SpaceshipArt;
         break;
     default:
-        cout << "Ungültige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << endl;
+        cout << "Ungueltige Auswahl. Standardmäßig wird ein Landschaftsbild generiert." << endl;
         artType = LandscapeArt;
         break;
     }
     generateAsciiArt(artType);
-    cout << "Drücken sie 1 wenn ich ein weiteres Bild malen soll oder kehre mit einer anderen Taste zum Hauptmenü zurück. ";
+    cout << "Druecken sie 1 wenn ich ein weiteres Bild malen soll oder kehre mit einer anderen Taste zum Hauptmenue zurueck. ";
     char again;
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
     cin >> again;

@@ -5,11 +5,6 @@ void rmmain() {              // Readme Funktion
     cout << endl << endl;
     cout << R"( Version Early Alpha 1.19)
 
-";
-    cout << "\033[32m";  //Anfang grüne Schriftfarbe
-  cout <<  R"(
-  
-
 
 
 

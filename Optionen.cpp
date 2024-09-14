@@ -1,5 +1,4 @@
 #include "Mainframe.h"
-#include <fstream> // Für Dateioperationen
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
@@ -40,10 +39,9 @@ int optionenmain() {
     int choice = LoadLastChoice(); // Lade die letzte Auswahl
     // Initialisiere den Zufallszahlengenerator mit der aktuellen Zeit
     srand(static_cast<unsigned>(time(nullptr)));
-
     do {
         cout << "Optionsmenue:" << endl << endl;
-        cout << "1. Hintergrundfarbe ändern" << endl;
+        cout << "1. Hintergrundfarbe aendern" << endl;
         cout << "2. Textfarbe aendern" << endl;
         cout << "3. Zufaellige Zahl generieren" << endl;
         cout << "4. Zurueck zum Hauptmenue" << endl << endl;
@@ -72,7 +70,6 @@ int optionenmain() {
             cout << "Ungültige Auswahl. Bitte versuche es erneut." << endl;
         }
         SaveLastChoice(choice); // Speichere die aktuelle Auswahl
-
     } while (choice != 4);
     return 0;
 }

@@ -51,7 +51,6 @@ void resetConsoleWindowSize()  // Konsolengröße zurücksetzen
         windowRect.Top = 0;
         windowRect.Right = originalWindowSize.X - 1;
         windowRect.Bottom = originalWindowSize.Y - 1;
-
 		SetConsoleWindowInfo(consoleHandle, TRUE, &windowRect); // Fenstergröße zurücksetzen
         SetConsoleScreenBufferSize(consoleHandle, originalWindowSize);  
     }
@@ -122,7 +121,6 @@ void centerConsoleWindow() // Konsolenfenster  mittig positionieren
 #elif __linux__
 #endif
 }
-
 void executeFile(const string& filename)
 {
     string command;
@@ -301,7 +299,7 @@ int main()   // Hauptfunktion von Rabbithole
 			running = false; 
             break;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << std::endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2)); // 2 Sekunden warten
             break;
         }
@@ -313,7 +311,7 @@ int main()   // Hauptfunktion von Rabbithole
         }
 		if (running) // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingabe machen
         {
-            cout << "Drücken Sie Enter, um fortzufahren.";
+            cout << "Druecken Sie Enter, um fortzufahren.";
             cin.ignore();
             cin.get();
         }

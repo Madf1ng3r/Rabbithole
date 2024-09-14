@@ -9,32 +9,26 @@ double addition(double a, double b)
 {
     return a + b;
 }
-
 double subtraktion(double a, double b)
 {
     return a - b;
 }
-
 double multiplikation(double a, double b)
 {
     return a * b;
 }
-
 double division(double a, double b)
 {
     return static_cast<double>(a) / b;
 }
-
 double potenzierung(double a, double b)
 {
     return pow(a, b);
 }
-
 double quadratwurzel(double a)
 {
     return sqrt(a);
 }
-
 double fakultaet(double a)
 {
     double result = 1;
@@ -44,28 +38,23 @@ double fakultaet(double a)
     }
     return result;
 }
-
 double volumenKreis(double radius)
 {
     return (4.0 / 3.0) * acos(-1) * pow(radius, 3);
 }
-
 double flaecheKreis(double radius)
 {
     return acos(-1) * pow(radius, 2);
 }
-
 double umfangKreis(double radius)
 {
     return 2 * acos(-1) * radius;
 }
-
 string calculatePi()
 {
     string piStr = to_string(acos(-1));
     return piStr.substr(0, piStr.find('.') + 101);
 }
-
 void printMenu()
 {
     cout << "\033[32m"; // Grüne Textfarbe
@@ -86,25 +75,23 @@ void printMenu()
     cout << "                                           ---------------------------------------------------------" << endl;
     cout << "                                           |                Optionen:                               |" << endl;
     cout << "                                           |  1. Addition             |  11. Umfang eines Kreises   |" << endl;
-    cout << "                                           |  2. Subtraktion          |  12. Binärrechner           |" << endl;
+    cout << "                                           |  2. Subtraktion          |  12. Binaerrechner          |" << endl;
     cout << "                                           |  3. Multiplikation       |  13. Bit-/Byte Rechner      |" << endl;
-    cout << "                                           |  4. Division             |  14. Gleichung lösen        |" << endl;
+    cout << "                                           |  4. Division             |  14. Gleichung loesen       |" << endl;
     cout << "                                           |  5. Potenzierung         |                             |" << endl;
     cout << "                                           |  6. Quadratwurzel        |                             |" << endl;
-    cout << "                                           |  7. Fakultät             |                             |" << endl;
+    cout << "                                           |  7. Fakultaet            |                             |" << endl;
     cout << "                                           |  8. Zahl Pi              |                             |" << endl;
     cout << "                                           |  9. Volumen eines Kreises|                             |" << endl;
     cout << "                                           |  10. Fläche eines Kreises|                             |" << endl;
-    cout << "                                           |  0. zurück zum Menue     |                             |" << endl;
+    cout << "                                           |  0. zurueck zum Menue    |                             |" << endl;
     cout << "                                            --------------------------------------------------------" << endl;
 }
-
 void changeConsoleColor(int colorCode)
 {
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, colorCode);
 }
-
 float calculaty(float num1, float num2, char op) {
     if (op == '+') {
         return num1 + num2;
@@ -125,11 +112,10 @@ float calculaty(float num1, float num2, char op) {
         return num1 * num2;
     }
     else {
-        cout << "Ungültige Eingabe" << endl;
+        cout << "Ungueltige Eingabe" << endl;
         return 0;
     }
 }
-
 void calcmain()
 {
     bool running = true;
@@ -139,14 +125,13 @@ void calcmain()
         printMenu();
         string choice;
         cout << "\033[34m";
-        cout << "Wählen Sie eine Option: ";
+        cout << "Waehlen Sie eine Option: ";
         cin >> choice;
         if (choice.empty() || !isdigit(choice[0]))
         {
-            cout << "Ungültige Eingabe. Bitte geben Sie eine Zahl ein." << endl;
+            cout << "Ungueltige Eingabe. Bitte geben Sie eine Zahl ein." << endl;
             continue;
         }
-
         int option = stoi(choice);
         switch (option)
         {
@@ -200,7 +185,7 @@ void calcmain()
             }
             else
             {
-                cout << "Fehler: Division durch Null nicht möglich." << endl;
+                cout << "Fehler: Division durch Null nicht moeglich." << endl;
             }
             break;
         }
@@ -225,7 +210,7 @@ void calcmain()
             }
             else
             {
-                cout << "Fehler: Quadratwurzel einer negativen Zahl nicht möglich." << endl;
+                cout << "Fehler: Quadratwurzel einer negativen Zahl nicht moeglich." << endl;
             }
             break;
         }
@@ -240,7 +225,7 @@ void calcmain()
             }
             else
             {
-                cout << "Fehler: Fakultät einer negativen Zahl nicht möglich." << endl;
+                cout << "Fehler: Fakultät einer negativen Zahl nicht moeglich." << endl;
             }
             break;
         }
@@ -260,7 +245,7 @@ void calcmain()
             double radius;
             cout << "Geben Sie den Radius des Kreises ein: ";
             cin >> radius;
-            cout << "Fläche des Kreises: " << flaecheKreis(radius) << endl;
+            cout << "Flaeche des Kreises: " << flaecheKreis(radius) << endl;
             break;
         }
         case 11:
@@ -291,14 +276,14 @@ void calcmain()
                 cin >> num1;
                 cout << "Gib die zweite Zahl ein: ";
                 cin >> num2;
-                cout << "Wähle eine Rechenoperation (+, -, /, *): ";
+                cout << "Waehle eine Rechenoperation (+, -, /, *): ";
                 cin >> op;
                 cout << setprecision(3) << fixed;
                 float result = calculaty(num1, num2, op);
                 cout << "Ergebnis: " << result << endl;
                 break; }
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             break;
         }
     }
