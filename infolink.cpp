@@ -12,8 +12,9 @@ int infolinkmain() {
         "https://www.lernort-mint.de/informatik",
         "https://www.lawerence.de",
         "https://computerweekly.com/de/definitionen",
-        "https://ss64.com"
-
+        "https://ss64.com",
+        "https://jscompress.com/",
+        "https://smallpdf.com"
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
     int choice;

@@ -147,6 +147,15 @@
     <ClCompile Include="Teil1.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Python.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Linux.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Objekt.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Taschenrechner.h">
@@ -219,9 +228,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Zcode.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Helpdesk.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="BeispielCode.h">

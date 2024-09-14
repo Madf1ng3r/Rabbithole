@@ -23,3 +23,14 @@ int pymain();
 #define HELPDESK_H
 int helpmain();
 #endif // !HELPDESK_H
+
+#ifndef LINUX_H
+#define LINUX_H
+void showLinux();
+int linuxmain();
+#endif // !LINUX_H
+
+#ifndef OBJECT_H
+#define OBJECT_H
+int objectmain();
+#endif // !OBJECT_H

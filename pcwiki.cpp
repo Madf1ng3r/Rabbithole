@@ -1,11 +1,64 @@
 #include "Mainframe.h"
 #include <algorithm>
 #include "pcwiki.h"
-
+#include "Definitionen.h"
+#include "Wiki.h"
 using namespace std;
-
-void genalgo() {
+void programmablauf() {
     R"(
+Variablen werden beim Aufruf eines Programms in den Stack geladen. 
+
+Funtionen werden in den Heap geladen. 
+
+)";
+}
+void programmiersprachen() {
+    cout << R"(
+compilersprachen                    vs                    interpretersprachen
+ C++,                                                   Python
+.cpp, .h                                                     Für die Ausführung braucht man 
+                                                         immer die Entwicklungsumgebung
+Deklaration von Variablen                                dynamische Typisierung
+jede Variable hat einen Datentyp                         Datentyp der Variablen wird
+vorher festlegen, dann Wert zuweisen                     über die Zuweisung festgelegt
+
+             alle Anweisungen, die zusammen ausgeführt werden sollen,
+                               sind ein Anweisungsbock
+{...}                                                    Alle Zeilen die genau untereinander Stehen,
+                                                         gehören zusammen (TAB)
+Es gibt eine main() für Start                            gibt es nicht in Python
+strenge Austeilung des Programmablaufs                   keine strenge Aufteilung
+in Methoden und Funktionen                               Methoden und Funktionen 
+                                                         können frei definiert werden
+Bibliotheken verwenden *.h                               Module verwenden *.py
+
+)"; 
+}
+void programmierung() {
+
+    cout << R"(                                          
+Grafische Oberfläche                 vs                    Konsolenanwendung
+Fensteranwendung                                           strenge Sequenz von Anweisungen
+objektorientiert                                           prozedural
+
+
+ 
+--------------------                                -------------------
+Fensteranwendung   |       1 zu n Beziehung        | Steuerelement      |
+--------------------                                -------------------
+Breite             | Eigenschaften                 | Farbe, Text, Größe |
+Höhe               |                                -------------------
+Titel              |                               | Mouse Over,Click   |
+Position           |                                -------------------
+Öffnen             |  Verhalten
+Beenden            |
+-------------------  
+MouseOver,Click    | Ereignisse
+------------------- 
+)";
+}
+void genalgo() {
+cout <<    R"(
                                            In der Programmierung gibt es zwei verschiedene Arten von Algorithmen:
 
           Deterministische Algorithmen:                                             Probabilistische Algorithmen: 
@@ -15,9 +68,8 @@ void genalgo() {
 
 )";
 }
-
 void suchalgo() {
-    R"(
+ cout <<   R"(
                                  In der Programmierung gibt es zwei verschiedene Arten von Suchalgorithmen:
 
             ein Prozessor                                                                   mehrere Prozessoren
@@ -28,7 +80,6 @@ Lineare Suche in einer Liste (Array) nach einem Wert                            
                                                                                       (Mitte berechnen= Begin+Ende/2)
 )";
 }
-
 void algorithm()
 {
     cout << R"(   
@@ -71,7 +122,6 @@ Hier sind einige der gängigsten RAID-Level:
         }
     }
 }
-
 void showraidzero() {
  cout <<   R"(
 RAID 0 (Striping):
@@ -81,7 +131,6 @@ Funktionsweise: Die Daten werden über mehrere Laufwerke gestreut, was zu schnell
 Datenzugriff führt. Es gibt jedoch keine Redundanz, daher führt der Ausfall eines Laufwerks zum Datenverlust.
 )";
 }
-
 void showraidone() {
 cout <<	R"(
 RAID 1 (Mirroring):
@@ -91,7 +140,6 @@ Funktionsweise: Alle Daten werden gleichzeitig auf zwei Festplatten gespiegelt.
 Wenn eine Festplatte ausfällt, sind die Daten auf der anderen Festplatte weiterhin verfügbar.
 )";
 }
-
 void showraidfive() {
 cout <<	R"(
 RAID 5 (Block-Level Striping mit Parität):
@@ -101,7 +149,6 @@ Funktionsweise: Daten werden auf mehreren Laufwerken gestreut, und Paritätsinfor
 Wenn eine Festplatte ausfällt, können die Daten durch Berechnung der Parität wiederhergestellt werden.
 )";
 }
-
 void showraidsix() {
 cout <<	R"(
 RAID 6 (Block-Level Striping mit doppelter Parität):
@@ -111,7 +158,6 @@ Funktionsweise: Ähnlich wie RAID 5, aber mit zusätzlicher Paritätsinformation.
 Es können zwei Festplatten ausfallen, ohne Datenverlust zu verursachen.
 )";
 }
-
 void showraidten() {
 cout <<	R"(
 RAID 10 (RAID 1+0 oder Mirrored Stripes):
@@ -121,7 +167,6 @@ Funktionsweise: Daten werden gespiegelt (RAID 1) und dann gestreut (RAID 0).
 Bietet hohe Leistung und Datensicherheit, erfordert jedoch mehr Festplatten.
 )";
 }
-
 void showraidfifty() {
 cout <<	R"(
 RAID 50 (Combining RAID 5 and RAID 0):
@@ -130,7 +175,6 @@ Ziel: Kombination von RAID 5 für Redundanz und RAID 0 für Leistung.
 Funktionsweise: Es werden mehrere RAID-5-Arrays kombiniert und über ein RAID-0-Array gestreut.
 )";
 }
-
 void showraid()
 {
     cout << R"(   
@@ -192,7 +236,6 @@ Hier sind einige der gängigsten RAID-Level:
         }
     }
 }
-
     void showandg() 
     {
          cout <<   R"(  
@@ -224,8 +267,6 @@ A | B | Q |
 -----------
 )";
 	}
-
-
     void showxorg()
 	{
     cout <<    R"(
@@ -241,7 +282,6 @@ A	B = Q
 ----------
 )";
 	}
-
     void showorg()
     {
         cout << R"(
@@ -257,7 +297,6 @@ A	B = Q
 ----------
 )";
  }
-
     void shownorg()
     {
      cout <<   R"(
@@ -271,7 +310,6 @@ A	B	Q
 1	1	0
 )";
     }
-
     void shownotg()
     {
       cout <<  R"(
@@ -283,7 +321,6 @@ A	Q
 1	0
 )";
     }
-
     void showlogicgate()
     {
         cout << R"(   
@@ -344,7 +381,6 @@ um logische Operationen durchzuführen. Hier sind die grundlegenden logischen Gat
             }
         }
     }
-
 	void showosi1()
 	{
         cout << R"(
@@ -354,7 +390,6 @@ Schnittstelle zum Übertragungsmedium. Einfacher gesagt: Sie beinhaltet die Daten
 der beteiligten physischen Geräte wie Kabel und Schalter. 
 )";
 	}
-
 	void showosi2()
 	{
 		cout << R"(
@@ -365,7 +400,6 @@ im selben Netzwerk. Dabei nimmt der data link layer Pakete vom network layer auf
 und zerlegt sie in kleinere Teile, den sogenannten Frames. 
 )";
 	}
-
 	void showosi3()
 	{
 		cout << R"(
@@ -376,7 +410,6 @@ Auch hier teilen sich die Segmente auf dem Sendergerät von dem Transport Layer i
 und fügen diese Pakete auf dem Empfängergerät wieder zusammen.
 )";
 	}
-
 	void showosi4()
 	{
 		cout << R"(
@@ -386,7 +419,6 @@ Sie gilt also als Bindeglied zwischen den transportorientierten und anwendungsor
 Zur Datenübertragung wird das Gesamtpaket in kleinere Bestandteile zerlegt. 
 )";
 	}
-
 	void showosi5()
 	{
 		cout << R"(
@@ -398,7 +430,6 @@ geöffnet bleibt, um alle auszutauschenden Daten zu übertragen. Im Anschluss dara
 schließt sich die Sitzung, um Ressourcenverschwendung zu vermeiden.
 )";
 	}
-
 	void showosi6()
 	{
 		cout << R"(
@@ -409,7 +440,6 @@ Die Kommunikation mit einem Webserver über HTTPS (hypertext transfer protocol se
 ist verschlüsselt, weshalb die Daten erst entschlüsselt werden müssen. 
 )";
 	}
-
 	void showosi7()
 	{
 		cout << R"(
@@ -419,7 +449,6 @@ Außerdem ermöglicht sie die Verbindung zu den unteren Schichten.
 Auf dieser Ebene findet auch die Dateneingabe und -ausgabe statt. 
 )";
 	}
-
     void showosi()
     {
         cout << R"(   
@@ -486,7 +515,6 @@ und besteht aus 7 Level:
             }
         }
     }
-
 	void shownetwork1()
 	{
         cout << R"(
@@ -501,7 +529,6 @@ meisten Internetanwendungen wie Webseitenzugriff, E-Mail,
 Dateiübertragungen und mehr verwendet.
 )";
 	}
-
 	void shownetwork2()
 	{
 		cout << R"(
@@ -513,7 +540,6 @@ Anwendungsbereich: HTTP wird für den Austausch von Informationen auf Websites ve
 HTTPS wird speziell für sichere Transaktionen und den geschützten Datenaustausch verwendet.
 )";
 	}
-
 	void shownetwork3()
 	{
 		cout << R"(
@@ -524,7 +550,6 @@ Anwendungsbereich: Es wird oft für den Austausch von Dateien zwischen einem Benu
 und einem Server verwendet, beispielsweise beim Hochladen von Dateien auf eine Website.
 )";
 	}
-
 	void shownetwork4()
 	{
 		cout << R"(
@@ -536,7 +561,6 @@ sie vom Server, während IMAP die E-Mails auf dem Server belässt.
 Anwendungsbereich: Diese Protokolle werden für die Übertragung und den Abruf von E-Mails verwendet.
 )";
 	}
-
 	void shownetwork5()
 	{
 		cout << R"(
@@ -548,7 +572,6 @@ Anwendungsbereich: Jedes Mal, wenn Sie eine Website besuchen, wird DNS verwendet
 um den Domainnamen in die entsprechende IP-Adresse umzuwandeln.
 )";
 	}
-
 	void shownetwork6()
 	{
 		cout << R"(
@@ -560,7 +583,6 @@ Anwendungsbereich: Es wird für Anwendungen verwendet, bei denen geringe Latenz w
 ist als die Zuverlässigkeit der Datenübertragung, wie bei Videostreaming oder Online-Spielen.
 )";
 	}
-
 	void shownetwork7()
 	{
 		cout << R"(
@@ -571,7 +593,6 @@ und Befehle auszuführen. Es verschlüsselt die Kommunikation zwischen dem Client 
 Anwendungsbereich: SSH wird häufig für die Fernadministration von Servern und sichere Dateiübertragungen verwendet.
 )";
 	}
-
     void shownetworkp()
     {
         cout << R"(   
@@ -640,7 +661,6 @@ Hier sind einige wichtige Netzwerkprotokolle:
             }
         }
     }
-
     void showkabel1() 
     {
     cout <<    R"(
@@ -665,7 +685,6 @@ Anwendung: Hochgeschwindigkeitsdatenübertragung über große Entfernungen.
 Typen: Single-Mode-Faser, Multi-Mode-Faser.
 )";
     }
-
     void showkabel2() 
     {
       cout <<  R"(
@@ -679,7 +698,6 @@ Stromkabel:
     wie Lüfter oder einige Laufwerke.
 )";
     }
-
     void showkabel3() 
     {
        cout << R"(
@@ -695,7 +713,6 @@ Anwendung: Übertragung von Audiosignalen zwischen Geräten.
 Typen: 3,5-mm-Klinkenstecker, 6,35-mm-Klinkenstecker.
 )";
     }
-
     void showkabel4() 
     {
      cout <<   R"(
@@ -722,7 +739,6 @@ Anwendung: Hochgeschwindigkeitsdatenübertragung und Displayverbindung.
 Typen: Thunderbolt 2 Mini DisplayPort-Stecker, Thunderbolt 3  USB Type-C-Stecker
 )";
     }
-
     void showkabel5() 
     {
       cout <<  R"(
@@ -735,7 +751,6 @@ PS/2-Kabel:
 Anwendung: Verbindung von Tastaturen und Mäusen mit älteren Computern.
 )";
     }
-
     void showkabel6()
     {
         cout << R"(
@@ -748,7 +763,6 @@ Anwendung: Verbindung von Tastaturen und Mäusen mit älteren Computern.
 )";
 
     }
-
     void showkabeli()
     {
         cout << R"(   
@@ -810,7 +824,6 @@ unterteilt nach verschiedenen Anwendungsbereichen:
             }
         }
     }
-
     void showhwinfo1()
     {
         cout << R"(
@@ -829,9 +842,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - Hyper-Threading: Eine Technologie, die die Anzahl der logischen Prozessoren erhöht 
                      und die parallele Verarbeitung verbessert.
 )";
-
     }
-
     void showhwinfo2()
     {
         cout << R"(
@@ -848,9 +859,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - Latenz: Die Verzögerung zwischen der Anforderung und der Ausführung einer Datenoperation im RAM.
    - Dual Channel / Quad Channel: Technologien, die die Datenübertragungsrate zwischen RAM und CPU erhöhen können.
 )";
-
     }
-
     void showhwinfo3()
     {
         cout << R"(
@@ -865,9 +874,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - Modularität: Ein modulares Netzteil ermöglicht es, nur die benötigten Kabel anzuschließen, was die Kabelführung 
                   und Luftzirkulation verbessern kann.
 )";
-
     }
-
     void showhwinfo4()
     {
         cout << R"(
@@ -883,9 +890,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - RPM (Umdrehungen pro Minute): Die Geschwindigkeit, mit der sich die Platten in einer HDD drehen.
    - MTBF (Mean Time Between Failures): Die durchschnittliche Zeit zwischen Ausfällen.
 )";
-
     }
-
     void showhwinfo5()
     {
         cout << R"(
@@ -899,9 +904,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
    - CUDA-Kerne (bei NVIDIA GPUs): Parallele Verarbeitungseinheiten für allgemeine Berechnungen.
    - DirectX / OpenGL / Vulkan-Unterstützung: API-Unterstützung für Grafikanwendungen und Spiele.
 )";
-
     }
-
 	void showmainboard1()
 	{
 		cout << R"(
@@ -912,7 +915,6 @@ Der Sockel stellt nicht nur die mechanische Verbindung zur Verfügung, sondern au
 Es ermöglicht den Datenaustausch zwischen der CPU und anderen Komponenten auf dem Motherboard.
 )";
 	}
-
 	void showmainboard2()
 	{
 		cout << R"(
@@ -923,7 +925,6 @@ Sie ermöglichen es dem RAM, temporäre Daten schnell zu speichern und darauf zuzu
 Die Anzahl und der Typ der RAM-Steckplätze variieren je nach Motherboard und beeinflussen die maximale unterstützte RAM-Kapazität und Geschwindigkeit.
 )";
 	}
-
 	void showmainboard3()
 	{
 		cout << R"(
@@ -934,7 +935,6 @@ Jeder PCIe-Steckplatz bietet hohe Datenübertragungsraten und ermöglicht die Komm
 Die Anzahl und Art der PCIe-Steckplätze variieren je nach Motherboard-Modell.
 )";
 	}
-
 	void showmainboard4()
 	{
 		cout << R"(
@@ -947,7 +947,6 @@ Audioanschlüsse unterstützen den Anschluss von Lautsprechern, Kopfhörern und Mik
 LAN-Ports ermöglichen die Verbindung mit einem Netzwerk für Internetzugang oder lokale Netzwerkkommunikation.
 )";
 	}
-
 	void showmainboard5()
 	{
 		cout << R"(
@@ -957,7 +956,6 @@ Das Basic Input/Output System (BIOS) oder das Unified Extensible Firmware Interf
 Es handelt sich um eine Firmware, die vor dem Start des Betriebssystems ausgeführt wird und grundlegende Einstellungen wie Bootreihenfolge und Hardwarekonfiguration speichert.
 )";
 	}
-
 	void showmainboard6()
 	{
 		cout << R"(
@@ -967,7 +965,6 @@ Der Chipsatz ist ein entscheidender Bestandteil des Motherboards, der die Kommun
 Er bietet auch Funktionen wie USB-Controller, SATA-Controller und weitere Schnittstellen.
 )";
 	}
-
 	void showmainboard7()
 	{
 		cout << R"(
@@ -977,7 +974,6 @@ Das Motherboard verfügt über Anschlüsse für die Stromversorgung, einschließlich 
 Diese liefern die benötigte Energie für den Betrieb der Komponenten.
 )";
 	}
-
     void showhwinfo6()
     {
         cout << R"(
@@ -1045,7 +1041,6 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
             }
         }
     }
-
     void showhwinfo7()
     {
         cout << R"(
@@ -1061,7 +1056,6 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
 )";
 
     }
-
     void showhwinfo8()
     {
         cout << R"(
@@ -1074,9 +1068,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
    - Kanäle: Die Anzahl der Audioausgangs- und -eingangskanäle, z.B. 2.1, 5.1, 7.1.
    - Abtastrate: Die Anzahl der Samples pro Sekunde, gemessen in Hertz (Hz).
 )";
-
     }
-
     void showhwinfo9()
     {
         cout << R"(
@@ -1089,9 +1081,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
    - Lesegeschwindigkeit: Die Geschwindigkeit, mit der das Laufwerk Daten von der Disc liest.
    - Schreibgeschwindigkeit: Die Geschwindigkeit, mit der das Laufwerk Daten auf eine leere Disc schreibt.
 )";
-
     }
-
     void showhwinfo10()
     {
         cout << R"(
@@ -1105,9 +1095,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
     - Erweiterungsschächte: Platz für zusätzliche Komponenten wie Festplatten oder SSDs.
     - Frontanschlüsse: USB-Ports, Audioanschlüsse, Power-Taste, usw.
 )";
-
     }
-
     void showhwinfo12()
     {
         cout << R"(
@@ -1120,9 +1108,7 @@ Diese liefern die benötigte Energie für den Betrieb der Komponenten.
     - Batterietyp: 3V CR-2032 Knopfzelle
     - Lebensdauer: Die geschätzte Lebensdauer der Batterie: ca. 3-5 Jahre
 )";
-
     }
-
     void showhwinfo()
     {
         cout << R"(   
@@ -1212,7 +1198,6 @@ Computerhardware / alle physischen Teile oder Komponenten, die zu einem Computer
             }
         }
     }
-
     void showad1() {
         cout << R"(
 Verzeichnisdienst:
@@ -1234,7 +1219,6 @@ Jede Domäne hat eine eindeutige Bezeichnung, die als Domänenname bezeichnet wird
 Domänen können auch hierarchisch organisiert werden.
 )";
     }
-
     void showad3() {
         cout << R"(
 Domänencontroller:
@@ -1246,7 +1230,6 @@ aber zusätzliche Domänencontroller können vorhanden sein, um die Last zu verteil
 und die Ausfallsicherheit zu verbessern.
 )";
     }
-
     void showad4() {
         cout << R"(
 Active Directory-Datenbank:
@@ -1257,7 +1240,6 @@ Die Datenbank wird repliziert, um sicherzustellen, dass Änderungen auf allen
 Domänencontrollern in einer Domäne synchronisiert werden.
 )";
     }
-
     void showad5() {
         cout << R"(
 Organizational Units (OU):
@@ -1267,7 +1249,6 @@ Objekte zu organisieren und zu verwalten. Sie bieten eine flexible Möglichkeit,
 Gruppenrichtlinien und Berechtigungen auf bestimmte Gruppen von Objekten anzuwenden.
 )";
     }
-
     void showad6() {
         cout << R"(
 Gruppenrichtlinien:
@@ -1276,7 +1257,6 @@ Gruppenrichtlinien ermöglichen es Administratoren, Einstellungen auf Benutzer- u
 zu konfigurieren. Dies reicht von Sicherheitseinstellungen bis hin zu Desktop-Hintergrundbildern.
 )";
     }
-
     void showad7() {
         cout << R"(
 Sicherheit:
@@ -1294,7 +1274,6 @@ Active Directory ist stark mit dem Domain Name System (DNS) integriert.
 DNS wird verwendet, um die Namen von Netzwerkressourcen in IP-Adressen aufzulösen.
 )";
     }
-
     void showad()
     {
         cout << R"(   
@@ -1372,7 +1351,6 @@ Hier sind die wichtigsten Komponenten und Funktionen von Active Directory:
             }
         }
     }
-
     void showusv1() {
      cout <<   R"(
 Batteriesicherung: Die USV verfügt über eine interne Batterie, die bei 
@@ -1387,7 +1365,6 @@ Automatische Spannungsregelung (AVR): Viele USV-Modelle verfügen über AVR,
 um Schwankungen in der Netzspannung auszugleichen und eine stabile Stromversorgung sicherzustellen.
 )";
     }
-
     void showusv3() {
      cout <<   R"(
 Online-, Offline- und Line-Interactive-Modelle: USV-Geräte gibt es in verschiedenen Konfigurationen. 
@@ -1399,14 +1376,12 @@ Geräte kontinuierlich über die Batterie versorgen. Offline- und Line-Interactive
 schalten die Batterie nur bei Bedarf ein.
 )";
     }
-
     void showusv4() {
     cout <<    R"(
 Überspannungsschutz: USV-Geräte bieten oft Schutz vor Überspannungen, 
 die durch Blitzeinschläge oder andere elektrische Störungen verursacht werden können.
 )";
     }
-
     void showusv5() {
      cout <<   R"(
 Schnittstellen: Viele moderne USV-Geräte verfügen über Schnittstellen wie USB oder Netzwerkanschlüsse, 
@@ -1414,7 +1389,6 @@ um mit Computern oder Netzwerken zu kommunizieren. Dies ermöglicht es der USV, d
 und automatisch herunterzufahren, wenn die Batterieleistung kritisch wird.
 )";
     }
-
     void showusv6() {
         cout << R"(
 Kapazität und Laufzeit:
@@ -1424,7 +1398,6 @@ wie viel Last sie unterstützen kann. Die Laufzeit der USV hängt von der Kapazitä
 der angeschlossenen Last ab. Größere Kapazitäten und Batterien ermöglichen längere Laufzeiten.
 )";
     }
-
     void showusv()
     {
         cout << R"(   
@@ -1488,7 +1461,6 @@ Dies ermöglicht es den angeschlossenen Geräten, nahtlos und ohne Unterbrechung w
             }
         }
     }
-
     void showpcwikitwo()
     {
         cout << R"(   
@@ -1598,7 +1570,6 @@ Zweite Seite:
             }
         }
     }
-
     int pcwikimain()
     {
         bool running = true;
@@ -1617,10 +1588,10 @@ Zweite Seite:
                                                    /  _______________________________________________________   |     
                                                   |  |------------------------                               |  |     
                                                   |  | ' 1.  Logic Gates      |                              |  |    
-                                                  |  | ' 2.                   |                              |  |     
+                                                  |  | ' 2.  ObjectProgramm   |                              |  |     
                                                   |  | ' 3.  PC Komponenten   |                              |  |     
-                                                  |  | ' 4.                   |                              |  |     
-                                                  |  | ' 5.                   |                              |  |    
+                                                  |  | ' 4.  Programmierung   |                              |  |     
+                                                  |  | ' 5. Programmiersprache|                              |  |    
                                                   |  | ' 6. RAID Systeme      |                              |  |     
                                                   |  | ' 7. OSI Modell        |                              |  |     
                                                   |  | ' 8. Netzwerkprotokoll |                              |  |     
@@ -1658,7 +1629,7 @@ Zweite Seite:
             case 2:
                 animateTransition();
 				clearScreen();
-
+                objectmain();
                 break;
             case 3:
 				animateTransition();
@@ -1668,12 +1639,12 @@ Zweite Seite:
             case 4:
 				animateTransition();
 				clearScreen();
-
+                programmierung();
                 break;
 			case 5:
 				animateTransition();
 				clearScreen();
-           
+                programmiersprachen();
 				break;
 			case 6:
 				animateTransition();

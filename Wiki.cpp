@@ -23,9 +23,9 @@ void showWiki()
                                                   |  | |-----------------------|                             |  |     
                                                   |  | |         WIKI          |                             |  |     
                                                   |  | |-----------------------|-------------------          |  |     
-                                                  |  | |1. C++                 | 6. Prüfungsfragen '         |  |    
+                                                  |  | |1. C++                 | 6. 1. Pruefung    '         |  |    
        .--.           .---.        .-.            |  | |2. CMD                 | 7. Python         '         |  |     
-   .---|--|   .-.     | B |  .---. |~|            |  | |3. SQL                 |                   '         |  |     
+   .---|--|   .-.     | B |  .---. |~|            |  | |3. SQL                 | 8. Linux          '         |  |     
 .--|===|W |---|_|--.__| W |--|:::| |~|-==-.__ ___ |  | |4. Elektronik & PC     |                   '         |  |     
 |C#|C++|i |===| |~~|%%| L |--|SQL|_|~|HTML|  |___||  | |5. BWL                 |                   '         |  |     
 |  |   |S |===| |==|  |   |  |:::|=| |    |PC|---||  | |0. Zurück zum Hauptmenü|                   '         |  |     
@@ -94,6 +94,11 @@ int wikimain() {
             animateTransition();
             clearScreen();
             showPython();
+            break;
+        case 8:
+            animateTransition();
+            clearScreen();
+            linuxmain();
             break;
         case 0:
             running = false;

@@ -59,7 +59,6 @@ void resetConsoleWindowSize()  // Konsolengröße zurücksetzen
 #elif __APPLE__ || __linux__
 void resetConsoleWindowSize()
 {
-    // Unter macOS und Linux ist keine Anpassung der Fenstergröße erforderlich
 }
 #endif
 //std::string getCurrentUsername() {
@@ -93,7 +92,7 @@ void showMenu()
     cout << "                                         |  | ' 9.  Matrix          '--------------                 |  |     " << endl;
     cout << "  \033[32m      __  __       _       _     \033[0m      |  | '10.  Geschichte      ' 11. Hardware '                |  |     " << endl;
     cout << "  \033[32m     |  \\/  |     | |     (_)     \033[0m     |  | ' 0.  Beenden         '--------------                 |  |     " << endl;
-    cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------'                               |  |     " << endl;
+    cout << "  \033[32m     | \\  / | __ _| |__ __ _  _  __  \033[0m  |  | @---------------------' 14. Optionen '                |  |     " << endl;
     cout << "  \033[32m     | |\\/| |/ _` | __|'__| |\) )/ / \033[0m   |  |-------------------------------------------------------|  |     " << endl;
     cout << "   \033[32m    | |  | | (_| | | | | | | ><   \033[0m    |__________________________________________________________|  /      " << endl;
     cout << "  \033[32m     |_|  |_|(__,_|_| |_| |_/_/]_[   \033[0m    (__________________________________________________________/        " << endl;
@@ -193,7 +192,6 @@ int main()   // Hauptfunktion von Rabbithole
         // Schritt 3: Speichert den Namen in der Konfigurationsdatei
         saveNameToFile("config.txt", g_name);
     }
-   
     while (running)
     {
         if (menuVisible)
@@ -217,10 +215,10 @@ int main()   // Hauptfunktion von Rabbithole
 			cin.ignore((numeric_limits<streamsize>::max)(), '\n');  // Leerzeichen ignorieren
 			cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << endl; //Fehlermeldung
 			this_thread::sleep_for(chrono::seconds(1)); // 1 Sekunde warten
-            continue;    // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingbae machen
+            continue;    // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingabe machen
         }
         //clockThread.detach();
-        switch (choice)          // Auswahl der Optionen
+        switch (choice)          // Auswahl der Option
         {
         case 1:
             animateTransition();   // schneller Ladebildschirm mit Übergangseffekt
@@ -257,7 +255,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 7:
             animateTransition();
             clearScreen();
-            linkmain(); // Eine Funktion aus Links.cpp aufrufen
+            linkmain(); // Links.cpp
             break;
         case 8:
             animateTransition();
@@ -267,7 +265,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 9:
             animateTransition();
             clearScreen();
-            bimain(); // Matrix
+            bimain(); // Matrixregen
             break;
         case 10:
             animateTransition();
@@ -292,7 +290,7 @@ int main()   // Hauptfunktion von Rabbithole
         case 14:
             animateTransition();
             clearScreen();
-
+            optionenmain();
             break;
         case 15:
             animateTransition();
