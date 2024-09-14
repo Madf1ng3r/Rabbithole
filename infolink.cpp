@@ -15,7 +15,11 @@ int infolinkmain() {
         "https://computerweekly.com/de/definitionen",
         "https://ss64.com",
         "https://jscompress.com/",
-        "https://smallpdf.com"
+        "https://smallpdf.com",
+        "https://www.av-test.org/de/",
+        "https://gc.de/gc/",
+        "https://www.yougetsignal.com",
+        "https://htmlcolorcodes.com",
     };
     int numLinks = sizeof(links) / sizeof(links[0]);
     int choice;
