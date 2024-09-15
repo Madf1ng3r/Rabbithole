@@ -452,26 +452,20 @@ Die richtige Antwort ist A)
 Um diese Aufgabe zu loesen, muss man wissen, wie die Subnetzmaske die Anzahl der möglichen Hosts in einem Netzwerk bestimmt. Die Subnetzmaske besteht aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehören zum Hostanteil der IP-Adresse. Die Anzahl der möglichen Hosts in einem Netzwerk ist gleich 2 hoch der Anzahl der 0-Bits in der Subnetzmaske minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
 
 Die Subnetzmaske 255.255.255.192 hat folgende binäre Darstellung:
-
 11111111.11111111.11111111.11000000
 
 Die Anzahl der 0-Bits in der Subnetzmaske ist 6. Die Anzahl der möglichen Hosts in einem Netzwerk mit dieser Subnetzmaske ist also:
-
 26?2=64?2=62
 26?2=64?2=62
 
 Das bedeutet, dass in einem Netzwerk mit der Subnetzmaske 255.255.255.192 maximal 62 Hosts adressiert werden können.
 
 
-
 Wie lautet das Ergebnis der binären Division 1000 : 10?
-
 A) 10 B) 100 C) 101 D) 110
 
 Die richtige Antwort ist B)
-
 Um diese Aufgabe zu lösen, muss man die binäre Division anwenden, die ähnlich wie die schriftliche Division im Dezimalsystem funktioniert. Dabei muss man beachten, dass die binäre Subtraktion folgende Regeln hat:
-
 0 - 0 = 0
 0 - 1 = 1 (Borrow 1)
 1 - 0 = 1
@@ -493,7 +487,6 @@ Das bedeutet, dass das Ergebnis der binären Division 1000 : 10 gleich 100 ist.
 
 
 Wie viele IP-Adressen stehen in einem Netzwerk mit der CIDR-Notation 192.168.1.0/24 zur Verfügung?
-
 A) 256 B) 254 C) 128 D) 126
 
 Die richtige Antwort ist B)
@@ -525,11 +518,8 @@ Das bedeutet, dass in einem Netzwerk mit der CIDR-Notation 192.168.1.0/24 254 IP
 Was ist der Unterschied zwischen einem Switch und einem Hub in einem lokalen Netzwerk?
 
 A) Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet, während ein Hub ein Gerät ist, das Datenpakete an alle angeschlossenen Geräte sendet.
-
 B) Ein Switch ist ein Gerät, das Datenpakete an alle angeschlossenen Geräte sendet, während ein Hub ein Gerät ist, das Datenpakete gezielt an die Empfänger weiterleitet.
-
 C) Ein Switch ist ein Gerät, das Datenpakete filtert und priorisiert, während ein Hub ein Gerät ist, das Datenpakete verstärkt und wiederholt.
-
 D) Ein Switch ist ein Gerät, das Datenpakete verstärkt und wiederholt, während ein Hub ein Gerät ist, das Datenpakete filtert und priorisiert.
 
 Die richtige Antwort ist A)
@@ -546,11 +536,8 @@ void pruefungsfragen5() {
 Wie lautet der Pseudocode, um die Summe der ersten n natürlichen Zahlen zu berechnen?
 
 A) sum = 0 for i = 1 to n sum = sum + i end for print sum
-
 B) sum = 0 while i <= n sum = sum + i i = i + 1 end while print sum
-
 C) sum = 0 repeat sum = sum + i i = i + 1 until i > n print sum
-
 D) sum = 0 do sum = sum + i i = i + 1 while i <= n print sum
 
 Die richtige Antwort ist A)
@@ -568,11 +555,8 @@ Die Antwort D) ist ebenfalls falsch, da sie eine do-while-Schleife verwendet, di
 Wie lautet der Pseudocode, um die Fakultät einer natürlichen Zahl n zu berechnen?
 
 A) fak = 1 for i = 1 to n fak = fak * i end for print fak
-
 B) fak = 1 while n > 0 fak = fak * n n = n - 1 end while print fak
-
 C) fak = 1 repeat fak = fak * n n = n - 1 until n = 0 print fak
-
 D) fak = 1 do fak = fak * n n = n - 1 while n > 0 print fak
 
 Die richtige Antwort ist B)
@@ -587,7 +571,6 @@ Die Antwort D) ist ebenfalls falsch, da sie eine do-while-Schleife verwendet, di
 
 
 Wie lautet der Fachbegriff für die Eigenschaften oder Merkmale einer Entität, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden?
-
 A) Attribute B) Relationen C) Schlüssel D) Tupel
 
 Die richtige Antwort ist A)
@@ -601,7 +584,6 @@ Die Antwort C) ist auch falsch, da Schlüssel die Attribute sind, die eine Entitä
 Die Antwort D) ist ebenfalls falsch, da Tupel die einzelnen Datensätze oder Zeilen in einer Tabelle darstellen, die eine Instanz einer Entität repräsentieren. Tupel sind die konkreten Werte, die den Attributen einer Entität zugewiesen werden. Zum Beispiel kann ein Tupel in der Tabelle Student die Werte Max, 123456, Informatik, max@uni.de für die Attribute Name, Matrikelnummer, Studiengang, E-Mail haben.
 
 Welche der folgenden Aussagen über den Arbeitsspeicher (RAM) ist falsch?
-
 A) Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. B) Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, ohne auf die Festplatte zuzugreifen. C) Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von zusätzlichen Speichermodulen vergrößert werden kann. D) Der Arbeitsspeicher ist ein permanenter Speicher, der die Daten auch nach dem Ausschalten des Computers behält.
 
 Die richtige Antwort ist D)
@@ -610,27 +592,28 @@ Die Aussage D) ist falsch, da der Arbeitsspeicher ein flüchtiger Speicher ist, d
 
 Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften und Funktionen des Arbeitsspeichers korrekt beschreiben. Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. Das bedeutet, dass der Arbeitsspeicher nur die Daten speichert, die gerade vom Computer benötigt werden, und nicht die Daten, die dauerhaft gesichert werden sollen. Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, ohne auf die Festplatte zuzugreifen. Das bedeutet, dass der Arbeitsspeicher die Leistung und Geschwindigkeit des Computers erhöht, indem er die Zugriffszeiten auf die Daten verkürzt. Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von zusätzlichen Speichermodulen vergrößert werden kann. Das bedeutet, dass der Arbeitsspeicher an die Bedürfnisse und Anforderungen des Computers angepasst werden kann, indem mehr Speicherplatz hinzugefügt wird.
 
-
 )";
 }
 
 void pruefungsfragen6() {
- cout <<   R"(
+    cout << R"(
 
 Wie viele Subnetze und wie viele Hosts pro Subnetz kann man mit der CIDR-Notation 10.0.0.0/20 bilden?
 
 A) 16 Subnetze mit je 4094 Hosts B) 64 Subnetze mit je 1022 Hosts C) 256 Subnetze mit je 254 Hosts D) 1024 Subnetze mit je 62 Hosts
 
 Die richtige Antwort ist B)
-
 Um diese Aufgabe zu lösen, muss man wissen, wie die CIDR-Notation die Anzahl der möglichen Subnetze und Hosts in einem Netzwerk bestimmt. Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehören. Die restlichen Bits gehören zum Subnetz- und Hostanteil der Adresse. Die Anzahl der möglichen Subnetze in einem Netzwerk ist gleich 2 hoch der Anzahl der Bits im Subnetzanteil. Die Anzahl der möglichen Hosts in einem Subnetz ist gleich 2 hoch der Anzahl der Bits im Hostanteil minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Subnetz für das Subnetz selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
 
 Die CIDR-Notation 10.0.0.0/20 hat folgende binaere Darstellung:
-
 00001010.00000000.0000|0000.00000000 / 20
 
-Die Anzahl der Bits im Netzwerkanteil ist 20, die Anzahl der Bits im Subnetz- und Hostanteil ist 12. Um die Anzahl der Bits im Subnetz- und Hostanteil aufzuteilen, muss man die gewünschte Subnetzmaske wählen. Die Subnetzmaske ist eine Bitfolge, die angibt, welche Bits zum Subnetzanteil und welche zum Hostanteil gehören. Die Bits, die 1 sind, gehören zum Subnetzanteil, die Bits, die 0 sind, gehören zum Hostanteil. Die Subnetzmaske muss immer mit einer Reihe von 1 beginnen und mit einer Reihe von 0 enden. Die Länge der Subnetzmaske muss gleich der Länge des Präfixes plus der Länge des Subnetzanteils sein.
-
+Die Anzahl der Bits im Netzwerkanteil ist 20, die Anzahl der Bits im Subnetz- und Hostanteil ist 12. 
+Um die Anzahl der Bits im Subnetz- und Hostanteil aufzuteilen, muss man die gewuenschte Subnetzmaske waehlen. 
+Die Subnetzmaske ist eine Bitfolge, die angibt, welche Bits zum Subnetzanteil und welche zum Hostanteil gehoeren. 
+Die Bits, die 1 sind, gehören zum Subnetzanteil, die Bits, die 0 sind, gehoeren zum Hostanteil. 
+Die Subnetzmaske muss immer mit einer Reihe von 1 beginnen und mit einer Reihe von 0 enden. 
+Die Laenge der Subnetzmaske muss gleich der Laenge des Praefixes plus der Länge des Subnetzanteils sein.
 Um die Antwortmöglichkeiten zu ueberprüfen, muss man die Subnetzmaske für jede Option berechnen und die Anzahl der Subnetze und Hosts daraus ableiten. Das ergibt:
 
 A) 16 Subnetze mit je 4094 Hosts
@@ -638,7 +621,6 @@ A) 16 Subnetze mit je 4094 Hosts
 Die Subnetzmaske für diese Option ist 255.255.240.0, die folgende binaere Darstellung hat:
 
 11111111.11111111.1111|0000.00000000 / 24
-
 Die Anzahl der Bits im Subnetzanteil ist 4, die Anzahl der Bits im Hostanteil ist 8. Die Anzahl der möglichen Subnetze ist also:
 
 2
@@ -666,17 +648,13 @@ Diese Option ist falsch, da die Anzahl der Hosts pro Subnetz nicht mit der Angab
 B) 64 Subnetze mit je 1022 Hosts
 
 Die Subnetzmaske für diese Option ist 255.255.252.0, die folgende binäre Darstellung hat:
-
 11111111.11111111.1111|1100.00000000 / 22
-
 Die Anzahl der Bits im Subnetzanteil ist 6, die Anzahl der Bits im Hostanteil ist 6. Die Anzahl der möglichen Subnetze ist also:
-
 2
 6
 =
 64
 26=64
-
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
 26?2=64?2
 =
@@ -692,11 +670,9 @@ Die Subnetzmaske für diese Option ist 255.255.255.0, die folgende binäre Darstel
 11111111.11111111.1111|1111.00000000 / 28
 
 Die Anzahl der Bits im Subnetzanteil ist 8, die Anzahl der Bits im Hostanteil ist 4. Die Anzahl der möglichen Subnetze ist also:
-
 28=25628=256
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
-
 24?2=16?2=14
 24?2=16?2=14
 
@@ -712,15 +688,12 @@ Die Anzahl der Bits im Subnetzanteil ist 10, die Anzahl der Bits im Hostanteil i
 210=1024210=1024
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
-
 22?2=4?2=222?2=4?2=2
 
 Diese Option ist falsch, da die Anzahl der Hosts pro Subnetz nicht mit der Angabe übereinstimmt.
 
 
-
 Wie lautet die IP-Adresse des Netzwerks, wenn die IP-Adresse eines Hosts 192.168.12.34 und die Subnetzmaske 255.255.255.0 ist?
-
 A) 192.168.12.0 B) 192.168.12.34 C) 192.168.0.0 D) 192.168.0.34
 
 Die richtige Antwort ist A)
@@ -746,27 +719,21 @@ Die IP-Adresse des Netzwerks ist also 11000000.10101000.00001100.00000000, die i
 Was ist der Unterschied zwischen TCP und UDP in Bezug auf die Übertragung von Datenpaketen im Internet?
 
 A) TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet.
-
 B) TCP ist ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll, das keine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll ist, das eine Quittung für jedes gesendete Datenpaket erwartet.
-
 C) TCP ist ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, zuverlässiges und geordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet.
-
 D) TCP ist ein verbindungsloses, zuverlässiges und geordnetes Protokoll, das keine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protokoll ist, das eine Quittung für jedes gesendete Datenpaket erwartet.
 
 Die richtige Antwort ist A)
 TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet. Das bedeutet, dass TCP eine Verbindung zwischen Sender und Empfänger aufbaut, bevor die Daten übertragen werden, und sicherstellt, dass die Daten vollständig, fehlerfrei und in der richtigen Reihenfolge ankommen, indem es die Pakete nummeriert, bestätigt und gegebenenfalls erneut sendet. UDP hingegen sendet die Daten ohne Verbindungsaufbau und ohne Garantie, dass die Daten ankommen, korrekt sind oder in der richtigen Reihenfolge sind, indem es die Pakete einfach an die Zieladresse schickt. TCP ist daher für Anwendungen geeignet, die eine hohe Zuverlässigkeit und Qualität der Datenübertragung erfordern, wie z.B. Webseiten, E-Mails oder Dateitransfers. UDP ist hingegen für Anwendungen geeignet, die eine hohe Geschwindigkeit und Effizienz der Datenübertragung erfordern, wie z.B. Sprach- oder Videotelefonie, Online-Spiele oder Streaming.
 
 
-
-Wie viel Speicherplatz benötigt man, um ein 15-minütiges Video in Full HD (1920 x 1080 Pixel) mit 30 Bildern pro Sekunde und einer Farbtiefe von 24 Bit zu speichern?
+Wie viel Speicherplatz benoetigt man, um ein 15-minütiges Video in Full HD (1920 x 1080 Pixel) mit 30 Bildern pro Sekunde und einer Farbtiefe von 24 Bit zu speichern?
 A) 1,2 GB B) 2,4 GB C) 3,6 GB D) 4,8 GB
 
 Die richtige Antwort ist C)
 Um diese Aufgabe zu lösen, muss man wissen, wie der Speicherbedarf eines Videos berechnet wird. Der Speicherbedarf eines Videos hängt von der Auflösung, der Bildrate, der Farbtiefe und der Länge des Videos ab. Die Formel lautet:
 
-
 S=R×F×B×T
-
 Dabei ist S der Speicherbedarf in Byte, R die Auflösung in Pixel, F die Bildrate in Bildern pro Sekunde, B die Farbtiefe in Bit und T die Länge des Videos in Sekunden. Wenn man die gegebenen Werte einsetzt, erhält man:
 
 =1920×1080×30×24×15×60=3.597.721.600Byte
@@ -777,18 +744,15 @@ Um die Antwort in Gigabyte zu erhalten, muss man den Speicherbedarf durch 1024 h
 102/43=3,35 GB
 102433.597.721.600??3,35 GB
 
-Da die Antwortmöglichkeiten nur eine Nachkommastelle haben, muss man den Speicherbedarf auf eine Nachkommastelle runden. Das ergibt 3,6 GB als richtige Antwort.
+Da die Antwortmoeglichkeiten nur eine Nachkommastelle haben, muss man den Speicherbedarf auf eine Nachkommastelle runden. Das ergibt 3,6 GB als richtige Antwort.
 
 
 
 Welche der folgenden Aussagen über das OSI-Modell ist falsch?
 
 A) Das OSI-Modell besteht aus sieben Schichten, die jeweils eine bestimmte Funktion bei der Datenübertragung erfüllen.
-
 B) Das OSI-Modell ist ein universeller Standard, der die Kommunikation zwischen verschiedenen Netzwerkgeräten und -protokollen ermöglicht.
-
 C) Das OSI-Modell ist ein hierarchisches Modell, bei dem jede höhere Schicht auf den Diensten der darunterliegenden Schicht aufbaut.
-
 D) Das OSI-Modell ist ein dynamisches Modell, bei dem die Schichten je nach Bedarf hinzugefügt oder entfernt werden können.
 
 Die richtige Antwort ist D)
@@ -800,23 +764,15 @@ Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften 
 
 
 Wie lautet der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu löschen, die in Berlin wohnen?
-
-A) DELETE FROM Kunden WHERE Stadt = ‘Berlin’; B) DROP FROM Kunden WHERE Stadt = ‘Berlin’; C) REMOVE FROM Kunden WHERE Stadt = ‘Berlin’; D) TRUNCATE FROM Kunden WHERE Stadt = ‘Berlin’;
+A) DELETE FROM Kunden WHERE Stadt = ‘Berlin’; B) DROP FROM Kunden WHERE Stadt = ‘Berlin’; 
+C) REMOVE FROM Kunden WHERE Stadt = ‘Berlin’; D) TRUNCATE FROM Kunden WHERE Stadt = ‘Berlin’;
 
 Die richtige Antwort ist A)
 
-Der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu löschen, die in Berlin wohnen, ist DELETE FROM Kunden WHERE Stadt = ‘Berlin’. Dieser Befehl entfernt alle Zeilen aus der Tabelle Kunden, die die Bedingung Stadt = ‘Berlin’ erfüllen.
-
-Die Antwort B) ist falsch, da DROP kein gültiger SQL-Befehl ist, um Datensätze zu löschen. DROP wird verwendet, um Tabellen oder Datenbanken zu löschen.
-
-Die Antwort C) ist auch falsch, da REMOVE kein gültiger SQL-Befehl ist, um Datensätze zu löschen. REMOVE wird nicht in SQL verwendet.
-
-Die Antwort D) ist ebenfalls falsch, da TRUNCATE kein gültiger SQL-Befehl ist, um Datensätze zu löschen. TRUNCATE wird verwendet, um alle Datensätze aus einer Tabelle zu löschen, ohne eine Bedingung anzugeben.
-
+Der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu löschen, die in Berlin wohnen, ist DELETE FROM Kunden WHERE Stadt = ‘Berlin’. 
+Dieser Befehl entfernt alle Zeilen aus der Tabelle Kunden, die die Bedingung Stadt = ‘Berlin’ erfuellen.
 )";
 }
-
-
 void pruefungsfragen2() {
     bool running = true;
     do {
@@ -825,42 +781,44 @@ void pruefungsfragen2() {
         clearScreen();
  cout <<   R"(
 
-Binäre Addition:
-Erläuterung: Bei der binären Addition werden zwei binäre Zahlen zusammengezählt, ähnlich wie bei der Dezimaladdition. Überträge können auftreten,
+Binaere Addition:
+Erlaeuterung: Bei der binaeren Addition werden zwei binaere Zahlen zusammengezaehlt, 
+aehnlich wie bei der Dezimaladdition. Uebertraege koennen auftreten,
  wenn das Ergebnis größer als eins ist.
-Beispiel: Addieren wir die binären Zahlen 101 und 111:
+Beispiel: Addieren wir die binaeren Zahlen 101 und 111:
   101
 + 111
 -----
  1010
-Lösung: Die Addition ergibt 1010 in binärer Form.
-Binäre Subtraktion:
-Erläuterung: Bei der binären Subtraktion wird eine binäre Zahl von einer anderen subtrahiert. Überträge können auftreten, wenn das Subtrahend größer als der Minuend ist.
-Beispiel: Subtrahieren wir die binäre Zahl 1101 von der binären Zahl 10010:
+Lösung: Die Addition ergibt 1010 in binaerer Form.
+Binaere Subtraktion:
+Erlaeuterung: Bei der binaeren Subtraktion wird eine binaere Zahl von einer anderen subtrahiert. 
+Uebertraege koennen auftreten, wenn das Subtrahend groeßer als der Minuend ist.
+Beispiel: Subtrahieren wir die binäre Zahl 1101 von der binaeren Zahl 10010:
   10010
 -  1101
 -------
   1001
-Lösung: Die Subtraktion ergibt 1001 in binärer Form.
-Bitweise UND-Verknüpfung:
-Erläuterung: Die bitweise UND-Verknüpfung führt eine logische UND-Operation auf den entsprechenden Bits von zwei binären Zahlen durch.
-Beispiel: Führen wir die bitweise UND-Verknüpfung der binären Zahlen 101010 und 110011 durch:
+Lösung: Die Subtraktion ergibt 1001 in binaerer Form.
+Bitweise UND-Verknuepfung:
+Erläuterung: Die bitweise UND-Verknüpfung führt eine logische UND-Operation auf den entsprechenden Bits von zwei binaeren Zahlen durch.
+Beispiel: Führen wir die bitweise UND-Verknüpfung der binaeren Zahlen 101010 und 110011 durch:
 markdown
 Copy code
   101010
 & 110011
 --------
   100010
-Lösung: Das Ergebnis der bitweisen UND-Verknüpfung ist 100010 in binärer Form.
+Loesung: Das Ergebnis der bitweisen UND-Verknüpfung ist 100010 in binaerer Form.
 Zweierkomplement:
 Erläuterung: Das Zweierkomplement wird verwendet, um negative Zahlen im Binärsystem darzustellen. Es wird berechnet, indem man die Bitwerte invertiert und dann eins addiert.
-Beispiel: Berechnen wir das Zweierkomplement der binären Zahl 110101:
+Beispiel: Berechnen wir das Zweierkomplement der binaeren Zahl 110101:
 Original:  110101
 Inversion: 001010
 + 1
 --------
 Komplement: 001011
-Lösung: Das Zweierkomplement von 110101 ist 001011 in binärer Form.
+Loesung: Das Zweierkomplement von 110101 ist 001011 in binaerer Form.
 
 Umrechnung von Dezimal zu Binär und Hexadezimal:
 
@@ -1015,7 +973,6 @@ if (_kbhit()) {
     }
 }
     } while (running);
-
 }
 
 void pruefungsfragen7() {
@@ -1059,7 +1016,6 @@ Pruefungsfragen AP1 Fachinformatiker
         }
     } while (running);
 }
-
 void Fachbegriffe() {
     bool running = true;
     do {
@@ -1091,7 +1047,7 @@ Schleife
 Variable
 Funktion
 Parameter
-Fakultät
+Fakultaet
 
 Projektmanagement-Fachwoerter:
 Wasserfallmodell
@@ -1128,7 +1084,7 @@ Work Breakdown Structure (WBS)
 Change Management
 Stakeholder-Management
 Kommunikationsmanagement
-Qualitätsmanagement
+Qualitaetsmanagement
 
 Netzwerkgrundlagen-Fachwoerter:
 OSI-Modell
@@ -1234,7 +1190,6 @@ if (_kbhit()) {
 }
     } while (running);
 }
-
 void themengebiete() {
     bool running = true;
     do {
@@ -1458,7 +1413,7 @@ int pruefungmain()
                                                   |  | ' 7.  Pruefungsfragen7 |                              |  |     
                                                   |  | ' 8.  Themengebiete    |                              |  |     
                                                   |  | ' 9.  Fachbegriffe     |                              |  |     
-                                                  |  | '10. naechste Seite    |                              |  |     
+                                                  |  | '                      |                              |  |     
                                                   |  | ' 0. zurueck           |                              |  |     
                                                   |  | @----------------------                               |  |     
                                                   |  |-------------------------------------------------------|  |

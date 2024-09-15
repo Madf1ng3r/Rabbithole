@@ -137,7 +137,7 @@ void executeFile(const string& filename)
     int exitCode = system(command.c_str()); // Kommando ausführen, um Datei zu öffnen
     if (exitCode != 0)
     {
-        cout << "Fehler beim Öffnen der Datei." << endl; // Fehlermeldung bei Fehlercode ungleich 0
+        cout << "Fehler beim Oeffnen der Datei." << endl; // Fehlermeldung bei Fehlercode ungleich 0
     }
 }
 void animateTransition()
@@ -206,12 +206,12 @@ int main()   // Hauptfunktion von Rabbithole
         ////        this_thread::sleep_for(chrono::minutes(1)); // Alle 1 Minute aktualisieren
         ////    }
         //});
-        cout << "Wählen Sie eine Option: ";
+        cout << "Waehlen Sie eine Option: ";
         if (!(cin >> choice))
         {
 			cin.clear(); 
 			cin.ignore((numeric_limits<streamsize>::max)(), '\n');  // Leerzeichen ignorieren
-			cout << "Ungültige Eingabe. Bitte versuchen Sie es erneut." << endl; //Fehlermeldung
+			cout << "Ungueltige Eingabe. Bitte versuchen Sie es erneut." << endl; //Fehlermeldung
 			this_thread::sleep_for(chrono::seconds(1)); // 1 Sekunde warten
             continue;    // Nutzer wird zum Anfang der Schleife geleitet und kann erneut eine Eingabe machen
         }

@@ -3,6 +3,7 @@
 #include "BWLLink.h"
 #include "Links.h"
 #include "Gesetze.h"
+#include "Wiki.h"
 using namespace std;
 
 void showFinanzierungsregeln() {
@@ -235,57 +236,69 @@ die aus einem Teil des Kapitals und einem Zinsanteil bestehen
 void showpdca()
 {
     cout << R"(
-Der DemingKreis und die PDCA (Plan-Do-Check-Act) wird in der Qualitätssicherung oft genutzt,
+                                            __________
+                                           /     |    \
+                                          / Plan |  Do \
+                                         {--------------}
+                                         \ Act   | Check/
+                                          \      |     / 
+                                           \_____|____/
+
+Der DemingKreis auch bekannt als PDCA Zylkus (Plan-Do-Check-Act) wird in der Qualitaetssicherung oft genutzt,
 er besteht aus folgenden Punkten:
 Planen (Plan):
-In dieser Phase werden Ziele und Prozesse identifiziert, die verbessert werden sollen. Es geht darum, klare Ziele zu setzen, mögliche Hindernisse zu identifizieren, Lösungsansätze zu entwickeln und Ressourcen zu planen.
+In dieser Phase werden Ziele und Prozesse identifiziert, die verbessert werden sollen. Es geht darum, klare Ziele zu setzen, 
+moegliche Hindernisse zu identifizieren, Loesungsansätze zu entwickeln und Ressourcen zu planen.
 
 Umsetzen (Do):
-Hier werden die geplanten Maßnahmen und Prozesse implementiert. Es ist wichtig, die geplanten Aktionen durchzuführen und sicherzustellen, dass alles nach den vorher festgelegten Plänen und Spezifikationen verläuft.
+Hier werden die geplanten Maßnahmen und Prozesse implementiert. Es ist wichtig, die geplanten Aktionen durchzuführen und sicherzustellen, 
+dass alles nach den vorher festgelegten Plänen und Spezifikationen verläuft.
 
-Überprüfen (Check):
-In dieser Phase wird überprüft, ob die implementierten Maßnahmen die gewünschten Ergebnisse erzielen und den Zielen entsprechen. Daten werden gesammelt und analysiert, um festzustellen, ob Abweichungen auftreten und ob weitere Anpassungen erforderlich sind.
+Ueberpruefen (Check):
+In dieser Phase wird überprüft, ob die implementierten Maßnahmen die gewuenschten Ergebnisse erzielen und den Zielen entsprechen. 
+Daten werden gesammelt und analysiert, um festzustellen, ob Abweichungen auftreten und ob weitere Anpassungen erforderlich sind.
 
 Handeln (Act):
-Basierend auf den Erkenntnissen aus der Überprüfung werden Anpassungen vorgenommen, um die Effektivität und Effizienz der Prozesse zu verbessern. Wenn Verbesserungen erzielt wurden, werden diese standardisiert und in den Arbeitsablauf integriert. Wenn notwendig, beginnt der Zyklus erneut, um weitere Verbesserungen anzustreben.
+Basierend auf den Erkenntnissen aus der Uberpruefung werden Anpassungen vorgenommen, um die Effektivität und Effizienz der Prozesse zu verbessern. 
+Wenn Verbesserungen erzielt wurden, werden diese standardisiert und in den Arbeitsablauf integriert. 
+Wenn notwendig, beginnt der Zyklus erneut, um weitere Verbesserungen anzustreben.
 )";
 }
 
 void showRechtsformen() {
     cout << R"(
 Einzelunternehmen (e.K.):
+Einzelunternehmer führt das Unternehmen alleine und trägt das volle persoenliche Haftungsrisiko.
 
-Einzelunternehmer führt das Unternehmen alleine und trägt das volle persönliche Haftungsrisiko.
 Offene Handelsgesellschaft (OHG):
-
 Zusammenschluss von zwei oder mehreren natürlichen oder juristischen Personen (Personengesellschaft).
 Die Gesellschafter haften persönlich, unbeschränkt und solidarisch.
+
 Kommanditgesellschaft (KG):
-
 Besteht aus Komplementären (unbeschränkte Haftung) und Kommanditisten (beschränkte Haftung auf ihre Einlage).
-Gesellschaft mit beschränkter Haftung (GmbH):
 
+Gesellschaft mit beschränkter Haftung (GmbH):
 Kapitalgesellschaft mit mindestens einem Gesellschafter.
 Haftung beschränkt sich auf das Gesellschaftsvermögen.
+
 Unternehmergesellschaft (haftungsbeschränkt) (UG):
-
 Variante der GmbH, speziell für Gründer mit geringem Stammkapital.
-Aktiengesellschaft (AG):
 
+Aktiengesellschaft (AG):
 Kapitalgesellschaft, deren Grundkapital in Aktien zerlegt ist.
 Aktionäre haften nur mit ihrer Einlage.
+
 Europäische Gesellschaft (SE):
+Gesellschaft mit Sitz in einem EU-Mitgliedsstaat, die nach einheitlichen Regeln gegruendet und geführt wird.
 
-Gesellschaft mit Sitz in einem EU-Mitgliedsstaat, die nach einheitlichen Regeln gegründet und geführt wird.
 Genossenschaft (eG):
-
 Zusammenschluss von Personen oder Unternehmen, um gemeinsame wirtschaftliche Interessen zu verfolgen.
 Mitglieder haften in der Regel beschränkt auf ihre Einlage.
-Gesellschaft bürgerlichen Rechts (GbR):
 
+Gesellschaft buergerlichen Rechts (GbR):
 Zusammenschluss von mindestens zwei natürlichen oder juristischen Personen ohne festes Kapital.
-Partnerschaftsgesellschaft (PartG):
 
+Partnerschaftsgesellschaft (PartG):
 Zusammenschluss von Freiberuflern, z.B. Anwälten, Steuerberatern, Ärzten, zu einer Partnerschaft mit gemeinschaftlicher Berufsausübung.
 Stiftung:
 Rechtliche Einrichtung, bei der Vermögen zur Verfolgung eines bestimmten gemeinnützigen Zwecks eingesetzt wird.
@@ -300,19 +313,23 @@ void showSteuern()
 
 Koerperschaftssteuer: Die Körperschaftssteuer ist eine Steuer, die von juristischen Personen wie Kapitalgesellschaften (z. B. GmbHs und AGs) auf ihre Gewinne erhoben wird. Es handelt sich um eine Unternehmenssteuer, die auf den erzielten Gewinn vor Steuern berechnet wird.
 
-Einkommenssteuer: Die Einkommenssteuer ist eine Steuer, die von natürlichen Personen auf ihr Einkommen erhoben wird. Dieses Einkommen kann aus verschiedenen Quellen stammen, einschließlich Gehältern, Mieteinnahmen, Kapitalerträgen und selbstständiger Arbeit.
+Einkommenssteuer: Die Einkommenssteuer ist eine Steuer, die von natuerlichen Personen auf ihr Einkommen erhoben wird. 
+Dieses Einkommen kann aus verschiedenen Quellen stammen, einschliesslich Gehältern, Mieteinnahmen, Kapitalerträgen und selbstständiger Arbeit.
 
-Umsatzsteuer: Die Umsatzsteuer (auch Mehrwertsteuer genannt) ist eine Verbrauchssteuer, die auf den Verkauf von Waren und Dienstleistungen erhoben wird. Sie wird in der Regel von Unternehmen an den Staat abgeführt und auf den Endverbraucher übertragen. Dies bedeutet, dass Endverbraucher die Umsatzsteuer auf den von ihnen gekauften Produkten und Dienstleistungen bezahlen.
+Umsatzsteuer: Die Umsatzsteuer (auch Mehrwertsteuer genannt) ist eine Verbrauchssteuer, die auf den Verkauf von Waren und Dienstleistungen erhoben wird. 
+Sie wird in der Regel von Unternehmen an den Staat abgeführt und auf den Endverbraucher uebertragen. Dies bedeutet, dass Endverbraucher die Umsatzsteuer auf den von ihnen gekauften Produkten und Dienstleistungen bezahlen.
 
 Gewerbesteuer: Die Gewerbesteuer ist eine Steuer, die von Unternehmen auf ihre Gewinne erhoben wird. Im Gegensatz zur Körperschaftssteuer betrifft die Gewerbesteuer nicht die Rechtsform des Unternehmens, sondern hängt von der Art des Gewerbes und dem erzielten Gewinn ab. Sie ist eine kommunale Steuer, was bedeutet, dass die Höhe der Steuer von der jeweiligen Gemeinde festgelegt wird.
 
 Kapitalertragsteuer: Die Kapitalertragsteuer ist eine Steuer, die von Unternehmen auf ihre Kapitalerträge erhoben wird.
 
-Grundsteuer: Diese Steuer wird auf Grundstücke und Gebäude erhoben. Die Höhe der Grundsteuer basiert in der Regel auf dem Einheitswert und dem Hebesatz, der von den Gemeinden festgelegt wird.
+Grundsteuer: Diese Steuer wird auf Grundstuecke und Gebäude erhoben. Die Höhe der Grundsteuer basiert 
+in der Regel auf dem Einheitswert und dem Hebesatz, der von den Gemeinden festgelegt wird.
 
 Erbschaftssteuer und Schenkungssteuer: Diese Steuern werden auf ererbtes oder geschenktes Vermögen erhoben. Die Steuersätze können je nach Verwandtschaftsgrad und Höhe des übertragenen Vermögens variieren.
 
-Kfz-Steuer: Diese Steuer wird für den Besitz und die Nutzung von Kraftfahrzeugen erhoben. Die Höhe hängt von verschiedenen Faktoren ab, wie z.B. Hubraum, CO2-Emissionen und Art des Fahrzeugs.
+Kfz-Steuer: Diese Steuer wird für den Besitz und die Nutzung von Kraftfahrzeugen erhoben. 
+Die Höhe hängt von verschiedenen Faktoren ab,wie z.B. Hubraum, CO2-Emissionen und Art des Fahrzeugs.
 
 Versicherungssteuer: Diese Steuer wird auf Versicherungsprämien für verschiedene Versicherungsarten (z.B. Lebensversicherungen, Sachversicherungen) erhoben.
 
@@ -334,15 +351,15 @@ void showUrheberrecht()
 {
     cout << R"(
 Das Urheberrecht ist ein Rechtsgebiet, das Kreatoren und Schöpfern das ausschließliche Recht gibt, 
-ihre kreativen Werke zu nutzen und zu kontrollieren. Es schützt die geistige Schöpfung, nicht die Ideen an sich. 
+ihre kreativen Werke zu nutzen und zu kontrollieren. Es schuetzt die geistige Schöpfung, nicht die Ideen an sich. 
 Es ist ein wesentlicher Bestandteil des geistigen Eigentums und soll Anreize für Künstler, Autoren, Musiker, 
 Designer, Entwickler und andere schaffen, indem es ihnen ermöglicht, von ihrer Arbeit zu 
-profitieren und ihre Investitionen zu schützen.
+profitieren und ihre Investitionen zu schuetzen.
 
 Hier sind einige wichtige Punkte zum Urheberrecht:
 
-1. **Schutzumfang**: Das Urheberrecht schützt Werke der Literatur, Kunst, Musik, Film, Architektur, 
-Software und anderen kreativen Ausdrucksformen. Beispiele sind Bücher, Gemälde, Musikstücke, Filme, 
+1. **Schutzumfang**: Das Urheberrecht schuetzt Werke der Literatur, Kunst, Musik, Film, Architektur, 
+Software und anderen kreativen Ausdrucksformen. Beispiele sind Buecher, Gemälde, Musikstuecke, Filme, 
 Softwarecodes und Architekturpläne.
 
 2. **Urheberrechtliche Rechte**: Der Urheber (der Schöpfer des Werks) hat bestimmte Rechte an seinem Werk, 
@@ -372,7 +389,6 @@ Es ist wichtig zu beachten, dass das Urheberrecht eine komplexe rechtliche Mater
 bei Fragen oder Bedenken einen Rechtsanwalt oder Experten für geistiges Eigentum zu konsultieren.
 )";
 }
-
 void showMarktKundenbeziehung()
 {
     cout << R"(
@@ -381,7 +397,6 @@ Eine gute Beziehung zu den Kunden hilft bei der Kundenbindung und ermoeglicht es
 ihre Produkte und Dienstleistungen besser an die Bedürfnisse des Marktes anzupassen.
 )";
 }
-
 void showMarktstrukturenUnternehmenszieleUnternehmensleitlinien()
 {
     cout << R"(
@@ -390,7 +405,6 @@ Oligopol oder vollkommener Wettbewerb. Unternehmensziele sind die angestrebten R
 die ein Unternehmen erreichen möchte. Unternehmensleitlinien sind die Grundprinzipien, nach denen ein Unternehmen handelt.
 )";
 }
-
 void showCorporateIdentityCommunicationBehaviorDesign()
 {
     cout << R"(
@@ -400,14 +414,12 @@ externen Stakeholdern kommuniziert. Corporate Behavior bezieht sich auf das Verh
 innerhalb des Unternehmens. Corporate Design betrifft das visuelle Erscheinungsbild des Unternehmens.
 )";
 }
-
 void showOperativestrategischeZiele()
 {
     cout << R"(
 Operative Ziele sind kurzfristige, konkrete Ziele, waehrend strategische Ziele langfristige, uebergeordnete Ziele sind.
 )";
 }
-
 void showMotivationMaslowKompetenzen()
 {
     cout << R"(
@@ -417,11 +429,9 @@ Kompetenzen beziehen sich auf die Fähigkeiten, Kenntnisse und Erfahrungen, die z
 Durchführung von Aufgaben benötigt werden.
 )";
 }
-
 void showMarktforschungprimäresekundäreDaten()
 {
     cout << R"(
-
 )";
 }
 
@@ -432,7 +442,6 @@ Der Marketing Mix umfasst die vier Elemente Price (Preisgestaltung), Product (Pr
 Placement (Vertrieb) und Promotion (Kommunikation), die gemeinsam die Marketingstrategie eines Unternehmens bilden.
 )";
 }
-
 void showFunkdPreiHochNiedripreiRabatpol()
 {
     cout << R"(
@@ -441,7 +450,6 @@ Hoch- und Niedrigpreisstrategien beziehen sich auf die Preispositionierung von P
 Rabattpolitik bezieht sich auf die Verwendung von Rabatten als Marketinginstrument.
 )";
 }
-
 void showDifferenzierungpsychologischerPreisZahlungsbedingung()
 {
     cout << R"(
@@ -451,7 +459,6 @@ die auf psychologische Faktoren abzielt. Zahlungsbedingungen sind die festgelegt
 unter denen Zahlungen erfolgen.
 )";
 }
-
 void anzeigenLieferbedingungenINCOTermsKreditpolitikLeasingFactoring()
 {
     cout << R"(
@@ -460,7 +467,6 @@ INCO-Terms sind internationale Regeln zur Auslegung von Lieferverträgen. Kreditp
 die Strategien zur Kreditvergabe. Leasing und Factoring sind Finanzierungsinstrumente für Unternehmen.
 )";
 }
-
 void anzeigenHandelsklauselnKreditpolitikMindestreserveOffenmarktpolitik()
 {
     cout << R"(
@@ -469,7 +475,6 @@ Mindestreserve ist der Mindestbetrag, den Banken als Reserve halten müssen. Offe
 Maßnahmen der Zentralbank zur Steuerung der Geldmenge und der Zinsen.
 )";
 }
-
 void anzeigenGewinnberechnungOHGKG()
 {
     R"(
@@ -477,7 +482,6 @@ Die Gewinnberechnung für Offene Handelsgesellschaften (OHG) und Kommanditgesells
 erfolgt auf Grundlage der Gesellschaftsverträge und Beteiligungsverhältnisse.
 )";
 }
-
 void anzeigenDatenschutzgrundverordnungDSGVO()
 {
     cout << R"(
@@ -485,7 +489,6 @@ Die Datenschutzgrundverordnung der EU regelt den Datenschutz und die Privatsphär
 Artikel 1 bis 18 beziehen sich auf die Grundprinzipien und Rechte der betroffenen Personen.
 )";
 }
-
 void anzeigenProduktpolitikDistributionspolitikKommunikationspolitik()
 {
     cout << R"(
@@ -494,7 +497,6 @@ Distributionspolitik bezieht sich auf Entscheidungen über Vertriebskanäle. Kommu
 beinhaltet die Planung und Umsetzung der Kommunikation mit Kunden und anderen Interessengruppen.
 )";
 }
-
 void anzeigenMarktpotentialWachstumReifungSättigungEliminierung()
 {
     cout << R"(
@@ -503,7 +505,6 @@ Reifung ist die Phase, in der das Marktwachstum abflacht. Saettigung ist der Pun
 Eliminierung bezieht sich auf das Ausscheiden von Produkten aus dem Markt.
 )";
 }
-
 void anzeigenKommunikationsmodellSchulzvonThun()
 {
     cout << R"(
@@ -512,7 +513,6 @@ Sachinhalt, Selbstoffenbarung, Beziehung und Appell. Es betont die Bedeutung von
 Kommunikation bei der Interpretation von Botschaften.
 )";
 }
-
 void anzeigenProzesskontrolle()
 {
     cout << R"(
@@ -523,7 +523,6 @@ Das Management Informations System ist eine Software das dieses Controlling erle
 Beispiele dafür sind das V-Model und das Spiralmodel.
 )";
 }
-
 void anzeigenprojektmanagement()
 {
     cout << R"(
@@ -547,7 +546,6 @@ Effektives Projektmanagement zielt darauf ab, die Qualität der Arbeit zu maximie
 dass das Projekt erfolgreich abgeschlossen wird, um den gewuenschten Nutzen zu erzielen.
 )";
 }
-
 void showTotalQualityManagement()
 {
     cout << R"(
@@ -567,7 +565,6 @@ Staendige Verbesserung ( KVP)
 Lieferantenbeziehung zum gegenseitigen Nutzen
 )";
 }
-
 void showVersi()
 {
     cout << R"(
@@ -625,7 +622,6 @@ die waehrend der gesamten Lieferkette entstehen können, einschließlich Lagerung,
 
 )";
 }
-
 void anzeigenGesetze()
 {
     cout << R"(
@@ -637,7 +633,6 @@ Buergerliches Gesetzbuch BgB
 
 )";
 }
-
 void anzeigenproablauf()
 {
     cout << R"(
@@ -666,7 +661,6 @@ Durch eine prozessorientierte Ablauforganisation können Vertriebsabläufe optimie
 um einen reibungslosen Bestellvorgang, eine effektive Lieferung und eine gute Kundenbeziehung sicherzustellen.
 )";
 }
-
 void anzeigenereigv()
 {
     cout << R"(
@@ -683,7 +677,6 @@ verlängerter Eigentumsvorbehalt
 nachtraeglicher Eigentumsvorbehalt 
 )";
 }
-
 void anzeigenrealsich()
 {
     cout << R"(
@@ -691,7 +684,6 @@ Realsicherheiten sind Vermögensgegenstaende, die verpfändet werden, falls der Sc
 Zu diesen Vermögensgegenständen gehören bewegliche und unbewegliche Sachen. Sicherungsmittel an Grundstücken sind Grundschuld und Hypothek.
 )";
 }
-
 void anzeigenholschuld()
 {
     cout << R"(
@@ -700,7 +692,6 @@ Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintrete
  die Leistung beim Schuldner abholen.
 )";
 }
-
 void showzession()
 {
     cout << R"(
@@ -710,7 +701,6 @@ Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessiona
 § 398 Abs. 1 BGB
 )";
 }
-
 void showsixsigma()
 {
     cout << R"(
@@ -727,7 +717,6 @@ Ueberwachung von Geschaeftsvorgängen mit statistischen Mitteln.
                                                                Verbessern
 )";
 }
-
 void showkaizen()
 {
     cout << R"(
@@ -744,7 +733,6 @@ Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum
                                                         Prozessorientierung
 )";
 }
-
 void showsteuererk()
 {
     cout << R"(
@@ -765,7 +753,6 @@ Gutschriften oder Abzügen, die die steuerliche Belastung mindern können.
 Die Steuererklärung ist in den meisten Laendern gesetzlich vorgeschrieben, und die Einreichungsfristen variieren je nach Land und Rechtsvorschriften. Sie ist ein wichtiges Instrument für die Steuerbehörden, um die Steuerzahlungen zu überprüfen und sicherzustellen, dass die Steuerpflichtigen ihre finanziellen Verpflichtungen gegenüber dem Staat erfüllen.
 )";
 }
-
 void showinvestrech()
 {
     cout << R"(
@@ -773,7 +760,6 @@ Mit der Investitionsrechnung sollen Investitionsentscheidungen bezüglich der mon
 Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu einer Zielgröße, beispielsweise der Rentabilitaet, verdichtet.
 )";
 }
-
 void showmaxpr()
 {
     cout << R"(
@@ -782,7 +768,6 @@ Ressourcen das Maximum an Zielen erreicht werden soll. Im ökonomischen Kontext b
 Unternehmen versucht, mit den vorhandenen Ressourcen den größtmoeglichen Gewinn zu erzielen.
 )";
 }
-
 void showminpr()
 {
     cout << R"(
@@ -792,8 +777,6 @@ dass ein Unternehmen versucht, eine bestimmte Produktionsmenge mit minimalen Kos
 um den Gewinn zu maximieren.
 )";
 }
-
-
 void showoekopr()
 {
     cout << R"(   
@@ -835,7 +818,6 @@ um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen
         }
     }
 }
-
 void showgeschp1() {
     R"(
 Beschaffungsprozess:
@@ -846,7 +828,6 @@ Bestellungsabwicklung
 Lieferantenmanagement
 )";
 }
-
 void showgeschp2() {
     R"(
 Produktionsprozess:
@@ -857,7 +838,6 @@ Qualitätskontrolle
 Lagerhaltung
 )";
 }
-
 void showgeschp3() {
     R"(
 Vertriebsprozess:
@@ -868,7 +848,6 @@ Auftragsabwicklung
 Lieferung
 )";
 }
-
 void showgeschp4() {
     R"(
 Finanzprozess:
@@ -879,7 +858,6 @@ Budgetierung
 Finanzplanung
 )";
 }
-
 void showgeschp5() {
     R"(
 Personalprozess:
@@ -890,7 +868,6 @@ Gehaltsabrechnung
 Personalmanagement
 )";
 }
-
 void showgeschp6() {
     R"(
 Innovations- und Entwicklungsprozess:
@@ -901,7 +878,6 @@ Innovationsmanagement
 Markteinfuehrung neuer Produkte
 )";
 }
-
 void showgeschp7() {
     R"(
 Kundenbeziehungsprozess:
@@ -912,14 +888,12 @@ Kundenfeedback
 Kundenzufriedenheitsmessung
 )";
 }
-
 void showgeschaeftsp()
 {
     cout << R"(
 Geschaeftsprozesse sind systematische und wiederholbare Aktivitaetsablaeufe, 
 die in einer Organisation durchgeführt werden, um Ziele zu erreichen. 
 Beispiele für Geschaeftsprozesse sind:\n
-
 )";
     int choice;
     while (true)
@@ -983,7 +957,7 @@ Beispiele für Geschaeftsprozesse sind:\n
 void showbwl4()
 {
     cout << R"(   
-Dritte Seite:
+Vierte Seite:
 )";
     int choice;
     while (true)
@@ -1309,7 +1283,6 @@ Zweite Seite:
         }
     }
 }
-
 int bwlmain()
 {
     bool running = true;
@@ -1339,7 +1312,7 @@ int bwlmain()
                                                   |  | ' 5.                      '        \ \         _.-;   |  |     
                                                   |  | ' 6.                      '         \ \    _.-"   :   |  |     
                                                   |  | ' 7.                      '          \ \,-"    _.-"   |  |     
-                                                  |  | ' 8.                      '           \(   _.-"       |  |     
+                                                  |  | ' 8. 1. Pruefung          '           \(   _.-"       |  |     
                                                   |  | ' 9. Links                '___________ `--"           |  |     
                                                   |  | ' 10. naecheste Seite     '0. zurueck '               |  |     
                                                   |  | @-------------------------------------                |  |     
@@ -1402,9 +1375,8 @@ int bwlmain()
                   
             break;
         case 8:
-            animateTransition();
             clearScreen();
-            
+            pruefungmain();
             break;
         case 9:
             animateTransition();

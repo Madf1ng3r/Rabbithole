@@ -228,9 +228,9 @@ Hier sind einige der gaengigsten RAID-Level:
             showraidfifty();
             break;
         case 0:
-            return; // Zurück zum Hauptmenü
+            return;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }
@@ -240,15 +240,16 @@ Hier sind einige der gaengigsten RAID-Level:
     {
          cout <<   R"(  
 AND - Gate :
+
 Das Ausgangssignal ist nur dann logisch 1 (wahr), wenn beide Eingangssignale logisch 1 sind.
             A AND B = Q 
-___________
-A | B | Q |
-0 | 0 | 0 |
-0 | 1 | 0 |
-1 | 0 | 0 |
-1 | 1 | 1 |
------------
+ ___________
+| A | B | Q |
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+ -----------
 )";
     }
 
@@ -256,69 +257,78 @@ A | B | Q |
     {
        cout << R"(
 NAND-Gate (NOT-UND):
+
 Das Ausgangssignal ist nur dann logisch 0, wenn beide Eingangssignale logisch 1 sind.
 A NAND B = Q
-___________
-A | B | Q |
-0 | 0 = 1 |
-0 | 1 = 1 |
-1 | 0 = 1 |
-1 | 1 = 0 |
------------
+ ___________
+| A | B | Q |
+| 0 | 0 = 1 |
+| 0 | 1 = 1 |
+| 1 | 0 = 1 |
+| 1 | 1 = 0 |
+ -----------
 )";
 	}
     void showxorg()
 	{
     cout <<    R"(
 XOR-Gate (Exklusiv-ODER):
+
 Das Ausgangssignal ist logisch 1, wenn die Eingangssignale unterschiedlich sind.
 A XOR B = Q
-__________
-A	B = Q
-0	0 = 0
-0	1 = 1
-1	0 = 1
-1	1 = 0
-----------
+ ___________
+| A | B | Q |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+ -----------
 )";
 	}
     void showorg()
     {
         cout << R"(
 ODER-Gate (OR):
+
 Das Ausgangssignal ist logisch 1, wenn mindestens eines der Eingangssignale logisch 1 ist.
 A OR B = Q
-__________
-A	B = Q
-0	0 = 0
-0	1 = 1
-1	0 = 1
-1	1 = 1
-----------
+ ___________
+| A | B | Q |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+- ----------
 )";
  }
     void shownorg()
     {
      cout <<   R"(
 NOR-Gate (NOT-ODER):
+
 Das Ausgangssignal ist logisch 0, wenn mindestens eines der Eingangssignale logisch 1 ist.
 A NOR B = Q
-A	B	Q
-0	0	1
-0	1	0
-1	0	0
-1	1	0
+ ___________
+| A | B | Q |
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 0 |
+ -----------
 )";
     }
     void shownotg()
     {
       cout <<  R"(
 NICHT-Gate (NOT):
+
 Das Ausgangssignal ist das Gegenteil des Eingangssignals.
 NOT A = Q
-A	Q
-0	1
-1	0
+ -------
+| A | Q |
+| 0 | 1 |
+| 1 | 0 |
+ -------
 )";
     }
     void showlogicgate()
@@ -386,7 +396,7 @@ um logische Operationen durchzuführen. Hier sind die grundlegenden logischen Gat
         cout << R"(
 Schicht 1: Bituebertragungsschicht (Physical Layer)
 Die Bituebertragungsschicht beschreibt die elektrische, mechanische und funktionale 
-Schnittstelle zum Übertragungsmedium. Einfacher gesagt: Sie beinhaltet die Datenuebertragung 
+Schnittstelle zum Uebertragungsmedium. Einfacher gesagt: Sie beinhaltet die Datenuebertragung 
 der beteiligten physischen Geräte wie Kabel und Schalter. 
 Beispiel:
 Netzwerkkabel, Stecker und Anschlüsse, Netzwerkkarten, Antennen
@@ -438,8 +448,8 @@ TCP , UDP , SCTP
 Schicht 5: Kommunikationsschicht (Session Layer)
 Die Kommunikationsschicht ermöglicht die Verbindungen zwischen den Endsystemen. 
 Die Zeit zwischen dem Öffnen und Schließen der Kommunikation bezeichnest du dabei als Sitzung (Session).
-Darüber hinaus wird durch die session layer sichergestellt, dass die Sitzung lange genug 
-geöffnet bleibt, um alle auszutauschenden Daten zu übertragen. Im Anschluss daran 
+Darueber hinaus wird durch die session layer sichergestellt, dass die Sitzung lange genug 
+geöffnet bleibt, um alle auszutauschenden Daten zu uebertragen. Im Anschluss daran 
 schließt sich die Sitzung, um Ressourcenverschwendung zu vermeiden.
 Beispiele: NetBIOS, PPTP Point to Point Tunneling 
 )";
@@ -449,7 +459,7 @@ Beispiele: NetBIOS, PPTP Point to Point Tunneling
 		cout << R"(
 Schicht 6: Darstellungsschicht (Presentation Layer)
 Die Darstellungsschicht bereitet die Daten so auf, dass sie dem Nutzer angezeigt werden können. 
-In diesem Fall ist es üblich, dass zwei verschiedene Anwendungen die gleiche Kodierung verwenden.
+In diesem Fall ist es ueblich, dass zwei verschiedene Anwendungen die gleiche Kodierung verwenden.
 Die Kommunikation mit einem Webserver über HTTPS (hypertext transfer protocol secure) 
 ist verschlüsselt, weshalb die Daten erst entschluesselt werden müssen. 
 Beispiele:
@@ -555,7 +565,7 @@ Dateiuebertragungen und mehr verwendet.
 HTTP/HTTPS (Hypertext Transfer Protocol/Secure):
 
 Beschreibung: HTTP ist ein Protokoll zur Uebertragung von Hypertext über das Internet. 
-HTTPS ist die sichere Variante von HTTP, die eine verschlüsselte Verbindung für zusaetzliche Sicherheit bietet.
+HTTPS ist die sichere Variante von HTTP, die eine verschluesselte Verbindung für zusaetzliche Sicherheit bietet.
 Anwendungsbereich: HTTP wird für den Austausch von Informationen auf Websites verwendet. 
 HTTPS wird speziell für sichere Transaktionen und den geschuetzten Datenaustausch verwendet.
 )";
@@ -565,7 +575,7 @@ HTTPS wird speziell für sichere Transaktionen und den geschuetzten Datenaustausc
 		cout << R"(
 FTP (File Transfer Protocol):
 
-Beschreibung: FTP ermöglicht die Übertragung von Dateien zwischen einem Client und einem Server über ein Netzwerk.
+Beschreibung: FTP ermöglicht die Übertragung von Dateien zwischen einem Client und einem Server ueber ein Netzwerk.
 Anwendungsbereich: Es wird oft für den Austausch von Dateien zwischen einem Benutzer 
 und einem Server verwendet, beispielsweise beim Hochladen von Dateien auf eine Website.
 )";
@@ -598,9 +608,9 @@ um den Domainnamen in die entsprechende IP-Adresse umzuwandeln.
 UDP (User Datagram Protocol):
 
 Beschreibung: UDP ist ein einfaches, verbindungsloses Protokoll, das für die 
-Übertragung von Daten ohne Sicherheits- oder Integritätsprüfungen verwendet wird.
+Uebertragung von Daten ohne Sicherheits- oder Integritätsprüfungen verwendet wird.
 Anwendungsbereich: Es wird für Anwendungen verwendet, bei denen geringe Latenz wichtiger
-ist als die Zuverlässigkeit der Datenübertragung, wie bei Videostreaming oder Online-Spielen.
+ist als die Zuverlässigkeit der Datenuebertragung, wie bei Videostreaming oder Online-Spielen.
 )";
 	}
 	void shownetwork7()
@@ -610,7 +620,7 @@ SSH (Secure Shell):
 
 Beschreibung: SSH bietet eine sichere Moeglichkeit, auf entfernte Systeme zuzugreifen 
 und Befehle auszuführen. Es verschlüsselt die Kommunikation zwischen dem Client und dem Server.
-Anwendungsbereich: SSH wird häufig für die Fernadministration von Servern und sichere Dateiübertragungen verwendet.
+Anwendungsbereich: SSH wird häufig für die Fernadministration von Servern und sichere Dateiuebertragungen verwendet.
 )";
 	}
     void shownetworkp()
@@ -686,22 +696,22 @@ Hier sind einige wichtige Netzwerkprotokolle:
     cout <<    R"(
 Netzwerkverkabelung:
 Ethernet-Kabel:
-Anwendung: Übertragung von Netzwerksignalen.
+Anwendung: Uebertragung von Netzwerksignalen.
 Typen:
-Cat5: Übertragungsgeschwindigkeit: Bis zu 100 MHz.
+Cat5: Uebertragungsgeschwindigkeit: Bis zu 100 MHz.
 Cat5e (Cat5 Enhanced):
-Übertragungsgeschwindigkeit: Bis zu 1 Gbit/s (1000BASE-T).
-Verbesserte Version von Cat5, die Gigabit Ethernet unterstützt und weniger Störungen aufweist.
-Cat6: Übertragungsgeschwindigkeit: Bis zu 250 MHz.
+Uebertragungsgeschwindigkeit: Bis zu 1 Gbit/s (1000BASE-T).
+Verbesserte Version von Cat5, die Gigabit Ethernet unterstützt und weniger Stoerungen aufweist.
+Cat6: Uebertragungsgeschwindigkeit: Bis zu 250 MHz.
 Geeignet für 1 Gbit/s und 10 Gbit/s Ethernet (10GBASE-T) über kurze Strecken.
-Cat6a (Cat6 Augmented): Übertragungsgeschwindigkeit: Bis zu 500 MHz.
+Cat6a (Cat6 Augmented): Uebertragungsgeschwindigkeit: Bis zu 500 MHz.
 Unterstützt 10 Gbit/s Ethernet über längere Entfernungen als Cat6.
-Cat7: Übertragungsgeschwindigkeit: Bis zu 600 MHz.
-Entwickelt, um 10 Gbit/s und 40 Gbit/s Ethernet zu unterstützen. Geschirmt für verbesserte Leistung und Schutz gegen Störungen.
-Cat8: Übertragungsgeschwindigkeit: Bis zu 2000 MHz.
+Cat7: Uebertragungsgeschwindigkeit: Bis zu 600 MHz.
+Entwickelt, um 10 Gbit/s und 40 Gbit/s Ethernet zu unterstützen. Geschirmt für verbesserte Leistung und Schutz gegen Stoerungen.
+Cat8: Uebertragungsgeschwindigkeit: Bis zu 2000 MHz.
 Unterstützt 25 Gbit/s und 40 Gbit/s Ethernet über kurze Entfernungen.
 Fiber-Optic-Kabel:
-Anwendung: Hochgeschwindigkeitsdatenübertragung über große Entfernungen.
+Anwendung: Hochgeschwindigkeitsdatenuebertragung über große Entfernungen.
 Typen: Single-Mode-Faser, Multi-Mode-Faser.
 )";
     }
@@ -715,7 +725,7 @@ Stromkabel:
     versorgen Komponenten mit Strom.
     Molex-Stecker:
     Funktion: Bietet Stromversorgung für ältere Komponenten 
-    wie Lüfter oder einige Laufwerke.
+    wie Luefter oder einige Laufwerke.
 )";
     }
     void showkabel3() 
@@ -726,7 +736,7 @@ HDMI-Kabel:
 Anwendung: Uebertragung von Audio- und Videosignalen zwischen Geräten.
 Typen: HDMI 1.4, HDMI 2.0, HDMI 2.1.
 DisplayPort-Kabel:
-Anwendung: Hochauflösende Video- und Audioübertragung.
+Anwendung: Hochaufloesende Video- und Audioübertragung.
 Typen: DisplayPort 1.2, DisplayPort 1.4.
 Audio-Kabel:
 Anwendung: Uebertragung von Audiosignalen zwischen Geräten.
@@ -742,11 +752,11 @@ Anwendung: Datenübertragung zwischen Computern und Peripheriegeraeten.
 USB 2.0: Übertragungsgeschwindigkeit: Bis zu 480 Mbit/s.
 Standard für viele Jahre. Verbindung von Peripheriegeraeten, externen Festplatten, Kameras usw.
 USB 3.0 (auch als USB 3.1 Gen 1 bekannt): Übertragungsgeschwindigkeit: Bis zu 5 Gbit/s.
-Schnellere Datenübertragung für externe Festplatten, SSDs und andere datenintensive Anwendungen.
+Schnellere Datenuebertragung für externe Festplatten, SSDs und andere datenintensive Anwendungen.
 USB 3.1 Gen 2: Übertragungsgeschwindigkeit: Bis zu 10 Gbit/s.
 Noch schnellere Datenübertragung. Verwendet denselben physikalischen Stecker wie USB 3.0.
 USB 3.2: Übertragungsgeschwindigkeit: Bis zu 20 Gbit/s 
-Erhoehte Bandbreite für schnellere Datenübertragung, insbesondere bei USB-C-Verbindungen.
+Erhoehte Bandbreite für schnellere Datenuebertragung, insbesondere bei USB-C-Verbindungen.
 USB 4: Uebertragungsgeschwindigkeit: Bis zu 40 Gbit/s.
 Neuester Standard, der Funktionen von Thunderbolt 3 übernimmt. Verwendet den USB-C-Stecker.
 USB-C: Merkmale: Kleinere, reversibel einsteckbare Steckverbindung.
@@ -838,7 +848,7 @@ unterteilt nach verschiedenen Anwendungsbereichen:
             case 0:
                 return;
             default:
-                cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+                cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
                 this_thread::sleep_for(chrono::seconds(2));
                 break;
             }
@@ -876,8 +886,8 @@ unterteilt nach verschiedenen Anwendungsbereichen:
                       Gigahertz (GHz).
    - Typ: Es gibt verschiedene Arten von RAM wie DDR3, DDR4, DDR5 mit unterschiedlichen Geschwindigkeiten und 
           Energieeffizienz.
-   - Latenz: Die Verzögerung zwischen der Anforderung und der Ausfuehrung einer Datenoperation im RAM.
-   - Dual Channel / Quad Channel: Technologien, die die Datenübertragungsrate zwischen RAM und CPU erhoehen koennen.
+   - Latenz: Die Verzoegerung zwischen der Anforderung und der Ausfuehrung einer Datenoperation im RAM.
+   - Dual Channel / Quad Channel: Technologien, die die Datenuebertragungsrate zwischen RAM und CPU erhoehen koennen.
 )";
     }
     void showhwinfo3()
@@ -942,7 +952,7 @@ RAM-Steckplätze:
 
 Die RAM-Steckplätze sind die Anschlüsse, in die die Arbeitsspeichermodule (RAM) eingesteckt werden.
 Sie ermöglichen es dem RAM, temporäre Daten schnell zu speichern und darauf zuzugreifen, was die Leistung des Systems bei laufenden Programmen verbessert.
-Die Anzahl und der Typ der RAM-Steckplaetze variieren je nach Motherboard und beeinflussen die maximale unterstützte RAM-Kapazitaet und Geschwindigkeit.
+Die Anzahl und der Typ der RAM-Steckplaetze variieren je nach Motherboard und beeinflussen die maximale unterstuetzte RAM-Kapazitaet und Geschwindigkeit.
 )";
 	}
 	void showmainboard3()
@@ -961,7 +971,7 @@ Die Anzahl und Art der PCIe-Steckplätze variieren je nach Motherboard-Modell.
 Anschluesse:
 
 Das Motherboard verfügt über verschiedene Anschlüsse, darunter USB, HDMI, Audioanschlüsse, LAN-Ports und weitere.
-USB-Anschluesse ermöglichen den Anschluss von Peripheriegeräten wie Tastaturen, Mäusen und Druckern.
+USB-Anschluesse ermoeglichen den Anschluss von Peripheriegeräten wie Tastaturen, Mäusen und Druckern.
 HDMI-Anschlüsse dienen zur Verbindung mit Bildschirmen und anderen Anzeigegeräten.
 Audioanschlüsse unterstützen den Anschluss von Lautsprechern, Kopfhoerern und Mikrofonen.
 LAN-Ports ermoeglichen die Verbindung mit einem Netzwerk für Internetzugang oder lokale Netzwerkkommunikation.
@@ -999,7 +1009,7 @@ Diese liefern die benoetigte Energie für den Betrieb der Komponenten.
         cout << R"(
 6  Motherboard (Hauptplatine):
 
-   Funktion: Verbindet alle Hardwarekomponenten miteinander und ermöglicht die Kommunikation zwischen ihnen.
+   Funktion: Verbindet alle Hardwarekomponenten miteinander und ermoeglicht die Kommunikation zwischen ihnen.
 
 )";
         int choice;
@@ -1070,8 +1080,8 @@ Diese liefern die benoetigte Energie für den Betrieb der Komponenten.
 
    Spezifikationen:
    - Lüfter / Kuehlkörper: Mechanismen zur Waermeableitung von CPU und GPU.
-   - Kühlmethoden: Luftkühlung oder Wasserkühlung.
-   - Lüftergeschwindigkeit: Die Umdrehungen pro Minute des Lüfters.
+   - Kuehlmethoden: Luftkühlung oder Wasserkühlung.
+   - Lueftergeschwindigkeit: Die Umdrehungen pro Minute des Lüfters.
    - Geraeuschpegel: Die Lautstärke des Kuehlsystems während des Betriebs.
 )";
 
@@ -1081,7 +1091,7 @@ Diese liefern die benoetigte Energie für den Betrieb der Komponenten.
         cout << R"(
 8  Soundkarte:
 
-   Funktion: Verarbeitet Audioinhalte und ermöglicht die Wiedergabe von Sound.
+   Funktion: Verarbeitet Audioinhalte und ermoeglicht die Wiedergabe von Sound.
 
    Spezifikationen:
    - Audiocodec: Der Chip, der für die Verarbeitung von Audio verantwortlich ist.
