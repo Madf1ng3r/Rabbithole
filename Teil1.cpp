@@ -267,58 +267,49 @@ D) Die Vorteile des agilen Projektmanagements sind, dass es kreativer, innovativ
 
 Die richtige Antwort ist A)
 
-Die Vorteile des agilen Projektmanagements sind, dass es flexibler, kundenorientierter, teamorientierter, iterativer und adaptiver ist als das klassische Projektmanagement. Das bedeutet, dass es sich besser an die Veränderungen der Anforderungen, des Marktes, der Technologien und der Umstände anpassen kann, dass es die Bedürfnisse und die Zufriedenheit des Kunden stärker berücksichtigt, dass es die Zusammenarbeit und die Kommunikation des Teams fördert, dass es das Projekt in kleine und überschaubare Teile aufteilt, die regelmäßig überprüft und getestet werden, und dass es das Projekt kontinuierlich verbessert und optimiert. Das agile Projektmanagement eignet sich für Projekte mit hoher Komplexität, Dynamik und Unsicherheit.
-
-Die Antwort B) ist falsch, da sie das agile Projektmanagement unrealistisch und unangemessen darstellt. Das agile Projektmanagement ist nicht unbedingt schneller, billiger oder einfacher als das klassische Projektmanagement, sondern erfordert mehr Aufwand, Zeit und Ressourcen für die Planung, die Abstimmung, die Qualitätssicherung und die Anpassung des Projekts. Das agile Projektmanagement ist auch nicht linear oder statisch, sondern zyklisch und veränderlich.
-
-Die Antwort C) ist auch falsch, da sie das agile Projektmanagement negativ und abwertend darstellt. Das agile Projektmanagement ist nicht komplexer, unstrukturierter, chaotischer, riskanter oder unvorhersehbarer als das klassische Projektmanagement, sondern versucht, die Komplexität, die Struktur, das Chaos, das Risiko und die Vorhersehbarkeit des Projekts zu managen und zu reduzieren.
+Die Vorteile des agilen Projektmanagements sind, dass es flexibler, kundenorientierter, teamorientierter, 
+iterativer und adaptiver ist als das klassische Projektmanagement. Das bedeutet, dass es sich besser an die 
+Veränderungen der Anforderungen, des Marktes, der Technologien und der Umstände anpassen kann, dass es die Beduerfnisse 
+und die Zufriedenheit des Kunden stärker beruecksichtigt, dass es die Zusammenarbeit und die Kommunikation des Teams foerdert, 
+dass es das Projekt in kleine und überschaubare Teile aufteilt, die regelmäßig ueberprüft und getestet werden, 
+und dass es das Projekt kontinuierlich verbessert und optimiert. 
+Das agile Projektmanagement eignet sich für Projekte mit hoher Komplexität, Dynamik und Unsicherheit.
 
 Die Antwort D) ist teilweise richtig, aber nicht vollständig, da sie einige wichtige Aspekte des agilen Projektmanagements auslässt. Das agile Projektmanagement ist zwar kreativer, innovativer, experimenteller, lernender und verbessernder als das klassische Projektmanagement, aber das sind nicht die einzigen oder die wichtigsten Vorteile. Das agile Projektmanagement ist auch flexibler, kundenorientierter, teamorientierter, iterativer und adaptiver, was für den Erfolg des Projekts entscheidend ist.
-
 
 
 Was sind die wichtigsten Projektmanagementmethoden und -werkzeuge, die bei der Einrichtung eines IT-gestützten Arbeitsplatzes angewendet werden können?
 
 A) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Projektcontrolling.
-
 B) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Pareto-Prinzip, die SWOT-Analyse und das Projektcontrolling.
-
 C) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die Balanced Scorecard und das Projektcontrolling.
-
 D) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Scrum-Framework.
 
 Die richtige Antwort ist A)
 
-Die wichtigsten Projektmanagementmethoden und -werkzeuge, die bei der Einrichtung eines IT-gestützten Arbeitsplatzes angewendet werden können, sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Projektcontrolling. Diese Methoden und Werkzeuge helfen, das Projekt zu definieren, zu planen, zu steuern und zu überwachen, die Beteiligten zu identifizieren und zu berücksichtigen, die Anforderungen zu erheben und zu spezifizieren, die Aufgaben zu strukturieren und zu terminieren, die Ressourcen zu verwalten, die Fortschritte zu visualisieren, die Ursachen von Problemen zu analysieren, die Stärken, Schwächen, Chancen und Risiken des Projekts zu bewerten und die Qualität und den Erfolg des Projekts zu sichern.
-
-Die Antwort B) ist falsch, da sie das Pareto-Prinzip anstelle des Ishikawa-Diagramms nennt. Das Pareto-Prinzip ist eine Regel, die besagt, dass 80 % der Ergebnisse aus 20 % der Ursachen stammen. Das Ishikawa-Diagramm ist ein Werkzeug, das die möglichen Ursachen eines Problems in Kategorien wie Material, Methode, Mensch, Maschine, Messung und Umwelt darstellt.
-
-Die Antwort C) ist auch falsch, da sie die Balanced Scorecard anstelle der SWOT-Analyse nennt. Die Balanced Scorecard ist ein Werkzeug, das die Leistung eines Unternehmens oder einer Organisation anhand von vier Perspektiven misst: Finanzen, Kunden, Prozesse und Lernen. Die SWOT-Analyse ist ein Werkzeug, das die internen Stärken und Schwächen sowie die externen Chancen und Risiken eines Projekts oder einer Situation ermittelt.
-
-Die Antwort D) ist ebenfalls falsch, da sie das Scrum-Framework anstelle des Projektcontrollings nennt. Das Scrum-Framework ist eine agile Projektmanagementmethode, die auf kurzen, iterativen und inkrementellen Entwicklungszyklen basiert, die Sprints genannt werden. Das Projektcontrolling ist ein Prozess, der die Planung, die Steuerung und die Überwachung des Projekts umfasst, um Abweichungen, Risiken und Probleme zu erkennen und zu beheben.
-
+Die wichtigsten Projektmanagementmethoden und -werkzeuge, die bei der Einrichtung eines IT-gestützten Arbeitsplatzes angewendet 
+werden koennen, sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, 
+das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Projektcontrolling. Diese Methoden und Werkzeuge helfen, 
+das Projekt zu definieren, zu planen, zu steuern und zu überwachen, die Beteiligten zu identifizieren und zu beruecksichtigen, 
+die Anforderungen zu erheben und zu spezifizieren, die Aufgaben zu strukturieren und zu terminieren, die Ressourcen zu verwalten, 
+die Fortschritte zu visualisieren, die Ursachen von Problemen zu analysieren, die Stärken, Schwächen, Chancen und Risiken 
+des Projekts zu bewerten und die Qualität und den Erfolg des Projekts zu sichern.
 
 
 Was sind die Voraussetzungen für eine erfolgreiche Kommunikation im Projektteam und mit dem Kunden?
 
 A) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man aktiv zuhört, verständlich und klar spricht oder schreibt, respektvoll und höflich ist, Feedback gibt und annimmt, Konflikte konstruktiv löst und die Kommunikationskanäle und -mittel angemessen auswählt.
-
 B) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man viel redet, kompliziert und fachlich spricht oder schreibt, dominant und selbstbewusst ist, Kritik äußert und ignoriert, Konflikte provoziert und eskaliert und die Kommunikationskanäle und -mittel beliebig auswählt.
-
 C) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man wenig redet, einfach und allgemein spricht oder schreibt, passiv und zurückhaltend ist, Lob gibt und erwartet, Konflikte vermeidet und verdrängt und die Kommunikationskanäle und -mittel zufällig auswählt.
-
 D) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man abwechslungsreich redet, kreativ und originell spricht oder schreibt, humorvoll und unterhaltsam ist, Witze macht und lacht, Konflikte ironisch behandelt und entschärft und die Kommunikationskanäle und -mittel spielerisch auswählt.
 
 Die richtige Antwort ist A)
 
-Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man aktiv zuhört, verständlich und klar spricht oder schreibt, respektvoll und höflich ist, Feedback gibt und annimmt, Konflikte konstruktiv löst und die Kommunikationskanäle und -mittel angemessen auswählt. Diese Voraussetzungen fördern das Verständnis, das Vertrauen, die Zusammenarbeit und die Zufriedenheit im Projektteam und mit dem Kunden. Sie helfen auch, Missverständnisse, Fehler, Verzögerungen und Unstimmigkeiten im Projekt zu vermeiden oder zu beheben.
-
-Die Antwort B) ist falsch, da sie das Gegenteil von den Voraussetzungen für eine erfolgreiche Kommunikation darstellt. Diese Antwort beschreibt eine Kommunikation, die arrogant, verwirrend, unhöflich, abweisend, aggressiv und willkürlich ist. Diese Kommunikation schadet dem Verständnis, dem Vertrauen, der Zusammenarbeit und der Zufriedenheit im Projektteam und mit dem Kunden. Sie verursacht auch Missverständnisse, Fehler, Verzögerungen und Unstimmigkeiten im Projekt.
-
-Die Antwort C) ist auch falsch, da sie eine Kommunikation beschreibt, die langweilig, ungenau, unterwürfig, bedürftig, ängstlich und planlos ist. Diese Kommunikation beeinträchtigt das Verständnis, das Vertrauen, die Zusammenarbeit und die Zufriedenheit im Projektteam und mit dem Kunden. Sie führt auch zu Missverständnissen, Fehlern, Verzögerungen und Unstimmigkeiten im Projekt.
-
-Die Antwort D) ist ebenfalls falsch, da sie eine Kommunikation beschreibt, die unpassend, unprofessionell, albern, respektlos, unernst und unzuverlässig ist. Diese Kommunikation stört das Verständnis, das Vertrauen, die Zusammenarbeit und die Zufriedenheit im Projektteam und mit dem Kunden. Sie erzeugt auch Missverständnisse, Fehler, Verzögerungen und Unstimmigkeiten im Projekt.
-
+Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man aktiv zuhoert, verständlich und klar spricht 
+oder schreibt, respektvoll und hoeflich ist, Feedback gibt und annimmt, Konflikte konstruktiv loest und die
+Kommunikationskanäle und -mittel angemessen auswählt. Diese Voraussetzungen foerdern das Verständnis, das Vertrauen, 
+die Zusammenarbeit und die Zufriedenheit im Projektteam und mit dem Kunden. Sie helfen auch, Missverständnisse, 
+Fehler, Verzoegerungen und Unstimmigkeiten im Projekt zu vermeiden oder zu beheben.
 
 )";
 }
@@ -330,25 +321,23 @@ Wie viele DVDs mit einer Kapazität von 4,7 GB kann man mit einem Blu-ray-Disc-Br
 A) 5 DVDs B) 6 DVDs C) 7 DVDs D) 8 DVDs
 
 Die richtige Antwort ist B)
-
-Um diese Aufgabe zu lösen, muss man die Kapazität des Blu-ray-Disc-Brenners durch die Kapazität einer DVD teilen. Das ergibt:
-
+Um diese Aufgabe zu loesen, muss man die Kapazität des Blu-ray-Disc-Brenners durch die Kapazität einer DVD teilen. Das ergibt:
 25 GB / 4,7GB ? 5,32
 4,7 GB 25 GB? ? 5,32
 
-Da man keine halben DVDs beschreiben kann, muss man die nächsthöhere ganze Zahl nehmen, also 6 DVDs. Das bedeutet, dass man mit einem Blu-ray-Disc-Brenner mit einer Kapazität von 25 GB sechs DVDs mit einer Kapazität von 4,7 GB beschreiben kann.
+Da man keine halben DVDs beschreiben kann, muss man die nächsthoehere ganze Zahl nehmen, also 6 DVDs. 
+Das bedeutet, dass man mit einem Blu-ray-Disc-Brenner mit einer Kapazität von 25 GB sechs DVDs mit einer Kapazität von 4,7 GB beschreiben kann.
 
 
 Wie viele Bytes sind in einem Terabyte enthalten?
 A) 1.000.000.000 Bytes B) 1.024.000.000 Bytes C) 1.000.000.000.000 Bytes D) 1.099.511.627.776 Bytes
 
 Die richtige Antwort ist D)
-
-Um diese Aufgabe zu lösen, muss man wissen, dass ein Byte aus acht Bit besteht und dass ein Terabyte aus 1024 Gigabyte besteht. Ein Gigabyte besteht wiederum aus 1024 Megabyte, ein Megabyte aus 1024 Kilobyte und ein Kilobyte aus 1024 Byte. Das heißt, um von Terabyte zu Byte zu kommen, muss man mit 1024 viermal multiplizieren. Das ergibt:
-
+Um diese Aufgabe zu loesen, muss man wissen, dass ein Byte aus acht Bit besteht und dass ein Terabyte aus 1024 Gigabyte besteht. 
+Ein Gigabyte besteht wiederum aus 1024 Megabyte, ein Megabyte aus 1024 Kilobyte und ein Kilobyte aus 1024 Byte. 
+Das heißt, um von Terabyte zu Byte zu kommen, muss man mit 1024 viermal multiplizieren. Das ergibt:
 1 TB=1 TB×1024 GB×1024 MB×1024 KB×1024 B=1.099.511.627.776 B
 1 TB=1 TB×1024 GB×1024 MB×1024 KB×1024 B=1.099.511.627.776 B
-
 Das bedeutet, dass ein Terabyte 1.099.511.627.776 Bytes enthält.
 
 
@@ -356,8 +345,10 @@ Wie viele Megabyte sind in einem Gigabit enthalten?
 A) 0,125 Megabyte B) 8 Megabyte C) 125 Megabyte D) 1000 Megabyte
 
 Die richtige Antwort ist B)
-
-Um diese Aufgabe zu lösen, muss man wissen, dass ein Bit aus einem einzigen binären Wert (0 oder 1) besteht und dass ein Byte aus acht Bit besteht. Außerdem muss man wissen, dass ein Gigabit aus 1000 Megabit besteht und dass ein Megabit aus 1000 Kilobit besteht. Ein Kilobit besteht wiederum aus 1000 Bit. Das heißt, um von Gigabit zu Megabyte zu kommen, muss man mit 1000 dreimal multiplizieren und dann durch 8 teilen. Das ergibt:
+Um diese Aufgabe zu loesen, muss man wissen, dass ein Bit aus einem einzigen binären Wert (0 oder 1) besteht 
+und dass ein Byte aus acht Bit besteht. Außerdem muss man wissen, dass ein Gigabit aus 1000 Megabit besteht 
+und dass ein Megabit aus 1000 Kilobit besteht. Ein Kilobit besteht wiederum aus 1000 Bit. 
+Das heißt, um von Gigabit zu Megabyte zu kommen, muss man mit 1000 dreimal multiplizieren und dann durch 8 teilen. Das ergibt:
 
 1 Gb=1 Gb×1000 Mb×1000 Kb×1000 b=1.000.000.000 b
 1 Gb=1 Gb×1000 Mb×1000 Kb×1000 b=1.000.000.000 b
@@ -368,7 +359,6 @@ Um diese Aufgabe zu lösen, muss man wissen, dass ein Bit aus einem einzigen binä
 
 125.000.000 B
 1.000.000 B=125 MB1.000.000 B125.000.000 B?=125 MB
-
 Das bedeutet, dass ein Gigabit 125 Megabyte enthält.
 
 
@@ -376,25 +366,22 @@ Wie groß ist die Leistung, die an einem Widerstand von 100 Ohm umgesetzt wird, w
 A) 0,12 Watt B) 1,2 Watt C) 12 Watt D) 120 Watt
 
 Die richtige Antwort ist B)
-
-Um diese Aufgabe zu lösen, muss man die Formel für die elektrische Leistung kennen
-
+Um diese Aufgabe zu loesen, muss man die Formel für die elektrische Leistung kennen
 P=RU2?
 Dabei ist P die Leistung in Watt, U die Spannung in Volt und R der Widerstand in Ohm. Wenn man die gegebenen Werte einsetzt, erhält man:
-
 
 122/100=144/100=1,44 Watt
 P=100122?=100144?=1,44 Watt
 
-Da die Antwortmöglichkeiten nur eine Nachkommastelle haben, muss man die Leistung auf eine Nachkommastelle runden. Das ergibt 1,2 Watt als richtige Antwort.
+Richtig runden nicht vergessen. Das ergibt 1,2 Watt als richtige Antwort.
 
 
 Wie lautet das Ergebnis der binären Multiplikation 1011 x 110?
 A) 100010 B) 111110 C) 100110 D) 111010
 
 Die richtige Antwort ist C)
-
-Um diese Aufgabe zu lösen, muss man die binäre Multiplikation anwenden, die ähnlich wie die schriftliche Multiplikation im Dezimalsystem funktioniert. Dabei muss man beachten, dass die binäre Addition folgende Regeln hat:
+Um diese Aufgabe zu loesen, muss man die binäre Multiplikation anwenden, die ähnlich wie die schriftliche 
+Multiplikation im Dezimalsystem funktioniert. Dabei muss man beachten, dass die binäre Addition folgende Regeln hat:
 
 0 + 0 = 0
 0 + 1 = 1
@@ -415,12 +402,10 @@ Das bedeutet, dass das Ergebnis der binären Multiplikation 1011 x 110 gleich 100
 
 
 Wie lautet das Ergebnis der binären Subtraktion 1101 - 101?
-
 A) 1000 B) 1001 C) 1010 D) 1011
 
 Die richtige Antwort ist A)
-
-Um diese Aufgabe zu lösen, muss man die binäre Subtraktion anwenden, die ähnlich wie die schriftliche Subtraktion im Dezimalsystem funktioniert. 
+Um diese Aufgabe zu loesen, muss man die binäre Subtraktion anwenden, die ähnlich wie die schriftliche Subtraktion im Dezimalsystem funktioniert. 
 Dabei muss man beachten, dass die binaere Subtraktion folgende Regeln hat:
 
 0 - 0 = 0
@@ -440,8 +425,12 @@ Wie viele Hosts können in einem Netzwerk mit der Subnetzmaske 255.255.255.192 ma
 A) 62 B) 64 C) 126 D) 128
 
 Die richtige Antwort ist A)
-
-Um diese Aufgabe zu loesen, muss man wissen, wie die Subnetzmaske die Anzahl der möglichen Hosts in einem Netzwerk bestimmt. Die Subnetzmaske besteht aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehören zum Hostanteil der IP-Adresse. Die Anzahl der möglichen Hosts in einem Netzwerk ist gleich 2 hoch der Anzahl der 0-Bits in der Subnetzmaske minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
+Um diese Aufgabe zu loesen, muss man wissen, wie die Subnetzmaske die Anzahl der moeglichen Hosts in einem Netzwerk bestimmt. 
+Die Subnetzmaske besteht aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. 
+Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehoeren zum Hostanteil der IP-Adresse. 
+Die Anzahl der moeglichen Hosts in einem Netzwerk ist gleich 2 hoch der Anzahl der 0-Bits in der Subnetzmaske minus 2. 
+Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und 
+den Broadcast reserviert sind und nicht für Hosts verwendet werden koennen.
 
 Die Subnetzmaske 255.255.255.192 hat folgende binäre Darstellung:
 11111111.11111111.11111111.11000000
@@ -449,15 +438,15 @@ Die Subnetzmaske 255.255.255.192 hat folgende binäre Darstellung:
 Die Anzahl der 0-Bits in der Subnetzmaske ist 6. Die Anzahl der möglichen Hosts in einem Netzwerk mit dieser Subnetzmaske ist also:
 26?2=64?2=62
 26?2=64?2=62
-
-Das bedeutet, dass in einem Netzwerk mit der Subnetzmaske 255.255.255.192 maximal 62 Hosts adressiert werden können.
+Das bedeutet, dass in einem Netzwerk mit der Subnetzmaske 255.255.255.192 maximal 62 Hosts adressiert werden koennen.
 
 
 Wie lautet das Ergebnis der binären Division 1000 : 10?
 A) 10 B) 100 C) 101 D) 110
 
 Die richtige Antwort ist B)
-Um diese Aufgabe zu lösen, muss man die binäre Division anwenden, die ähnlich wie die schriftliche Division im Dezimalsystem funktioniert. Dabei muss man beachten, dass die binäre Subtraktion folgende Regeln hat:
+Binäre Division anwenden, die ähnlich wie die schriftliche Division im Dezimalsystem funktioniert. 
+Dabei beachten, dass die binäre Subtraktion folgende Regeln hat:
 0 - 0 = 0
 0 - 1 = 1 (Borrow 1)
 1 - 0 = 1
@@ -477,32 +466,25 @@ Die binäre Division sieht dann so aus:
 Das bedeutet, dass das Ergebnis der binären Division 1000 : 10 gleich 100 ist.
 
 
-
 Wie viele IP-Adressen stehen in einem Netzwerk mit der CIDR-Notation 192.168.1.0/24 zur Verfügung?
 A) 256 B) 254 C) 128 D) 126
 
 Die richtige Antwort ist B)
 
-Um diese Aufgabe zu lösen, muss man wissen, wie die CIDR-Notation die Anzahl der möglichen IP-Adressen in einem Netzwerk bestimmt. Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehören. Die restlichen Bits gehören zum Hostanteil der Adresse. Die Anzahl der möglichen IP-Adressen in einem Netzwerk ist gleich 2 hoch der Anzahl der Bits im Hostanteil minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
+Um diese Aufgabe zu loesen, muss man wissen, wie die CIDR-Notation die Anzahl der moeglichen IP-Adressen in einem Netzwerk bestimmt. 
+Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehoeren. 
+Die restlichen Bits gehören zum Hostanteil der Adresse. Die Anzahl der moeglichen IP-Adressen in einem Netzwerk ist gleich 2 hoch 
+der Anzahl der Bits im Hostanteil minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Netzwerk 
+für das Netzwerk selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden koennen.
 
 Die CIDR-Notation 192.168.1.0/24 hat folgende binäre Darstellung:
-
 11000000.10101000.00000001.00000000 / 24
 
-Die Anzahl der Bits im Netzwerkanteil ist 24, die Anzahl der Bits im Hostanteil ist 8. Die Anzahl der möglichen IP-Adressen in einem Netzwerk mit dieser CIDR-Notation ist also:
+Die Anzahl der Bits im Netzwerkanteil ist 24, die Anzahl der Bits im Hostanteil ist 8. 
+Die Anzahl der möglichen IP-Adressen in einem Netzwerk mit dieser CIDR-Notation ist also:
 
-2
-8
-?
-2
-=
-256
-?
-2
-=
-254
 28?2=256?2=254
-
+28?2=256?2=254
 Das bedeutet, dass in einem Netzwerk mit der CIDR-Notation 192.168.1.0/24 254 IP-Adressen zur Verfügung stehen.
 
 
@@ -515,9 +497,10 @@ C) Ein Switch ist ein Gerät, das Datenpakete filtert und priorisiert, während ei
 D) Ein Switch ist ein Gerät, das Datenpakete verstärkt und wiederholt, während ein Hub ein Gerät ist, das Datenpakete filtert und priorisiert.
 
 Die richtige Antwort ist A)
-
-Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet, während ein Hub ein Gerät ist, das Datenpakete an alle angeschlossenen Geräte sendet. Das bedeutet, dass ein Switch die Netzwerkleistung verbessert, indem er den Datenverkehr reduziert und die Kollisionen vermeidet, während ein Hub die Netzwerkleistung verschlechtert, indem er den Datenverkehr erhöht und die Kollisionen fördert. Ein Switch ist daher ein intelligenteres und effizienteres Gerät als ein Hub.
-
+Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet, während ein Hub ein Gerät ist, 
+das Datenpakete an alle angeschlossenen Geräte sendet. Das bedeutet, dass ein Switch die Netzwerkleistung verbessert, 
+indem er den Datenverkehr reduziert und die Kollisionen vermeidet, während ein Hub die Netzwerkleistung verschlechtert, 
+indem er den Datenverkehr erhöht und die Kollisionen fördert. Ein Switch ist daher ein intelligenteres und effizienteres Gerät als ein Hub.
 
 )";
 }
@@ -525,7 +508,7 @@ Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet,
 void pruefungsfragen5() {
  cout <<   R"(
 
-Wie lautet der Pseudocode, um die Summe der ersten n natürlichen Zahlen zu berechnen?
+Wie lautet der Pseudocode, um die Summe der ersten n natuerlichen Zahlen zu berechnen?
 
 A) sum = 0 for i = 1 to n sum = sum + i end for print sum
 B) sum = 0 while i <= n sum = sum + i i = i + 1 end while print sum
@@ -534,14 +517,9 @@ D) sum = 0 do sum = sum + i i = i + 1 while i <= n print sum
 
 Die richtige Antwort ist A)
 
-Der Pseudocode, um die Summe der ersten n natürlichen Zahlen zu berechnen, ist A). Dieser Pseudocode verwendet eine for-Schleife, die von 1 bis n läuft und bei jedem Durchlauf die Variable sum um den aktuellen Wert von i erhöht. Am Ende wird die Variable sum ausgegeben, die die gesuchte Summe enthält.
-
-Die Antwort B) ist falsch, da sie eine while-Schleife verwendet, die eine zusätzliche Variable i benötigt, die vorher initialisiert werden muss. Außerdem muss die Variable i nach jedem Durchlauf um 1 erhöht werden, was einen zusätzlichen Schritt darstellt.
-
-Die Antwort C) ist auch falsch, da sie eine repeat-until-Schleife verwendet, die ebenfalls eine zusätzliche Variable i benötigt, die vorher initialisiert werden muss. Außerdem wird die Bedingung am Ende der Schleife überprüft, was bedeutet, dass die Schleife mindestens einmal ausgeführt wird, auch wenn n gleich 0 ist.
-
-Die Antwort D) ist ebenfalls falsch, da sie eine do-while-Schleife verwendet, die auch eine zusätzliche Variable i benötigt, die vorher initialisiert werden muss. Außerdem wird die Bedingung am Ende der Schleife überprüft, was bedeutet, dass die Schleife mindestens einmal ausgeführt wird, auch wenn n gleich 0 ist.
-
+Der Pseudocode, um die Summe der ersten n natürlichen Zahlen zu berechnen, ist A). Dieser Pseudocode verwendet eine for-Schleife, 
+die von 1 bis n läuft und bei jedem Durchlauf die Variable sum um den aktuellen Wert von i erhöht. 
+Am Ende wird die Variable sum ausgegeben, die die gesuchte Summe enthält.
 
 
 Wie lautet der Pseudocode, um die Fakultät einer natürlichen Zahl n zu berechnen?
@@ -553,13 +531,9 @@ D) fak = 1 do fak = fak * n n = n - 1 while n > 0 print fak
 
 Die richtige Antwort ist B)
 
-Der Pseudocode, um die Fakultät einer natürlichen Zahl n zu berechnen, ist B). Dieser Pseudocode verwendet eine while-Schleife, die so lange läuft, wie n größer als 0 ist. Bei jedem Durchlauf wird die Variable fak mit n multipliziert und n um 1 verringert. Am Ende wird die Variable fak ausgegeben, die die gesuchte Fakultät enthält.
-
-Die Antwort A) ist falsch, da sie eine for-Schleife verwendet, die von 1 bis n läuft. Das bedeutet, dass die Variable fak mit 1 beginnt und dann mit allen Zahlen von 1 bis n multipliziert wird. Das ergibt aber nicht die Fakultät von n, sondern das Produkt aller natürlichen Zahlen bis n.
-
-Die Antwort C) ist auch falsch, da sie eine repeat-until-Schleife verwendet, die die Bedingung am Ende der Schleife überprüft. Das bedeutet, dass die Schleife mindestens einmal ausgeführt wird, auch wenn n gleich 0 ist. Das führt zu einem falschen Ergebnis, da die Fakultät von 0 gleich 1 ist, aber die Variable fak mit 0 multipliziert wird.
-
-Die Antwort D) ist ebenfalls falsch, da sie eine do-while-Schleife verwendet, die die Bedingung am Ende der Schleife überprüft. Das bedeutet, dass die Schleife mindestens einmal ausgeführt wird, auch wenn n gleich 0 ist. Das führt zu einem falschen Ergebnis, da die Fakultät von 0 gleich 1 ist, aber die Variable fak mit 0 multipliziert wird.
+Der Pseudocode, um die Fakultät einer natuerlichen Zahl n zu berechnen, ist B). Dieser Pseudocode verwendet eine while-Schleife, 
+die so lange läuft, wie n größer als 0 ist. Bei jedem Durchlauf wird die Variable fak mit n multipliziert und n um 1 verringert. 
+Am Ende wird die Variable fak ausgegeben, die die gesuchte Fakultät enthält.
 
 
 Wie lautet der Fachbegriff für die Eigenschaften oder Merkmale einer Entität, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden?
@@ -567,22 +541,30 @@ A) Attribute B) Relationen C) Schlüssel D) Tupel
 
 Die richtige Antwort ist A)
 
-Die Eigenschaften oder Merkmale einer Entitaet, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden, werden Attribute genannt. Attribute sind die Informationen, die eine Entität beschreiben oder identifizieren. Zum Beispiel kann eine Entität Student die Attribute Name, Matrikelnummer, Studiengang, E-Mail usw. haben.
-
-Die Antwort B) ist falsch, da Relationen die Beziehungen zwischen Entitäten bezeichnen, die in einem ER-Modell durch Linien oder Rauten dargestellt werden. Relationen beschreiben, wie Entitäten miteinander in Verbindung stehen oder interagieren. Zum Beispiel kann eine Relation Einschreiben die Beziehung zwischen den Entitäten Student und Kurs darstellen.
-
-Die Antwort C) ist auch falsch, da Schlüssel die Attribute sind, die eine Entität eindeutig identifizieren oder von anderen Entitäten unterscheiden. Schlüssel sind spezielle Attribute, die in einem ER-Modell durch Unterstreichung oder Fettdruck hervorgehoben werden. Zum Beispiel kann die Matrikelnummer ein Schlüssel für die Entität Student sein.
-
-Die Antwort D) ist ebenfalls falsch, da Tupel die einzelnen Datensätze oder Zeilen in einer Tabelle darstellen, die eine Instanz einer Entität repräsentieren. Tupel sind die konkreten Werte, die den Attributen einer Entität zugewiesen werden. Zum Beispiel kann ein Tupel in der Tabelle Student die Werte Max, 123456, Informatik, max@uni.de für die Attribute Name, Matrikelnummer, Studiengang, E-Mail haben.
+Die Eigenschaften oder Merkmale einer Entitaet, die in einem ER-Modell durch Spalten in einer Tabelle dargestellt werden, 
+werden Attribute genannt. Attribute sind die Informationen, die eine Entität beschreiben oder identifizieren. 
+Zum Beispiel kann eine Entität Student die Attribute Name, Matrikelnummer, Studiengang, E-Mail usw. haben.
 
 Welche der folgenden Aussagen über den Arbeitsspeicher (RAM) ist falsch?
-A) Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. B) Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, ohne auf die Festplatte zuzugreifen. C) Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von zusätzlichen Speichermodulen vergrößert werden kann. D) Der Arbeitsspeicher ist ein permanenter Speicher, der die Daten auch nach dem Ausschalten des Computers behält.
+A) Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. 
+B) Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, ohne auf die Festplatte zuzugreifen. 
+C) Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von zusätzlichen Speichermodulen vergrößert werden kann. 
+D) Der Arbeitsspeicher ist ein permanenter Speicher, der die Daten auch nach dem Ausschalten des Computers behält.
 
 Die richtige Antwort ist D)
 
-Die Aussage D) ist falsch, da der Arbeitsspeicher ein flüchtiger Speicher ist, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. Der Arbeitsspeicher ist kein permanenter Speicher, der die Daten auch nach dem Ausschalten des Computers behält. Das ist die Eigenschaft von nichtflüchtigen Speichern wie Festplatten, SSDs oder USB-Sticks.
+Die Aussage D) ist falsch, da der Arbeitsspeicher ein fluechtiger Speicher ist, der die Daten verliert, 
+wenn die Stromversorgung unterbrochen wird. Der Arbeitsspeicher ist kein permanenter Speicher, 
+der die Daten auch nach dem Ausschalten des Computers behält. Das ist die Eigenschaft von nichtflüchtigen Speichern wie Festplatten, SSDs oder USB-Sticks.
 
-Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften und Funktionen des Arbeitsspeichers korrekt beschreiben. Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. Das bedeutet, dass der Arbeitsspeicher nur die Daten speichert, die gerade vom Computer benötigt werden, und nicht die Daten, die dauerhaft gesichert werden sollen. Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, ohne auf die Festplatte zuzugreifen. Das bedeutet, dass der Arbeitsspeicher die Leistung und Geschwindigkeit des Computers erhöht, indem er die Zugriffszeiten auf die Daten verkürzt. Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von zusätzlichen Speichermodulen vergrößert werden kann. Das bedeutet, dass der Arbeitsspeicher an die Bedürfnisse und Anforderungen des Computers angepasst werden kann, indem mehr Speicherplatz hinzugefügt wird.
+Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften und Funktionen des Arbeitsspeichers korrekt beschreiben. 
+Der Arbeitsspeicher ist ein flüchtiger Speicher, der die Daten verliert, wenn die Stromversorgung unterbrochen wird. 
+Das bedeutet, dass der Arbeitsspeicher nur die Daten speichert, die gerade vom Computer benötigt werden, und nicht die Daten, 
+die dauerhaft gesichert werden sollen. Der Arbeitsspeicher ist ein schneller Speicher, der die Daten direkt an die CPU liefert, 
+ohne auf die Festplatte zuzugreifen. Das bedeutet, dass der Arbeitsspeicher die Leistung und Geschwindigkeit des Computers erhoeht, 
+indem er die Zugriffszeiten auf die Daten verkürzt. Der Arbeitsspeicher ist ein erweiterbarer Speicher, der durch den Einbau von 
+zusätzlichen Speichermodulen vergroessert werden kann. Das bedeutet, dass der Arbeitsspeicher an die Beduerfnisse und Anforderungen 
+des Computers angepasst werden kann, indem mehr Speicherplatz hinzugefuegt wird.
 
 )";
 }
@@ -595,8 +577,12 @@ Wie viele Subnetze und wie viele Hosts pro Subnetz kann man mit der CIDR-Notatio
 A) 16 Subnetze mit je 4094 Hosts B) 64 Subnetze mit je 1022 Hosts C) 256 Subnetze mit je 254 Hosts D) 1024 Subnetze mit je 62 Hosts
 
 Die richtige Antwort ist B)
-Um diese Aufgabe zu lösen, muss man wissen, wie die CIDR-Notation die Anzahl der möglichen Subnetze und Hosts in einem Netzwerk bestimmt. Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehören. Die restlichen Bits gehören zum Subnetz- und Hostanteil der Adresse. Die Anzahl der möglichen Subnetze in einem Netzwerk ist gleich 2 hoch der Anzahl der Bits im Subnetzanteil. Die Anzahl der möglichen Hosts in einem Subnetz ist gleich 2 hoch der Anzahl der Bits im Hostanteil minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Subnetz für das Subnetz selbst und den Broadcast reserviert sind und nicht für Hosts verwendet werden können.
-
+Um diese Aufgabe zu lösen, muss man wissen, wie die CIDR-Notation die Anzahl der möglichen Subnetze und Hosts in einem Netzwerk bestimmt. 
+Die CIDR-Notation besteht aus einer IP-Adresse und einem Präfix, der die Anzahl der Bits angibt, die zum Netzwerkanteil der Adresse gehören.
+Die restlichen Bits gehören zum Subnetz- und Hostanteil der Adresse. Die Anzahl der möglichen Subnetze in einem Netzwerk ist gleich 2
+hoch der Anzahl der Bits im Subnetzanteil. Die Anzahl der möglichen Hosts in einem Subnetz ist gleich 2 hoch der Anzahl der Bits im Hostanteil
+minus 2. Die 2 wird abgezogen, weil die erste und die letzte Adresse in einem Subnetz für das Subnetz selbst und den Broadcast 
+reserviert sind und nicht für Hosts verwendet werden können.
 Die CIDR-Notation 10.0.0.0/20 hat folgende binaere Darstellung:
 00001010.00000000.0000|0000.00000000 / 20
 
@@ -606,7 +592,8 @@ Die Subnetzmaske ist eine Bitfolge, die angibt, welche Bits zum Subnetzanteil un
 Die Bits, die 1 sind, gehören zum Subnetzanteil, die Bits, die 0 sind, gehoeren zum Hostanteil. 
 Die Subnetzmaske muss immer mit einer Reihe von 1 beginnen und mit einer Reihe von 0 enden. 
 Die Laenge der Subnetzmaske muss gleich der Laenge des Praefixes plus der Länge des Subnetzanteils sein.
-Um die Antwortmöglichkeiten zu ueberprüfen, muss man die Subnetzmaske für jede Option berechnen und die Anzahl der Subnetze und Hosts daraus ableiten. Das ergibt:
+Um die Antwortmöglichkeiten zu ueberprüfen, muss man die Subnetzmaske für jede Option berechnen und die Anzahl der Subnetze und 
+Hosts daraus ableiten. Das ergibt:
 
 A) 16 Subnetze mit je 4094 Hosts
 
@@ -622,16 +609,7 @@ Die Anzahl der Bits im Subnetzanteil ist 4, die Anzahl der Bits im Hostanteil is
 24=16
 
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
-
-2
-8
-?
-2
-=
-256
-?
-2
-=
+28?2=256?2=
 254
 28?2=256?2=254
 
@@ -642,15 +620,11 @@ B) 64 Subnetze mit je 1022 Hosts
 Die Subnetzmaske für diese Option ist 255.255.252.0, die folgende binäre Darstellung hat:
 11111111.11111111.1111|1100.00000000 / 22
 Die Anzahl der Bits im Subnetzanteil ist 6, die Anzahl der Bits im Hostanteil ist 6. Die Anzahl der möglichen Subnetze ist also:
-2
-6
-=
-64
+26=64
 26=64
 Die Anzahl der möglichen Hosts pro Subnetz ist also:
 26?2=64?2
-=
-62
+=62
 26?2=64?2=62
 
 Diese Option ist richtig, da die Anzahl der Subnetze und Hosts mit der Angabe übereinstimmt.
@@ -690,14 +664,19 @@ A) 192.168.12.0 B) 192.168.12.34 C) 192.168.0.0 D) 192.168.0.34
 
 Die richtige Antwort ist A)
 
-Um diese Aufgabe zu lösen, muss man wissen, wie die IP-Adresse eines Netzwerks aus der IP-Adresse eines Hosts und der Subnetzmaske berechnet wird. Die IP-Adresse und die Subnetzmaske bestehen aus 32 Bit, die in vier Oktette zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehören zum Netzwerkanteil der IP-Adresse, die Bits, die 0 sind, gehören zum Hostanteil der IP-Adresse. Die IP-Adresse eines Netzwerks ist diejenige, die alle Bits im Netzwerkanteil beibehält und alle Bits im Hostanteil auf 0 setzt.
+Um diese Aufgabe zu loesen, muss man wissen, wie die IP-Adresse eines Netzwerks aus der IP-Adresse eines Hosts 
+und der Subnetzmaske berechnet wird. Die IP-Adresse und die Subnetzmaske bestehen aus 32 Bit, die in vier Oktette 
+zu je acht Bit unterteilt sind. Jedes Bit kann entweder 0 oder 1 sein. Die Bits, die 1 sind, gehoeren zum Netzwerkanteil 
+der IP-Adresse, die Bits, die 0 sind, gehoeren zum Hostanteil der IP-Adresse. Die IP-Adresse eines Netzwerks ist diejenige, 
+die alle Bits im Netzwerkanteil beibehält und alle Bits im Hostanteil auf 0 setzt.
 
 Die IP-Adresse eines Hosts 192.168.12.34 und die Subnetzmaske 255.255.255.0 haben folgende binäre Darstellung:
 
 11000000.10101000.00001100.00100010 (IP-Adresse)
 11111111.11111111.11111111.00000000 (Subnetzmaske)
 
-Die Anzahl der Bits im Netzwerkanteil ist 24, die Anzahl der Bits im Hostanteil ist 8. Um die IP-Adresse des Netzwerks zu erhalten, muss man die IP-Adresse und die Subnetzmaske mit einer logischen UND-Operation verknüpfen. Das ergibt:
+Die Anzahl der Bits im Netzwerkanteil ist 24, die Anzahl der Bits im Hostanteil ist 8. Um die IP-Adresse des Netzwerks zu erhalten, 
+muss man die IP-Adresse und die Subnetzmaske mit einer logischen UND-Operation verknüpfen. Das ergibt:
 
 11000000.10101000.00001100.00100010
 AND
@@ -716,43 +695,58 @@ C) TCP ist ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protoko
 D) TCP ist ein verbindungsloses, zuverlässiges und geordnetes Protokoll, das keine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsorientiertes, unzuverlässiges und ungeordnetes Protokoll ist, das eine Quittung für jedes gesendete Datenpaket erwartet.
 
 Die richtige Antwort ist A)
-TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet. Das bedeutet, dass TCP eine Verbindung zwischen Sender und Empfänger aufbaut, bevor die Daten übertragen werden, und sicherstellt, dass die Daten vollständig, fehlerfrei und in der richtigen Reihenfolge ankommen, indem es die Pakete nummeriert, bestätigt und gegebenenfalls erneut sendet. UDP hingegen sendet die Daten ohne Verbindungsaufbau und ohne Garantie, dass die Daten ankommen, korrekt sind oder in der richtigen Reihenfolge sind, indem es die Pakete einfach an die Zieladresse schickt. TCP ist daher für Anwendungen geeignet, die eine hohe Zuverlässigkeit und Qualität der Datenübertragung erfordern, wie z.B. Webseiten, E-Mails oder Dateitransfers. UDP ist hingegen für Anwendungen geeignet, die eine hohe Geschwindigkeit und Effizienz der Datenübertragung erfordern, wie z.B. Sprach- oder Videotelefonie, Online-Spiele oder Streaming.
+TCP ist ein verbindungsorientiertes, zuverlässiges und geordnetes Protokoll, das eine Quittung für jedes gesendete Datenpaket erwartet, 
+während UDP ein verbindungsloses, unzuverlässiges und ungeordnetes Protokoll ist, das keine Quittung für jedes gesendete Datenpaket erwartet. 
+Das bedeutet, dass TCP eine Verbindung zwischen Sender und Empfänger aufbaut, bevor die Daten übertragen werden, und sicherstellt, 
+dass die Daten vollständig, fehlerfrei und in der richtigen Reihenfolge ankommen, indem es die Pakete nummeriert, bestätigt und 
+gegebenenfalls erneut sendet. UDP hingegen sendet die Daten ohne Verbindungsaufbau und ohne Garantie, dass die Daten ankommen, 
+korrekt sind oder in der richtigen Reihenfolge sind, indem es die Pakete einfach an die Zieladresse schickt. 
+TCP ist daher für Anwendungen geeignet, die eine hohe Zuverlässigkeit und Qualität der Datenübertragung erfordern, 
+wie z.B. Webseiten, E-Mails oder Dateitransfers. UDP ist hingegen für Anwendungen geeignet, die eine hohe Geschwindigkeit 
+und Effizienz der Datenuebertragung erfordern, wie z.B. Online-Spiele oder Streaming.
 
 
-Wie viel Speicherplatz benoetigt man, um ein 15-minütiges Video in Full HD (1920 x 1080 Pixel) mit 30 Bildern pro Sekunde und einer Farbtiefe von 24 Bit zu speichern?
+Wie viel Speicherplatz benoetigt man, um ein 15-minütiges Video in Full HD (1920 x 1080 Pixel) 
+mit 30 Bildern pro Sekunde und einer Farbtiefe von 24 Bit zu speichern?
 A) 1,2 GB B) 2,4 GB C) 3,6 GB D) 4,8 GB
 
 Die richtige Antwort ist C)
-Um diese Aufgabe zu lösen, muss man wissen, wie der Speicherbedarf eines Videos berechnet wird. Der Speicherbedarf eines Videos hängt von der Auflösung, der Bildrate, der Farbtiefe und der Länge des Videos ab. Die Formel lautet:
+Der Speicherbedarf eines Videos hängt von der Aufloesung, der Bildrate, der Farbtiefe und der Länge des Videos ab. Die Formel lautet:
 
 S=R×F×B×T
-Dabei ist S der Speicherbedarf in Byte, R die Auflösung in Pixel, F die Bildrate in Bildern pro Sekunde, B die Farbtiefe in Bit und T die Länge des Videos in Sekunden. Wenn man die gegebenen Werte einsetzt, erhält man:
+Dabei ist S der Speicherbedarf in Byte, R die Auflösung in Pixel, F die Bildrate in Bildern pro Sekunde, B die Farbtiefe in Bit 
+und T die Länge des Videos in Sekunden. Wenn man die gegebenen Werte einsetzt, erhält man:
 
 =1920×1080×30×24×15×60=3.597.721.600Byte
 S=1920×1080×30×24×15×60=3.597.721.600 Byte
-
 Um die Antwort in Gigabyte zu erhalten, muss man den Speicherbedarf durch 1024 hoch 3 teilen. Das ergibt:
 3.597.721.600
 102/43=3,35 GB
 102433.597.721.600??3,35 GB
-
-Da die Antwortmoeglichkeiten nur eine Nachkommastelle haben, muss man den Speicherbedarf auf eine Nachkommastelle runden. Das ergibt 3,6 GB als richtige Antwort.
-
+Auf eine Nachkommastelle runden nicht vergessen. Das ergibt 3,6 GB als richtige Antwort.
 
 
 Welche der folgenden Aussagen über das OSI-Modell ist falsch?
 
-A) Das OSI-Modell besteht aus sieben Schichten, die jeweils eine bestimmte Funktion bei der Datenübertragung erfüllen.
-B) Das OSI-Modell ist ein universeller Standard, der die Kommunikation zwischen verschiedenen Netzwerkgeräten und -protokollen ermöglicht.
-C) Das OSI-Modell ist ein hierarchisches Modell, bei dem jede höhere Schicht auf den Diensten der darunterliegenden Schicht aufbaut.
+A) Das OSI-Modell besteht aus sieben Schichten, die jeweils eine bestimmte Funktion bei der Datenuebertragung erfüllen.
+B) Das OSI-Modell ist ein universeller Standard, der die Kommunikation zwischen verschiedenen Netzwerkgeräten und -protokollen ermoeglicht.
+C) Das OSI-Modell ist ein hierarchisches Modell, bei dem jede hoehere Schicht auf den Diensten der darunterliegenden Schicht aufbaut.
 D) Das OSI-Modell ist ein dynamisches Modell, bei dem die Schichten je nach Bedarf hinzugefügt oder entfernt werden können.
 
 Die richtige Antwort ist D)
 
-Die Aussage D) ist falsch, da das OSI-Modell ein statisches Modell ist, bei dem die Schichten fest definiert und nicht veränderbar sind. Das OSI-Modell ist ein theoretisches Referenzmodell, das die ideale Struktur und Funktion der Netzwerkkommunikation beschreibt, aber nicht die tatsächliche Implementierung widerspiegelt. Das OSI-Modell ist daher nicht anpassbar an die unterschiedlichen Anforderungen und Gegebenheiten der realen Netzwerke.
-
-Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften und Ziele des OSI-Modells korrekt wiedergeben. Das OSI-Modell besteht aus sieben Schichten, die jeweils eine bestimmte Funktion bei der Datenübertragung erfüllen, wie z.B. die physikalische Übertragung, die Fehlerkontrolle, die Adressierung, die Verschlüsselung, die Anwendung usw. Das OSI-Modell ist ein universeller Standard, der die Kommunikation zwischen verschiedenen Netzwerkgeräten und -protokollen ermöglicht, indem es eine gemeinsame Sprache und ein gemeinsames Verständnis für die Datenübertragung schafft. Das OSI-Modell ist ein hierarchisches Modell, bei dem jede höhere Schicht auf den Diensten der darunterliegenden Schicht aufbaut, und bei dem die Daten von einer Schicht zur nächsten weitergegeben werden, wobei sie entsprechend verpackt, entpackt, umgewandelt oder interpretiert werden.
-
+Die Aussage D) ist falsch, da das OSI-Modell ein statisches Modell ist, bei dem die Schichten fest definiert und nicht 
+veränderbar sind. Das OSI-Modell ist ein theoretisches Referenzmodell, das die ideale Struktur und Funktion der Netzwerkkommunikation 
+beschreibt, aber nicht die tatsächliche Implementierung widerspiegelt. Das OSI-Modell ist daher nicht anpassbar an 
+die unterschiedlichen Anforderungen und Gegebenheiten der realen Netzwerke.
+Die Aussagen A), B) und C) sind richtig, da sie die grundlegenden Eigenschaften und Ziele des OSI-Modells korrekt wiedergeben. 
+Das OSI-Modell besteht aus sieben Schichten, die jeweils eine bestimmte Funktion bei der Datenuebertragung erfuellen, wie 
+z.B. die physikalische Übertragung, die Fehlerkontrolle, die Adressierung, die Verschluesselung, die Anwendung usw. 
+Das OSI-Modell ist ein universeller Standard, der die Kommunikation zwischen verschiedenen Netzwerkgeräten und -protokollen 
+ermoeglicht, indem es eine gemeinsame Sprache und ein gemeinsames Verständnis für die Datenübertragung schafft. 
+Das OSI-Modell ist ein hierarchisches Modell, bei dem jede hoehere Schicht auf den Diensten der darunterliegenden Schicht aufbaut, 
+und bei dem die Daten von einer Schicht zur nächsten weitergegeben werden, 
+wobei sie entsprechend verpackt, entpackt, umgewandelt oder interpretiert werden.
 
 
 Wie lautet der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu löschen, die in Berlin wohnen?
@@ -760,8 +754,7 @@ A) DELETE FROM Kunden WHERE Stadt = ‘Berlin’; B) DROP FROM Kunden WHERE Stadt = 
 C) REMOVE FROM Kunden WHERE Stadt = ‘Berlin’; D) TRUNCATE FROM Kunden WHERE Stadt = ‘Berlin’;
 
 Die richtige Antwort ist A)
-
-Der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu löschen, die in Berlin wohnen, ist DELETE FROM Kunden WHERE Stadt = ‘Berlin’. 
+Der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu loeschen, die in Berlin wohnen, ist DELETE FROM Kunden WHERE Stadt = ‘Berlin’. 
 Dieser Befehl entfernt alle Zeilen aus der Tabelle Kunden, die die Bedingung Stadt = ‘Berlin’ erfuellen.
 )";
 }
@@ -782,7 +775,7 @@ Beispiel: Addieren wir die binaeren Zahlen 101 und 111:
 + 111
 -----
  1010
-Lösung: Die Addition ergibt 1010 in binaerer Form.
+Loesung: Die Addition ergibt 1010 in binaerer Form.
 Binaere Subtraktion:
 Erlaeuterung: Bei der binaeren Subtraktion wird eine binaere Zahl von einer anderen subtrahiert. 
 Uebertraege koennen auftreten, wenn das Subtrahend groeßer als der Minuend ist.
@@ -791,7 +784,7 @@ Beispiel: Subtrahieren wir die binäre Zahl 1101 von der binaeren Zahl 10010:
 -  1101
 -------
   1001
-Lösung: Die Subtraktion ergibt 1001 in binaerer Form.
+Loesung: Die Subtraktion ergibt 1001 in binaerer Form.
 Bitweise UND-Verknuepfung:
 Erläuterung: Die bitweise UND-Verknüpfung führt eine logische UND-Operation auf den entsprechenden Bits von zwei binaeren Zahlen durch.
 Beispiel: Führen wir die bitweise UND-Verknüpfung der binaeren Zahlen 101010 und 110011 durch:
@@ -817,7 +810,7 @@ Umrechnung von Dezimal zu Binär und Hexadezimal:
 Aufgabe: Konvertieren Sie die Dezimalzahl 217 in das Binär- und Hexadezimalsystem.
 Erläuterung: Um eine Dezimalzahl in das Binärsystem umzurechnen, führen Sie wiederholt Division durch 2 durch und notieren die Reste.
  Um eine Dezimalzahl in das Hexadezimalsystem umzurechnen, können Sie das Binärsystem als Zwischenschritt verwenden.
-Lösung:
+Loesung:
 Dezimal zu Binär:
 217 / 2 = 108 Rest 1
 108 / 2 = 54 Rest 0
@@ -836,7 +829,7 @@ Umrechnung von Hexadezimal zu Dezimal und Binär:
 Aufgabe: Konvertieren Sie die hexadezimale Zahl AB3F in das Dezimal- und Binärsystem.
 Erläuterung: Um eine Hexadezimalzahl in das Dezimalsystem umzurechnen, multiplizieren Sie jeden Hexadezimalwert mit seiner entsprechenden 
 Potenz von 16 und addieren die Ergebnisse. Um eine Hexadezimalzahl in das Binärsystem umzurechnen, konvertieren Sie jeden Hexadezimalwert in seine entsprechende 4-Bit-Binärzahl.
-Lösung:
+Loesung:
 Hexadezimal zu Dezimal: AB3F = (A * 16^3) + (B * 16^2) + (3 * 16^1) + (F * 16^0) = (10 * 4096) + (11 * 256) + (3 * 16) + (15 * 1) = 43775.
 Hexadezimal zu Binär:
 A = 1010, B = 1011, 3 = 0011, F = 1111. Die Binärdarstellung von AB3F ist daher 1010101100111111.
@@ -845,7 +838,7 @@ Umrechnung von Speichereinheiten:
 
 Aufgabe: Ein Dateiserver hat eine Festplatte mit einer Kapazität von 2 Terabyte (TB). Konvertieren Sie diese Kapazität in Gigabyte (GB) und Megabyte (MB).
 Erläuterung: Um Terabyte in Gigabyte umzurechnen, multiplizieren Sie mit 1024, und um Gigabyte in Megabyte umzurechnen, multiplizieren Sie erneut mit 1024.
-Lösung:
+Loesung:
 Umrechnung von Terabyte in Gigabyte: 2 TB * 1024 GB/TB = 2048 GB.
 Umrechnung von Gigabyte in Megabyte: 2048 GB * 1024 MB/GB = 2097152 MB.
 Umrechnung von Datenübertragungsraten:
@@ -854,14 +847,14 @@ Aufgabe: Ein Internetanschluss hat eine maximale Downloadgeschwindigkeit von 100
 in Kilobit pro Sekunde (kbps) und Megabyte pro Sekunde (MB/s).
 Erläuterung: Um Megabit pro Sekunde in Kilobit pro Sekunde umzurechnen, multiplizieren Sie mit 1000, und um Megabit pro Sekunde in Megabyte pro Sekunde umzurechnen,
  teilen Sie durch 8.
-Lösung:
+Loesung:
 Umrechnung von Megabit pro Sekunde in Kilobit pro Sekunde: 100 Mbps * 1000 kbps/Mbps = 100000 kbps.
 Umrechnung von Megabit pro Sekunde in Megabyte pro Sekunde: 100 Mbps / 8 MB/Mbps = 12.5 MB/s.
 Umrechnung von Zeiteinheiten:
 
 Aufgabe: Ein Datenbankbackup dauert 3 Stunden und 45 Minuten. Konvertieren Sie diese Zeit in Minuten.
 Erläuterung: Um Stunden in Minuten umzurechnen, multiplizieren Sie mit 60, und addieren Sie die verbleibenden Minuten.
-Lösung:
+Loesung:
 Umrechnung von Stunden in Minuten: 3 Stunden * 60 Minuten/Stunde + 45 Minuten = 180 Minuten + 45 Minuten = 225 Minuten.
 
 SQL Fragen und Antworten:
@@ -966,7 +959,6 @@ if (_kbhit()) {
 }
     } while (running);
 }
-
 void pruefungsfragen7() {
     bool running = true;
     do {

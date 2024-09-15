@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS  // Sicherheitsfunktionen
 #include "Mainframe.h" 
 #include <cstdlib>      // Funktionen für allgemeine Aufgaben (z.B. system())
-#ifdef _WIN32         // Windows-spezifische Funktionen
+#ifdef _WIN32       
 #include <windows.h>    // Windows-spezifische Funktionen (z.B. GetSystemMetrics())
 #endif 
 #include <lmcons.h>   // Windows-spezifische Funktionen (z.B. GetSystemMetrics())
@@ -9,7 +9,7 @@
 #include "sinndeslebens.h"      // Header-Datei für das Programm "Sinn des Lebens"
 #include "binary.h"             // Header-Datei für die Binärkonvertierung
 #include "Links.h"              // Header-Datei für das Link-Programm
-#include "readme.h"             // Header-Datei für das Readme-Programm
+#include "readme.h"             // Header-Datei für die Readme Datei
 #include "Geschichte.h"         // Header-Datei für das Geschichte-Programm
 #include "Witzbold.h"           // Header-Datei für den Witzbold
 #include "BWL.h"                // Header-Datei für das BWL Lexikon
