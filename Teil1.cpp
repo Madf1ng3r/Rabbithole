@@ -65,7 +65,7 @@ Wandeln Sie die hexadezimale Zahl 2F in das binäre Zahlensystem um.
 Bit- und Byterechnung:
 
 Wie viele Bits sind in einem Byte enthalten?
-Berechnen Sie die Anzahl der möglichen Kombinationen von 8 Bits.
+Berechnen Sie die Anzahl der moeglichen Kombinationen von 8 Bits.
 Wenn ein Byte 256 verschiedene Werte haben kann, wie viele Bits sind dann benötigt?
 Addition und Subtraktion im Binärsystem:
 
@@ -212,17 +212,17 @@ Menge von Anfragen oder Datenverkehr, die die Ressourcen des Ziels erschöpfen.
     } while (running);
 
 }
-
 void pruefungsfragen4() {
+    bool running = true;
+    do {
+        system("cls");
+        int choice;
+        clearScreen();
  cout <<   R"(
 Was sind die Ziele des Projektmanagements?
-
 A) Die Ziele des Projektmanagements sind, die Anforderungen des Kunden zu erfüllen, die Kosten, die Zeit und die Qualität des Projekts zu planen, zu steuern und zu überwachen, und die Risiken und Probleme des Projekts zu identifizieren und zu lösen.
-
 B) Die Ziele des Projektmanagements sind, die eigenen Interessen zu verfolgen, die Kosten, die Zeit und die Qualität des Projekts zu ignorieren, und die Risiken und Probleme des Projekts zu vermeiden oder zu verschleiern.
-
 C) Die Ziele des Projektmanagements sind, die Anforderungen des Kunden zu ändern, die Kosten, die Zeit und die Qualität des Projekts zu schätzen, zu kontrollieren und zu dokumentieren, und die Risiken und Probleme des Projekts zu analysieren und zu bewerten.
-
 D) Die Ziele des Projektmanagements sind, die Anforderungen des Kunden zu verstehen, die Kosten, die Zeit und die Qualität des Projekts zu optimieren, und die Risiken und Probleme des Projekts zu minimieren und zu lösen.
 
 Die richtige Antwort ist D)
@@ -231,25 +231,19 @@ Die Anforderungen des Kunden zu verstehen, die Kosten, die Zeit und die Qualität
 und die Risiken und Probleme des Projekts zu minimieren und zu loesen, sind die Ziele des Projektmanagements. 
 Diese Ziele sollen dazu beitragen, dass das Projekt erfolgreich abgeschlossen wird und die Erwartungen 
 des Kunden und der Stakeholder erfuellt oder uebertroffen werden.
-
 Die Antwort A) ist teilweise richtig, aber nicht optimal, da sie nicht die Optimierung der Kosten, der Zeit und der Qualität des Projekts erwähnt.
 
 
 
 Was sind die Phasen eines Projekts nach dem klassischen Wasserfallmodell?
-
 A) Planung, Analyse, Design, Implementierung, Test, Einführung, Wartung
-
 B) Planung, Design, Implementierung, Test, Einführung, Wartung, Abschluss
-
-C) Planung, Analyse, Design, Implementierung, Test, Einführung, Abschluss
-
+C) Planung, Analyse, Design, Implementierung, Test, Einfuehrung, Abschluss
 D) Planung, Analyse, Design, Implementierung, Test, Wartung, Abschluss
 
 Die richtige Antwort ist C)
-
 Die Phasen eines Projekts nach dem klassischen Wasserfallmodell sind Planung, Analyse, Design, Implementierung, Test, 
-Einführung und Abschluss. In jeder Phase werden bestimmte Aktivitäten durchgeführt, die das Projekt voranbringen 
+Einführung und Abschluss. In jeder Phase werden bestimmte Aktivitäten durchgefuehrt, die das Projekt voranbringen 
 und die Ergebnisse dokumentieren. Die Phasen sind sequenziell angeordnet, das heißt, eine Phase beginnt erst, 
 wenn die vorherige Phase abgeschlossen ist. Das Wasserfallmodell ist ein einfaches und uebersichtliches Vorgehensmodell, 
 das sich für Projekte mit klaren Anforderungen und geringer Komplexität eignet.
@@ -258,15 +252,11 @@ das sich für Projekte mit klaren Anforderungen und geringer Komplexität eignet.
 Was sind die Vorteile des agilen Projektmanagements gegenüber dem klassischen Projektmanagement?
 
 A) Die Vorteile des agilen Projektmanagements sind, dass es flexibler, kundenorientierter, teamorientierter, iterativer und adaptiver ist als das klassische Projektmanagement.
-
 B) Die Vorteile des agilen Projektmanagements sind, dass es schneller, billiger, einfacher, linearer und statischer ist als das klassische Projektmanagement.
-
 C) Die Vorteile des agilen Projektmanagements sind, dass es komplexer, unstrukturierter, chaotischer, riskanter und unvorhersehbarer ist als das klassische Projektmanagement.
-
 D) Die Vorteile des agilen Projektmanagements sind, dass es kreativer, innovativer, experimenteller, lernender und verbessernder ist als das klassische Projektmanagement.
 
 Die richtige Antwort ist A)
-
 Die Vorteile des agilen Projektmanagements sind, dass es flexibler, kundenorientierter, teamorientierter, 
 iterativer und adaptiver ist als das klassische Projektmanagement. Das bedeutet, dass es sich besser an die 
 Veränderungen der Anforderungen, des Marktes, der Technologien und der Umstände anpassen kann, dass es die Beduerfnisse 
@@ -279,14 +269,12 @@ Die Antwort D) ist teilweise richtig, aber nicht vollständig, da sie einige wich
 
 
 Was sind die wichtigsten Projektmanagementmethoden und -werkzeuge, die bei der Einrichtung eines IT-gestützten Arbeitsplatzes angewendet werden können?
-
 A) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Projektcontrolling.
 B) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Pareto-Prinzip, die SWOT-Analyse und das Projektcontrolling.
 C) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die Balanced Scorecard und das Projektcontrolling.
 D) Die wichtigsten Projektmanagementmethoden und -werkzeuge sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Scrum-Framework.
 
 Die richtige Antwort ist A)
-
 Die wichtigsten Projektmanagementmethoden und -werkzeuge, die bei der Einrichtung eines IT-gestützten Arbeitsplatzes angewendet 
 werden koennen, sind die SMART-Kriterien, die Stakeholderanalyse, die Anforderungsanalyse, der Projektstrukturplan, der Netzplan, 
 das Gantt-Diagramm, das Ishikawa-Diagramm, die SWOT-Analyse und das Projektcontrolling. Diese Methoden und Werkzeuge helfen, 
@@ -297,24 +285,51 @@ des Projekts zu bewerten und die Qualität und den Erfolg des Projekts zu sichern
 
 
 Was sind die Voraussetzungen für eine erfolgreiche Kommunikation im Projektteam und mit dem Kunden?
-
 A) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man aktiv zuhört, verständlich und klar spricht oder schreibt, respektvoll und höflich ist, Feedback gibt und annimmt, Konflikte konstruktiv löst und die Kommunikationskanäle und -mittel angemessen auswählt.
 B) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man viel redet, kompliziert und fachlich spricht oder schreibt, dominant und selbstbewusst ist, Kritik äußert und ignoriert, Konflikte provoziert und eskaliert und die Kommunikationskanäle und -mittel beliebig auswählt.
 C) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man wenig redet, einfach und allgemein spricht oder schreibt, passiv und zurückhaltend ist, Lob gibt und erwartet, Konflikte vermeidet und verdrängt und die Kommunikationskanäle und -mittel zufällig auswählt.
 D) Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man abwechslungsreich redet, kreativ und originell spricht oder schreibt, humorvoll und unterhaltsam ist, Witze macht und lacht, Konflikte ironisch behandelt und entschärft und die Kommunikationskanäle und -mittel spielerisch auswählt.
 
 Die richtige Antwort ist A)
-
 Die Voraussetzungen für eine erfolgreiche Kommunikation sind, dass man aktiv zuhoert, verständlich und klar spricht 
 oder schreibt, respektvoll und hoeflich ist, Feedback gibt und annimmt, Konflikte konstruktiv loest und die
 Kommunikationskanäle und -mittel angemessen auswählt. Diese Voraussetzungen foerdern das Verständnis, das Vertrauen, 
 die Zusammenarbeit und die Zufriedenheit im Projektteam und mit dem Kunden. Sie helfen auch, Missverständnisse, 
 Fehler, Verzoegerungen und Unstimmigkeiten im Projekt zu vermeiden oder zu beheben.
 
+                                                                         0 - zurueck
 )";
+ if (!(cin >> choice)) {
+     cin.clear();
+     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+     cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+     this_thread::sleep_for(chrono::seconds(2));
+     continue;
+ }
+ switch (choice) {
+ case 0:
+     running = false;
+     break;
+ default:
+     cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+     this_thread::sleep_for(chrono::seconds(2));
+     break;
+ }
+ if (_kbhit()) {
+     char key = _getch();
+     if (key == 27 || key == '0') {
+         running = false;
+     }
+ }
+    } while (running);
 }
 
 void pruefungsfragen3() {
+    bool running = true;
+    do {
+        system("cls");
+        int choice;
+        clearScreen();
     cout << R"(
 
 Wie viele DVDs mit einer Kapazität von 4,7 GB kann man mit einem Blu-ray-Disc-Brenner mit einer Kapazität von 25 GB beschreiben?
@@ -488,7 +503,6 @@ Die Anzahl der möglichen IP-Adressen in einem Netzwerk mit dieser CIDR-Notation 
 Das bedeutet, dass in einem Netzwerk mit der CIDR-Notation 192.168.1.0/24 254 IP-Adressen zur Verfügung stehen.
 
 
-
 Was ist der Unterschied zwischen einem Switch und einem Hub in einem lokalen Netzwerk?
 
 A) Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet, während ein Hub ein Gerät ist, das Datenpakete an alle angeschlossenen Geräte sendet.
@@ -500,12 +514,41 @@ Die richtige Antwort ist A)
 Ein Switch ist ein Gerät, das Datenpakete gezielt an die Empfänger weiterleitet, während ein Hub ein Gerät ist, 
 das Datenpakete an alle angeschlossenen Geräte sendet. Das bedeutet, dass ein Switch die Netzwerkleistung verbessert, 
 indem er den Datenverkehr reduziert und die Kollisionen vermeidet, während ein Hub die Netzwerkleistung verschlechtert, 
-indem er den Datenverkehr erhöht und die Kollisionen fördert. Ein Switch ist daher ein intelligenteres und effizienteres Gerät als ein Hub.
+indem er den Datenverkehr erhoeht und die Kollisionen fördert. Ein Switch ist daher ein intelligenteres und effizienteres Gerät als ein Hub.
 
+                                                                         0 - zurueck
 )";
+if (!(cin >> choice)) {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+    this_thread::sleep_for(chrono::seconds(2));
+    continue;
+}
+switch (choice) {
+case 0:
+    running = false;
+    break;
+default:
+    cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+    this_thread::sleep_for(chrono::seconds(2));
+    break;
+}
+if (_kbhit()) {
+    char key = _getch();
+    if (key == 27 || key == '0') {
+        running = false;
+    }
+}
+    } while (running);
 }
 
 void pruefungsfragen5() {
+    bool running = true;
+    do {
+        system("cls");
+        int choice;
+        clearScreen();
  cout <<   R"(
 
 Wie lautet der Pseudocode, um die Summe der ersten n natuerlichen Zahlen zu berechnen?
@@ -566,10 +609,40 @@ indem er die Zugriffszeiten auf die Daten verkürzt. Der Arbeitsspeicher ist ein 
 zusätzlichen Speichermodulen vergroessert werden kann. Das bedeutet, dass der Arbeitsspeicher an die Beduerfnisse und Anforderungen 
 des Computers angepasst werden kann, indem mehr Speicherplatz hinzugefuegt wird.
 
+                                                                         0 - zurueck
 )";
+ if (!(cin >> choice)) {
+     cin.clear();
+     cin.ignore(numeric_limits<streamsize>::max(), '\n');
+     cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+     this_thread::sleep_for(chrono::seconds(2));
+     continue;
+ }
+ switch (choice) {
+ case 0:
+     running = false;
+     break;
+ default:
+     cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+     this_thread::sleep_for(chrono::seconds(2));
+     break;
+ }
+ if (_kbhit()) {
+     char key = _getch();
+     if (key == 27 || key == '0') {
+         running = false;
+     }
+ }
+    } while (running);
 }
 
+
 void pruefungsfragen6() {
+    bool running = true;
+    do {
+        system("cls");
+        int choice;
+        clearScreen();
     cout << R"(
 
 Wie viele Subnetze und wie viele Hosts pro Subnetz kann man mit der CIDR-Notation 10.0.0.0/20 bilden?
@@ -756,7 +829,32 @@ C) REMOVE FROM Kunden WHERE Stadt = ‘Berlin’; D) TRUNCATE FROM Kunden WHERE Stad
 Die richtige Antwort ist A)
 Der SQL-Befehl, um alle Datensätze aus der Tabelle Kunden zu loeschen, die in Berlin wohnen, ist DELETE FROM Kunden WHERE Stadt = ‘Berlin’. 
 Dieser Befehl entfernt alle Zeilen aus der Tabelle Kunden, die die Bedingung Stadt = ‘Berlin’ erfuellen.
+
+                                                                         0 - zurueck
 )";
+if (!(cin >> choice)) {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout << "Nicht korrekte Eingabe. Bitte versuchen Sie es erneut." << endl;
+    this_thread::sleep_for(chrono::seconds(2));
+    continue;
+}
+switch (choice) {
+case 0:
+    running = false;
+    break;
+default:
+    cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
+    this_thread::sleep_for(chrono::seconds(2));
+    break;
+}
+if (_kbhit()) {
+    char key = _getch();
+    if (key == 27 || key == '0') {
+        running = false;
+    }
+}
+    } while (running);
 }
 void pruefungsfragen2() {
     bool running = true;
@@ -969,7 +1067,7 @@ void pruefungsfragen7() {
 Pruefungsfragen AP1 Fachinformatiker 
 
 
-                                     1 -   0 - zurueck
+                                       0 - zurueck
 )";
         if (!(cin >> choice)) {
             cin.clear();
@@ -1019,7 +1117,7 @@ Datenintegrität
 Trigger
 Redundanz
 Aktualisierungsanomalien
-Einfügeanomalien
+Einfuegeanomalien
 
 C++-Fachwoerter:
 Referenz
@@ -1121,7 +1219,7 @@ Paging
 Virtual Memory
 
 IT-Sicherheit-Fachwörter:
-Verschlüsselung
+Verschluesselung
 Authentifizierung
 Autorisierung
 Firewalls
@@ -1133,7 +1231,7 @@ Biometrie
 Zugriffskontrolle
 Intrusion Detection System (IDS)
 Intrusion Prevention System (IPS)
-Verschlüsselungsalgorithmen
+Verschluesselungsalgorithmen
 Public Key Infrastructure (PKI)
 Zero-Day-Exploit
 Patch-Management
@@ -1321,7 +1419,7 @@ Umrechnung      1byte = 8 bit        Kilo,Mega,Giga,Terra,Penta - bit / byte
 Kibi/Mebi/byte *1028  -> KiB: 1024^1 2^10 , MiB: 1024^2 2^20 GiB: 1024^3 2^30  
 Farbtiefe  dpi=  Pixel =   1 cm=2,54 inch    RGB= 24 bit pro Pixel
 Dateiformate SVG, PDF , PNG , XML , PPT , WAV, TIFF , JPG , XLS , BMP , CSV, DLL , JSON
-Englisch übersetzen
+Englisch uebersetzen
 Industrie 4.0 / BigData/AI SmartHome IoT
 DIN ISO Normen   ISO/IEC-27001-Cybersec   ISO 9001-Qualitaetsmanagement  DIN-69901-Projektmanagement
 EVA Prinzip  Eingabe/Verarbeitung/Ausgabe 
@@ -1334,11 +1432,11 @@ Alias LIKE>= <= != % ? ROLLBACK;
 1.-3. Normalform  Primary Key - Foreign Key DQL DDL DML 
 MicrosoftVisualCode, 
 bash PowerShell
-PHP Scriptsprache
-HTML Grundgerüst einer Website 
+PHP Scriptsprache vom Server interpretiert -> Java Script vom Browser des Clienten 
+HTML Grundgeruest einer Website 
 CSS Corporate Design,  Responsive Design  
 Java Script
-Datentypen int, char, double, float, boolean, string, Array, void, struct
+Datentypen int, char, double, float, boolean, string[Array], void, struct
 objektorientierte Programmierung:  Klassen mit Eigenschaften und Methoden / Hierarchische Vererbung 
 Beziehung 1 : 0..n   0..n: 0..m  1:1
 Datenbankstruktur  relational SQL / objektiv 
