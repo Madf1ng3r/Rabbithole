@@ -1,8 +1,8 @@
 #include "Mainframe.h"
 #include <algorithm>
-#include "pcwiki.h"
 #include "Definitionen.h"
 #include "Wiki.h"
+#include "Links.h"
 using namespace std;
 void programmablauf() {
     R"(

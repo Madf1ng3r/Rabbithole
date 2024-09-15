@@ -16,3 +16,8 @@ void animateTransition();
 void resetConsoleWindowSize();
 //void printDigitalClock();
 #endif // !MAINFRAME_H
+
+#ifndef OPTIONEN_H
+#define OPTIONEN_H
+int optionenmain();
+#endif // !OPTIONEN_H

@@ -1,7 +1,8 @@
 #include "Mainframe.h"
 #include "Wiki.h"
 #include "Definitionen.h"
-#include "pcwiki.h"
+#include "Wiki.h"
+#include "Links.h"
 using namespace std;
 void pruefungsfragen() {
 	bool running=true;
@@ -11,7 +12,6 @@ void pruefungsfragen() {
         clearScreen();
         cout << R"(
 Hardwarekomponenten eines Computers:
-
 Welche Funktion hat der Prozessor in einem Computer?
 Der Prozessor in einem Computer ist für die Ausführung von Befehlen und die Verarbeitung von Daten zuständig.
 Erläutern Sie die Unterschiede zwischen HDD und SSD.
@@ -37,31 +37,28 @@ Netzwerksicherheit und -management:
 Welche Maßnahmen können ergriffen werden, um ein Netzwerk vor unbefugtem Zugriff zu schützen?
 Wie funktioniert das Prinzip der Verschlüsselung in einem Netzwerk?
 Erläutern Sie den Zweck von Firewalls und Intrusion Detection Systems (IDS).
-Softwareinstallation und -konfiguration:
 
+Softwareinstallation und -konfiguration:
 Wie installiert man eine Anwendung unter Windows?
 Was ist der Unterschied zwischen Freeware und Shareware?
 Welche Möglichkeiten gibt es, um Software zu aktualisieren?
 
 Benutzer- und Rechteverwaltung:
-
 Wie legt man unter Windows einen neuen Benutzer an?
 Welche Rechte kann ein Benutzer in einem Netzwerk haben?
 Warum ist eine differenzierte Rechtevergabe wichtig?
-Datenschutz und Datensicherheit:
 
+Datenschutz und Datensicherheit:
 Was versteht man unter Datenschutz und warum ist er wichtig?
 Welche Maßnahmen können ergriffen werden, um Daten vor Verlust oder Diebstahl zu schützen?
 Was sind die wichtigsten Bestandteile eines Datenschutzkonzepts?
 
 Projektmanagement im IT-Bereich:
-
 Erläutern Sie den Projektmanagementprozess.
 Was sind typische Meilensteine in einem IT-Projekt?
 Wie geht man mit Projektverzögerungen um?
 
 Binäre und Hexadezimale Zahlensysteme:
-
 Erläutern Sie den Unterschied zwischen dem binären und dem hexadezimalen Zahlensystem.
 Konvertieren Sie die binäre Zahl 10101110 in das hexadezimale Zahlensystem.
 Wandeln Sie die hexadezimale Zahl 2F in das binäre Zahlensystem um.
@@ -75,19 +72,18 @@ Addition und Subtraktion im Binärsystem:
 Führen Sie die binäre Addition 101 + 111 durch und geben Sie das Ergebnis in binärer Form an.
 Subtrahieren Sie die binäre Zahl 1101 von der binären Zahl 10010.
 Wie lautet das Ergebnis der binären Subtraktion 101010 - 11111?
-Logische Verknüpfungen und Bitoperationen:
 
+Logische Verknüpfungen und Bitoperationen:
 Erläutern Sie die logischen Operatoren AND, OR und XOR.
 Führen Sie die bitweise UND-Verknüpfung der binären Zahlen 101010 und 110011 durch.
 Welches Ergebnis ergibt sich aus der bitweisen XOR-Verknüpfung der binären Zahlen 101101 und 110010?
-Komplementbildung und Zweierkomplement:
 
+Komplementbildung und Zweierkomplement:
 Was ist das Einerkomplement einer binären Zahl und wie wird es gebildet?
 Berechnen Sie das Zweierkomplement der binären Zahl 110101.
 Wie lautet die dezimale Darstellung der binären Zahl 11111111 im Zweierkomplement?
 
 Netzwerkgrundlagen:
-
 Was versteht man unter dem OSI-Modell und welche Funktion hat es?
 Erläutern Sie den Unterschied zwischen einem Hub und einem Switch.
 Welche Aufgaben hat ein Router in einem Netzwerk?
@@ -106,8 +102,8 @@ Programmierung:
 Was ist der Unterschied zwischen einer Compiler- und einer Interpreter-Sprache?
 Nennen Sie die grundlegenden Datentypen in der Programmierung und ihre Verwendung.
 Schreiben Sie ein einfaches Programm in einer Programmiersprache Ihrer Wahl, das die ersten 10 Primzahlen ausgibt.
-IT-Sicherheit:
 
+IT-Sicherheit:
 Was versteht man unter einem Denial-of-Service-Angriff und wie kann man sich davor schützen?
 Erläutern Sie den Unterschied zwischen Authentifizierung und Autorisierung.
 Welche Maßnahmen können ergriffen werden, um sensible Daten zu verschlüsseln?
@@ -162,7 +158,7 @@ Grundlagen der IT-Projektarbeit:
 Das Wasserfallmodell ist ein sequenzielles Modell, bei dem die Phasen (Anforderungsanalyse, Entwurf, 
 Implementierung, Test, Bereitstellung) nacheinander durchlaufen werden, während 
 agile Methoden iterative Ansätze mit flexibleren Prozessen verwenden.
-Phasen des Projektmanagements umfassen Initiation, Planung, Durchführung, Überwachung und Abschluss.
+Phasen des Projektmanagements umfassen Initiation, Planung, Durchfuehrung, Ueberwachung und Abschluss.
 Risiken in einem IT-Projekt können durch Risikoanalysen und -bewertungen identifiziert und 
 bewertet werden, um geeignete Gegenmaßnahmen zu entwickeln.)
 
@@ -203,7 +199,7 @@ Menge von Anfragen oder Datenverkehr, die die Ressourcen des Ziels erschöpfen.
             running = false;
             break;
         default:
-            cout << "Ungültige Auswahl. Bitte versuchen Sie es erneut." << endl;
+            cout << "Ungueltige Auswahl. Bitte versuchen Sie es erneut." << endl;
             this_thread::sleep_for(chrono::seconds(2));
             break;
         }
@@ -231,13 +227,12 @@ D) Die Ziele des Projektmanagements sind, die Anforderungen des Kunden zu verste
 
 Die richtige Antwort ist D)
 
-Die Anforderungen des Kunden zu verstehen, die Kosten, die Zeit und die Qualität des Projekts zu optimieren, und die Risiken und Probleme des Projekts zu minimieren und zu lösen, sind die Ziele des Projektmanagements. Diese Ziele sollen dazu beitragen, dass das Projekt erfolgreich abgeschlossen wird und die Erwartungen des Kunden und der Stakeholder erfüllt oder übertroffen werden.
+Die Anforderungen des Kunden zu verstehen, die Kosten, die Zeit und die Qualität des Projekts zu optimieren, 
+und die Risiken und Probleme des Projekts zu minimieren und zu loesen, sind die Ziele des Projektmanagements. 
+Diese Ziele sollen dazu beitragen, dass das Projekt erfolgreich abgeschlossen wird und die Erwartungen 
+des Kunden und der Stakeholder erfuellt oder uebertroffen werden.
 
 Die Antwort A) ist teilweise richtig, aber nicht optimal, da sie nicht die Optimierung der Kosten, der Zeit und der Qualität des Projekts erwähnt.
-
-Die Antwort B) ist falsch, da sie das Gegenteil von den Zielen des Projektmanagements darstellt.
-
-Die Antwort C) ist auch falsch, da sie die Anforderungen des Kunden nicht erfüllen, sondern ändern will, und die Kosten, die Zeit und die Qualität des Projekts nicht optimieren, sondern nur schätzen, kontrollieren und dokumentieren will. Außerdem ist die Analyse und Bewertung der Risiken und Probleme des Projekts nicht ausreichend, um sie zu lösen.
 
 
 
@@ -253,14 +248,11 @@ D) Planung, Analyse, Design, Implementierung, Test, Wartung, Abschluss
 
 Die richtige Antwort ist C)
 
-Die Phasen eines Projekts nach dem klassischen Wasserfallmodell sind Planung, Analyse, Design, Implementierung, Test, Einführung und Abschluss. In jeder Phase werden bestimmte Aktivitäten durchgeführt, die das Projekt voranbringen und die Ergebnisse dokumentieren. Die Phasen sind sequenziell angeordnet, das heißt, eine Phase beginnt erst, wenn die vorherige Phase abgeschlossen ist. Das Wasserfallmodell ist ein einfaches und übersichtliches Vorgehensmodell, das sich für Projekte mit klaren Anforderungen und geringer Komplexität eignet.
-
-Die Antwort A) ist falsch, da sie die Phase Abschluss weglässt, die für den formalen Abschluss des Projekts und die Übergabe der Ergebnisse an den Kunden wichtig ist.
-
-Die Antwort B) ist auch falsch, da sie die Phase Analyse weglässt, die für die Erhebung und Spezifikation der Anforderungen des Kunden notwendig ist.
-
-Die Antwort D) ist ebenfalls falsch, da sie die Phase Einführung weglässt, die für die Installation, Schulung und Inbetriebnahme des Projektergebnisses verantwortlich ist.
-
+Die Phasen eines Projekts nach dem klassischen Wasserfallmodell sind Planung, Analyse, Design, Implementierung, Test, 
+Einführung und Abschluss. In jeder Phase werden bestimmte Aktivitäten durchgeführt, die das Projekt voranbringen 
+und die Ergebnisse dokumentieren. Die Phasen sind sequenziell angeordnet, das heißt, eine Phase beginnt erst, 
+wenn die vorherige Phase abgeschlossen ist. Das Wasserfallmodell ist ein einfaches und uebersichtliches Vorgehensmodell, 
+das sich für Projekte mit klaren Anforderungen und geringer Komplexität eignet.
 
 
 Was sind die Vorteile des agilen Projektmanagements gegenüber dem klassischen Projektmanagement?

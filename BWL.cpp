@@ -1,16 +1,14 @@
 #include <algorithm>
 #include "Mainframe.h"
-#include "BWLLink.h"
+#include "Links.h"
 #include "Links.h"
 #include "Gesetze.h"
 #include "Wiki.h"
 using namespace std;
-
 void showFinanzierungsregeln() {
     cout << "Finanzierungsregeln sind Regeln und Vorschriften, die die finanzielle Struktur und das Kapital eines Unternehmens regeln. Sie umfassen:\n";
     cout << "Die Finanzierungsregeln sind in der BWL aufgestellte normierte Regeln. Es handelt sich um Mindestanforderungen an die aus einer Bilanz ersichtliche Kapitalstruktur.[1] Im Hinblick auf eine optimale Kapitalstruktur, was eine Kosten minimierende und damit auch Unternehmenswert maximierende Auslegung der Finanzierung bedeutet, haben sich einige Finanzierungsregeln ausgeprägt. Diese zielen nicht nur auf einen optimalen Verschuldungsgrad, sondern auch auf die Erhaltung der Zahlungsfähigkeit, also eine optimale Liquidität. Bei der Bewertung der Liquidität wird vom Grundsatz der Fristenkongruenz ausgegangen. Die meisten der unten genannten Regeln erweisen sich in der Praxis oft als unerreichbar, da sie je nach Branche kaum bis gar nicht umzusetzen sind. Außerdem vermindern sie häufig die Rentabilität zu Gunsten der Liquidität, ermöglichen aber auch, je besser die Regeln erfüllt sind, längere wirtschaftliche Unternehmenskrisen zu überwinden. Aus dieser Perspektive ist eine Anpassung der starren Regeln auf jedes einzelne Unternehmen (Betriebsgröße) oder zumindest auf einen Wirtschaftszweig nötig, um den Praxisbezug herzustellen. Eine besondere Rolle spielt der Leverage-Effekt, das heißt die Hebelwirkung des Fremdkapitals auf die Eigenkapitalrentabilität.";
 }
-
 void showBilanz()
 {
     cout << R"(
@@ -29,7 +27,6 @@ Eigenkapitalrentabilität.";
 Übersicht aller Vermögensbestandteile, finanzielle Buchführung.
 )";
 }
-
 void showISONormen() {
     cout << "Die ISO-Normen, auch als Internationale Normen der Internationalen Organisation für Normung (ISO) bekannt, sind eine Reihe von international anerkannten Standards, die entwickelt wurden, um sicherzustellen, dass Produkte, Dienstleistungen und Systeme weltweit einheitliche Qualitäts- und Sicherheitsstandards erfüllen. Diese Normen werden von Expertengremien aus verschiedenen Ländern entwickelt und regelmäßig überarbeitet, um sicherzustellen, dass sie den aktuellen Anforderungen und technologischen Entwicklungen entsprechen.";
 
@@ -51,7 +48,6 @@ void showISONormen() {
 
     cout << "ISO 13485 - Qualitätsmanagementsysteme für Medizinprodukte: Diese Norm ist speziell für Hersteller von Medizinprodukten relevant und legt Anforderungen an Qualitätsmanagementsysteme für diese Branche fest.\n";
 }
-
 void showFinanzierungsarten() {
     cout << "Beispiele für Finanzierungsarten sind: \n";
     cout << "Finanzierungsarten:\n";
@@ -63,7 +59,6 @@ void showFinanzierungsarten() {
     cout << "     6. Finanzierung aus Rationalisierungsmaßnahmen\n";
     cout << "      7. Vermögensumschichtung\n";
 }
-
 void showmagischesdreieck()
 {
     cout << R"(
@@ -90,7 +85,6 @@ alle drei gleichzeitig zu optimieren. Wenn Sie eine der Größen ändern, wirkt sic
 Zum Beispiel, wenn Sie die Qualität erhöhen möchten, könnten sich die Kosten erhöhen und/oder die Zeit verlängern.
 )";
 }
-
 void anzeigenmagischesviereck()
 {
     cout << R"(
@@ -123,7 +117,6 @@ Außenwirtschaftliches Gleichgewicht: Dieses Ziel strebt an, ein Gleichgewicht in
 Wirtschaftswachstum: Dieses Ziel zielt darauf ab, das langfristige Wirtschaftswachstum zu fördern und das Bruttoinlandsprodukt (BIP) zu steigern. Ein kontinuierliches, nachhaltiges Wirtschaftswachstum wird als entscheidend angesehen, um den Lebensstandard zu verbessern und zukünftige Generationen besser abzusichern.
 )";
 }
-
 void anzeigenDarlehensarten() {
     cout << R"(
 Hypothekendarlehen (Immobilienkredite):
@@ -153,7 +146,6 @@ Eigentümerdarlehen sind Darlehen, bei denen eine bereits abbezahlte Immobilie al
 Annuitätendarhlehnen
 )";
 }
-
 void anzeigenVertragsarten() {
     cout << R"(
 Arbeitsvertrag:
@@ -187,7 +179,6 @@ Kreditvertrag:
 Ein Vertrag zwischen einem Kreditgeber und einem Kreditnehmer, der die Bedingungen für die Kreditaufnahme, Rückzahlung und Zinssätze festlegt.
 )";
 }
-
 void showKreditarten() {
     cout << R"(
 Avalkredit
@@ -232,7 +223,6 @@ Bei einem Ratenkredit zahlt der Kreditnehmer das Darlehen in regelmäßigen Raten 
 die aus einem Teil des Kapitals und einem Zinsanteil bestehen
 )";
 }
-
 void showpdca()
 {
     cout << R"(
@@ -264,7 +254,6 @@ Wenn Verbesserungen erzielt wurden, werden diese standardisiert und in den Arbei
 Wenn notwendig, beginnt der Zyklus erneut, um weitere Verbesserungen anzustreben.
 )";
 }
-
 void showRechtsformen() {
     cout << R"(
 Einzelunternehmen (e.K.):
@@ -306,7 +295,6 @@ Einzelkaufmann (e.Kfm.):
 Natürliche Person, die ein Handelsgewerbe betreibt, ohne eine bestimmte Rechtsform anzunehmen.
 )";
 }
-
 void showSteuern()
 {
     cout << R"(
@@ -346,10 +334,8 @@ Mehrwertsteuer auf Importe (Einfuhrumsatzsteuer): Eine Steuer auf Waren und Dien
 Hundesteuer: Eine Steuer, die auf den Besitz von Hunden erhoben wird, um die Kommunen zu finanzieren und die Haltung von Hunden zu regulieren.
 )";
 }
-
 void showUrheberrecht()
-{
-    cout << R"(
+{   cout << R"(
 Das Urheberrecht ist ein Rechtsgebiet, das Kreatoren und Schöpfern das ausschließliche Recht gibt, 
 ihre kreativen Werke zu nutzen und zu kontrollieren. Es schuetzt die geistige Schöpfung, nicht die Ideen an sich. 
 Es ist ein wesentlicher Bestandteil des geistigen Eigentums und soll Anreize für Künstler, Autoren, Musiker, 
@@ -390,24 +376,21 @@ bei Fragen oder Bedenken einen Rechtsanwalt oder Experten für geistiges Eigentum
 )";
 }
 void showMarktKundenbeziehung()
-{
-    cout << R"(
+{  cout << R"(
 Markt- und Kundenbeziehungen sind zentral für den Erfolg eines Unternehmens. 
 Eine gute Beziehung zu den Kunden hilft bei der Kundenbindung und ermoeglicht es Unternehmen, 
 ihre Produkte und Dienstleistungen besser an die Bedürfnisse des Marktes anzupassen.
 )";
 }
 void showMarktstrukturenUnternehmenszieleUnternehmensleitlinien()
-{
-    cout << R"(
+{  cout << R"(
 Marktstrukturen beschreiben, wie ein Markt organisiert ist, z.B. Wettbewerbsformen wie Monopol, 
 Oligopol oder vollkommener Wettbewerb. Unternehmensziele sind die angestrebten Resultate, 
 die ein Unternehmen erreichen möchte. Unternehmensleitlinien sind die Grundprinzipien, nach denen ein Unternehmen handelt.
 )";
 }
 void showCorporateIdentityCommunicationBehaviorDesign()
-{
-    cout << R"(
+{  cout << R"(
 Corporate Identity umfasst das Erscheinungsbild, die Werte und die Identität eines Unternehmens. 
 Corporate Communication bezieht sich auf die Art und Weise, wie das Unternehmen mit internen und 
 externen Stakeholdern kommuniziert. Corporate Behavior bezieht sich auf das Verhalten und die Kultur 
@@ -415,14 +398,12 @@ innerhalb des Unternehmens. Corporate Design betrifft das visuelle Erscheinungsb
 )";
 }
 void showOperativestrategischeZiele()
-{
-    cout << R"(
+{  cout << R"(
 Operative Ziele sind kurzfristige, konkrete Ziele, waehrend strategische Ziele langfristige, uebergeordnete Ziele sind.
 )";
 }
 void showMotivationMaslowKompetenzen()
-{
-    cout << R"(
+{  cout << R"(
 Motivation bezieht sich auf die inneren und äußeren Faktoren, die das Verhalten und die Leistung von Mitarbeitern 
 beeinflussen. Maslows Beduerfnispyramide ist eine Theorie, die die Hierarchie der menschlichen Bedürfnisse beschreibt. 
 Kompetenzen beziehen sich auf die Fähigkeiten, Kenntnisse und Erfahrungen, die zur erfolgreichen 
@@ -430,29 +411,25 @@ Durchführung von Aufgaben benötigt werden.
 )";
 }
 void showMarktforschungprimäresekundäreDaten()
-{
-    cout << R"(
+{   cout << R"(
 )";
 }
 
 void showMarketingMix4P()
-{
-    cout << R"(
+{  cout << R"(
 Der Marketing Mix umfasst die vier Elemente Price (Preisgestaltung), Product (Produktgestaltung), 
 Placement (Vertrieb) und Promotion (Kommunikation), die gemeinsam die Marketingstrategie eines Unternehmens bilden.
 )";
 }
 void showFunkdPreiHochNiedripreiRabatpol()
-{
-    cout << R"(
+{   cout << R"(
 Der Preis erfüllt verschiedene Funktionen wie Signalfunktion, Lenkungsfunktion und Einkommensfunktion. 
 Hoch- und Niedrigpreisstrategien beziehen sich auf die Preispositionierung von Produkten. 
 Rabattpolitik bezieht sich auf die Verwendung von Rabatten als Marketinginstrument.
 )";
 }
 void showDifferenzierungpsychologischerPreisZahlungsbedingung()
-{
-    cout << R"(
+{ cout << R"(
 Differenzierung bezieht sich auf die Schaffung von Unterscheidungsmerkmalen für ein Produkt, 
 um sich von der Konkurrenz abzuheben. Psychologischer Preis bezieht sich auf die Preisgestaltung, 
 die auf psychologische Faktoren abzielt. Zahlungsbedingungen sind die festgelegten Bedingungen, 
@@ -460,62 +437,54 @@ unter denen Zahlungen erfolgen.
 )";
 }
 void anzeigenLieferbedingungenINCOTermsKreditpolitikLeasingFactoring()
-{
-    cout << R"(
+{ cout << R"(
 Lieferbedingungen regeln die Bedingungen für den Transport und die Lieferung von Waren. 
 INCO-Terms sind internationale Regeln zur Auslegung von Lieferverträgen. Kreditpolitik bezieht sich auf 
 die Strategien zur Kreditvergabe. Leasing und Factoring sind Finanzierungsinstrumente für Unternehmen.
 )";
 }
 void anzeigenHandelsklauselnKreditpolitikMindestreserveOffenmarktpolitik()
-{
-    cout << R"(
+{  cout << R"(
 Handelsklauseln sind Bestimmungen in Handelsverträgen. Die Kreditpolitik regelt die Kreditvergabe und -rueckzahlung. 
 Mindestreserve ist der Mindestbetrag, den Banken als Reserve halten müssen. Offenmarktpolitik bezieht sich auf 
 Maßnahmen der Zentralbank zur Steuerung der Geldmenge und der Zinsen.
 )";
 }
 void anzeigenGewinnberechnungOHGKG()
-{
-    R"(
+{ cout <<   R"(
 Die Gewinnberechnung für Offene Handelsgesellschaften (OHG) und Kommanditgesellschaften (KG) 
 erfolgt auf Grundlage der Gesellschaftsverträge und Beteiligungsverhältnisse.
 )";
 }
 void anzeigenDatenschutzgrundverordnungDSGVO()
-{
-    cout << R"(
+{   cout << R"(
 Die Datenschutzgrundverordnung der EU regelt den Datenschutz und die Privatsphäre für alle Personen innerhalb der EU. 
 Artikel 1 bis 18 beziehen sich auf die Grundprinzipien und Rechte der betroffenen Personen.
 )";
 }
 void anzeigenProduktpolitikDistributionspolitikKommunikationspolitik()
-{
-    cout << R"(
+{  cout << R"(
 Produktpolitik umfasst die Gestaltung von Produkten, Marken und Produktvariationen. 
 Distributionspolitik bezieht sich auf Entscheidungen über Vertriebskanäle. Kommunikationspolitik 
 beinhaltet die Planung und Umsetzung der Kommunikation mit Kunden und anderen Interessengruppen.
 )";
 }
 void anzeigenMarktpotentialWachstumReifungSättigungEliminierung()
-{
-    cout << R"(
+{    cout << R"(
 Marktpotential bezieht sich auf das ungenutzte Marktvolumen. Wachstum ist die Phase, in der ein Markt expandiert. 
 Reifung ist die Phase, in der das Marktwachstum abflacht. Saettigung ist der Punkt, an dem der Markt gesättigt ist. 
 Eliminierung bezieht sich auf das Ausscheiden von Produkten aus dem Markt.
 )";
 }
 void anzeigenKommunikationsmodellSchulzvonThun()
-{
-    cout << R"(
+{    cout << R"(
 Das Kommunikationsmodell nach Schulz von Thun beschreibt die Kommunikation mit vier Ebenen: 
 Sachinhalt, Selbstoffenbarung, Beziehung und Appell. Es betont die Bedeutung von verbaler und nonverbaler 
 Kommunikation bei der Interpretation von Botschaften.
 )";
 }
 void anzeigenProzesskontrolle()
-{
-    cout << R"(
+{   cout << R"(
 Kontrolle von Prozessen
 Prozesscontrolling bezeichnet die Planung und Kontrolle von Geschaeftsprozessen sowie die dafür notwendige Informationensversorgung und Koordination.
 Schwerpunkt der Planung ist die Definition von Ziel und Messgrößen und deren Kontrolle in Geschäftsprozessen.
@@ -524,8 +493,7 @@ Beispiele dafür sind das V-Model und das Spiralmodel.
 )";
 }
 void anzeigenprojektmanagement()
-{
-    cout << R"(
+{  cout << R"(
 Projektmanagement ist eine strukturierte Herangehensweise zur Planung, Durchführung, Überwachung und Steuerung von Projekten, 
 um die definierten Ziele und Anforderungen innerhalb bestimmter Zeit-, Kosten- und Qualitätsvorgaben zu erreichen. 
 Es beinhaltet die effektive Nutzung von Ressourcen, das Management von Risiken, Kommunikation und Zusammenarbeit 
@@ -547,8 +515,7 @@ dass das Projekt erfolgreich abgeschlossen wird, um den gewuenschten Nutzen zu e
 )";
 }
 void showTotalQualityManagement()
-{
-    cout << R"(
+{   cout << R"(
 TQM Total Quality Management
 bezeichnet als umfassendes QM Qualitaetsmanagement nach der DIN eine "durchgaengige,
 fortwaehrende und alle Bereiche des Unternehmens
@@ -566,8 +533,7 @@ Lieferantenbeziehung zum gegenseitigen Nutzen
 )";
 }
 void showVersi()
-{
-    cout << R"(
+{  cout << R"(
 Kfz-Versicherung (Kraftfahrzeugversicherung):
 Eine Kfz-Versicherung deckt Schäden oder Verluste an Ihrem Fahrzeug sowie Haftpflichtansprüche Dritter ab, 
 die durch den Betrieb des Fahrzeugs entstehen.
@@ -623,8 +589,7 @@ die waehrend der gesamten Lieferkette entstehen können, einschließlich Lagerung,
 )";
 }
 void anzeigenGesetze()
-{
-    cout << R"(
+{   cout << R"(
 Gesetzbuecher zum auswendig lernen für die Pruefung:
 Jugendarbeitsschutzgesetz JArbSchG
 Arbeitsschutzgesetz ArbSchG
@@ -634,8 +599,7 @@ Buergerliches Gesetzbuch BgB
 )";
 }
 void anzeigenproablauf()
-{
-    cout << R"(
+{ cout << R"(
 Beschaffungsprozess:
 
 Dieser Prozess umfasst die Identifikation, Auswahl und Beschaffung von Rohstoffen, Materialien, Ausrüstungen und Dienstleistungen,
@@ -662,8 +626,7 @@ um einen reibungslosen Bestellvorgang, eine effektive Lieferung und eine gute Ku
 )";
 }
 void anzeigenereigv()
-{
-    cout << R"(
+{ cout << R"(
 Der erweiterte Eigentumsvorbehalt sichert die Rechte eines Verkäufers.
 Bei der Vereinbarung mit dem Käufer muss er darauf achten, dass sich keine Grüne ergeben, die zur Unwirsamkeit des ´Vertrags führen.
 Mit dem erweiterten Eigentumsvorbehalt sichert sich der Verkäufer einer Sache ein zusetzliches Recht zu. 
@@ -678,23 +641,20 @@ nachtraeglicher Eigentumsvorbehalt
 )";
 }
 void anzeigenrealsich()
-{
-    cout << R"(
+{  cout << R"(
 Realsicherheiten sind Vermögensgegenstaende, die verpfändet werden, falls der Schuldner seine Schuld nicht bezahlt. 
 Zu diesen Vermögensgegenständen gehören bewegliche und unbewegliche Sachen. Sicherungsmittel an Grundstücken sind Grundschuld und Hypothek.
 )";
 }
 void anzeigenholschuld()
-{
-    cout << R"(
+{  cout << R"(
 Holschuld ist ein Begriff aus dem Schuldrecht und bedeutet, dass Leistungs- und Erfolgsort beim Schuldner liegt. 
 Bei ihm sollen die Leistungshandlungen erfolgen und der Leistungserfolg eintreten. Bei der Holschuld muss sich der Glaeubiger
  die Leistung beim Schuldner abholen.
 )";
 }
 void showzession()
-{
-    cout << R"(
+{   cout << R"(
 Eine Zession ist eine Forderungsabtretung oder Sicherungsabtretung. Dabei ändert sich das Schuldverhältnis, 
 indem die Forderung an einen neuen Gläubiger uebertragen wird. 
 Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessionar (Abtretungsempfänger).
@@ -702,8 +662,7 @@ Der Zedent (Abtretender) verkauft also die Forderung an den sogenannten Zessiona
 )";
 }
 void showsixsigma()
-{
-    cout << R"(
+{   cout << R"(
 Six Sigma ist ein Managementsystem zur Prozessverbesserung, statistisches 
 Qualitätsziel und zugleich eine Methode des Qualitätsmanagements.
 Ihr Kernelement ist die Beschreibung, Messung, Analyse, Verbesserung und 
@@ -718,8 +677,7 @@ Ueberwachung von Geschaeftsvorgängen mit statistischen Mitteln.
 )";
 }
 void showkaizen()
-{
-    cout << R"(
+{  cout << R"(
 Die Kaizen-Philosophie beschreibt laut Definition eine Denkweise, bei der kleine, schrittweise Aenderungen im Laufe der Zeit 
 eine große Wirkung erzielen. Bei Kaizen handelt es sich um eine Methode des Qualitätsmanagement.
 Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum Bessen verwendet wird´.
@@ -734,8 +692,7 @@ Kai steht für Verbesserung eines Produktes,  Zen bedeutet dass diese Produkt zum
 )";
 }
 void showsteuererk()
-{
-    cout << R"(
+{  cout << R"(
 Eine Steuererklärung ist ein formaler Prozess, bei dem eine steuerpflichtige Person oder ein Unternehmen
  dem Finanzamt Informationen über ihre Einkommensverhältnisse, Ausgaben und finanziellen Transaktionen 
 für einen bestimmten Zeitraum meldet. Dieser Zeitraum entspricht normalerweise dem Steuerjahr, das in den meisten Ländern dem Kalenderjahr entspricht.
@@ -754,23 +711,20 @@ Die Steuererklärung ist in den meisten Laendern gesetzlich vorgeschrieben, und d
 )";
 }
 void showinvestrech()
-{
-    cout << R"(
+{  cout << R"(
 Mit der Investitionsrechnung sollen Investitionsentscheidungen bezüglich der monetären Unternehmensziele fundiert und vorbereitet werden. 
 Der durch das Investitionsprojekt generierte Zahlungsstrom wird ermittelt und zu einer Zielgröße, beispielsweise der Rentabilitaet, verdichtet.
 )";
 }
 void showmaxpr()
-{
-    cout << R"(
+{  cout << R"(
 Maximalprinzip: Auch als Prinzip der optimalen Zielerreichung bekannt. Es besagt, dass mit gegebenen
 Ressourcen das Maximum an Zielen erreicht werden soll. Im ökonomischen Kontext bedeutet dies, dass ein 
 Unternehmen versucht, mit den vorhandenen Ressourcen den größtmoeglichen Gewinn zu erzielen.
 )";
 }
 void showminpr()
-{
-    cout << R"(
+{   cout << R"(
 Minimalprinzip: Auch als Prinzip der sparsamen Mittelverwendung bekannt. Es besagt, dass ein bestimmtes Ziel 
 mit minimalen Ressourcen oder Aufwand erreicht werden sollte. Im ökonomischen Kontext bedeutet dies, 
 dass ein Unternehmen versucht, eine bestimmte Produktionsmenge mit minimalen Kosten zu produzieren, 
@@ -778,8 +732,7 @@ um den Gewinn zu maximieren.
 )";
 }
 void showoekopr()
-{
-    cout << R"(   
+{  cout << R"(   
 Ökonomisches Prinzip:
 Das oekonomische Prinzip besagt, dass ökonomische Entscheidungen auf rationale Weise getroffen werden, 
 um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen. Es setzt sich aus zwei Teilen zusammen:
@@ -819,7 +772,7 @@ um knappe Ressourcen effizient zu nutzen, um bestmögliche Ergebnisse zu erzielen
     }
 }
 void showgeschp1() {
-    R"(
+  cout <<  R"(
 Beschaffungsprozess:
 
 Identifikation von Bedarfen
@@ -829,7 +782,7 @@ Lieferantenmanagement
 )";
 }
 void showgeschp2() {
-    R"(
+   cout << R"(
 Produktionsprozess:
 
 Materialbeschaffung
@@ -839,7 +792,7 @@ Lagerhaltung
 )";
 }
 void showgeschp3() {
-    R"(
+ cout <<   R"(
 Vertriebsprozess:
 
 Kundenaquise
@@ -849,7 +802,7 @@ Lieferung
 )";
 }
 void showgeschp4() {
-    R"(
+cout <<    R"(
 Finanzprozess:
 
 Buchführung
@@ -859,7 +812,7 @@ Finanzplanung
 )";
 }
 void showgeschp5() {
-    R"(
+  cout <<  R"(
 Personalprozess:
 
 Personalbeschaffung
@@ -869,7 +822,7 @@ Personalmanagement
 )";
 }
 void showgeschp6() {
-    R"(
+ cout <<   R"(
 Innovations- und Entwicklungsprozess:
 
 Forschung und Entwicklung
@@ -879,7 +832,7 @@ Markteinfuehrung neuer Produkte
 )";
 }
 void showgeschp7() {
-    R"(
+ cout <<   R"(
 Kundenbeziehungsprozess:
 
 Kundenbetreuung

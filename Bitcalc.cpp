@@ -1,14 +1,11 @@
 #include <iostream>
 using namespace std;
-
 double bitsToBytes(double bits) {
     return bits / 8.0;
 }
-
 double bytesToBits(double bytes) {
     return bytes * 8.0;
 }
-
 int bitmain() {
     char choice;
     cout << "Möchten Sie Bit zu Byte (b) oder Byte zu Bit (t) umrechnen? ";

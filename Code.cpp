@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int codemain() {
-
 	cout << R"( 
 _________________________________________________________________________________
 Definitionen des C++ Codes:
@@ -147,6 +146,10 @@ Idee: Speichern von Eingabe, Suchen und Ersetzen
 3) ein Array->Speicherfeld, alle Werte, gleicher Typ->Suchen und Sortieren->Algorithmus
 Eindumensionales Array> int list[5]
 Zweidimensionales Array> double umsatz[3][2];
+
+_________________________________________________________________________________________
+
+Backslash -> \ escape sequenz 
 )";
 return 0;
 }

@@ -1,9 +1,7 @@
 #include <bitset> // Für die binäre Umwandlung
 #include <sstream> // Für die Umwandlung in Hexadezimal und Oktal
 #include "Mainframe.h"
-
 using namespace std;
-
 // Funktionen für die verschiedenen Operationen
 double Addition(double num1, double num2) {
     return num1 + num2;
@@ -44,10 +42,8 @@ int bicmain() {
     char operation;
     double num1, num2;
     int base = 10; // 10 für Dezimal, 2 für Binär, 16 für Hexadezimal, 8 für Oktal
-
     while (true) {
         system("cls");
-
         cout << "\033[32m";
         cout << "-----------------------------------" << endl;
         cout << "|        Binaerer Rechner         |" << endl;
@@ -99,10 +95,8 @@ int bicmain() {
 )";*/
 
         operation = _getch();
-
         if (operation == 27)
             break;
-
         if (operation == '5') {
             base = 2; // Wechsel zur Binären Eingabe
             continue;
@@ -124,7 +118,6 @@ int bicmain() {
             cout << "Ungueltige Eingabe. Bitte waehlen Sie eine gueltige Operation." << endl;
             continue;
         }
-
         // Eingabe von Operanden basierend auf der ausgewählten Eingabebasis
         if (base == 10) {
             cout << "Bitte geben Sie den ersten Operanden ein: ";
@@ -159,9 +152,7 @@ int bicmain() {
             num1 = stoi(octalNum1, nullptr, 8);
             num2 = stoi(octalNum2, nullptr, 8);
         }
-
         double result;
-
         // Je nach ausgewählter Operation wird die entsprechende Funktion aufgerufen
         switch (operation) {
         case '1':
@@ -177,7 +168,6 @@ int bicmain() {
             result = Division(num1, num2);
             break;
         }
-
         // Ausgabe des Ergebnisses
         cout << "-----------------------------------" << endl;
         if (base == 10) {
@@ -221,12 +211,9 @@ int bicmain() {
         else if (base == 8) {
             cout << " " << num2 << " = " << result << " (Oktal: 0" << ToOctal(result) << ")" << endl;
         }
-
         cout << "-----------------------------------" << endl;
-
         cout << "Druecken Sie eine beliebige Taste, um fortzufahren...";
         _getch();
     }
-
     return 0;
 }

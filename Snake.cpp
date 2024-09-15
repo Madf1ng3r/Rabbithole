@@ -14,7 +14,6 @@ enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
 HANDLE consoleHandle;
 CHAR_INFO consoleBuffer[width * height];
-
 void snakeSetup()
 {
     dir = STOP;
@@ -28,7 +27,6 @@ void snakeSetup()
     tailX = new int[width * height];
     tailY = new int[width * height];
 }
-
 void snakeDraw()
 {
     for (int i = 0; i < width + 2; i++)
@@ -84,7 +82,6 @@ void snakeDraw()
     SMALL_RECT writeRegion = { 0, 0, width + 1, height + 1 };
     WriteConsoleOutput(consoleHandle, consoleBuffer, bufferSize, bufferCoord, &writeRegion);
 }
-
 void snakeInput()
 {
     if (_kbhit())
@@ -173,7 +170,6 @@ void DisplayScore()
     system("cls");
     cout << "Score: " << score << endl;
 }
- 
 void SaveHighScore(int score)
 {
     ofstream file("highscores.txt", ios::app); // Open the file in append mode
@@ -187,7 +183,6 @@ void SaveHighScore(int score)
         cout << "Unable to save high score to file." << endl;
     }
 }
-
 void ShowHighScores()
 {
     ifstream file("highscores.txt");
@@ -206,7 +201,6 @@ void ShowHighScores()
         cout << "No high scores found." << endl;
     }
 }
-
 bool PlayAgainPrompt()
 {
  

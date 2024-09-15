@@ -34,3 +34,14 @@ int linuxmain();
 #define OBJECT_H
 int objectmain();
 #endif // !OBJECT_H
+
+#ifndef SQLWIKI_H
+#define SQLWIKI_H
+void showsqlwikimain();
+#endif // !SQLWIKI_H
+
+#ifndef PCWIKI_H
+#define PCWIKI_H
+int pcwikimain();
+#endif // !PCWIKI_H
+

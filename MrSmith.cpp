@@ -17,7 +17,6 @@ struct Player {
     int direction; // Blickrichtung des Spielers (0 - oben, 1 - rechts, 2 - unten, 3 - links)
     int bulletDamage; // Schaden der abgefeuerten Kugeln
 };
-
 struct Enemy {
     double x;
     double y;
@@ -26,7 +25,6 @@ struct Enemy {
     int weaponDamage;
     bool alive; // Zustand des Gegners (lebendig oder tot)
 };
-
 struct Item { 
     double x;
     double y;
@@ -34,32 +32,27 @@ struct Item {
     string name;
     bool isAmmo; // Gibt an, ob das Item Munition ist
 };
-
 void setConsoleMaximized() {
     HWND console = GetConsoleWindow();
     ShowWindow(console, SW_MAXIMIZE);
 }
-
 void waitForEnter() {
     cout << "Drücke die Enter-Taste, um das Spiel zu starten...";
     cin.ignore();
     cin.get();
 }
-
 void setCursorPosition(int x, int y) { // Zeichne Cursor
     COORD coord;
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
-
 void hideCursor() { // verstecke Cursor
     CONSOLE_CURSOR_INFO cursorInfo;
     cursorInfo.dwSize = 100;
     cursorInfo.bVisible = FALSE;
     SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
 }
-
 void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<Item>& items, const vector<pair<int, int>>& projectiles, const vector<vector<char>>& obstacles) {
     setCursorPosition(0, 0);
     // Zeichne Spielfeldrand
@@ -138,7 +131,6 @@ void drawBoard(const Player& player, const vector<Enemy>& enemies, const vector<
     cout << " | ";
     cout << "Munition: " << player.ammunition << endl;
 }
-
 void movePlayer(Player& player, char direction, const vector<vector<char>>& obstacles) {
     double moveSpeed = 1.6; // Geschwindigkeit der Spielerbewegung
     double nextX = player.x;
@@ -165,19 +157,15 @@ void movePlayer(Player& player, char direction, const vector<vector<char>>& obst
         player.y = nextY;
     }
 }
-
 bool checkCollision(const Player& player, const Enemy& enemy) {
     return static_cast<int>(player.x) == static_cast<int>(enemy.x) && static_cast<int>(player.y) == static_cast<int>(enemy.y) && enemy.alive;
 }
-
 bool checkCollision(const Player& player, const Item& item) {
     return static_cast<int>(player.x) == static_cast<int>(item.x) && static_cast<int>(player.y) == static_cast<int>(item.y);
 }
-
 bool checkCollision(const pair<int, int>& projectile, const Enemy& enemy) {
     return projectile.first == static_cast<int>(enemy.x) && projectile.second == static_cast<int>(enemy.y) && enemy.alive;
 }
-
 void moveEnemyTowardsPlayer(Enemy& enemy, const Player& player, const vector<vector<char>>& obstacles) {
     double dx = player.x - enemy.x;
     double dy = player.y - enemy.y;
@@ -197,7 +185,6 @@ void moveEnemyTowardsPlayer(Enemy& enemy, const Player& player, const vector<vec
         enemy.y = nextY;
     }
 }
-
 void shootPlayerWeapon(Player& player, vector<pair<int, int>>& projectiles, vector<Enemy>& enemies) {
     if (player.ammo > 0) {
         player.ammo--;
@@ -237,7 +224,6 @@ void shootPlayerWeapon(Player& player, vector<pair<int, int>>& projectiles, vect
         cout << "Waffe ist leer!" << endl;
     }
 }
-
 void collectItem(Player& player, Item& item) {
     if (item.name == "Medikit") {
         player.medkits++;
@@ -249,7 +235,6 @@ void collectItem(Player& player, Item& item) {
         cout << "Munition eingesammelt! Munitionsgrenze erhöht." << endl;
     }
 }
-
 void drawExplosion(int x, int y) {
     setCursorPosition(x, y);
     cout << "   ";
@@ -258,7 +243,6 @@ void drawExplosion(int x, int y) {
     setCursorPosition(x + 1, y + 1);
     cout << " ";
 }
-
 void spawnItems(vector<Item>& items, int level) {
     items.clear();
     if (level >= 2 && level <= 7) {
@@ -277,7 +261,6 @@ void spawnItems(vector<Item>& items, int level) {
                 item.name = "Munition";
                 item.isAmmo = true;
             }
-
             items.push_back(item);
         }
     }
@@ -451,12 +434,12 @@ L___________________J     \
         isGameWon = playLevel(player, level);
         level++;
         if (level == 8) {
-            cout << "Herzlichen Glückwunsch! Du hast das Spiel gewonnen!" << endl;
+            cout << "Herzlichen Glueckwunsch! Du hast das Spiel gewonnen!" << endl;
             break;
         }
         else if (player.health > 0) {
             char choice;
-            cout << "Möchtest du das nächste Level spielen? (j/n): ";
+            cout << "Moechtest du das nächste Level spielen? (j/n): ";
             cin >> choice;
             if (choice != 'j') {
                 break;

@@ -13,7 +13,7 @@ void showPython()
 <|___________________________|>
       |                |
 
-1. Entscheidung: Kosolenprogramm vs. Programm mit GUI
+1. Entscheidung: Konsolenprogramm vs. Programm mit GUI
 2. Art/Weise der Programmausführung Compiler vs Interpreter va Hybrid
 3. Programmsystem: Client vs Server
 4. Entwicklungsumgebung  IDE 
@@ -48,6 +48,8 @@ void showPython()
         print("Hello World!\n Was geht?")
 
         4. Extensions installieren  Python Interpreter
+        5. run - start debuging
+        6. find python interpreter - python - select interpreter
 
 
 

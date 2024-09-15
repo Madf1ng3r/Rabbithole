@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "PLinks.h"
+#include "Links.h"
 #include "Openlink.h"
 // Farben für die Terminalausgabe
 #define GREEN "\033[1;32m"
@@ -10,6 +10,7 @@ using namespace std;
 int plinkmain() {
     string links[] = {
         "https://www.leipzig.ihk.de/mb-04-111",
+        "https://ausbildung-in-der-it.de/abschlusspruefung/einrichten-eines-it-gestuetzten-arbeitsplatzes",
         "https://en.cppreference.com/w/",
         "https://github.com/nlohmann/json",
         "https://github.com/curl/curl/tree/master",

@@ -9,7 +9,6 @@ vector<int> enemyX, enemyY;
 int bulletX, bulletY;
 bool isBulletActive;
 int sscore;
-
 void spaceSetup() {
     playerX = width / 2;
     playerY = height - 1;
@@ -20,7 +19,6 @@ void spaceSetup() {
     isBulletActive = false;
     sscore = 0;
 }
-
 void spaceDraw() {
     system("cls");
     for (int i = 0; i < width; i++)
@@ -37,7 +35,6 @@ void spaceDraw() {
                     break;
                 }
             }
-
             if (isPlayer)
                 cout << "P";
             else if (isEnemy)
@@ -54,7 +51,6 @@ void spaceDraw() {
     cout << endl;
     cout << "Score: " << sscore << endl;
 }
-
 void spaceInput() {
     if (_kbhit()) {
         char key = _getch();
@@ -71,7 +67,6 @@ void spaceInput() {
         }
     }
 }
-
 void spaceUpdate() {
     for (size_t i = 0; i < enemyX.size(); i++) {
         enemyY[i]++;
@@ -80,8 +75,7 @@ void spaceUpdate() {
             enemyY[i] = 0;
         }
     }
-
-    if (isBulletActive) {
+if (isBulletActive) {
         bulletY--;
         if (bulletY < 0) {
             isBulletActive = false;
@@ -103,7 +97,6 @@ void spaceUpdate() {
         enemyY.push_back(0);
     }
 }
-
 int spacemain() {
     srand(static_cast<unsigned>(time(0)));
     spaceSetup();

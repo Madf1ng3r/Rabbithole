@@ -5,14 +5,12 @@ void anzeigenanfechtbar()
 {
  cout <<   R"(  Vertrag ist gültig.  )";
 }
-
 void anzeigenAuslobung()
 {
  cout <<   R"(
 Preisversprechen
 )";
 }
-
 void anzeigenakkreditiv()
 {
 //	int  key;
@@ -30,7 +28,6 @@ statt der Hausbank des Importeuers die Bank des Exporteuers in die Pflicht genom
     //    cin >> key;
     //} while (key != 27);
 }
-
 void anzeigenavisieren()
 {
 cout <<	R"(
@@ -40,32 +37,27 @@ In spezifischeren Kontexten kann es sich auf das Melden oder
  Ankündigen von geplanten Aktivitäten, Ereignissen oder Lieferungen beziehen.
 )";
 }
-
 void anzeigenBartern()
 {
 cout <<    R"(
 Tauschhandel mit Sachwerten )";
 }
-
 void anzeigenBesitzkonstitut()
 {
 cout <<    R"(
 Verkäufer bleibt Eigentümer der Sache, Besitzrecht wird aber übertragen.
 )";
 }
-
 void anzeigenDisponent()
 {
  cout <<   R"(  Zuteiler/Verwalter einer Organisation, Zuständig für Finanzen und Personal )";
 }
-
 void anzeigenevaluiren()
 {
  cout <<   R"(
 bewerten / beurteilen
 )";
 }
-
 void anzeigenforfaitierung()
 {
 cout <<	R"(
@@ -73,7 +65,6 @@ cout <<	R"(
 		Forfaitierungen sind vor allem ein Mittel der Exportfinanzierung bei Lieferungen an ausländische Kunden.
 )";
 }
-
 void anzeigenfactoring()
 {
 cout <<	R"(
@@ -82,21 +73,18 @@ Beim Factoring verkauft ein Unternehmen seine offenen Forderungen an einen Facto
 Der Factor übernimmt auch das Debitorenmanagement und das Mahnwesen.
 )";
 }
-
 void anzeigenISO()
 {
  cout <<   R"(
 ISO Normen sind gleiche einheitliche Vorschriften, die für alle Unternehmen gleichermaßen verstanden werden.
 )";
 }
-
 void anzeigentilgung()
 {
 cout <<    R"(
 Tilgung nennt man im Finanzwesen die planmäßige oder außerplanmäßige Rückzahlung von Schulden.
 )";
 }
-
 void anzeigensqueezeout()
 {
  cout <<   R"(
@@ -104,7 +92,6 @@ Der Squeeze Out, auch bekannt als „Freeze Out“, ist ein rechtliches Verfahren, u
 und alle Anteile auf den Mehrheitsaktionär (Hauptaktionär) zu vereinigen.
 )";
 }
-
 int defmain()
 {
     char auswahl;
@@ -171,25 +158,17 @@ int defmain()
         case '14':
                     anzeigenBartern();
                     break;
-        case '15':
-
-            break;
-        case '16':
-
-            break;
-
         case '0':
             beenden = true; // Programm beenden
             break;
         default:
-            cout << "Ungültige Auswahl. Bitte erneut wählen.\n";
+            cout << "Ungueltige Auswahl. Bitte erneut wählen.\n";
             break;
         }
         if (auswahl != '0') {
-            cout << "\nDrücken Sie eine beliebige Taste, um fortzufahren...";
+            cout << "\nDruecken Sie eine beliebige Taste, um fortzufahren...";
             _getch(); // Warten auf Tastendruck, bevor das Menü erneut angezeigt wird
         }
     }
 	return 0;
-
 }

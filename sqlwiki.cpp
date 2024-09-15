@@ -1,7 +1,7 @@
-#include "sqlwiki.h"
+#include "Wiki.h"
 #include "Mainframe.h"
+#include "Links.h"
 using namespace std;
-
 void showsqlwikimain()
 {
 	clearScreen();

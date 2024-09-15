@@ -177,14 +177,12 @@
     <ClCompile Include="ZCode.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AILinks.h" />
     <ClInclude Include="Art.h" />
     <ClInclude Include="BeispielCode.h" />
     <ClInclude Include="Bicalc.h" />
     <ClInclude Include="binary.h" />
     <ClInclude Include="Bitcalc.h" />
     <ClInclude Include="BWL.h" />
-    <ClInclude Include="BWLLink.h" />
     <ClInclude Include="caesar.h" />
     <ClInclude Include="cmd.h" />
     <ClInclude Include="Code.h" />
@@ -196,17 +194,12 @@
     <ClInclude Include="Games.h" />
     <ClInclude Include="Geschichte.h" />
     <ClInclude Include="Hcode.h" />
-    <ClInclude Include="pcwiki.h" />
-    <ClInclude Include="sqlwiki.h" />
     <ClInclude Include="User.h" />
     <ClInclude Include="Mainframe.h" />
     <ClInclude Include="MSmith.h" />
     <ClInclude Include="Openlink.h" />
-    <ClInclude Include="NULinks.h" />
-    <ClInclude Include="OPLink.h" />
     <ClInclude Include="jason.hpp" />
     <ClInclude Include="Links.h" />
-    <ClInclude Include="PLinks.h" />
     <ClInclude Include="pong.h" />
     <ClInclude Include="readme.h" />
     <ClInclude Include="sinndeslebens.h" />

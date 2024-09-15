@@ -1,12 +1,7 @@
 #include "Links.h"
-#include "AILinks.h"
-#include "NULinks.h"
-#include "BWLLink.h"
-#include "OPLink.h"
-#include "PLinks.h"
 #include "Openlink.h"
 #include "Mainframe.h"
-#include "pcwiki.h"
+#include "Wiki.h"
 using namespace std;
 void showLinkmenu()
 {

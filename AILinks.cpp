@@ -1,6 +1,6 @@
 #include <cstdlib>
 #include "Mainframe.h"
-#include "AILinks.h"
+#include "Links.h"
 #include "Openlink.h"
 #define GREEN "\033[1;32m"
 #define RESET "\033[0m"
@@ -18,6 +18,8 @@ int ailinkmain() {
         "https://wepik.com/ai#rs=menu",
         "https://clipdrop.co/",
         "https://donotpay.com",  
+        "https://gemini.google.com/app",
+
 
     };
     int numLinks = sizeof(links) / sizeof(links[0]);

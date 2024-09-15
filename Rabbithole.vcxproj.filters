@@ -197,18 +197,6 @@
     <ClInclude Include="Geschichte.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="PLinks.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="AILinks.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="OPLink.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="NULinks.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Openlink.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -242,9 +230,6 @@
     <ClInclude Include="Definitionen.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="BWLLink.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Hardware.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -255,12 +240,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Gesetze.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="sqlwiki.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="pcwiki.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Bitcalc.h">

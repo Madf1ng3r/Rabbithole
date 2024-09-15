@@ -7,13 +7,12 @@ void writeToFile(const string& filename, const string& name, const string& text)
     if (file.is_open()) {
         file << "[" << name << "]: " << text << endl;
         file.close();
-        cout << "Note saved successfully." << endl;
+        cout << "Notiz wurde erfolgreich gespeichert." << endl;
     }
     else {
-        cout << "Error: Could not open the file." << endl;
+        cout << "Fehler, Datei konnte nicht geoeffnet werden." << endl;
     }
 }
-
 void displayNotes(const string& filename) {
     ifstream file(filename);
     if (file.is_open()) {
@@ -24,12 +23,10 @@ void displayNotes(const string& filename) {
         file.close();
     }
     else {
-        cout << "Datei konnte nicht geöffnet werden." << endl;
+        cout << "Datei konnte nicht geoeffnet werden." << endl;
     }
 }
-
 static void createPasswort() {
-
     string password;
     bool validPassword = false;
     while (!validPassword) {
@@ -83,7 +80,6 @@ static void createPasswort() {
         }
     }
 }
-
 bool changePassword(const string& oldPassword, const string& newPassword) {
     ifstream file("pw.txt");
     string savedPassword;
@@ -95,25 +91,24 @@ bool changePassword(const string& oldPassword, const string& newPassword) {
             if (passwordFile.is_open()) {
                 passwordFile << newPassword;
                 passwordFile.close();
-                cout << "Password successfully changed." << endl;
+                cout << "Password wurde erfolgreich geändert." << endl;
                 return true;
             }
             else {
-                cout << "Error: Could not open the password file for writing." << endl;
+                cout << "Passwort konnte nicht geändert werden." << endl;
                 return false;
             }
         }
         else {
-            cout << "Error: The old password does not match the saved password." << endl;
+            cout << "Passwort ist falsch.." << endl;
             return false;
         }
     }
     else {
-        cout << "Error: Could not open the password file for reading." << endl;
+        cout << "Fehler, das Passwort konnte nicht ausgelesen werden." << endl;
         return false;
     }
 }
-
 string enterName() {
     string name;
     cout << "\033[32m";
@@ -149,7 +144,7 @@ string enterName() {
     cout << "Wilkommen ";
     this_thread::sleep_for(chrono::milliseconds(500)); 
  
-    string welcomeMessage = "im Rabbithole! Das Programm befindet sich noch in der Alpha Version. Bevor Du loslegst erzähl mir etwas über Dich. Wie lautet dein Name?";
+    string welcomeMessage = "im Rabbithole! Das Programm befindet sich noch im Aufbau. Bevor Du loslegst erzähl mir etwas über Dich. Wie lautet dein Name?";
     for (char c : welcomeMessage) {
         cout << c;
         this_thread::sleep_for(chrono::milliseconds(100)); // Verzögerung von 100 Millisekunden pro Zeichen
@@ -158,7 +153,6 @@ string enterName() {
     getline(cin, name);
     return name;
 }
-
 void saveNameToFile(const string& filename, const string& name) {
     ofstream file(filename);
     if (file.is_open()) {
@@ -166,10 +160,9 @@ void saveNameToFile(const string& filename, const string& name) {
         file.close();
     }
     else {
-        cout << "Datei konnte nicht geöffnet werden." << endl;
+        cout << "Datei konnte nicht geoeffnet werden." << endl;
     }
 }
-
 string readNameFromFile(const string& filename) {
     ifstream file(filename);
     string name;
@@ -178,7 +171,7 @@ string readNameFromFile(const string& filename) {
         file.close();
     }
     else {
-        cout << "Datei konnte nicht geöffnet werden." << endl;
+        cout << "Datei konnte nicht geoeffnet werden." << endl;
     }
     return name;
 }

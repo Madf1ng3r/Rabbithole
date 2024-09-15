@@ -8,7 +8,6 @@ using namespace std;
 void sleep(unsigned int milliseconds) {
     Sleep(milliseconds);
 }
-
 void setConsoleSize(int width, int height) {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     SMALL_RECT rect = { 0, 0, static_cast<SHORT>(width - 1), static_cast<SHORT>(height - 1) };
@@ -16,12 +15,10 @@ void setConsoleSize(int width, int height) {
     SetConsoleWindowInfo(consoleHandle, TRUE, &rect);
     SetConsoleScreenBufferSize(consoleHandle, size);
 }
-
 void setConsoleColor(WORD color) {
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(consoleHandle, color);
 }
-
 void functionToExecute() {
     smmain();
     // Fügen Sie hier den Code für die auszuführende Funktion ein

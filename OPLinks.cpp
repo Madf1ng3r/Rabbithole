@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-#include "OPLink.h"
+#include "Links.h"
 #include "Openlink.h"
 using namespace std;
 // Farben für die Terminalausgabe

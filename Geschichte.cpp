@@ -16,7 +16,6 @@ enum class TextColor {
     Yellow,
     White
 };
-
 void setTextColor(TextColor color) {
     switch (color) {
     case TextColor::Black:
@@ -47,16 +46,13 @@ void setTextColor(TextColor color) {
         break;
     }
 }
-
 void resetTextColor() {
     cout << "\033[0m"; // Setzt die Textfarbe auf die Standardfarbe zurück
 }
-
 string getRandomElement(const vector<string>& elements) {
     int index = rand() % elements.size();
     return elements[index];
 }
-
 #ifdef _WIN32
 bool isEscapeKeyPressed() {
     if (_kbhit()) {
@@ -73,7 +69,6 @@ bool isEscapeKeyPressed() {
     return false;
 }
 #endif
-
 void generateStory(const vector<string>& storyParts, const vector<string>& nouns, const vector<string>& adjectives, const vector<string>& actions, const vector<string>& locations, const vector<string>& endings) {
     int numStoryParts = storyParts.size();
     int numNouns = nouns.size();
@@ -119,7 +114,6 @@ void generateStory(const vector<string>& storyParts, const vector<string>& nouns
         }
     }
 }
-
 int geschmain() {
     cout << endl << endl << endl << "                                               Hey  " << g_name <<  " !" << endl;
     cout << "\033[32m";  //Grün
@@ -172,7 +166,6 @@ int geschmain() {
         cout << "Hier ist deine Geschichte:" << endl;
         cout << "________________________________________________________________________________________________________________________";
         srand(time(nullptr)); // Initialisiert den Zufallssatzgenerator
-
         vector<string> storyParts;
         if (isFunny) {
             storyParts = {
@@ -217,23 +210,18 @@ int geschmain() {
                 //...  zufällige Satzanfänge
             };
         }
-
         vector<string> nouns = {
             "Kevin", g_name , "Kater", "Vogel", "Bär", "Affe", "Elefant", "Löwe", "Tiger", "Hase", "Fisch", "Kühlschrank", "Roboter Namens Marvin", "Computer", "Delfin", "Dino", "Chefkoch", "Rüdiger", "Steffen", "Klaus", "Geist", "Influencer", "Informatiker", "König", "Zauberer", "Pilot", "Astronaut", "Detektiv", "Werwolf", "Hacker", "Mandaloreaner", "Hobbit", "Waldelf", "Karsten", "Sheriff", "Polizist", "Marsianer", "junger Padawan", "Indianer", "Woookie", "Zwerg"
         };
-
         vector<string> adjectives = {
             "kleiner", "großer", "freundlicher", "mutiger", "schlauer", "schneller", "ruhiger", "starker", "lustiger", "neugieriger", "glücklicher", "träumerischer", "lebendiger", "merkwürdiger", "verärgerter", "ruchloser", "erschrockener", "trauriger", "geheimnisvoller", "abenteuerlustiger", "tapferer", "toller", "verwirrter" , "neugieriger", "faszinierter", "wirrer", "verpeilter"
         };
-
         vector<string> actions = {
             "spielte", "rannte", "sprang", "kletterte", "flog", "lief", "versteckte sich", "schlief", "tanzte", "lachte", "sang", "las", "spielte", "rollte", "warf einen Stein", "fand einen Schatz", "löste ein Rätsel", "rettete", "verfolgte", "löschte", "erschuf", "gluckste vergnügt", "seufzte", "stolperte", "räusperte", "wanderte", "spazierte", "tanzte","galoppierte","duckte", "rannte", "sprung", "träumte"
         };
-
         vector<string> locations = {
             "im Wald", "auf dem Berg", "am Strand", "in der Stadt", "im Park", "im Zoo", "in einer Höhle", "im Schloss", "im Garten", "im Ozean", "auf einer Insel", "in einer Wüste", "am Johannisplatz", "um die Ecke", "in einer anderen Galaxie", "in einer Paralleldimension", "in der Matrix", "Gegenüber vom Penny", "im Raumschiff", "vor dem Stargate", "auf dem Spielplatz", "im Büro", "in der Herrentoilette", "auf dem Bahnsteig", "in London", "irgendwo in Leipzig", "im Kirschblütenwald", "im Block gegenüber", "im Fitnesscenter", "in einem Märchenland", "unter Wasser", "in Amsterdam", "in New York", "in der Schule", "beim Abendessen", "auf einer Beerdigung", "auf der Spitze des Mount Everest", "in Mordor", "im Auenland", "irgendwo auf dem Mars", "auf dem Mond", "auf einer einsamen Insel", "Im Dschungel von Patagonien", "in dem unterirdischen Tunnelsystem eines kleinen Jupitermondes", "in den Pariser Katakomben", "am Südpol", "im inneren der Erde", "vor den Toren Rohans", "im Aldi", "in einer Bar"
         };
-
         vector<string> endings = {
             "und lebte glücklich bis ans Ende seiner Tage.",
             "und entdeckte dabei ein unglaubliches Geheimnis.",
@@ -306,7 +294,6 @@ int geschmain() {
             " und er dachte sich nur so: Ach wär ich doch lieber mal Zuhause geblieben.",
             ". Dies sollte der Anfang einer langen Reise für ihn sein.",
             ". Durch diese Aktion riss er ein Loch in das Raum-Zeit Kontinuum."
-
         };
          generateStory(storyParts, nouns, adjectives, actions, locations, endings);
          cout << endl << "Soll ich dir noch eine Geschichte erzählen? ";

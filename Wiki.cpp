@@ -1,7 +1,6 @@
 #include "Mainframe.h"
 #include "BWL.h"
-#include "sqlwiki.h"
-#include "pcwiki.h"
+#include "Links.h"
 #include "cmd.h"
 #include "Wiki.h"
 using namespace std;
